@@ -25,8 +25,10 @@
         var timeout = 0;
         var timeoutFunction = function() {
             if(document.getElementsByClassName('nc-appHeader-content')) {
-              document.getElementsByClassName('nc-appHeader-content')[0].innerHTML =
-              document.getElementsByClassName('nc-appHeader-content')[0].innerHTML + '<div style="position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);">IOR - ADMIN</div>';
+              var node = document.createElement("DIV");
+              node.innerHTML = 'IOR - ADMIN';
+              node.style.cssText = "position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);";
+              document.getElementsByClassName('nc-appHeader-content')[0].appendChild(node);
               clearTimeout(timeout);
             } else {
               window.setTimeout(timeoutFunction, 1000)
