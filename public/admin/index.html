@@ -22,8 +22,18 @@
             document.location.href = "/admin/";
           });
         }
-        window.setTimeout(function() {document.getElementsByClassName('nc-appHeader-content')[0].innerHTML + '<div style="position: absolute;left:50%;top:50%;transform:transalte(-50%,-50%);">IOR - ADMIN</div>';},
-                     1000);
+        var timeout = 0;
+        var timeoutFunction = function() {
+            if(document.getElementsByClassName('nc-appHeader-content')) {
+              document.getElementsByClassName('nc-appHeader-content')[0].innerHTML =
+              document.getElementsByClassName('nc-appHeader-content')[0].innerHTML + '<div style="position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);">IOR - ADMIN</div>';
+              clearTimeout(timeout);
+            } else {
+              window.setTimeout(timeoutFunction, 1000)
+            }
+          };
+        timeout =
+        window.setTimeout(timeoutFunction, 1000);
       });
     }
   </script>
