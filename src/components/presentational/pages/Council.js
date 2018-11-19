@@ -1,6 +1,14 @@
 import React from 'react';
 import { withRouteData } from 'react-static'
 //
+
+const l = (data, field, language) => {
+    if (language === 'en') {
+        return data[field]
+    }
+    return data[`${field}-${language}`]
+}
+
 export default withRouteData(({ members, language }) => (
   <div>
     <h1>The council.</h1>
@@ -9,8 +17,8 @@ export default withRouteData(({ members, language }) => (
     <ul>
       {members.map(member => (
         <li key={member.data.slug}>
-            <p>{member.data[`title-${language}`]}</p>
-            <p>{member.data[`bio-${language}`]}</p>
+            <p>{l(member.data, 'title', language)}</p>
+            <p>{l(member.data, 'bio', language)}</p>
             <img className="image" src={member.data.picture} alt="" />
         </li>
       ))}
