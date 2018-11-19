@@ -10,7 +10,11 @@ let StripeProvider = null;
 if (typeof window !== 'undefined') {
   StripeProvider = require('react-stripe-elements');
 } else {
-  StripeProvider = ({ children } ) => <div>{children}</div>
+  StripeProvider = class SP extends React.Component {
+    render() {
+      return (<div>{this.props.children}</div>)
+    }
+  }
 }
 
 class Main extends React.Component {
