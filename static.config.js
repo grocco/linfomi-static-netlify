@@ -1,3 +1,5 @@
+import React from 'react';
+
 const fs = require('fs')
 const klaw = require('klaw')
 const path = require('path')
@@ -75,7 +77,22 @@ function getData () {
 }
 
 export default {
-
+  Document: class CustomHtml extends React.Component {
+    render() {
+      const { Html, Head, Body, children, /* renderMeta */} = this.props;
+      return (
+        <Html>
+          <Head>
+            <script id="stripe-js" src="https://js.stripe.com/v3/" async />
+            {/* {renderMeta.styleTags} */}
+          </Head>
+          <Body >
+            {children}
+          </Body>
+        </Html>
+      )  
+    }
+  },
   getSiteData: () => ({
     title: 'React Static with Netlify CMS',
   }),
@@ -84,11 +101,23 @@ export default {
     return [
       {
         path: '/',
-        component: 'src/containers/Home',
+        component: 'src/components/connected/pages/Home',
       },
       {
-        path: '/about',
-        component: 'src/containers/About',
+        path: '/home',
+        component: 'src/components/connected/pages/Home',
+      },
+      {
+        path: '/history',
+        component: 'src/components/connected/pages/History',
+      },
+      {
+        path: '/president',
+        component: 'src/components/connected/pages/President',
+      },
+      {
+        path: '/donations',
+        component: 'src/components/connected/pages/Donations',
       },
       {
         path: '/blog',
@@ -106,7 +135,7 @@ export default {
       },
       {
         path: '/council',
-        component: 'src/containers/Council',
+        component: 'src/components/connected/pages/Council',
         getData: () => ({
           members,
         })
