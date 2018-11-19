@@ -18,12 +18,12 @@ class Main extends React.Component {
     componentDidMount() {
       if (window.Stripe) {
           this.setState({stripe: window.Stripe('pk_test_12345')});
-      } else {
+      } else if (typeof document !== 'undefined') {
           document.querySelector('#stripe-js').addEventListener('load', () => {
           // Create Stripe instance once Stripe.js loads
           this.setState({stripe: window.Stripe('pk_test_12345')});
           });
-        }
+      }
     }
 
     render() {

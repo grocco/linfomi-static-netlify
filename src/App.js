@@ -29,7 +29,9 @@ class AppPresentational extends React.Component {
   }
 
   componentDidMount() {
-    document.addEventListener('scroll', this.trackScrolling);
+    if (typeof document !== 'undefined') {
+      document.addEventListener('scroll', this.trackScrolling);
+    }
   }
 
   trackScrolling() {
@@ -43,7 +45,9 @@ class AppPresentational extends React.Component {
   };
 
   componentWillUnmount() {
-    document.removeEventListener('scroll',this.trackScrolling);
+    if (typeof document !== 'undefined') {
+      document.removeEventListener('scroll',this.trackScrolling);
+    }
   }
 
   render() {
