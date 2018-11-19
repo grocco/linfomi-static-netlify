@@ -207,6 +207,24 @@ opacity: 0;
   transform: rotate(90deg);
 }
 
+/* .hamburger-line {
+  height: 5px;
+  width: 30px;
+  background: #f00;
+  padding: 0;
+  margin: 5px 0px;
+  border-radius: 5px;
+  transition: transform 0.5s 0.25s;
+}
+
+.hamburger.selected .hamburger-line:last-of-type {
+  transform: rotate(45deg) translateY(2px) translateX(-10px) scaleX(0.5);
+}
+
+.hamburger.selected .hamburger-line:first-of-type {
+  transform: rotate(-45deg) translateY(-2px) translateX(-10px) scaleX(0.5);
+} */
+
 .hamburger-line {
   height: 5px;
   width: 30px;
@@ -214,6 +232,17 @@ opacity: 0;
   padding: 0;
   margin: 5px 0px;
   border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.hamburger.selected .hamburger-line:last-of-type {
+  transform: rotate(45deg) translateY(-3px) translateX(-4px);
+  width: 15px;
+}
+
+.hamburger.selected .hamburger-line:first-of-type {
+  transform: rotate(-45deg) translateY(3px) translateX(-4px);
+  width: 15px;
 }
 
 .hamburger-buttons {
@@ -237,6 +266,7 @@ opacity: 0;
   color: #fff;
   cursor: pointer;
   transition: all 0.5s;
+  opacity: 0.5;
 }
 
 .hamburger-button .language {
@@ -253,6 +283,7 @@ opacity: 0;
   height: 80px;
   line-height: 80px;
   color: #000;
+  opacity: 1;
   transition: all 0.5s;
 }
 
