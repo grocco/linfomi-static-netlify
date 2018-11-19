@@ -16,6 +16,7 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
+      if (typeof window !== 'undefined') {
         if (window.Stripe) {
             this.setState({stripe: window.Stripe('pk_test_12345')});
         } else {
@@ -24,6 +25,7 @@ class Main extends React.Component {
             this.setState({stripe: window.Stripe('pk_test_12345')});
             });
         }
+      }
     }
 
     render() {
@@ -56,8 +58,14 @@ if (typeof document !== 'undefined') {
   render(App)
 }
 
-
-window.addEventListener('resize', () => {
+if (typeof window !== 'undefined') {
+  window.addEventListener('resize', () => {
+    store.dispatch(screenResize(window.innerWidth, window.innerHeight));
+  });
   store.dispatch(screenResize(window.innerWidth, window.innerHeight));
-});
-store.dispatch(screenResize(window.innerWidth, window.innerHeight));
+} else {
+  window = {
+    innerHeight: 1000,
+    innerWidth: 1000
+  }
+}

@@ -13,7 +13,7 @@ const mapStateToProps = state => ({
   })),
   languages: state.ui.languages,
   language: state.ui.language,
-  mobile: window.innerWidth < 1024,
+  mobile: typeof window !== 'undefined' ? window.innerWidth < 1024 : false,
   showHamburgerMenu: state.ui.showHamburgerMenu
 });
 
