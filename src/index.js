@@ -6,17 +6,6 @@ import { screenResize } from 'domain/state/actions';
 import { window } from 'domain/global';
 import App from './App';
 
-let StripeProvider = null;
-if (typeof window !== 'undefined') {
-  StripeProvider = require('react-stripe-elements');
-} else {
-  StripeProvider = class SP extends React.Component {
-    render() {
-      return (<div>{this.props.children}</div>)
-    }
-  }
-}
-
 class Main extends React.Component {
     
     constructor() {
@@ -33,6 +22,7 @@ class Main extends React.Component {
           this.setState({stripe: window.Stripe('pk_test_12345')});
           });
       }
+    
     }
 
     render() {
@@ -48,8 +38,10 @@ class Main extends React.Component {
 
 export default Main;
 
-// Render your app
-if (typeof document !== 'undefined') {
+
+if (typeof window !== 'undefined') {
+  const StripeProvider = require('react-stripe-elements').StripeProvider;
+
   const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
   const render = Comp => {
     renderMethod(
@@ -63,11 +55,24 @@ if (typeof document !== 'undefined') {
 
   // Render!
   render(App)
-}
 
-if (typeof window !== 'undefined') {
   window.addEventListener('resize', () => {
     store.dispatch(screenResize(window.innerWidth, window.innerHeight));
   });
   store.dispatch(screenResize(window.innerWidth, window.innerHeight));
+} else {
+
+// Render your app
+  const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
+  const render = Comp => {
+    renderMethod(
+        <Provider store={store}>
+          <Comp />
+        </Provider>
+    , document.getElementById('root'))
+  }
+
+  // Render!
+  render(App)
+
 }
