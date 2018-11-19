@@ -5,7 +5,7 @@ import store from 'domain/state/store';
 
 import { screenResize } from 'domain/state/actions';
 import { StripeProvider } from 'react-stripe-elements';
-import window from 'domain/global'
+import { window } from 'domain/global';
 import App from './App';
 
 class Main extends React.Component {

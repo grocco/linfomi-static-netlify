@@ -3,7 +3,7 @@ import Presentational from 'components/presentational/Footer';
 // import i18n from 'domain/i18n';
 import { changePage } from 'domain/state/actions';
 // import { withRouter } from "react-router-dom";
-import window from 'domain/global'
+import { window } from 'domain/global';
 
 
 const mapStateToProps = () => ({
