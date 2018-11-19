@@ -151,6 +151,7 @@ opacity: 0;
 }
 
 
+
 .hamburger-button.languages:hover {
   background-color: #fff;
 }
@@ -162,6 +163,12 @@ opacity: 0;
 
 button.language {
   flex: 1;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+.selected button.language {
+  opacity: 1;
 }
 
 .panel {
