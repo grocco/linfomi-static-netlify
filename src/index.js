@@ -2,11 +2,16 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux';
 import store from 'domain/state/store';
-
 import { screenResize } from 'domain/state/actions';
-import { StripeProvider } from 'react-stripe-elements';
 import { window } from 'domain/global';
 import App from './App';
+
+let StripeProvider = null;
+if (typeof window !== 'undefined') {
+  StripeProvider = require('react-stripe-elements');
+} else {
+  StripeProvider = ({ children } ) => <div>{children}</div>
+}
 
 class Main extends React.Component {
     
