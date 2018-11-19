@@ -71,7 +71,6 @@ class Header extends Component {
                 <button 
                   key={language}
                   className={`language ${this.props.language === language ? ' selected' : ''}`}
-                  style={{width: window.innerWidth/this.props.languages.length}}
                   onClick={()=>{
                       this.props.toggleHamburger();
                       this.props.changeLanguage(language);
