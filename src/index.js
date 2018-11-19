@@ -33,10 +33,11 @@ export default App;
 // } else {
 
 // Render your app
+if (typeof document !== 'undefined') {
+
+  const StripeProvider = require('react-stripe-elements').StripeProvider;
   const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
   const render = Comp => {
-    if (typeof window !== 'undefined') {
-      const StripeProvider = require('react-stripe-elements').StripeProvider;
       renderMethod(
         <StripeProvider apiKey="pk_test_xpM7sZ6yRB83nlEQu6MAI64U">
           <Provider store={store}>
@@ -44,22 +45,10 @@ export default App;
           </Provider>
         </StripeProvider>
       , document.getElementById('root'))
-    } else {
-      renderMethod(
-          <Provider store={store}>
-            <Comp />
-          </Provider>
-      , document.getElementById('root'))
-    }
   }
 
   // Render!
   render(App)
-
-// }
-
-
-if (typeof window !== 'undefined') {
 
   window.addEventListener('resize', () => {
     store.dispatch(screenResize(window.innerWidth, window.innerHeight));
