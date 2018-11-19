@@ -1,6 +1,8 @@
 import React from "react";
-import store from 'domain/state/store';
+// import store from 'domain/state/store';
 import { connect } from 'react-redux';
+import window from 'domain/global'
+
 
 class StringStateInjector extends React.Component {
   render() {

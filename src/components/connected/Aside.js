@@ -3,6 +3,8 @@ import Presentational from 'components/presentational/Aside';
 import i18n from 'domain/i18n';
 import { changeLanguage, /* changePage, */ toggleHamburger } from 'domain/state/actions';
 // import { withRouter } from "react-router-dom";
+import window from 'domain/global'
+
 
 const mapStateToProps = state => ({
   buttons: Object.keys(i18n.header.buttons).map(key => ({
@@ -13,7 +15,7 @@ const mapStateToProps = state => ({
   })),
   languages: state.ui.languages,
   language: state.ui.language,
-  mobile: typeof window !== 'undefined' ? window.innerWidth < 1024 : false,
+  mobile: window.innerWidth < 1024,
   showHamburgerMenu: state.ui.showHamburgerMenu
 });
 
