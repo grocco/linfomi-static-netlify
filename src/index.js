@@ -6,7 +6,17 @@ import { screenResize } from 'domain/state/actions';
 import { window } from 'domain/global';
 import App from './App';
 
-export default App;
+class Main extends React.Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <App />
+      </Provider>
+    )
+  }
+}
+
+export default Main;
 
 
 // if (typeof window !== 'undefined') {
