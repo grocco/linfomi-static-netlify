@@ -83,6 +83,7 @@ bio-it: >-
   Dal 1999 è Vice-Presidente e membro del Consiglio Direttivo della Fondazione
   per la Ricerca e la Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto
   oncologico di ricerca (IOR).
+bio-fr: fremnch version here
 email: giorgio.noseda@bluewin.ch
 board-of-directors: true
 not-anymore: false
