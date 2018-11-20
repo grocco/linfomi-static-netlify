@@ -9,8 +9,8 @@ const l = (data, field, language) => {
     return data[`${field}-${language}`]
 }
 
-const Member = (member, language) => (
-    <div className="member" key={member.slug}>
+const Member = ({member, language}) => (
+    <div className="member" key={member.data.slug}>
         <div className="title">{l(member.data, 'title', language)}</div>
         <div className="name-and-surname">{l(member.data, 'name-and-surname', language)}</div>
         <div className="role">{l(member.data, 'role', language)}</div>
