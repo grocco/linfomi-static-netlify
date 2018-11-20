@@ -23,7 +23,7 @@ collections:
       - {label: "[IT] Titolo", name: "title-it", widget: "select", options: ['Prof.', 'Sign.', 'Dott.']}
       - {label: "[EN] Ruolo", name: "role-it", widget: "string"}
       - {label: "[IT] Biografia", name: "bio-it", widget: "text"}
-      - {label: "E-mail", name: "email", widget: "string"}
+      - {label: "E-mail", name: "email", widget: "string", pattern: [`[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?`, "Please insert a valid email"]}
       - {label: "Board of directors", name: "board-of-directors", widget: "boolean"}
       - {label: "Not member anymore", name: "not-anymore", widget: "boolean"}
       - {label: "Portrait Picture", name: "picture", widget: "image"}
