@@ -13,14 +13,15 @@ collections:
     label: "Member" # Used in the UI
     folder: "src/data/members" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{year}}-{{month}}-{{day}}-{{name-and-surname}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter. 
       - {label: "Layout", name: "layout", widget: "hidden", default: "council"}
       - {label: "[EN] Name and Surname", name: "name-and-surname", widget: "string"}
       - {label: "[EN] Title", name: "title", widget: "select", options: ['Prof.', 'Mr.', 'Phd.', 'Doc.']}
+      - {label: "[EN] Role", name: "role", widget: "string"}
       - {label: "[EN] Bio", name: "bio", widget: "text"}
-      - {label: "[IT] Nome e Cognome", name: "name-and-surname-it", widget: "string"}
       - {label: "[IT] Titolo", name: "title-it", widget: "select", options: ['Prof.', 'Sign.', 'Dott.']}
+      - {label: "[EN] Ruolo", name: "role-it", widget: "string"}
       - {label: "[IT] Biografia", name: "bio-it", widget: "text"}
       - {label: "E-mail", name: "email", widget: "string"}
       - {label: "Board of directors", name: "board-of-directors", widget: "boolean"}

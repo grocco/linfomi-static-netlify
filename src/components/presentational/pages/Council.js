@@ -9,37 +9,31 @@ const l = (data, field, language) => {
     return data[`${field}-${language}`]
 }
 
+const Member = (member, language) => (<div className="member" key={member.data.slug}>
+<div className="title">{l(member.data, 'title', language)}</div>
+<div className="name-and-surname">{l(member.data, 'name-and-surname', language)}</div>
+<div className="role">{l(member.data, 'role', language)}</div>
+<div className="bio">{l(member.data, 'bio', language)}</div>
+<div className="email">{member.data.email}</div>
+<div className="board-of-directors">{member.data['board-of-directors'] ? { en: 'Board of directors', it: 'Comitato direttivo' }[language] : ''}</div>
+<img className="image" src={member.data.picture} alt="" />
+</div>);
+
 export default withRouteData(({ members, language }) => (
   <div>
     <h1>The council.</h1>
     <br />
     Current Members:
-    <ul>
+    <div className="members">
       {members.filter(member => !member.data['not-anymore']).map(member => (
-        <li key={member.data.slug}>
-            <p>{l(member.data, 'title', language)}</p>
-            <p>{l(member.data, 'name-and-surname', language)}</p>
-            <p>{l(member.data, 'title', language)}</p>
-            <p>{l(member.data, 'bio', language)}</p>
-            <p>{member.data.email}</p>
-            <p>{member.data['board-of-directors'] ? { en: 'Board of directors', it: 'Comitato direttivo' }[language] : ''}</p>
-            <img className="image" src={member.data.picture} alt="" />
-        </li>
+        <Member member={member} language={language} />
       ))}
-    </ul>
+    </div>
     Old members:
-    <ul>
+    <div className="members">
       {members.filter(member => member.data['not-anymore']).map(member => (
-        <li key={member.data.slug}>
-            <p>{l(member.data, 'title', language)}</p>
-            <p>{l(member.data, 'name-and-surname', language)}</p>
-            <p>{l(member.data, 'title', language)}</p>
-            <p>{l(member.data, 'bio', language)}</p>
-            <p>{member.data.email}</p>
-            <p>{member.data['board-of-directors'] ? { en: 'Board of directors', it: 'Comitato direttivo' }[language] : ''}</p>
-            <img className="image" src={member.data.picture} alt="" />
-        </li>
+        <Member member={member} language={language} />
       ))}
-    </ul>
+    </div>
   </div>
 ))
