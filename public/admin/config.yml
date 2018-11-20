@@ -18,12 +18,12 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "council"}
       - {label: "[EN] Name and Surname", name: "name-and-surname", widget: "string"}
       - {label: "[EN] Title", name: "title", widget: "select", options: ['Prof.', 'Mr.', 'Phd.', 'Doc.']}
-      - {label: "[EN] Role", name: "role", widget: "string"}
+      - {label: "[EN] Role", name: "role", widget: "string", required: false}
       - {label: "[EN] Bio", name: "bio", widget: "text"}
       - {label: "[IT] Titolo", name: "title-it", widget: "select", options: ['Prof.', 'Sign.', 'Dott.']}
-      - {label: "[EN] Ruolo", name: "role-it", widget: "string"}
+      - {label: "[EN] Ruolo", name: "role-it", widget: "string", required: false}
       - {label: "[IT] Biografia", name: "bio-it", widget: "text"}
-      - {label: "E-mail", name: "email", widget: "string", pattern: [`[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?`, "Please insert a valid email"]}
-      - {label: "Board of directors", name: "board-of-directors", widget: "boolean"}
-      - {label: "Not member anymore", name: "not-anymore", widget: "boolean"}
+      - {label: "E-mail", name: "email", widget: "string", pattern: ["[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", "Please insert a valid email"]}
+      - {label: "Board of directors", name: "board-of-directors", widget: "boolean", required: false}
+      - {label: "Not member anymore", name: "not-anymore", widget: "boolean", required: false}
       - {label: "Portrait Picture", name: "picture", widget: "image"}
