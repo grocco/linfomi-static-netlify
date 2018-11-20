@@ -85,7 +85,7 @@ bio-it: >-
   oncologico di ricerca (IOR).
 email: giorgio.noseda@bluewin.ch
 board-of-directors: true
-not-anymore: true
+not-anymore: false
 picture: >-
   https://ucarecdn.com/d59656a0-09ed-4793-a807-1866c4275e4d/-/crop/564x719/219,0/-/preview/
 ---
