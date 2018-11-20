@@ -15,11 +15,7 @@ import config from 'config';
 import Modal from "./components/connected/Modal";
 // import Page from "./components/connected/Page";
 
-
 import './app.css'
-
-
-
 
 class AppPresentational extends React.Component {
 
