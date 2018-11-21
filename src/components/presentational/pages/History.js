@@ -4,6 +4,7 @@ import i18n from 'domain/i18n';
 export default class History extends Component {
 
     render() {
+        console.log(this.props)
         const l = (s) => (s[this.props.language] || s['en']);
         return (
             <div className='page-history'>

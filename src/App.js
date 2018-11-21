@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Link } from 'react-static'
+import { Router, Link, Route } from 'react-static'
 import { hot } from 'react-hot-loader'
 //
 import Routes from 'react-static-routes'
@@ -16,6 +16,21 @@ import Modal from "./components/connected/Modal";
 // import Page from "./components/connected/Page";
 
 import './app.css'
+
+// This is the default renderer for `<Routes>`
+const RenderRoutes = ({ getComponentForPath, side }) => (
+  // The default renderer uses a catch all route to receive the pathname
+  <Route
+    path="*"
+    render={props => {
+      // The pathname is used to retrieve the component for that path
+      let Comp = getComponentForPath(props.location.pathname)
+      // The component is rendered!
+      return <Comp key={props.location.pathname} side={side} {...props} />
+    }}
+  />
+)
+
 
 class AppPresentational extends React.Component {
 
@@ -92,7 +107,9 @@ class AppPresentational extends React.Component {
           />}
           <div 
             className='frame left'
-            ><div className='main'>hello</div></div>
+            ><div className='main' style={{ opacity: this.props.showHamburgerMenu ? 0.1 : 1 }}>
+              <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'left'}))}/>
+            </div></div>
           <div 
             ref={(el)=>{this.frame=el}} 
             // className={`frame ${(this.props.showHamburgerMenu ? 'selected' : '')}`}
@@ -103,8 +120,8 @@ class AppPresentational extends React.Component {
             {/* </div> */}
             {/* { !this.props.mobile && config.aside && <Route path="/" component={Aside} /> } */}
             { !this.props.mobile && config.aside && <Aside /> }
-            <div className='main' style={{minHeight: this.props.windowInnerHeight - 81 - 61 - 20, opacity: this.props.showHamburgerMenu ? 0.1 : 1 }}>
-              <Routes />
+            <div className='main' style={{ opacity: this.props.showHamburgerMenu ? 0.1 : 1 }}>
+              <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'right'}))}/>
               {/* <div>Main Content</div>
               <div><input placeholder={'text input'} onChange={(e=>this.props.setWord(e.target.value))} /></div>
               <div>{ this.props.word }</div>

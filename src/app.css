@@ -98,6 +98,8 @@ body {
   line-height: 80px;
   border-bottom-width: 0px;
   width: auto;
+  border-left: 1px solid #bbb;
+  padding-left: 20px;
 }
 
 .page-slug.mobile {
@@ -228,17 +230,18 @@ button.language {
 
 .frame.left {
   position: fixed;
-  width: 300px;
+  width: 500px;
 }
 
 .frame.right {
-  margin-left: 30%;
+  margin-left: 512px;
   width: calc(100% - 512px);
 }
 
 @media only screen and (max-width: 1024px) {
   .frame.left {
-    display: none;
+    width: 100%;
+    position: relative;
   }
   .frame.right {
     margin-left: 0;
@@ -403,12 +406,6 @@ button.language {
 }
 
 
-.right {
-  /* float: right; */
-  position: absolute;
-    right: 0;
-}
-
 /* 
 button{
   height: 50px;
@@ -440,7 +437,7 @@ button[disabled]{
 
 .app{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 
@@ -578,6 +575,7 @@ footer{
   right: 0; */
   font-family: Suisse, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+  display: none;
 }
 
 .footer-link, .footer-copyright {
