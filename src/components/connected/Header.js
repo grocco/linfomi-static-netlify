@@ -3,7 +3,9 @@ import Presentational from 'components/presentational/Header';
 import i18n from 'domain/i18n';
 import { changeLanguage, /* changePage, */ toggleHamburger } from 'domain/state/actions';
 // import { withRouter } from "react-router-dom";
-import { window } from 'domain/global';
+import window from 'domain/window';
+
+console.log(window)
 
 const mapStateToProps = state => ({
   buttons: Object.keys(i18n.header.buttons).map(key => ({

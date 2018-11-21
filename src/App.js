@@ -1,11 +1,11 @@
 import React from 'react'
-import { Router } from 'react-static'
+import { Router, Link } from 'react-static'
 import { hot } from 'react-hot-loader'
 //
 import Routes from 'react-static-routes'
 
 
-import { setWord, showModal, toggleHamburger } from 'domain/state/actions';
+import { setWord, showModal, toggleHamburger, changeLanguage } from 'domain/state/actions';
 import Header from 'components/connected/Header';
 import Aside from 'components/connected/Aside';
 import Footer from 'components/connected/Footer';
@@ -33,7 +33,7 @@ class AppPresentational extends React.Component {
   trackScrolling() {
     if (this.props.showHamburgerMenu && this.frame) {
       if(this.frame
-        .getBoundingClientRect().top < 390) 
+        .getBoundingClientRect().top < this.props.nrButtons*80 + 60) 
       {
         this.props.toggleHamburger();
       }
@@ -49,6 +49,41 @@ class AppPresentational extends React.Component {
   render() {
     return (
       <Router>
+        <div>
+            <div 
+            className={`hamburger-buttons ${this.props.showHamburgerMenu ? ' selected' : ''}`}
+            style={ (this.props.showHamburgerMenu ? {height:(this.props.buttons.length + 1) * 80}: {})}
+            // style={{height: this.props.showHamburgerMenu ? window.innerHeight - 82 : 0}}
+          >
+            <div className='languages hamburger-button'>
+                { this.props.languages && this.props.languages.map(language => 
+                <button 
+                  key={language}
+                  className={`language ${this.props.language === language ? ' selected' : ''}`}
+                  onClick={()=>{
+                      this.props.toggleHamburger();
+                      this.props.changeLanguage(language);
+                    }
+                  }
+                >{language}</button>
+                )}
+            </div>
+            { this.props.buttons && this.props.buttons.map(button => 
+                <button 
+                  key={button.key}
+                  className={`hamburger-button ${button.selected ? ' selected' : ''} ${button.featured ? ' featured' : ''}`}
+                  onClick={()=>this.props.toggleHamburger()}
+                >
+                  <Link 
+                    to={`/${button.key}`} 
+                    href={`/${button.key}`} 
+                    activeClassName='selected'
+                  >
+                      {button.title}
+                  </Link>
+                </button>
+            )}
+          </div>
         <div className="app">
           {/* <Route path="/" component={Header} /> */}
           <Header />
@@ -56,14 +91,19 @@ class AppPresentational extends React.Component {
             {...this.props.modal}
           />}
           <div 
-            ref={(el)=>{this.frame=el}} className={`frame ${(this.props.showHamburgerMenu ? 'selected' : '')}`}
-            style={this.props.showHamburgerMenu ? {marginTop: this.props.nrButtons*80 + 81} : {}}
+            className='frame left'
+            ><div className='main'>hello</div></div>
+          <div 
+            ref={(el)=>{this.frame=el}} 
+            // className={`frame ${(this.props.showHamburgerMenu ? 'selected' : '')}`}
+            className='frame right'
+            // style={this.props.showHamburgerMenu ? {marginTop: this.props.nrButtons*80 + 81} : {}}
           >
             {/* <div className='panel' style={{height: window.innerHeight - 81 - 61 - 40 }}> */}
             {/* </div> */}
             {/* { !this.props.mobile && config.aside && <Route path="/" component={Aside} /> } */}
             { !this.props.mobile && config.aside && <Aside /> }
-            <div className='main' style={{minHeight: this.props.windowInnerHeight - 81 - 61 - 20 }}>
+            <div className='main' style={{minHeight: this.props.windowInnerHeight - 81 - 61 - 20, opacity: this.props.showHamburgerMenu ? 0.1 : 1 }}>
               <Routes />
               {/* <div>Main Content</div>
               <div><input placeholder={'text input'} onChange={(e=>this.props.setWord(e.target.value))} /></div>
@@ -73,6 +113,7 @@ class AppPresentational extends React.Component {
           </div>
           {/* { !this.props.mobile && <Route path="/" component={Footer} /> } */}
           { !this.props.mobile && <Footer /> }
+        </div>
         </div>
       </Router>
     );
@@ -86,13 +127,22 @@ const mapStateToProps = state => ({
   mobile: state.ui.screen.width < 1024,
   showHamburgerMenu: state.ui.showHamburgerMenu,
   windowInnerHeight: state.ui.screen.height,
-  nrButtons: Object.keys(i18n.header.buttons).length + 1
+  nrButtons: Object.keys(i18n.header.buttons).length + 1,
+  buttons: Object.keys(i18n.header.buttons).map(key => ({
+    title: i18n.header.buttons[key].title[state.ui.language] || i18n.header.buttons[key].title['en'],
+    selected: state.ui.page === key,
+    key,
+    featured: key === 'donations'
+  })),
+  languages: state.ui.languages,
+  language: state.ui.language,
 });
 
 const mapDispatchToProps = dispatch => ({
   setWord: (word) => dispatch(setWord(word)),
   showModal: (name) => dispatch(showModal(name)),
-  toggleHamburger: () => dispatch(toggleHamburger())
+  toggleHamburger: () => dispatch(toggleHamburger()),
+  changeLanguage: (language) => dispatch(changeLanguage(language)),
 });
 
 const App = connect(

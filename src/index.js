@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux';
 import store from 'domain/state/store';
 import { screenResize } from 'domain/state/actions';
-import { window } from 'domain/global';
+import window from 'domain/window';
 import App from './App';
 
 class Main extends React.Component {

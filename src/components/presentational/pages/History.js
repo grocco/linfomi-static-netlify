@@ -7,7 +7,7 @@ export default class History extends Component {
         const l = (s) => (s[this.props.language] || s['en']);
         return (
             <div className='page-history'>
-                <h1 className='title'>{l(i18n.pages.history.title)}</h1>
+                {/* <h1 className='title'>{l(i18n.pages.history.title)}</h1> */}
                 <p dangerouslySetInnerHTML={{ __html: l(i18n.pages.history.content) }} />   
             </div>
         )

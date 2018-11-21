@@ -35,8 +35,8 @@ const header = {
 
 const home = {
     title: {
-        en: "The Foundation for the Institute of Oncology Research (Foundation IOR)",
-        it: "La Fondazione per l\'Istituto oncologico di ricerca (Fondazione IOR)",
+        en: "The Foundation for the Institute of Oncology Research",
+        it: "La Fondazione per l\'Istituto oncologico di ricerca",
     },
     content: {
         thanks: {

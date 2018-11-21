@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
-import { Link } from 'react-static'
+import { Link, withRouteData } from 'react-static'
 import config from 'config';
-import { window } from 'domain/global';
+import i18n from 'domain/i18n';
 
 class Header extends Component {
 
   render() {
+    const l = (s) => (s[this.props.language] || s['en']);
     return (
     <div>
+    <div className={`page-slug${(this.props.mobile ? ' mobile' : '')}`}>{l(i18n.pages[this.props.pageSlug].title)}</div>
       <header>
         <div 
           className={`hamburger${(this.props.mobile ? ' mobile' : '')} ${(this.props.showHamburgerMenu ? ' selected' : '')}`}
@@ -20,13 +22,16 @@ class Header extends Component {
           <div className="hamburger-line" />
           <div className="hamburger-line"/>
         </div>
+        {/* <div style={{ left: 80, position: 'absolute'}} >
+          {l(i18n.pages[this.props.pageSlug].title)}
+        </div> */}
         <Link 
           to='/' 
           href='/'
         >
           <div 
             id='logo'
-            className={`${(this.props.mobile ? ' mobile' : '')}`}
+            // className={`${(this.props.mobile ? ' mobile' : '')}`}
           />
         </Link>
         {/* </a> */}
@@ -48,10 +53,12 @@ class Header extends Component {
               </button>
           )}
         </div> :
-        <div style={{flex: 1}} />
+        {/* <div style={{flex: 1}} >
+          {this.props.buttons.find(button=>button.selected).title}
+        </div> */}
         }
 
-        <div className={`languages ${this.props.mobile ? ' mobile' : ''}`}>
+        {/* <div className={`languages ${this.props.mobile ? ' mobile' : ''}`}>
           { this.props.languages && this.props.languages.map(language => 
               <button 
                 key={language}
@@ -59,8 +66,8 @@ class Header extends Component {
                 onClick={()=>this.props.changeLanguage(language)}
               >{language}</button>
           )}
-        </div>
-        { this.props.mobile &&
+        </div> */}
+        {/* { this.props.mobile &&
             <div 
             className={`hamburger-buttons ${this.props.showHamburgerMenu ? ' selected' : ''}`}
             style={ (this.props.showHamburgerMenu ? {height:(this.props.buttons.length + 1) * 80}: {})}
@@ -95,7 +102,7 @@ class Header extends Component {
                 </button>
             )}
           </div>
-        }
+        } */}
       </header>
      
     </div>)
@@ -103,4 +110,4 @@ class Header extends Component {
 
 }
 
-export default Header;
+export default withRouteData(Header);

@@ -41,6 +41,7 @@ a{
 
 html {
   background-color: #f5f5f5;
+  background-color: #fff;
 }
 
 /* custom css starts here */
@@ -53,7 +54,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
-  /* width: 800px; */
+  /* width: 1024px; */
   background-color: #fff;
   position: relative;
 }
@@ -86,6 +87,33 @@ body {
   src: url(/fonts/suissebpintl-medium-webfont.woff);
 }
 
+.page-slug {
+  position: fixed;
+  color: #de0000;
+  z-index: 2;
+  left: 80px;
+  position: fixed;
+  height: 80px;
+  display: block;
+  line-height: 80px;
+  border-bottom-width: 0px;
+  width: auto;
+}
+
+.page-slug.mobile {
+  top: 80px;
+  left: 0px;
+  z-index: 1;
+  height: auto;
+  line-height: inherit;
+  position: fixed;
+  width: calc(100% - 10px);
+  border-bottom: 1px solid #bbb;
+  color: #de0000;
+  padding: 5px;
+  text-align: center;
+  background-color: #fff;
+}
 
 
 header{
@@ -98,7 +126,7 @@ header{
   color: #000;
   font-size: 15px;
   letter-spacing: 2px;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #bbb;
   background-color: #fff;
   /* box-shadow: 0px 1px 0px 0px #ddd; */
   overflow: hidden;
@@ -187,6 +215,7 @@ button.language {
   /* background: url(https://www.eoc.ch/.imaging/stk/site-eoc/slider/website/site-eoc/iosi/Area-…nisti/Ricerca/stage/0/slider/0/imageBinary/box%20consulenzagenetica-01.jpg);
   background-repeat-y: no-repeat;
   background-size: 100%; */
+  transition: opacity 0.5s;
 }
 
 .frame {
@@ -194,8 +223,31 @@ button.language {
   display: flex;
   margin-top:80px;
   transition: all 0.5s;
+  background-color: #fff;
 }
 
+.frame.left {
+  position: fixed;
+  width: 300px;
+}
+
+.frame.right {
+  margin-left: 30%;
+  width: calc(100% - 512px);
+}
+
+@media only screen and (max-width: 1024px) {
+  .frame.left {
+    display: none;
+  }
+  .frame.right {
+    margin-left: 0;
+    width: 100%;
+  }
+  .frame {
+    margin-top: 110px;
+  }
+}
 
 .frame.selected {
   margin-top:401px;
@@ -208,6 +260,7 @@ button.language {
   top: 10px;
   cursor: pointer;
   transition: transform 0.5s;
+  display: block;
 }
 
 .hamburger.mobile {
@@ -267,9 +320,28 @@ button.language {
   bottom: 0;
   background: #fff; */
   border-top: solid 0px #fff;
+  width: 50%;
+  border-right: solid 1px #ddd;
+  border-bottom: solid 1px #ddd;
+
+  margin-top: 79px;
+  position: fixed;
+  z-index: 1;
+  background: #fff;
+  width: 512px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+ .hamburger-buttons {
+   width: 100%;
+   margin-top: 110px;
+   z-index: 2;
+ }
 }
 
 .hamburger-button {
+  width: 100%;
   height: 0px;
   text-align: center;
   line-height: 0px;
@@ -317,7 +389,7 @@ button.language {
   background-size: 260px;
 }
 
-#logo.mobile {
+#logo/*.mobile*/ {
   position: absolute;
   right: 0;
   top: 0;
@@ -368,7 +440,7 @@ button[disabled]{
 
 .app{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 
@@ -381,6 +453,7 @@ button[disabled]{
 .header-buttons {
   flex: 1;
   display: flex;
+  display: none;
 }
 
 

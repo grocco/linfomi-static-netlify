@@ -102,41 +102,43 @@ export default {
       {
         path: '/',
         component: 'src/components/connected/pages/Home',
+        getData: () => ({
+          pageSlug: 'home' 
+        })
       },
       {
         path: '/home',
         component: 'src/components/connected/pages/Home',
+        getData: () => ({
+          pageSlug: 'home' 
+        })
       },
       {
         path: '/history',
         component: 'src/components/connected/pages/History',
+        getData: () => ({
+          pageSlug: 'history' 
+        })
       },
       {
         path: '/president',
         component: 'src/components/connected/pages/President',
+        getData: () => ({
+          pageSlug: 'president' 
+        })
       },
       {
         path: '/donations',
         component: 'src/components/connected/pages/Donations',
-      },
-      {
-        path: '/blog',
-        component: 'src/containers/Blog',
         getData: () => ({
-          posts,
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.data.slug}`,
-          component: 'src/containers/Post',
-          getData: () => ({
-            post,
-          }),
-        })),
+          pageSlug: 'donations' 
+        })
       },
       {
         path: '/council',
         component: 'src/components/connected/pages/Council',
         getData: () => ({
+          pageSlug: 'council',
           members,
         })
       },
