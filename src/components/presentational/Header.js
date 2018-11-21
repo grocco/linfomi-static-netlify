@@ -10,7 +10,7 @@ class Header extends Component {
     const l = (s) => (s[this.props.language] || s['en']);
     return (
     <div>
-    <div className={`page-slug${(this.props.mobile ? ' mobile' : '')}`}>{l(i18n.pages[this.props.pageSlug].title)}</div>
+    <div className={`page-slug${(this.props.mobile ? ' mobile' : '')}`}>{i18n.pages[this.props.pageSlug] ? l(i18n.pages[this.props.pageSlug].title) : ''}</div>
       <header>
         <div 
           className={`hamburger${(this.props.mobile ? ' mobile' : '')} ${(this.props.showHamburgerMenu ? ' selected' : '')}`}
