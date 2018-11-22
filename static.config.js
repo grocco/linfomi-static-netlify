@@ -143,6 +143,21 @@ export default {
         })
       },
       {
+        path: '/contact/success',
+        component: 'src/components/connected/pages/Contact',
+        getData: () => ({
+          pageSlug: 'contact',
+          success: true
+        })
+      },
+      {
+        path: '/contact',
+        component: 'src/components/connected/pages/Contact',
+        getData: () => ({
+          pageSlug: 'contact',
+        })
+      },
+      {
         is404: true,
         component: 'src/containers/404',
       },

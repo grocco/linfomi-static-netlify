@@ -29,6 +29,12 @@ const header = {
                 en: "Donations",
                 it: "Donazioni",
             }
+        },
+        contact: {
+            title: {
+                en: "Contact",
+                it: "Contatti",
+            }
         }
     }
 }
@@ -183,12 +189,21 @@ const council = {
     }
 }
 
+
+const contact = {
+    title: {
+        en: 'Contact',
+        it: 'Contatti'
+    }
+}
+
 const pages = {
     home,
     donations,
     president,
     history,
-    council
+    council,
+    contact
 }
 
 
