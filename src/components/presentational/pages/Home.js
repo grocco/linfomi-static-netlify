@@ -8,10 +8,12 @@ export default class Home extends Component {
         const l = (s) => (s[this.props.language] || s.en);
         return (
             <div className='page-home'>
-                <div className='card-title' >
-                    <h1 className='card-h2'>{l(i18n.pages.home.content.realities.fior.acronym)}</h1>
-                    <h3 className='card-h3'>{l(i18n.pages.home.content.realities.fior.title)}</h3>
-                </div>
+                <Link to={{pathname:'/home/', state: { reality: 'history'}}} href='/home'>
+                    <div className='card-title' >
+                        <h1 className='card-h2'>{l(i18n.pages.home.content.realities.fior.acronym)}</h1>
+                        <h3 className='card-h3'>{l(i18n.pages.home.content.realities.fior.title)}</h3>
+                    </div>
+                </Link>
                 <p>{l(i18n.pages.home.content.thanks)}</p>
                 <p>{l(i18n.pages.home.content.realities.introduction)}</p>
                 <ol>
@@ -29,6 +31,7 @@ export default class Home extends Component {
             </div>
         )
     }
+
     
     renderRight() {
         console.log(this.props)
@@ -51,7 +54,13 @@ export default class Home extends Component {
                 <p dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.description) }} />
             </div>
         );
-        if ( ! this.props.location.state ) return ior;
+        const history = (
+            <div className='page-history'>
+                {/* <h1 className='title'>{l(i18n.pages.history.title)}</h1> */}
+                <p dangerouslySetInnerHTML={{ __html: l(i18n.pages.history.content) }} />   
+            </div>
+        )
+        if ( ! this.props.location.state ) return history;
         switch( this.props.location.state.reality) {
             case 'ior':
                 return ior;
@@ -59,8 +68,10 @@ export default class Home extends Component {
                 return ielsg;
             case 'icml':
                 return icml;
+            case 'history':
+                return history;
             default:
-                return ior;
+                return history;
         }
 
         // return (

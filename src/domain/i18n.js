@@ -12,12 +12,12 @@ const header = {
                 it: 'Presidente'
             }
         },
-        history: {
-            title: {
-                en: 'History',
-                it: 'Storia'
-            }
-        },
+        // history: {
+        //     title: {
+        //         en: 'History',
+        //         it: 'Storia'
+        //     }
+        // },
         council: {
             title: {
                 en: "Board",
