@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouteData } from 'react-static'
+import { withRouteData, Link } from 'react-static'
 //
 
 const l = (data, field, language) => {
@@ -21,21 +21,45 @@ const Member = ({member, language}) => (
     </div>
 );
 
-export default withRouteData(({ members, language }) => (
-  <div>
-    <h1>The council.</h1>
-    <br />
-    Current Members:
-    <div className="members">
-      {members.filter(member => !member.data['not-anymore']).map(member => (
-        <Member member={member} language={language} />
-      ))}
-    </div>
-    Old members:
-    <div className="members">
-      {members.filter(member => member.data['not-anymore']).map(member => (
-        <Member member={member} language={language} />
-      ))}
-    </div>
-  </div>
-))
+class Council extends React.Component {
+    renderLeft(){
+        const { members, language } = this.props;
+        return (
+            <div>
+                <h1>The council.</h1>
+                <br />
+                Current Members:
+                <div className="members">
+                {members.filter(member => !member.data['not-anymore']).map(member => (
+                    <div key={member.data.slug}><Link to={{pathname: '/council', state: {memberSlug: member.data.slug}}}>{member.data['name-and-surname']}</Link></div>
+                ))}
+                </div>
+                Old members:
+                <div className="members">
+                {members.filter(member => member.data['not-anymore']).map(member => (
+                    <div key={member.data.slug}><Link to={{pathname: '/council', state: {memberSlug: member.data.slug}}}>{member.data['name-and-surname']}</Link></div>
+                ))}
+                </div>
+            </div>
+        )
+    }
+
+    renderRight() {
+        const { members, language, history } = this.props;
+        let member = null;
+        if (! history.location.state) member = members[0]
+        else member = members.find(member => member.data.slug === history.location.state.memberSlug)
+        return (
+            <Member key={member.slug} member={member} language={language} />
+        )
+    }
+
+    render() {
+        if ( this.props.side === 'left') {
+            return this.renderLeft();
+        }
+        return this.renderRight();
+    }
+}
+
+export default withRouteData(Council);
