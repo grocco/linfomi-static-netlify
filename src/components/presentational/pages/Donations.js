@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Elements } from 'react-stripe-elements';
 import {injectStripe, CardElement} from 'react-stripe-elements';
 import i18n from 'domain/i18n';
+import { Link } from 'react-static';
 // CardSection.js
 
 import ReactDOM from 'react-dom';
@@ -169,40 +170,80 @@ export default class Donations extends React.PureComponent {
     //     }
     // }
 
-    render() {
+    renderLeft() {
         return (
             <div>
-                <h2>{i18n.pages.donations.title[this.props.language]}</h2>
-                <p>{i18n.pages.donations.subtitle[this.props.language]}</p>
-                    <Row>
-                        <Col sm={6} lg={this.props.windowInnerWidth > 1200 ? 4 : 6} >
-                            <h2>{i18n.pages.donations.creditCard.title[this.props.language]}</h2>
-                            <Elements locale={this.props.language}>
-                                <InjectedCheckoutForm 
-                                    {...this.props}
-                                />
-                            </Elements>
-                        </Col>
-                        <Col sm={6} lg={this.props.windowInnerWidth > 1200 ? 4 : 6} >
-                            <h2>{i18n.pages.donations.payPal.title[this.props.language]}</h2>
-                            <PayPalButton
-                                env='sandbox'
-                                sandboxID='AaTUAdq41QA5Yjlf9OIq-zF_wLzlacj6WGR611rHtuzl79SPSYXDQQw-d5la_0_uYTVhuueBORehUjtx'
-                                currency='CHF'
-                                commit={true}
-                            />
-                        </Col>
-                        <Col sm={6} lg={this.props.windowInnerWidth > 1200 ? 4 : 6} >
-                            <h2>{i18n.pages.donations.bankTransfer.title[this.props.language]}</h2>
-                            <p dangerouslySetInnerHTML={{ __html: i18n.pages.donations.bankTransfer.description[this.props.language] }} />
-                        </Col>
-                        <Col sm={6} lg={this.props.windowInnerWidth > 1200 ? 4 : 6} >
-                            <h2>{i18n.pages.donations.post.title[this.props.language]}</h2>
-                            <p dangerouslySetInnerHTML={{ __html: i18n.pages.donations.post.description[this.props.language] }} />
-                        </Col>
-                    </Row>
+                <div><Link to={{pathname: '/donations', state: { method: 'credit-card'}}} href='/donations'>Credit card</Link></div>
+                <div><Link to={{pathname: '/donations', state: { method: 'paypal'}}} href='/donations'>PayPal</Link></div>
+                <div><Link to={{pathname: '/donations', state: { method: 'bank-transfer'}}} href='/donations'>Bank transfer</Link></div>
+                <div><Link to={{pathname: '/donations', state: { method: 'post-office-account'}}} href='/donations'>Post office account</Link></div>
             </div>
         )
+    }
+
+    renderCreditCardForm() {
+        return (
+            <div>
+                <h2>{i18n.pages.donations.creditCard.title[this.props.language]}</h2>
+                <Elements locale={this.props.language}>
+                    <InjectedCheckoutForm 
+                        {...this.props}
+                    />
+                </Elements>
+            </div>
+        )
+    }
+
+    renderPaypalForm() {
+        return (
+            <div>
+                <h2>{i18n.pages.donations.payPal.title[this.props.language]}</h2>
+                <PayPalButton
+                    env='sandbox'
+                    sandboxID='AaTUAdq41QA5Yjlf9OIq-zF_wLzlacj6WGR611rHtuzl79SPSYXDQQw-d5la_0_uYTVhuueBORehUjtx'
+                    currency='CHF'
+                    commit
+                />
+            </div>
+        )
+    }
+
+    renderBankTransferForm() {
+        return (
+            <div>
+                <h2>{i18n.pages.donations.bankTransfer.title[this.props.language]}</h2>
+                <p dangerouslySetInnerHTML={{ __html: i18n.pages.donations.bankTransfer.description[this.props.language] }} />
+            </div>
+        )
+    }
+
+    renderPostOfficeAccountForm() {
+        return (
+            <div>
+                <h2>{i18n.pages.donations.post.title[this.props.language]}</h2>
+                <p dangerouslySetInnerHTML={{ __html: i18n.pages.donations.post.description[this.props.language] }} />
+            </div>
+        )
+    }
+
+    render() {
+        if (this.props.side === 'left') {
+            return this.renderLeft();
+        }
+        console.log(this.props.location.state)
+        if (! this.props.location.state) return this.renderCreditCardForm();
+        switch(this.props.location.state.method) {
+            case 'credit-card':
+                return this.renderCreditCardForm();
+            case 'paypal':
+                return this.renderPaypalForm();
+            case 'bank-transfer':
+                return this.renderBankTransferForm();
+            case 'post-office-account':
+                return this.renderPostOfficeAccountForm();
+            default: 
+                return this.renderCreditCardForm();
+        }
     }
 
 }
