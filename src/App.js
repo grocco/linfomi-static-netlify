@@ -107,6 +107,7 @@ class AppPresentational extends React.Component {
           />}
           <div 
             className='frame left'
+            style={{height: this.props.windowInnerHeight - 81}}
             ><div className='main' style={{ opacity: this.props.showHamburgerMenu ? 0.1 : 1 }}>
               <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'left'}))}/>
             </div></div>

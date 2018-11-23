@@ -288,7 +288,6 @@ button.language {
 
 .main {
   display: inline-block;
-  border-left: 1px solid #eee;
   border-top: 1px solid #eee;
   flex: 1;
   /* background: url(https://www.eoc.ch/.imaging/stk/site-eoc/slider/website/site-eoc/iosi/Area-…nisti/Ricerca/stage/0/slider/0/imageBinary/box%20consulenzagenetica-01.jpg);
@@ -308,11 +307,16 @@ button.language {
 .frame.left {
   position: fixed;
   width: 512px;
+  overflow-y: scroll;
 }
 
 .frame.right {
   margin-left: 512px;
   width: calc(100% - 512px);
+}
+
+.frame.right .main {
+  border-left: 1px solid #eee;
 }
 
 .padded {
