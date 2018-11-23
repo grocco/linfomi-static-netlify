@@ -134,6 +134,67 @@ body {
   background-color: #fff;
 }
 
+.page-home #president-pic {
+  width: 150px;
+  height: 150px;
+}
+
+.round {
+  position: relative;
+  border-radius: 50%;
+  background-size: 100%;
+}
+
+.round::after {
+  border: solid 1px rgba(0,0,0,0.3);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border-radius: 50%;
+}
+
+
+.member-list-item.selected {
+  color: #de0000;
+}
+
+.member-list-item .member-pic {
+  width: 50px;
+  height: 50px;
+}
+
+.member-list-item {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 15px;
+  border-bottom: solid 1px #eee;
+}
+
+
+.member-list-item:hover {
+  background-color: #fcfcfc;
+}
+
+.member-list-item .name-and-surname {
+
+}
+
+.member-list-item .role {
+  color: #999;
+  font-size: 14px;
+}
+
+.member-list-item .name-and-role {
+  display: flex;
+  flex-direction: column;
+  padding-left: 35px;
+  height: 50px;
+  flex: 1;
+  justify-content: center;
+}
 
 header{
   font-family: RobotoLight, TradeGothic, Suisse, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -227,7 +288,6 @@ button.language {
 
 .main {
   display: inline-block;
-  padding: 20px 20px 20px 20px;
   border-left: 1px solid #eee;
   border-top: 1px solid #eee;
   flex: 1;
@@ -247,12 +307,22 @@ button.language {
 
 .frame.left {
   position: fixed;
-  width: 500px;
+  width: 512px;
 }
 
 .frame.right {
   margin-left: 512px;
   width: calc(100% - 512px);
+}
+
+.padded {
+  padding: 20px;
+  width: calc(auto - 40px)
+}
+
+.frame.left .main .members {
+    width: 100%;
+    border-top: solid 1px #eee;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -268,6 +338,10 @@ button.language {
   .frame {
     margin-top: 110px;
   }
+}
+
+.frame.left .president img {
+  width: 100%;
 }
 
 .frame.selected {
@@ -612,6 +686,13 @@ footer{
 
 .footer-copyright.mobile {
   display: none;
+}
+
+.row-size-text {
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  margin: 20px;
 }
 
 

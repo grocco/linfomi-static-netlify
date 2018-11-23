@@ -10,7 +10,7 @@ const l = (data, field, language) => {
 }
 
 const Member = ({member, language}) => (
-    <div className="member" key={member.data.slug}>
+    <div className="member padded" key={member.data.slug}>
         <div className="title">{l(member.data, 'title', language)}</div>
         <div className="name-and-surname">{l(member.data, 'name-and-surname', language)}</div>
         <div className="role">{l(member.data, 'role', language)}</div>
@@ -21,20 +21,30 @@ const Member = ({member, language}) => (
     </div>
 );
 
+const MemberListItem = ({member, language, selected}) => (
+    <Link to={{pathname: '/council', state: {memberSlug: member.data.slug}}} href='/council'>
+        <div className={`member-list-item ${selected ? 'selected' : ''}`}>
+            <div className='round member-pic' style={ {backgroundImage: `url('${member.data.picture}')`} } />
+            <div className='name-and-role'>
+                <div className='name-and-surname'>{member.data['name-and-surname']}</div>
+                <div className='role'>{l(member.data, 'role', language)}</div>
+            </div>
+        </div>
+    </Link>
+);
+
 class Council extends React.Component {
     renderLeft(){
         const { members, language } = this.props;
         return (
             <div>
-                <div>The council.</div>
-                <br />
-                Current Members:
+                <div className='row-size-text'>Current Members:</div>
                 <div className="members">
                 {members.filter(member => !member.data['not-anymore']).map(member => (
-                    <div key={member.data.slug}><Link to={{pathname: '/council', state: {memberSlug: member.data.slug}}}>{member.data['name-and-surname']}</Link></div>
+                    <MemberListItem  key={member.data.slug} member={member} language={language} selected={this.props.history.location.state && this.props.history.location.state.memberSlug === member.data.slug}/>
                 ))}
                 </div>
-                Old members:
+                <div className='row-size-text'>Old members:</div>
                 <div className="members">
                 {members.filter(member => member.data['not-anymore']).map(member => (
                     <div key={member.data.slug}><Link to={{pathname: '/council', state: {memberSlug: member.data.slug}}}>{member.data['name-and-surname']}</Link></div>

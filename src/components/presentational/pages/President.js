@@ -19,9 +19,9 @@ export default class President extends Component {
             return this.renderRight();
         }
         return (
-            <div>
-                <div>{l(i18n.pages.president.title)}</div>
+            <div className='president'>
                 <img src='/assets/president.jpg' alt='the president' />
+                <div>{l(i18n.pages.president.title)}</div>
             </div>
         )
     }

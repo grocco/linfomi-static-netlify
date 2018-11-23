@@ -109,7 +109,7 @@ const home = {
         },
         finalThoughts: {
             it: 'Come vedete, la carne al fuoco è tanta. E sono sicuro che se proseguirete nella lettura di questo sito, anche voi sarete impressionati da quanto stiamo facendo.<br/>Personalmente ne sono molto orgoglioso.',
-            en: 'As you can see there is a lot to take in and I am sure that as you continue reading this site, you will be impressed by all that we have accomplished.<br/>Personally, I am very proud of our achievements.'
+            en: 'As you can see there is a lot to take in and I am sure that as you continue reading this site, you will be impressed by all that we have accomplished.<br/></br/>Personally, I am very proud of our achievements.'
         },
         signature: {
             name: {

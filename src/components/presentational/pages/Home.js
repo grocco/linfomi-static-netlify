@@ -7,7 +7,7 @@ export default class Home extends Component {
     renderLeft() {
         const l = (s) => (s[this.props.language] || s.en);
         return (
-            <div className='page-home'>
+            <div className='page-home padded'>
                 <Link to={{pathname:'/home/', state: { reality: 'history'}}} href='/home'>
                     <div >
                         <div >{l(i18n.pages.home.content.realities.fior.acronym)}</div>
@@ -22,7 +22,9 @@ export default class Home extends Component {
                     <li><Link to={{pathname:'/home/', state: { reality: 'icml'}}} href='/home'>{l(i18n.pages.home.content.realities.icml.title)}</Link></li>
                 </ol>
                 <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.finalThoughts) }} />
+                <br/>
                 <Link to={{pathname:'/president'}} href='/president'>
+                    <div className='round' id='president-pic' style={{backgroundImage: `url('/assets/president.jpg')`}}/>
                     <div>{l(i18n.pages.home.content.signature.name)}
                         <br/>
                         {l(i18n.pages.home.content.signature.description)}
@@ -115,7 +117,7 @@ export default class Home extends Component {
         if ( this.props.side === 'left') {
             return this.renderLeft();
         }
-        return this.renderRight();
+        return <div className='padded'>{this.renderRight()}</div>;
     }
 
 }
