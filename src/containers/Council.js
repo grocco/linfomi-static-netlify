@@ -4,14 +4,14 @@ import { withRouteData } from 'react-static'
 
 export default withRouteData(({ members }) => (
   <div>
-    <h1>The council.</h1>
+    <div>The council.</div>
     <br />
     All Members:
     <ul>
       {members.map(member => (
         <li key={member.data.slug}>
-            <p>{member.data.title}</p>
-            <p>{member.data.bio}</p>
+            <div>{member.data.title}</div >
+            <div>{member.data.bio}</div >
             <img className="image" src={member.data.picture} alt="" />
         </li>
       ))}

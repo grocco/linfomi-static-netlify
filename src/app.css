@@ -50,7 +50,7 @@ body {
   padding: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
-  font-family: Suisse, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: RobotoLight, TradeGothic, Suisse, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
@@ -62,6 +62,7 @@ body {
 @media screen and (min-width: 1441px) {
 
   body {
+    font-family: RobotoLight, TradeGothic;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
   }
@@ -85,6 +86,22 @@ body {
 @font-face {
   font-family: SuisseMedium;
   src: url(/fonts/suissebpintl-medium-webfont.woff);
+}
+
+@font-face {
+  font-family: RobotoLight, TradeGothic;
+  src: url(/fonts/trade-gothic-lt.ttf);
+}
+
+
+@font-face {
+  font-family: Roboto;
+  src: url(/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: RobotoLight;
+  src: url(/fonts/Roboto-Light.ttf);
 }
 
 .page-slug {
@@ -119,7 +136,7 @@ body {
 
 
 header{
-  font-family: Suisse, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: RobotoLight, TradeGothic, Suisse, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
   min-height: 80px;
   background: #fff;
@@ -536,7 +553,7 @@ button[disabled]{
 }
 
 .modal-title{
-  font-family: SuisseMedium, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: RobotoLight, TradeGothic, SuisseMedium, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 50px;
   color: #000;
   letter-spacing: 4px;
@@ -548,7 +565,7 @@ button[disabled]{
 }
 
 .modal-text{
-  font-family: SuisseLight, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: RobotoLight, TradeGothic, SuisseLight, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 25px;
   color: #000;
   letter-spacing: 1.67px;
@@ -574,7 +591,7 @@ footer{
   /* position: absolute;
   bottom: 0;
   right: 0; */
-  font-family: Suisse, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: RobotoLight, TradeGothic, Suisse, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   display: none;
 }

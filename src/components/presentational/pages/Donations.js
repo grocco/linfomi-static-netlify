@@ -184,7 +184,7 @@ export default class Donations extends React.PureComponent {
     renderCreditCardForm() {
         return (
             <div>
-                <h2>{i18n.pages.donations.creditCard.title[this.props.language]}</h2>
+                <div>{i18n.pages.donations.creditCard.title[this.props.language]}</div>
                 <Elements locale={this.props.language}>
                     <InjectedCheckoutForm 
                         {...this.props}
@@ -197,7 +197,7 @@ export default class Donations extends React.PureComponent {
     renderPaypalForm() {
         return (
             <div>
-                <h2>{i18n.pages.donations.payPal.title[this.props.language]}</h2>
+                <div>{i18n.pages.donations.payPal.title[this.props.language]}</div>
                 <PayPalButton
                     env='sandbox'
                     sandboxID='AaTUAdq41QA5Yjlf9OIq-zF_wLzlacj6WGR611rHtuzl79SPSYXDQQw-d5la_0_uYTVhuueBORehUjtx'
@@ -211,8 +211,8 @@ export default class Donations extends React.PureComponent {
     renderBankTransferForm() {
         return (
             <div>
-                <h2>{i18n.pages.donations.bankTransfer.title[this.props.language]}</h2>
-                <p dangerouslySetInnerHTML={{ __html: i18n.pages.donations.bankTransfer.description[this.props.language] }} />
+                <div>{i18n.pages.donations.bankTransfer.title[this.props.language]}</div>
+                <div dangerouslySetInnerHTML={{ __html: i18n.pages.donations.bankTransfer.description[this.props.language] }} />
             </div>
         )
     }
@@ -220,8 +220,8 @@ export default class Donations extends React.PureComponent {
     renderPostOfficeAccountForm() {
         return (
             <div>
-                <h2>{i18n.pages.donations.post.title[this.props.language]}</h2>
-                <p dangerouslySetInnerHTML={{ __html: i18n.pages.donations.post.description[this.props.language] }} />
+                <div>{i18n.pages.donations.post.title[this.props.language]}</div>
+                <div dangerouslySetInnerHTML={{ __html: i18n.pages.donations.post.description[this.props.language] }} />
             </div>
         )
     }

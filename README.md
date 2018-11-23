@@ -35,7 +35,7 @@ If you'd like to remove any, simply comment out the object. For example, I don't
 <pre> 
 - {label: "Featured Image", name: "thumbnail", widget: "image"}
 - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-</pre>
+</div re>
 Then, modify the following code in static.config.js to fit the data that the CMS will provide:
 <pre>
     klaw('./src/posts')
@@ -55,7 +55,7 @@ Then, modify the following code in static.config.js to fit the data that the CMS
             items.push(dataObj)
           }
         })
-</pre>
+</div re>
 (I'd remove the thumbnail property since I removed it in config.yml)
 
 In addition, make sure that no files in src/containers are relying on the removed data.

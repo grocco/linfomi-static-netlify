@@ -26,7 +26,7 @@ class Council extends React.Component {
         const { members, language } = this.props;
         return (
             <div>
-                <h1>The council.</h1>
+                <div>The council.</div>
                 <br />
                 Current Members:
                 <div className="members">
