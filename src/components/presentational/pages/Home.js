@@ -8,26 +8,52 @@ export default class Home extends Component {
         const l = (s) => (s[this.props.language] || s.en);
         return (
             <div className='page-home padded'>
-                <Link to={{pathname:'/home/', state: { reality: 'history'}}} href='/home'>
+                {/* <Link to={{pathname:'/home/', state: { reality: 'history'}}} href='/home'>
                     <div >
                         <div >{l(i18n.pages.home.content.realities.fior.acronym)}</div>
                         <div >{l(i18n.pages.home.content.realities.fior.title)}</div>
                     </div>
-                </Link>
-                <div>{l(i18n.pages.home.content.thanks)}</div >
-                <div>{l(i18n.pages.home.content.realities.introduction)}</div >
-                <ol>
-                    <li><Link to={{pathname:'/home/', state: { reality: 'ior'}}} href='/home'>{l(i18n.pages.home.content.realities.ior.title)}</Link></li>
-                    <li><Link to={{pathname:'/home/', state: { reality: 'ielsg'}}} href='/home'>{l(i18n.pages.home.content.realities.ielsg.title)}</Link></li>
-                    <li><Link to={{pathname:'/home/', state: { reality: 'icml'}}} href='/home'>{l(i18n.pages.home.content.realities.icml.title)}</Link></li>
-                </ol>
-                <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.finalThoughts) }} />
+                </Link> */}
+                <div className='home-intro'>
+                    <Link to={{pathname:'/president'}} href='/president'>
+                        <div className='highlighted-image-left' id='president-pic' style={{backgroundImage: `url('/assets/president.jpg')`}}/>
+                    </Link>
+                    <div className='thanks-and-introduction'>
+                        <div>{l(i18n.pages.home.content.thanks)}</div >
+                        <br/>
+                        <div>{l(i18n.pages.home.content.realities.introduction)}</div >
+                    </div>
+                </div>
+                <div style={{clear: 'left'}} />
+                <div className='realities'>
+                    <Link to={{pathname:'/home/', state: { reality: 'ior'}}} href='/home'>
+                        <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'ior' ? 'selected' : ''}`}>
+                            <div className='acronym'>{l(i18n.pages.home.content.realities.ior.acronym)}</div>
+                            <div className='title'>{l(i18n.pages.home.content.realities.ior.title)}</div>
+                            <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                        </div>
+                    </Link>
+                    <Link to={{pathname:'/home/', state: { reality: 'ielsg'}}} href='/home'>
+                        <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'ielsg' ? 'selected' : ''}`}>
+                            <div className='acronym'>{l(i18n.pages.home.content.realities.ielsg.acronym)}</div>
+                            <div className='title'>{l(i18n.pages.home.content.realities.ielsg.title)}</div>
+                            <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                        </div>
+                    </Link>
+                    <Link to={{pathname:'/home/', state: { reality: 'icml'}}} href='/home'>
+                        <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'icml' ? 'selected' : ''}`}>
+                            <div className='acronym'>{l(i18n.pages.home.content.realities.icml.acronym)}</div>
+                            <div className='title'>{l(i18n.pages.home.content.realities.icml.title)}</div>
+                            <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                        </div>
+                    </Link>
+                </div>
+                <div className='bubble' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.finalThoughts) }} />
                 <br/>
-                <Link to={{pathname:'/president'}} href='/president'>
-                    <div className='round' id='president-pic' style={{backgroundImage: `url('/assets/president.jpg')`}}/>
+                <Link className='bubble' to={{pathname:'/president'}} href='/president'>
                     <img id='president-signature' src='/assets/signature-cavalli.png' alt='signature'/>
                     <div>{l(i18n.pages.home.content.signature.name)}
-                        <br/>
+                        <br/><br/>
                         {l(i18n.pages.home.content.signature.description)}
                     </div >
                 </Link>

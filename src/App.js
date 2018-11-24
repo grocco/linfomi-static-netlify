@@ -115,6 +115,7 @@ class AppPresentational extends React.Component {
             ref={(el)=>{this.frame=el}} 
             // className={`frame ${(this.props.showHamburgerMenu ? 'selected' : '')}`}
             className='frame right'
+            style={{minHeight: this.props.windowInnerHeight - 81}}
             // style={this.props.showHamburgerMenu ? {marginTop: this.props.nrButtons*80 + 81} : {}}
           >
             {/* <div className='panel' style={{height: window.innerHeight - 81 - 61 - 40 }}> */}
