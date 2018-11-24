@@ -1,7 +1,7 @@
 ---
 layout: council
 name-and-surname: Aris Mozzini
-title: Mr.
+title: Mr. Aris Mozzini
 role: Member
 bio: >-
   Born in 1971 in Bellinzona, where he currently resides, he graduated as an

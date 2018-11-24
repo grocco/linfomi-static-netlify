@@ -96,7 +96,7 @@ class CheckoutForm extends React.Component {
       // Within the context of `Elements`, this call to createToken knows which Element to
       // tokenize, since there's only one in this group.
       _props.stripe.createToken({name: this.state.name, email: this.state.email, amount: this.state.amount * 100}).then(({token}) => {
-        console.log('Received Stripe token:', token);
+        // console.log('Received Stripe token:', token);
         _props.onTransactionStart(this.state.amount);
         fetch('https://us-central1-ior-web.cloudfunctions.net/charge/donations/charge', {
             method: 'POST',
@@ -116,7 +116,7 @@ class CheckoutForm extends React.Component {
         })
         .then(function(transaction) {
             _props.onTransactionSuccessful(_state.amount, _state.email)
-            console.log(JSON.stringify(transaction));
+            // console.log(JSON.stringify(transaction));
         });
       });
   
@@ -256,7 +256,7 @@ export default class Donations extends React.PureComponent {
         if (this.props.side === 'left') {
             return this.renderLeft();
         }
-        console.log(this.props.location.state)
+        // console.log(this.props.location.state)
         if (! this.props.location.state) return this.renderCreditCardForm();
         switch(this.props.location.state.method) {
             case 'credit-card':

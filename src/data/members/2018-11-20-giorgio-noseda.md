@@ -1,7 +1,7 @@
 ---
 layout: council
 name-and-surname: Giorgio Noseda
-title: Prof.
+title: Prof. Giorgio Noseda
 role: Vice-president
 bio: >-
   Born in Mendrisio, on July 14, 1938. 

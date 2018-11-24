@@ -1,6 +1,4 @@
 const w = (() => {
-    console.log('typ',typeof window)
-
     if (typeof window !== 'undefined') {
         return window || {};
     }

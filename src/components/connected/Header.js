@@ -5,8 +5,6 @@ import { changeLanguage, /* changePage, */ toggleHamburger } from 'domain/state/
 // import { withRouter } from "react-router-dom";
 import window from 'domain/window';
 
-console.log(window)
-
 const mapStateToProps = state => ({
   buttons: Object.keys(i18n.header.buttons).map(key => ({
     title: i18n.header.buttons[key].title[state.ui.language] || i18n.header.buttons[key].title['en'],

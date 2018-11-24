@@ -90,8 +90,8 @@ class AppPresentational extends React.Component {
                   onClick={()=>this.props.toggleHamburger()}
                 >
                   <Link 
-                    to={`/${button.key}`} 
-                    href={`/${button.key}`} 
+                    to={button.key === 'president' ? {pathname:'/council', state: { memberSlug: 'prof-franco-cavalli'}} : `/${button.key}`} 
+                    href={`/${button.key === 'president' ? 'council' : button.key}`}
                     activeClassName='selected'
                   >
                       {button.title}

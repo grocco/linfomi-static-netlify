@@ -15,7 +15,7 @@ export default class Home extends Component {
                     </div>
                 </Link> */}
                 <div className='home-intro'>
-                    <Link to={{pathname:'/president'}} href='/president'>
+                    <Link to={{pathname:'/council', state: { memberSlug: 'prof-franco-cavalli'}}} href='/president'>
                         <div className='highlighted-image-left' id='president-pic' style={{backgroundImage: `url('/assets/president.jpg')`}}/>
                     </Link>
                     <div className='thanks-and-introduction'>
@@ -50,7 +50,7 @@ export default class Home extends Component {
                 </div>
                 <div className='bubble' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.finalThoughts) }} />
                 <br/>
-                <Link className='bubble' to={{pathname:'/president'}} href='/president'>
+                <Link className='bubble' to={{pathname:'/council', state: { memberSlug: 'prof-franco-cavalli'}}} href='/council'>
                     <img id='president-signature' src='/assets/signature-cavalli.png' alt='signature'/>
                     <div>{l(i18n.pages.home.content.signature.name)}
                         <br/><br/>
@@ -63,7 +63,6 @@ export default class Home extends Component {
 
     
     renderRight() {
-        console.log(this.props)
         const l = (s) => (s[this.props.language] || s.en);
         const ior = (
             <div>

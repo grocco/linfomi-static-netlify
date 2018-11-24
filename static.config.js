@@ -29,7 +29,7 @@ function getData () {
           }
         })
         .on('error', e => {
-          console.log(e)
+          console.error(e)
         })
         .on('end', () => {
           // Resolve promise for async getRoutes request //
@@ -61,7 +61,7 @@ function getData () {
           }
         })
         .on('error', e => {
-          console.log(e)
+          console.error(e)
         })
         .on('end', () => {
           // Resolve promise for async getRoutes request //

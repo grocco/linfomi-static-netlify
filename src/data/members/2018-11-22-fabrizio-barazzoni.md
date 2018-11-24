@@ -1,7 +1,7 @@
 ---
 layout: council
 name-and-surname: Fabrizio Barazzoni
-title: Doc.
+title: Doc. Fabrizio Barazzoni
 role: member
 bio: >-
   Born in 1954 in Thun, he graduated in 1974 from the Liceo Papio in Ascona,
