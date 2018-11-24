@@ -25,6 +25,7 @@ export default class Home extends Component {
                 <br/>
                 <Link to={{pathname:'/president'}} href='/president'>
                     <div className='round' id='president-pic' style={{backgroundImage: `url('/assets/president.jpg')`}}/>
+                    <img id='president-signature' src='/assets/signature-cavalli.png' alt='signature'/>
                     <div>{l(i18n.pages.home.content.signature.name)}
                         <br/>
                         {l(i18n.pages.home.content.signature.description)}

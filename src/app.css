@@ -139,6 +139,11 @@ body {
   height: 150px;
 }
 
+
+.page-home #president-signature {
+  width: 150px;
+}
+
 .round {
   position: relative;
   border-radius: 50%;
