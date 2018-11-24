@@ -128,22 +128,22 @@ const donations = {
     title: {
         en: 'Make a donation'
     },
-    subtitle: {
-        en: 'You can make a donation both on line as well as via bank transfer or on our post office account.'
+    intro: {
+        en: 'You can make a donation both on line as well as via bank transfer or on our post office account.<br/><br/>Thank you for your support!'
     },
     creditCard: {
         title: {
-            en: 'Donate with Credit Card'
+            en: 'Donate online with your Credit Card'
         }
     },
     payPal: {
         title: {
-            en: 'Donate with PayPal'
+            en: 'Donate online through PayPal'
         }
     },
     bankTransfer: {
         title: {
-            en: 'Donate via bank transfer'
+            en: 'Bank account details'
         },
         description: {
             en: 'Fondazione per la Ricerca e la Cura dei Linfomi<br/>Banca dello Stato del Canton Ticino<br/>Via Pioda 7<br/>6900 Lugano<br/>Switzerland<br/><b>Account nr:</b> 336 9742/001.000.001<br/><b>IBAN code:</b> CH31 0076 4336 9742 C000 C<br/><b>SWIFT:</b> BSCTCH22LUG<br/><b>Clearing number:</b> 00764'
@@ -151,7 +151,7 @@ const donations = {
     },
     post: {
         title: {
-            en: 'Post Office Account'
+            en: 'Post office account details'
         },
         description: {
             en: '<b>no. CCP:</b> 65-433-5'

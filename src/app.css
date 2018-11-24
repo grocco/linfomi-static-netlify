@@ -151,6 +151,31 @@ body {
 }
 
 
+.donations {
+  margin-bottom: 20px;
+  border-top: solid 1px #eee;
+  width: 100%;
+}
+
+.donation-list-item {
+  height: 80px;
+  display: flex;
+  border-bottom: solid 1px #eee;
+  padding: 0px 20px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.donation-list-item:hover {
+  background-color: #fcfcfc;
+}
+
+.donation-list-item.selected {
+  color: #de0000;
+}
+
+
 .reality-list-item {
   height: 80px;
   display: flex;
@@ -179,7 +204,7 @@ body {
   background-color: #fcfcfc;
 }
 
-.reality-list-item img.arrow-right {
+img.arrow-right {
   position: absolute;
   right: 20px;
   height: 20px;

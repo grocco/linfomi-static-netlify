@@ -171,12 +171,38 @@ export default class Donations extends React.PureComponent {
     // }
 
     renderLeft() {
+        const l = (s) => (s[this.props.language] || s.en);
         return (
             <div>
-                <div><Link to={{pathname: '/donations', state: { method: 'credit-card'}}} href='/donations'>Credit card</Link></div>
-                <div><Link to={{pathname: '/donations', state: { method: 'paypal'}}} href='/donations'>PayPal</Link></div>
-                <div><Link to={{pathname: '/donations', state: { method: 'bank-transfer'}}} href='/donations'>Bank transfer</Link></div>
-                <div><Link to={{pathname: '/donations', state: { method: 'post-office-account'}}} href='/donations'>Post office account</Link></div>
+                <div className='padded'>
+                    <div className='bubble' dangerouslySetInnerHTML={{ __html: l(i18n.pages.donations.intro) }} />
+                </div>
+                <div className='donations'>
+                    <Link to={{pathname: '/donations', state: { method: 'credit-card'}}} href='/donations'>
+                        <div className={`donation-list-item ${this.props.location.state && this.props.location.state.method === 'credit-card' ? 'selected' : ''}`}>
+                            <div>{l(i18n.pages.donations.creditCard.title)}</div>
+                            <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                        </div>
+                    </Link>
+                    <Link to={{pathname: '/donations', state: { method: 'paypal'}}} href='/donations'>
+                        <div className={`donation-list-item ${this.props.location.state && this.props.location.state.method === 'paypal' ? 'selected' : ''}`}>
+                            <div>{l(i18n.pages.donations.payPal.title)}</div>
+                            <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                        </div>
+                    </Link>
+                    <Link to={{pathname: '/donations', state: { method: 'bank-transfer'}}} href='/donations'>
+                        <div className={`donation-list-item ${this.props.location.state && this.props.location.state.method === 'bank-transfer' ? 'selected' : ''}`}>
+                            <div>{l(i18n.pages.donations.bankTransfer.title)}</div>
+                            <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                        </div>
+                    </Link>
+                    <Link to={{pathname: '/donations', state: { method: 'post-office-account'}}} href='/donations'>
+                        <div className={`donation-list-item ${this.props.location.state && this.props.location.state.method === 'post-office-account' ? 'selected' : ''}`}>
+                            <div>{l(i18n.pages.donations.post.title)}</div>
+                            <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                        </div>
+                    </Link>
+                </div>
             </div>
         )
     }

@@ -85,6 +85,7 @@ export default {
           <Head>
             <script id="stripe-js" src="https://js.stripe.com/v3/" async />
             {/* {renderMeta.styleTags} */}
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           </Head>
           <Body >
             {children}
