@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Link, Route } from 'react-static'
+import { Router, Link, Route, withRouteData } from 'react-static'
 import { hot } from 'react-hot-loader'
 //
 import Routes from 'react-static-routes'
@@ -32,6 +32,21 @@ const RenderRoutes = ({ getComponentForPath, side }) => (
 )
 
 
+const Left = withRouteData(({ history, windowInnerHeight, windowInnerWidth, showHamburgerMenu }) => {
+  const hide = windowInnerWidth < 1024 && history.location && history.location.state && history.location.state.reality;
+  return (<div 
+    className='frame left'
+    style={{height: hide ? 0 : windowInnerHeight - 81}}
+    >
+      { !hide &&
+        <div className='main' style={{ opacity: showHamburgerMenu ? 0.1 : 1 }}>
+          <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'left'}))}/>
+        </div>
+      }
+    </div>
+  )
+});
+
 class AppPresentational extends React.Component {
 
   constructor(props) {
@@ -62,6 +77,8 @@ class AppPresentational extends React.Component {
   }
 
   render() {
+    console.log(this.props)
+    const showLeft = (this.props.windowInnerWidth < 1024 && this.props.history && this.props.history.location && this.props.history.location.state && this.props.history.location.state.reality);
     return (
       <Router>
         <div>
@@ -106,12 +123,11 @@ class AppPresentational extends React.Component {
           {this.props.modal && <Modal
             {...this.props.modal}
           />}
-          <div 
-            className='frame left'
-            style={{height: this.props.windowInnerHeight - 81}}
-            ><div className='main' style={{ opacity: this.props.showHamburgerMenu ? 0.1 : 1 }}>
-              <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'left'}))}/>
-            </div></div>
+          <Left 
+            windowInnerHeight={this.props.windowInnerHeight}
+            windowInnerWidth={this.props.windowInnerWidth}
+            showHamburgerMenu={this.props.showHamburgerMenu}
+          />
           <div 
             ref={(el)=>{this.frame=el}} 
             // className={`frame ${(this.props.showHamburgerMenu ? 'selected' : '')}`}
@@ -147,6 +163,7 @@ const mapStateToProps = state => ({
   mobile: state.ui.screen.width < 1024,
   showHamburgerMenu: state.ui.showHamburgerMenu,
   windowInnerHeight: state.ui.screen.height,
+  windowInnerWidth: state.ui.screen.width,
   nrButtons: Object.keys(i18n.header.buttons).length + 1,
   buttons: Object.keys(i18n.header.buttons).map(key => ({
     title: i18n.header.buttons[key].title[state.ui.language] || i18n.header.buttons[key].title['en'],

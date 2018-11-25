@@ -211,6 +211,20 @@ body {
   opacity: 0.2;
 }
 
+.breadcrumbs {
+  height: 30px;
+  border-bottom: solid 1px #eee;
+  border-top: solid 1px #eee;
+  line-height: 30px;
+  margin-bottom: 20px;
+  color: #de0000;
+  cursor: pointer;
+}
+
+.breadcrumbs:hover {
+  background-color: #fafafa;
+}
+
 .hamburger-buttons.selected .buttonsUnderlay {
   position: fixed;
   top: 0;

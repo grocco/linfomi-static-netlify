@@ -143,7 +143,10 @@ export default class Home extends Component {
         if ( this.props.side === 'left') {
             return this.renderLeft();
         }
-        return <div className='padded'>{this.renderRight()}</div>;
+        return (<div className='padded'>
+            <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div>
+            {this.renderRight()}
+        </div>);
     }
 
 }
