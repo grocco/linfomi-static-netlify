@@ -2,6 +2,10 @@
   display: none;
   }
 
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   button {
     border-width: 0px;
     padding: 0px;
