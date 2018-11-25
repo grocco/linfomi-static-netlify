@@ -132,6 +132,7 @@ body {
   padding: 5px;
   text-align: center;
   background-color: #fff;
+  box-shadow: 0px -4px 10px 0px #000;
 }
 
 .page-home #president-pic {
@@ -143,11 +144,20 @@ body {
   /* margin-bottom: 10px; */
 }
 
+.page-home #president-signature {
+  width: 150px;
+  margin-right: 20px;
+}
+
 
 @media only screen and (max-width: 479px) {
   .page-home #president-pic {
     width: 100px;
     height: 100px;
+  }
+
+  .page-home #president-signature {
+    width: 100px;
   }
 }
 
@@ -237,7 +247,7 @@ body {
 
 .hamburger-buttons.selected .buttonsUnderlay {
   position: fixed;
-  top: 0;
+  top: 81px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -246,7 +256,7 @@ body {
 }
 
 .hamburger-buttons.selected .buttonsUnderlay:hover {
-  background-color: rgba(0,0,0,0.05);
+  /* background-color: rgba(0,0,0,0.05); */
 }
 
 .hamburger-buttons.selected {
@@ -281,7 +291,7 @@ body {
 }
 
 .highlighted-image-left::after {
-  border-right: solid 1px rgba(0,0,0,0.3);
+  border-right: solid 1px rgba(0,0,0,0.2);
   content: '';
   position: absolute;
   top: 0;
@@ -291,12 +301,6 @@ body {
   border-radius: 0% 0% 0px 8px;
 }
 
-
-.page-home #president-signature {
-  width: 150px;
-  margin-right: 20px;
-}
-
 .round {
   position: relative;
   border-radius: 50%;
@@ -304,7 +308,7 @@ body {
 }
 
 .round::after {
-  border: solid 1px rgba(0,0,0,0.3);
+  border: solid 1px rgba(0,0,0,0.2);
   content: '';
   position: absolute;
   top: 0;
@@ -373,6 +377,12 @@ header{
   z-index: 1;
   max-width: 1440px;
   /* left: 1px; */
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    box-shadow: 0px -4px 10px 0px #000;
+  }
 }
 
 /* header::after {
@@ -446,7 +456,7 @@ button.language {
 
 .main {
   display: inline-block;
-  border-top: 1px solid #eee;
+  /* border-top: 1px solid #eee; */
   flex: 1;
   /* background: url(https://www.eoc.ch/.imaging/stk/site-eoc/slider/website/site-eoc/iosi/Area-…nisti/Ricerca/stage/0/slider/0/imageBinary/box%20consulenzagenetica-01.jpg);
   background-repeat-y: no-repeat;
@@ -631,7 +641,7 @@ button.language {
 
 .hamburger-buttons.selected {
   height: 320px;
-  border-top: solid 1px #ddd;
+  /* border-top: solid 1px #ddd; */
 }
 
 .hamburger-buttons.selected .hamburger-button {
