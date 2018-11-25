@@ -3,8 +3,8 @@ const w = (() => {
         return window || {};
     }
     return {
-        innerHeight: 1024,
-        innerWidth: 1024,
+        innerHeight: 1023,
+        innerWidth: 1023,
         addEventListener: () => new Promise((resolve, reject) => reject()),
         removeEventListener: () => new Promise((resolve, reject) => reject())
     }
