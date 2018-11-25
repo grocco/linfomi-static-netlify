@@ -45,7 +45,7 @@ class Header extends Component {
               >
                 <Link 
                   to={button.key === 'president' ? {pathname:'/council', state: { memberSlug: 'prof-franco-cavalli'}} : `/${button.key}`} 
-                  href={`/${button.key === 'president' ? 'council' : button.key}`}
+                  href={`/${button.key}`}
                   activeClassName='selected'
                 >
                   {button.title}

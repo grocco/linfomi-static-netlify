@@ -66,10 +66,11 @@ class AppPresentational extends React.Component {
       <Router>
         <div>
             <div 
-            className={`hamburger-buttons ${this.props.showHamburgerMenu ? ' selected' : ''}`}
-            style={ (this.props.showHamburgerMenu ? {height:(this.props.buttons.length + 1) * 80}: {})}
-            // style={{height: this.props.showHamburgerMenu ? window.innerHeight - 82 : 0}}
-          >
+              className={`hamburger-buttons ${this.props.showHamburgerMenu ? ' selected' : ''}`}
+              style={ (this.props.showHamburgerMenu ? {height:(this.props.buttons.length + 1) * 80}: {})}
+              // style={{height: this.props.showHamburgerMenu ? window.innerHeight - 82 : 0}}
+            >
+            <div role='none' className='buttonsUnderlay' onClick={this.props.toggleHamburger} onKeyDown={this.props.toggleHamburger}/>
             <div className='languages hamburger-button'>
                 { this.props.languages && this.props.languages.map(language => 
                 <button 
@@ -91,7 +92,7 @@ class AppPresentational extends React.Component {
                 >
                   <Link 
                     to={button.key === 'president' ? {pathname:'/council', state: { memberSlug: 'prof-franco-cavalli'}} : `/${button.key}`} 
-                    href={`/${button.key === 'president' ? 'council' : button.key}`}
+                    href={`/${button.key}`}
                     activeClassName='selected'
                   >
                       {button.title}

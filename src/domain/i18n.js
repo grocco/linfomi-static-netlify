@@ -6,12 +6,12 @@ const header = {
                 it: "Benvenuti",
             }
         },
-        president: {
-            title: {
-                en: 'President',
-                it: 'Presidente'
-            }
-        },
+        // president: {
+        //     title: {
+        //         en: 'President',
+        //         it: 'Presidente'
+        //     }
+        // },
         // history: {
         //     title: {
         //         en: 'History',
