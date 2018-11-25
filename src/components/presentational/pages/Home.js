@@ -20,11 +20,15 @@ export default class Home extends Component {
                     </Link>
                     <div className='thanks-and-introduction'>
                         <div>{l(i18n.pages.home.content.thanks)}</div >
-                        <br/>
-                        <div>{l(i18n.pages.home.content.realities.introduction)}</div >
+                        { this.props.windowInnerWidth >= 480  &&   
+                            <div><br/>{l(i18n.pages.home.content.realities.introduction)}</div >
+                        }
                     </div>
                 </div>
                 <div style={{clear: 'left'}} />
+                { this.props.windowInnerWidth < 480  &&   
+                            <div><br/><div className='bubble'>{l(i18n.pages.home.content.realities.introduction)}</div ></div>
+                        }
                 <div className='realities'>
                     <Link to={{pathname:'/home/', state: { reality: 'ior'}}} href='/home'>
                         <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'ior' ? 'selected' : ''}`}>
@@ -144,7 +148,7 @@ export default class Home extends Component {
             return this.renderLeft();
         }
         return (<div className='padded'>
-            <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div>
+            { this.props.location.state && this.props.location.state.reality && <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div> }
             {this.renderRight()}
         </div>);
     }

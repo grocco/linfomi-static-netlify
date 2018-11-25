@@ -33,19 +33,41 @@ const RenderRoutes = ({ getComponentForPath, side }) => (
 
 
 const Left = withRouteData(({ history, windowInnerHeight, windowInnerWidth, showHamburgerMenu }) => {
-  const hide = windowInnerWidth < 1024 && history.location && history.location.state && history.location.state.reality;
+  const hide = history.location && history.location.state && history.location.state.reality;
+  const mobile = windowInnerWidth < 1024;
   return (<div 
-    className='frame left'
-    style={{height: hide ? 0 : windowInnerHeight - 81}}
+    className={`frame left ${mobile ? 'mobile' : ''} ${hide ? 'hidden' : ''}`}
     >
-      { !hide &&
         <div className='main' style={{ opacity: showHamburgerMenu ? 0.1 : 1 }}>
           <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'left'}))}/>
         </div>
-      }
     </div>
   )
 });
+
+const Right = withRouteData(({ history, windowInnerWidth, windowInnerHeight, showHamburgerMenu }) => {
+  const show = history.location && history.location.state && history.location.state.reality;
+  const mobile = windowInnerWidth < 1024;
+  return (
+    <div 
+      // className={`frame ${(this.props.showHamburgerMenu ? 'selected' : '')}`}
+      className='frame right'
+      style={{minHeight: mobile && !show ? 0 : windowInnerHeight - 81 - (mobile ? 30 : 0), height: mobile && !show ? 0 : 'auto'}}
+      // style={this.props.showHamburgerMenu ? {marginTop: this.props.nrButtons*80 + 81} : {}}
+    >
+      {/* <div className='panel' style={{height: window.innerHeight - 81 - 61 - 40 }}> */}
+      {/* </div> */}
+      {/* { !this.props.mobile && config.aside && <Route path="/" component={Aside} /> } */}
+      <div className='main' style={{ opacity: showHamburgerMenu ? 0.1 : 1 }}>
+        <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'right'}))}/>
+        {/* <div>Main Content</div>
+        <div><input placeholder={'text input'} onChange={(e=>this.props.setWord(e.target.value))} /></div>
+        <div>{ this.props.word }</div>
+        <div onClick={()=>this.props.showModal({name:'EXAMPLE_MODAL'})}>Show Modalo</div> */}
+      </div>
+    </div>
+  )
+})
 
 class AppPresentational extends React.Component {
 
@@ -77,8 +99,6 @@ class AppPresentational extends React.Component {
   }
 
   render() {
-    console.log(this.props)
-    const showLeft = (this.props.windowInnerWidth < 1024 && this.props.history && this.props.history.location && this.props.history.location.state && this.props.history.location.state.reality);
     return (
       <Router>
         <div>
@@ -123,29 +143,19 @@ class AppPresentational extends React.Component {
           {this.props.modal && <Modal
             {...this.props.modal}
           />}
-          <Left 
-            windowInnerHeight={this.props.windowInnerHeight}
-            windowInnerWidth={this.props.windowInnerWidth}
-            showHamburgerMenu={this.props.showHamburgerMenu}
-          />
-          <div 
+          <div
             ref={(el)=>{this.frame=el}} 
-            // className={`frame ${(this.props.showHamburgerMenu ? 'selected' : '')}`}
-            className='frame right'
-            style={{minHeight: this.props.windowInnerHeight - 81}}
-            // style={this.props.showHamburgerMenu ? {marginTop: this.props.nrButtons*80 + 81} : {}}
           >
-            {/* <div className='panel' style={{height: window.innerHeight - 81 - 61 - 40 }}> */}
-            {/* </div> */}
-            {/* { !this.props.mobile && config.aside && <Route path="/" component={Aside} /> } */}
-            { !this.props.mobile && config.aside && <Aside /> }
-            <div className='main' style={{ opacity: this.props.showHamburgerMenu ? 0.1 : 1 }}>
-              <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'right'}))}/>
-              {/* <div>Main Content</div>
-              <div><input placeholder={'text input'} onChange={(e=>this.props.setWord(e.target.value))} /></div>
-              <div>{ this.props.word }</div>
-              <div onClick={()=>this.props.showModal({name:'EXAMPLE_MODAL'})}>Show Modalo</div> */}
-            </div>
+            <Left 
+              windowInnerHeight={this.props.windowInnerHeight}
+              windowInnerWidth={this.props.windowInnerWidth}
+              showHamburgerMenu={this.props.showHamburgerMenu}
+            />
+            <Right
+              windowInnerHeight={this.props.windowInnerHeight}
+              windowInnerWidth={this.props.windowInnerWidth}
+              showHamburgerMenu={this.props.showHamburgerMenu}
+            />
           </div>
           {/* { !this.props.mobile && <Route path="/" component={Footer} /> } */}
           { !this.props.mobile && <Footer /> }
