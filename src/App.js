@@ -108,7 +108,7 @@ class AppPresentational extends React.Component {
               // style={{height: this.props.showHamburgerMenu ? window.innerHeight - 82 : 0}}
             >
             <div role='none' className='buttonsUnderlay' onClick={this.props.toggleHamburger} onKeyDown={this.props.toggleHamburger}/>
-            <div className='languages hamburger-button'>
+            <button className='languages hamburger-button'>
                 { this.props.languages && this.props.languages.map(language => 
                 <button 
                   key={language}
@@ -120,7 +120,7 @@ class AppPresentational extends React.Component {
                   }
                 >{language}</button>
                 )}
-            </div>
+            </button>
             { this.props.buttons && this.props.buttons.map(button => 
                 <button 
                   key={button.key}
