@@ -114,6 +114,7 @@ class AppPresentational extends React.Component {
                 >{language}</button>
                 )}
             </button>
+            <div>
             { this.props.buttons && this.props.buttons.map(button => 
                 <button 
                   key={button.key}
@@ -129,6 +130,7 @@ class AppPresentational extends React.Component {
                   </Link>
                 </button>
             )}
+            </div>
           </div>
         <div className="app">
           {/* <Route path="/" component={Header} /> */}
