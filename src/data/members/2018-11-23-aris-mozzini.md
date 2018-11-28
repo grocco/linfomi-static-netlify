@@ -1,6 +1,5 @@
 ---
 layout: council
-name-and-surname: Aris Mozzini
 title: Mr. Aris Mozzini
 role: Member
 bio: >-

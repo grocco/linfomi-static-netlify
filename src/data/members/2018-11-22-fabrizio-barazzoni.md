@@ -1,6 +1,5 @@
 ---
 layout: council
-name-and-surname: Fabrizio Barazzoni
 title: Doc. Fabrizio Barazzoni
 role: member
 bio: >-

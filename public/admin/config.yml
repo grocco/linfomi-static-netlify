@@ -13,11 +13,9 @@ collections:
     label: "Member" # Used in the UI
     folder: "src/data/members" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    identifier_field: name-and-surname
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter. 
       - {label: "Layout", name: "layout", widget: "hidden", default: "council"}
-      - {label: "[EN] Name and Surname", name: "name-and-surname", widget: "string"}
       - {label: "[EN] Title (eg: Prof. Franco Cavalli)", name: "title", widget: "string"}
       - {label: "[EN] Role", name: "role", widget: "string", required: false}
       - {label: "[EN] Bio", name: "bio", widget: "text"}

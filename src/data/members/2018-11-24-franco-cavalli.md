@@ -1,6 +1,5 @@
 ---
 layout: council
-name-and-surname: Franco Cavalli
 title: Prof. Franco Cavalli
 role: President
 bio: >-

@@ -12,7 +12,6 @@ const l = (data, field, language) => {
 const Member = ({member, language}) => (
     <div className="member padded" key={member.data.slug}>
         <div className="title">{l(member.data, 'title', language)}</div>
-        <div className="name-and-surname">{l(member.data, 'name-and-surname', language)}</div>
         <div className="role">{l(member.data, 'role', language)}</div>
         <div className="bio">{l(member.data, 'bio', language)}</div>
         <div className="email">{member.data.email}</div>
@@ -26,7 +25,7 @@ const MemberListItem = ({member, language, selected}) => (
         <div className={`member-list-item ${selected ? 'selected' : ''}`}>
             <div className='round member-pic' style={ {backgroundImage: `url('${member.data.picture}')`} } />
             <div className='name-and-role'>
-                <div className='name-and-surname'>{member.data['name-and-surname']}</div>
+                <div className='title'>{member.data.title}</div>
                 <div className='role'>{l(member.data, 'role', language)}</div>
             </div>
         </div>
@@ -47,7 +46,7 @@ class Council extends React.Component {
                 <div className='row-size-text'>Old members:</div>
                 <div className="members">
                 {members.filter(member => member.data['not-anymore']).map(member => (
-                    <div key={member.data.slug}><Link to={{pathname: '/council', state: {memberSlug: member.data.slug}}}>{member.data['name-and-surname']}</Link></div>
+                    <div key={member.data.slug}><Link to={{pathname: '/council', state: {memberSlug: member.data.slug}}} href='/council'>{member.data.title}</Link></div>
                 ))}
                 </div>
             </div>

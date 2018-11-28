@@ -1,6 +1,5 @@
 ---
 layout: council
-name-and-surname: Giorgio Noseda
 title: Prof. Giorgio Noseda
 role: Vice-president
 bio: >-
