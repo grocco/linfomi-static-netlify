@@ -747,6 +747,12 @@ button {
   /* border-top: solid 1px #ddd; */
 }
 
+@media only screen and (max-width: 1023px) {
+  .hamburger-buttons.selected {
+    max-height: calc( 100vh - 81px - 30px);
+  }
+}
+
 .hamburger-buttons.selected .hamburger-button {
   height: 80px;
   line-height: 80px;
