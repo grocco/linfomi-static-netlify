@@ -209,7 +209,7 @@ export default class Donations extends React.PureComponent {
 
     renderCreditCardForm() {
         return (
-            <div>
+            <div className='credit-card-form'>
                 <Elements locale={this.props.language}>
                     <InjectedCheckoutForm 
                         {...this.props}
@@ -221,7 +221,7 @@ export default class Donations extends React.PureComponent {
 
     renderPaypalForm() {
         return (
-            <div>
+            <div className='paypal-form'>
                 <PayPalButton
                     env='sandbox'
                     sandboxID='AaTUAdq41QA5Yjlf9OIq-zF_wLzlacj6WGR611rHtuzl79SPSYXDQQw-d5la_0_uYTVhuueBORehUjtx'
@@ -253,7 +253,7 @@ export default class Donations extends React.PureComponent {
             return this.renderLeft();
         }
         // console.log(this.props.location.state)
-        if (! this.props.location.state) return this.renderCreditCardForm();
+        if (! this.props.location.state) return (<div className='padded'>{this.renderCreditCardForm()}</div>);
         return (
             <div className='padded'>
                 { this.props.location.state && this.props.location.state.slave && <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div> }

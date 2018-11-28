@@ -12,12 +12,14 @@ const l = (data, field, language) => {
 const Member = ({member, language, history}) => (
     <div className="member padded" key={member.data.slug}>
         { history.location.state && history.location.state.slave && <div className='breadcrumbs' onClick={history.goBack}>{'< back'}</div> }
-        <div className="title">{l(member.data, 'title', language)}</div>
-        <div className="role">{l(member.data, 'role', language)}</div>
-        <div className="bio">{l(member.data, 'bio', language)}</div>
-        <div className="email">{member.data.email}</div>
-        <div className="board-of-directors">{member.data['board-of-directors'] ? { en: 'Board of directors', it: 'Comitato direttivo' }[language] : ''}</div>
-        <img className="image" src={member.data.picture} alt="" />
+        <div className='aside-left'>
+            <div className="image round" style={{backgroundImage: `url('${member.data.picture}')`}} />
+            <div className="title">{l(member.data, 'title', language)}</div>
+            <div className="role">{l(member.data, 'role', language)}</div>
+            <div className="board-of-directors">{member.data['board-of-directors'] ? { en: 'Board of directors', it: 'Comitato direttivo' }[language] : ''}</div>
+            <div className="email" onClick={`mailto:${member.data.email}`} />
+        </div>
+        <div className="bio bubble">{l(member.data, 'bio', language)}</div>
     </div>
 );
 

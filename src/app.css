@@ -343,14 +343,46 @@ body {
   border-bottom: solid 1px #eee;
 }
 
+.member .aside-left {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  width: 150px;
+}
+
+@media only screen and (max-width: 1131px) and (min-width: 1023px), (max-width: 640px) {
+  .member .aside-left {
+    float: inherit;
+    margin: 0px auto;
+    margin-bottom: 20px;
+  }
+}
+
+.member .aside-left .image {
+  width: 150px;
+  height: 150px;
+  background-size: 100%;
+  margin-bottom: 20px;
+}
+
 
 .member-list-item:hover {
   background-color: #fcfcfc;
 }
 
-.member-list-item .role {
+.member-list-item .role, .member .aside-left .role  {
   color: #999;
   font-size: 14px;
+}
+
+.member .aside-left .board-of-directors  {
+  color: #de0000;
+  font-size: 12px;
+  position: absolute;
+  top: 155px;
+  width: 100%;
+  text-align: center;
 }
 
 .member-list-item .name-and-role {
@@ -1037,4 +1069,8 @@ footer img {
 .card.hidden {
   opacity: 0;
   /* height: 0; */
+}
+
+.credit-card-form, .paypal-form {
+  max-width: 500px;
 }
