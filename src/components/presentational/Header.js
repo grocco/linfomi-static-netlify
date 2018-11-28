@@ -29,6 +29,7 @@ class Header extends Component {
           to='/' 
           href='/'
         >
+          <div className='logo-name'><div className='logo-name-inner'><br/>{"per l'"}<br/><br/>{"di"}</div>{"Fondazione"}<br/>{"Istituto"}<br/>{"Oncologico"}<br/>{"Ricerca"}</div>
           <div 
             id='logo'
             // className={`${(this.props.mobile ? ' mobile' : '')}`}
