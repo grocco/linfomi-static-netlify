@@ -23,7 +23,7 @@ const Member = ({member, language, history}) => (
             <div className="title">{member.data.title}</div>
             <div className="role">{l(member.data, 'role', language)}</div>
             <div className="board-of-directors">{member.data['board-of-directors'] ? { en: 'Board of directors', it: 'Comitato direttivo' }[language] : ''}</div>
-            <div className="email" onClick={`mailto:${member.data.email}`} />
+            <div className="email" onClick={()=>`mailto:${member.data.email}`} />
         </div>
         <div className="bio bubble">{l(member.data, 'bio', language)}</div>
     </div>
