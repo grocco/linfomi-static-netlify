@@ -204,10 +204,20 @@ const pages = {
     history,
     council,
     contact
-}
+};
 
+const languages = {
+    original: {
+        en: 'English',
+        it: 'Italiano',
+        fr: 'Français',
+        de: 'Deutsch',
+        sp: 'Español'
+    }
+};
 
 export default {
     header,
     pages,
+    languages
 }

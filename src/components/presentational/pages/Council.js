@@ -53,7 +53,7 @@ class Council extends React.Component {
                     <MemberListItem  key={member.data.slug} member={member} language={language} selected={this.props.history.location.state && this.props.history.location.state.memberSlug === member.data.slug}/>
                 ))}
                 </div>
-                <div className='row-size-text'>Old members:</div>
+                <div className='row-size-text'>Previous members:</div>
                 <div className="members">
                 {members.filter(member => member.data['not-anymore']).map(member => (
                     <div key={member.data.slug}><Link to={{pathname: '/council', state: {memberSlug: member.data.slug, slave: true}}} href='/council'>{member.data.title}</Link></div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouteData } from 'react-static'
+import { withRouteData, Link } from 'react-static'
 import { isNull } from 'util';
 
 class Contact extends React.Component {
@@ -17,7 +17,18 @@ class Contact extends React.Component {
             return null;
         }
         return (
-            <div>Please complete the form to contact us.</div>
+            <div className='padded'>
+                <div className='bubble'>Please complete the form to contact us.</div>
+                <br/>
+                <div className='list-items'>
+                    <Link to={{pathname: '/contact', state: { slave: true }}} href='/council'>
+                        <div className='list-item'>
+                            <div>Contact</div>
+                            <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                        </div>  
+                    </Link>
+                </div>
+            </div>
         )
     }
 
@@ -27,19 +38,19 @@ class Contact extends React.Component {
         }
         if (this.props.side === 'left') return this.renderLeft();
         return (
-            <form name="contact" method="POST" data-netlify="true" action='/contact/success'>
+            <form id='contact-form' className='padded' name="contact" method="POST" data-netlify="true" action='/contact/success'>
                 <input type="hidden" name="form-name" value="contact" />
-                <div>
-                    <label>Your Name: <input type="text" name="name" /></label>   
+                <div className='field'>
+                    <label>Name: <input placeholder='Your name' type="text" name="name" /></label>   
                 </div >
-                <div>
-                    <label>Your Email: <input type="email" name="email" /></label>
+                <div className='field'>
+                    <label>E-mail: <input placeholder='you@example.com'  type="email" name="email" /></label>
                 </div >
-                <div>
-                    <label>Message: <textarea name="message"></textarea></label>
+                <div className='field'>
+                    <label>Message: <textarea placeholder='Your message ...'  name="message"></textarea></label>
                 </div >
-                <div>
-                    <button type="submit">Send</button>
+                <div className='field'>
+                    <button className='submit' type="submit">Send</button>
                 </div >
             </form>
         )

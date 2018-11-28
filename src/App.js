@@ -98,7 +98,6 @@ class AppPresentational extends React.Component {
         <div>
             <div 
               className={`hamburger-buttons ${this.props.showHamburgerMenu ? ' selected' : ''}`}
-              style={ (this.props.showHamburgerMenu ? {maxHeight:(this.props.buttons.length + 1) * 80}: {})}
             >
             <div role='none' className='buttonsUnderlay' onClick={this.props.toggleHamburger} onKeyDown={this.props.toggleHamburger}/>
             <div className='languages hamburger-button'>
@@ -111,7 +110,7 @@ class AppPresentational extends React.Component {
                       this.props.changeLanguage(language);
                     }
                   }
-                >{language}</button>
+                >{i18n.languages.original[language]}</button>
                 )}
             </div>
             <div>

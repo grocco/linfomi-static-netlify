@@ -70,7 +70,7 @@ export const modalTemplates = {
 
 export const initialUiState = { 
   language: 'en', 
-  languages: ['en', 'it', 'fr'],// 'fr', ],//'de', 'es'],
+  languages: ['en', 'it', 'de', 'fr'],// 'fr', ],//'de', 'es'],
   page: 'home',
   modalTemplates, 
   currentModal: null, 
