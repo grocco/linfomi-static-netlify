@@ -1,10 +1,10 @@
 ---
 layout: council
 title: Rosalba Canova
-role: Previous Member
+role: 1999 - 2008
 bio: No biography available
 title-it: Rosalba Canova
-role-it: Membro precedente
+role-it: 1999 - 2008
 bio-it: Nessuna biografia disponibile
 bio-fr: '-'
 email: test@example.com
