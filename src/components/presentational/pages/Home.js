@@ -15,7 +15,7 @@ export default class Home extends Component {
                     </div>
                 </Link> */}
                 <div className='home-intro'>
-                    <Link to={{pathname:'/council', state: { memberSlug: 'prof-franco-cavalli'}}} href='/president'>
+                    <Link to={{pathname:'/council', state: { memberSlug: 'prof-franco-cavalli', slave: true}}} href='/president'>
                         <div className='highlighted-image-left' id='president-pic' style={{backgroundImage: `url('/assets/president.jpg')`}}/>
                     </Link>
                     <div className='thanks-and-introduction'>
@@ -30,21 +30,21 @@ export default class Home extends Component {
                             <div><br/><div className='bubble'>{l(i18n.pages.home.content.realities.introduction)}</div ></div>
                         }
                 <div className='realities'>
-                    <Link to={{pathname:'/home/', state: { reality: 'ior'}}} href='/home'>
+                    <Link to={{pathname:'/home/', state: { reality: 'ior', slave: true}}} href='/home'>
                         <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'ior' ? 'selected' : ''}`}>
                             <div className='acronym'>{l(i18n.pages.home.content.realities.ior.acronym)}</div>
                             <div className='title'>{l(i18n.pages.home.content.realities.ior.title)}</div>
                             <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
                         </div>
                     </Link>
-                    <Link to={{pathname:'/home/', state: { reality: 'ielsg'}}} href='/home'>
+                    <Link to={{pathname:'/home/', state: { reality: 'ielsg', slave: true}}} href='/home'>
                         <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'ielsg' ? 'selected' : ''}`}>
                             <div className='acronym'>{l(i18n.pages.home.content.realities.ielsg.acronym)}</div>
                             <div className='title'>{l(i18n.pages.home.content.realities.ielsg.title)}</div>
                             <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
                         </div>
                     </Link>
-                    <Link to={{pathname:'/home/', state: { reality: 'icml'}}} href='/home'>
+                    <Link to={{pathname:'/home/', state: { reality: 'icml', slave: true}}} href='/home'>
                         <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'icml' ? 'selected' : ''}`}>
                             <div className='acronym'>{l(i18n.pages.home.content.realities.icml.acronym)}</div>
                             <div className='title'>{l(i18n.pages.home.content.realities.icml.title)}</div>
@@ -54,7 +54,7 @@ export default class Home extends Component {
                 </div>
                 <div className='bubble' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.finalThoughts) }} />
                 <br/>
-                <Link className='bubble' to={{pathname:'/council', state: { memberSlug: 'prof-franco-cavalli'}}} href='/council'>
+                <Link className='bubble' to={{pathname:'/council', state: { memberSlug: 'prof-franco-cavalli', slave: true}}} href='/council'>
                     <img id='president-signature' src='/assets/signature-cavalli.png' alt='signature'/>
                     <div>{l(i18n.pages.home.content.signature.name)}
                         <br/><br/>
@@ -148,7 +148,7 @@ export default class Home extends Component {
             return this.renderLeft();
         }
         return (<div className='padded'>
-            { this.props.location.state && this.props.location.state.reality && <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div> }
+            { this.props.location.state && this.props.location.state.slave && <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div> }
             {this.renderRight()}
         </div>);
     }

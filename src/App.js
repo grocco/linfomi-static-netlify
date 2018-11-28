@@ -32,8 +32,8 @@ const RenderRoutes = ({ getComponentForPath, side }) => (
 )
 
 
-const Left = withRouteData(({ history, windowInnerHeight, windowInnerWidth, showHamburgerMenu }) => {
-  const hide = history.location && history.location.state && history.location.state.reality;
+const Left = withRouteData(({ history, windowInnerWidth, showHamburgerMenu }) => {
+  const hide = history.location && history.location.state && history.location.state.slave;
   const mobile = windowInnerWidth < 1024;
   return (<div 
     className={`frame left ${mobile ? 'mobile' : ''} ${hide ? 'hidden' : ''}`}
@@ -46,7 +46,7 @@ const Left = withRouteData(({ history, windowInnerHeight, windowInnerWidth, show
 });
 
 const Right = withRouteData(({ history, windowInnerWidth, windowInnerHeight, showHamburgerMenu }) => {
-  const show = history.location && history.location.state && history.location.state.reality;
+  const show = history.location && history.location.state && history.location.state.slave;
   const mobile = windowInnerWidth < 1024;
   return (
     <div 
@@ -128,7 +128,7 @@ class AppPresentational extends React.Component {
                   onClick={()=>this.props.toggleHamburger()}
                 >
                   <Link 
-                    to={button.key === 'president' ? {pathname:'/council', state: { memberSlug: 'prof-franco-cavalli'}} : `/${button.key}`} 
+                    to={button.key === 'president' ? {pathname:'/council', state: { memberSlug: 'prof-franco-cavalli', slave: true}} : `/${button.key}`} 
                     href={`/${button.key}`}
                     activeClassName='selected'
                   >

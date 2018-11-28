@@ -178,25 +178,25 @@ export default class Donations extends React.PureComponent {
                     <div className='bubble' dangerouslySetInnerHTML={{ __html: l(i18n.pages.donations.intro) }} />
                 </div>
                 <div className='donations'>
-                    <Link to={{pathname: '/donations', state: { method: 'credit-card'}}} href='/donations'>
+                    <Link to={{pathname: '/donations', state: { method: 'credit-card', slave: true}}} href='/donations'>
                         <div className={`donation-list-item ${this.props.location.state && this.props.location.state.method === 'credit-card' ? 'selected' : ''}`}>
                             <div>{l(i18n.pages.donations.creditCard.title)}</div>
                             <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
                         </div>
                     </Link>
-                    <Link to={{pathname: '/donations', state: { method: 'paypal'}}} href='/donations'>
+                    <Link to={{pathname: '/donations', state: { method: 'paypal', slave: true}}} href='/donations'>
                         <div className={`donation-list-item ${this.props.location.state && this.props.location.state.method === 'paypal' ? 'selected' : ''}`}>
                             <div>{l(i18n.pages.donations.payPal.title)}</div>
                             <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
                         </div>
                     </Link>
-                    <Link to={{pathname: '/donations', state: { method: 'bank-transfer'}}} href='/donations'>
+                    <Link to={{pathname: '/donations', state: { method: 'bank-transfer', slave: true}}} href='/donations'>
                         <div className={`donation-list-item ${this.props.location.state && this.props.location.state.method === 'bank-transfer' ? 'selected' : ''}`}>
                             <div>{l(i18n.pages.donations.bankTransfer.title)}</div>
                             <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
                         </div>
                     </Link>
-                    <Link to={{pathname: '/donations', state: { method: 'post-office-account'}}} href='/donations'>
+                    <Link to={{pathname: '/donations', state: { method: 'post-office-account', slave: true}}} href='/donations'>
                         <div className={`donation-list-item ${this.props.location.state && this.props.location.state.method === 'post-office-account' ? 'selected' : ''}`}>
                             <div>{l(i18n.pages.donations.post.title)}</div>
                             <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
@@ -210,7 +210,6 @@ export default class Donations extends React.PureComponent {
     renderCreditCardForm() {
         return (
             <div>
-                <div>{i18n.pages.donations.creditCard.title[this.props.language]}</div>
                 <Elements locale={this.props.language}>
                     <InjectedCheckoutForm 
                         {...this.props}
@@ -223,7 +222,6 @@ export default class Donations extends React.PureComponent {
     renderPaypalForm() {
         return (
             <div>
-                <div>{i18n.pages.donations.payPal.title[this.props.language]}</div>
                 <PayPalButton
                     env='sandbox'
                     sandboxID='AaTUAdq41QA5Yjlf9OIq-zF_wLzlacj6WGR611rHtuzl79SPSYXDQQw-d5la_0_uYTVhuueBORehUjtx'
@@ -237,7 +235,6 @@ export default class Donations extends React.PureComponent {
     renderBankTransferForm() {
         return (
             <div>
-                <div>{i18n.pages.donations.bankTransfer.title[this.props.language]}</div>
                 <div dangerouslySetInnerHTML={{ __html: i18n.pages.donations.bankTransfer.description[this.props.language] }} />
             </div>
         )
@@ -246,7 +243,6 @@ export default class Donations extends React.PureComponent {
     renderPostOfficeAccountForm() {
         return (
             <div>
-                <div>{i18n.pages.donations.post.title[this.props.language]}</div>
                 <div dangerouslySetInnerHTML={{ __html: i18n.pages.donations.post.description[this.props.language] }} />
             </div>
         )
@@ -258,18 +254,25 @@ export default class Donations extends React.PureComponent {
         }
         // console.log(this.props.location.state)
         if (! this.props.location.state) return this.renderCreditCardForm();
-        switch(this.props.location.state.method) {
-            case 'credit-card':
-                return this.renderCreditCardForm();
-            case 'paypal':
-                return this.renderPaypalForm();
-            case 'bank-transfer':
-                return this.renderBankTransferForm();
-            case 'post-office-account':
-                return this.renderPostOfficeAccountForm();
-            default: 
-                return this.renderCreditCardForm();
-        }
+        return (
+            <div className='padded'>
+                { this.props.location.state && this.props.location.state.slave && <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div> }
+                {(()=>{
+                    switch(this.props.location.state.method) {
+                        case 'credit-card':
+                            return this.renderCreditCardForm();
+                        case 'paypal':
+                            return this.renderPaypalForm();
+                        case 'bank-transfer':
+                            return this.renderBankTransferForm();
+                        case 'post-office-account':
+                            return this.renderPostOfficeAccountForm();
+                        default: 
+                            return this.renderCreditCardForm();
+                    }
+                })()}
+            </div>
+        )
     }
 
 }

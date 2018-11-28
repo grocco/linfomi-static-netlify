@@ -44,7 +44,7 @@ class Header extends Component {
                 onClick={()=>this.forceUpdate()}
               >
                 <Link 
-                  to={button.key === 'president' ? {pathname:'/council', state: { memberSlug: 'prof-franco-cavalli'}} : `/${button.key}`} 
+                  to={button.key === 'president' ? {pathname:'/council', state: { memberSlug: 'prof-franco-cavalli', slave: true}} : `/${button.key}`} 
                   href={`/${button.key}`}
                   activeClassName='selected'
                 >

@@ -9,8 +9,9 @@ const l = (data, field, language) => {
     return data[`${field}-${language}`]
 }
 
-const Member = ({member, language}) => (
+const Member = ({member, language, history}) => (
     <div className="member padded" key={member.data.slug}>
+        { history.location.state && history.location.state.slave && <div className='breadcrumbs' onClick={history.goBack}>{'< back'}</div> }
         <div className="title">{l(member.data, 'title', language)}</div>
         <div className="role">{l(member.data, 'role', language)}</div>
         <div className="bio">{l(member.data, 'bio', language)}</div>
@@ -21,7 +22,7 @@ const Member = ({member, language}) => (
 );
 
 const MemberListItem = ({member, language, selected}) => (
-    <Link to={{pathname: '/council', state: {memberSlug: member.data.slug}}} href='/council'>
+    <Link to={{pathname: '/council', state: {memberSlug: member.data.slug, slave: true}}} href='/council'>
         <div className={`member-list-item ${selected ? 'selected' : ''}`}>
             <div className='round member-pic' style={ {backgroundImage: `url('${member.data.picture}')`} } />
             <div className='name-and-role'>
@@ -46,7 +47,7 @@ class Council extends React.Component {
                 <div className='row-size-text'>Old members:</div>
                 <div className="members">
                 {members.filter(member => member.data['not-anymore']).map(member => (
-                    <div key={member.data.slug}><Link to={{pathname: '/council', state: {memberSlug: member.data.slug}}} href='/council'>{member.data.title}</Link></div>
+                    <div key={member.data.slug}><Link to={{pathname: '/council', state: {memberSlug: member.data.slug, slave: true}}} href='/council'>{member.data.title}</Link></div>
                 ))}
                 </div>
             </div>
@@ -59,7 +60,7 @@ class Council extends React.Component {
         if (! history.location.state) member = members[0]
         else member = members.find(member => member.data.slug === history.location.state.memberSlug)
         return (
-            <Member key={member.slug} member={member} language={language} />
+            <Member key={member.slug} member={member} language={language} history={history} />
         )
     }
 
