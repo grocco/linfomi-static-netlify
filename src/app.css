@@ -242,10 +242,17 @@ body {
   margin-bottom: 20px;
   color: #de0000;
   cursor: pointer;
+  position: relative;
 }
 
 .breadcrumbs:hover {
   background-color: #fafafa;
+}
+
+@media only screen and (min-width: 1024px) {
+  .breadcrumbs {
+    display: none;
+  }
 }
 
 .hamburger-buttons.selected .buttonsUnderlay {
@@ -364,6 +371,14 @@ body {
   height: 150px;
   background-size: 100%;
   margin-bottom: 20px;
+  background-repeat: no-repeat;
+}
+
+
+.member .aside-left .image, .member .aside-left .image::after {
+  border-radius: 0px;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 
@@ -1073,4 +1088,25 @@ footer img {
 
 .credit-card-form, .paypal-form {
   max-width: 500px;
+}
+
+.arrow-left {
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%) rotateY(180deg);
+  opacity: 0.2;
+}
+
+.go-back {
+  color: #aaa;
+  margin-left: 30px;
+}
+
+.go-back:hover {
+  color: #999;
+}
+
+.arrow-left:hover {
+  opacity: 0.3;
 }

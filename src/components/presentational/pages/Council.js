@@ -9,9 +9,15 @@ const l = (data, field, language) => {
     return data[`${field}-${language}`]
 }
 
+// <div className='breadcrumbs' onClick={history.goBack}>{'< back'}</div>
 const Member = ({member, language, history}) => (
     <div className="member padded" key={member.data.slug}>
-        { history.location.state && history.location.state.slave && <div className='breadcrumbs' onClick={history.goBack}>{'< back'}</div> }
+        { history.location.state && history.location.state.slave && 
+            <div className="breadcrumbs" onClick={history.goBack}>
+                <img className="arrow-left" src="/assets/arrow-right.png" alt="back" />
+                <div className='go-back'>BACK</div>
+            </div>
+        }
         <div className='aside-left'>
             <div className="image round" style={{backgroundImage: `url('${member.data.picture}')`}} />
             <div className="title">{l(member.data, 'title', language)}</div>

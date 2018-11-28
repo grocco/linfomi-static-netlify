@@ -254,9 +254,15 @@ export default class Donations extends React.PureComponent {
         }
         // console.log(this.props.location.state)
         if (! this.props.location.state) return (<div className='padded'>{this.renderCreditCardForm()}</div>);
+        //       <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div> 
         return (
             <div className='padded'>
-                { this.props.location.state && this.props.location.state.slave && <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div> }
+                { this.props.location.state && this.props.location.state.slave && 
+                    <div className="breadcrumbs" onClick={this.props.history.goBack}>
+                        <img className="arrow-left" src="/assets/arrow-right.png" alt="back" />
+                        <div className='go-back'>BACK</div>
+                    </div>
+                }
                 {(()=>{
                     switch(this.props.location.state.method) {
                         case 'credit-card':
