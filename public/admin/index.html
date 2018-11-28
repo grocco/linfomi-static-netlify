@@ -31,6 +31,25 @@
                 node.style.cssText = "position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);";
                 document.getElementsByClassName('nc-appHeader-content')[0].appendChild(node);
                 clearTimeout(timeout);
+
+                CMS.registerPreviewStyle("/admin.css");
+
+                var MemberPreview = createClass({
+                  render: function() {
+                    var entry = this.props.entry;
+                    var image = entry.getIn(['data', 'picture']);
+                    var bg = this.props.getAsset(image);
+                    return h('div', {},
+                      h('h1', {}, entry.getIn(['data', 'title'])),
+                      h('img', {src: bg.toString()}),
+                      h('div', {"className": "bio"}, this.props.widgetFor('bio'))
+                    );
+                  }
+                });
+
+                CMS.registerPreviewTemplate('council', MemberPreview);
+
+
               } else {
                 window.setTimeout(timeoutFunction, 1000)
               }
