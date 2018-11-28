@@ -20,15 +20,13 @@ export default class Home extends Component {
                     </Link>
                     <div className='thanks-and-introduction'>
                         <div>{l(i18n.pages.home.content.thanks)}</div >
-                        { this.props.windowInnerWidth >= 480  &&   
-                            <div><br/>{l(i18n.pages.home.content.realities.introduction)}</div >
-                        }
+                        <div className='mt-480'><br/>{l(i18n.pages.home.content.realities.introduction)}</div >
+                        
                     </div>
                 </div>
                 <div style={{clear: 'left'}} />
-                { this.props.windowInnerWidth < 480  &&   
-                            <div><br/><div className='bubble'>{l(i18n.pages.home.content.realities.introduction)}</div ></div>
-                        }
+                <div className='lt-480'><br/><div className='bubble'>{l(i18n.pages.home.content.realities.introduction)}</div ></div>
+                        
                 <div className='realities'>
                     <Link to={{pathname:'/home/', state: { reality: 'ior', slave: true}}} href='/home'>
                         <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'ior' ? 'selected' : ''}`}>

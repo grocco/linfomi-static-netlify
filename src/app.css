@@ -122,22 +122,23 @@ body {
   padding-left: 20px;
 }
 
-.page-slug.mobile {
-  top: 80px;
-  left: 0px;
-  z-index: 1;
-  height: auto;
-  line-height: inherit;
-  position: fixed;
-  width: calc(100% - 10px);
-  border-bottom: 1px solid #bbb;
-  color: #de0000;
-  padding: 5px;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0px -4px 10px 0px #000;
+@media only screen and (max-width: 1023px) {
+  .page-slug {
+    top: 80px;
+    left: 0px;
+    z-index: 1;
+    height: auto;
+    line-height: inherit;
+    position: fixed;
+    width: calc(100% - 10px);
+    border-bottom: 1px solid #bbb;
+    color: #de0000;
+    padding: 5px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px -4px 10px 0px #000;
+  }
 }
-
 .page-home #president-pic {
   width: 140px;
   height: 140px;
@@ -351,6 +352,7 @@ body {
   padding: 15px 15px;
   border-bottom: solid 1px #eee;    
   position: relative;
+  align-items: center;
 }
 
 .member .aside-left {
@@ -544,18 +546,6 @@ button {
   height: calc( 100vh - 81px);
 }
 
-
-.frame.left.mobile {
-  height: calc( 100vh - 81px - 30px);
-  min-height: calc( 100vh - 81px - 30px);
-}
-
-.frame.left.mobile.hidden {
-  opacity: 0;
-  min-height: 0vh;
-  max-height: 0vh;
-}
-
 .frame.right {
   margin-left: 512px;
   width: calc(100% - 512px);
@@ -564,6 +554,37 @@ button {
 .frame.right .main {
   border-left: 1px solid #eee;
 }
+
+.frame.right {
+  min-height: calc( 100vh - 81px );
+  height: calc( 100vh - 81px );
+}
+
+@media only screen and (max-width: 1023px) {
+
+  .frame.left {
+    height: calc( 100vh - 81px - 30px);
+    min-height: calc( 100vh - 81px - 30px);
+  }
+
+  .frame.left.hidden {
+    opacity: 0;
+    min-height: 0vh;
+    max-height: 0vh;
+  }
+
+  .frame.right {
+    min-height: calc( 100vh - 81px - 30px );
+    height: calc( 100vh - 81px - 30px );
+  }
+
+  .frame.right.hide {
+    min-height: 0px;
+    height: 0px;
+  }
+
+}
+
 
 .padded {
   padding: 20px;
@@ -608,8 +629,10 @@ button {
   display: block;
 }
 
-.hamburger.mobile {
-  display: block;
+@media only screen and (max-width: 1023px) {
+  .hamburger {
+    display: block;
+  }
 }
 
 .hamburger.selected {
@@ -754,7 +777,7 @@ button {
   margin-right: 10px;
 }
 
-#logo/*.mobile*/ {
+#logo{
   position: absolute;
   right: 0;
   top: 0;
@@ -815,11 +838,6 @@ button[disabled]{
   display: none;
 }
 
-
-.header-buttons.mobile {
-  display: none;
-}
-
 .language {
   border-right: 1px solid #ddd;
   margin-right: 10px;
@@ -840,10 +858,6 @@ button[disabled]{
 .languages {
   display: flex;
   letter-spacing: 6px;
-}
-
-.languages.mobile {
-  display: none;
 }
 
 .aside-button .selected, .header-button .selected, .hamburger-buttons .hamburger-button .selected {
@@ -952,10 +966,6 @@ footer{
 .footer-copyright {
   cursor: default;
   color: #aaa;
-}
-
-.footer-copyright.mobile {
-  display: none;
 }
 
 .row-size-text {
@@ -1133,4 +1143,22 @@ footer img {
 
 .arrow-left:hover {
   opacity: 0.3;
+}
+
+.mt-480 {
+  display: inherit;
+}
+
+.lt-480 {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .mt-480 {
+    display: none;
+  }
+
+  .lt-480 {
+    display: inherit;
+  }
 }

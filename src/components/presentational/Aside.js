@@ -6,7 +6,7 @@ class Aside extends Component {
   render() {
     return (
     <div className='aside'>
-        <div className={`aside-buttons ${this.props.mobile ? ' mobile' : ''}`}>
+        <div className='aside-buttons'>
           { this.props.buttons && this.props.buttons.map(button => 
               <button 
                 key={button.key}

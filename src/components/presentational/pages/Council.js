@@ -20,7 +20,7 @@ const Member = ({member, language, history}) => (
         }
         <div className='aside-left'>
             <div className="image round" style={{backgroundImage: member.data.picture ? `url('${member.data.picture}/-/resize/150x/')` : "url('/assets/member-placeholder.jpg')"}} />
-            <div className="title">{l(member.data, 'title', language)}</div>
+            <div className="title">{member.data.title}</div>
             <div className="role">{l(member.data, 'role', language)}</div>
             <div className="board-of-directors">{member.data['board-of-directors'] ? { en: 'Board of directors', it: 'Comitato direttivo' }[language] : ''}</div>
             <div className="email" onClick={`mailto:${member.data.email}`} />
@@ -37,6 +37,7 @@ const MemberListItem = ({member, language, selected}) => (
                 <div className='title'>{member.data.title}</div>
                 <div className='role'>{l(member.data, 'role', language)}</div>
             </div>
+            <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
         </div>
     </Link>
 );

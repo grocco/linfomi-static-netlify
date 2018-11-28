@@ -32,11 +32,10 @@ const RenderRoutes = ({ getComponentForPath, side }) => (
 )
 
 
-const Left = withRouteData(({ history, windowInnerWidth, showHamburgerMenu }) => {
+const Left = withRouteData(({ history, showHamburgerMenu }) => {
   const hide = history.location && history.location.state && history.location.state.slave;
-  const mobile = windowInnerWidth < 1024;
   return (<div 
-    className={`frame left ${mobile ? 'mobile' : ''} ${hide ? 'hidden' : ''}`}
+    className={`frame left ${hide ? 'hidden' : ''}`}
     >
         <div className='main' style={{ opacity: showHamburgerMenu ? 0.1 : 1 }}>
           <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'left'}))}/>
@@ -45,19 +44,14 @@ const Left = withRouteData(({ history, windowInnerWidth, showHamburgerMenu }) =>
   )
 });
 
-const Right = withRouteData(({ history, windowInnerWidth, windowInnerHeight, showHamburgerMenu }) => {
+const Right = withRouteData(({ history, showHamburgerMenu }) => {
   const show = history.location && history.location.state && history.location.state.slave;
-  const mobile = windowInnerWidth < 1024;
   return (
     <div 
       // className={`frame ${(this.props.showHamburgerMenu ? 'selected' : '')}`}
-      className='frame right'
-      style={{minHeight: mobile && !show ? 0 : windowInnerHeight - 81 - (mobile ? 30 : 0), height: mobile && !show ? 0 : 'auto'}}
-      // style={this.props.showHamburgerMenu ? {marginTop: this.props.nrButtons*80 + 81} : {}}
+      className={`frame right ${!show ? 'hide' : ''}`}
     >
-      {/* <div className='panel' style={{height: window.innerHeight - 81 - 61 - 40 }}> */}
       {/* </div> */}
-      {/* { !this.props.mobile && config.aside && <Route path="/" component={Aside} /> } */}
       <div className='main' style={{ opacity: showHamburgerMenu ? 0.1 : 1 }}>
         <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'right'}))}/>
         {/* <div>Main Content</div>
@@ -105,7 +99,6 @@ class AppPresentational extends React.Component {
             <div 
               className={`hamburger-buttons ${this.props.showHamburgerMenu ? ' selected' : ''}`}
               style={ (this.props.showHamburgerMenu ? {height:(this.props.buttons.length + 1) * 80}: {})}
-              // style={{height: this.props.showHamburgerMenu ? window.innerHeight - 82 : 0}}
             >
             <div role='none' className='buttonsUnderlay' onClick={this.props.toggleHamburger} onKeyDown={this.props.toggleHamburger}/>
             <button className='languages hamburger-button'>
@@ -147,18 +140,13 @@ class AppPresentational extends React.Component {
             ref={(el)=>{this.frame=el}} 
           >
             <Left 
-              windowInnerHeight={this.props.windowInnerHeight}
-              windowInnerWidth={this.props.windowInnerWidth}
               showHamburgerMenu={this.props.showHamburgerMenu}
             />
             <Right
-              windowInnerHeight={this.props.windowInnerHeight}
-              windowInnerWidth={this.props.windowInnerWidth}
               showHamburgerMenu={this.props.showHamburgerMenu}
             />
           </div>
-          {/* { !this.props.mobile && <Route path="/" component={Footer} /> } */}
-          { !this.props.mobile && <Footer /> }
+           {/* <Footer /> */}
         </div>
         </div>
       </Router>
@@ -170,10 +158,7 @@ class AppPresentational extends React.Component {
 const mapStateToProps = state => ({
   word: state.ui.word,
   modal: (state.ui.currentModal ? state.ui.modalTemplates[state.ui.currentModal] : null),
-  mobile: state.ui.screen.width < 1024,
   showHamburgerMenu: state.ui.showHamburgerMenu,
-  windowInnerHeight: state.ui.screen.height,
-  windowInnerWidth: state.ui.screen.width,
   nrButtons: Object.keys(i18n.header.buttons).length + 1,
   buttons: Object.keys(i18n.header.buttons).map(key => ({
     title: i18n.header.buttons[key].title[state.ui.language] || i18n.header.buttons[key].title['en'],

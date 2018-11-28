@@ -4,7 +4,6 @@ import { showModal } from 'domain/state/actions';
 
 const mapStateToProps = state => ({
     language: state.ui.language,
-    windowInnerWidth: state.ui.screen.width,
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -3,7 +3,6 @@ import Presentational from 'components/presentational/pages/Home';
 
 const mapStateToProps = state => ({
     language: state.ui.language || 'en',
-    windowInnerWidth: state.ui.screen.width,
 });
 
 const mapDispatchToProps = dispatch => ({
