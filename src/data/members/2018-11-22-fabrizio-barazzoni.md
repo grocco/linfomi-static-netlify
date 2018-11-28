@@ -71,6 +71,6 @@ bio-fr: french version for fabrizio
 email: fabrizio.barazzoni@eoc.ch
 board-of-directors: true
 picture: >-
-  https://ucarecdn.com/ce3525d3-5aa5-485c-a2ab-5b92ea82d6c0/-/preview/-/enhance/85/-/sharp/15/
+  https://ucarecdn.com/ce3525d3-5aa5-485c-a2ab-5b92ea82d6c0/-/preview/
 ---
 

@@ -34,6 +34,5 @@ bio-it: >-
 bio-fr: french vers
 email: aris.mozzini@ti.ch
 board-of-directors: true
-picture: 'https://ucarecdn.com/28644111-57a5-4456-9623-f3ff8239989a/'
 ---
 

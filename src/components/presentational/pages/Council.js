@@ -19,7 +19,7 @@ const Member = ({member, language, history}) => (
             </div>
         }
         <div className='aside-left'>
-            <div className="image round" style={{backgroundImage: `url('${member.data.picture}')`}} />
+            <div className="image round" style={{backgroundImage: member.data.picture ? `url('${member.data.picture}/-/resize/150x/')` : "url('/assets/member-placeholder.jpg')"}} />
             <div className="title">{l(member.data, 'title', language)}</div>
             <div className="role">{l(member.data, 'role', language)}</div>
             <div className="board-of-directors">{member.data['board-of-directors'] ? { en: 'Board of directors', it: 'Comitato direttivo' }[language] : ''}</div>
@@ -32,7 +32,7 @@ const Member = ({member, language, history}) => (
 const MemberListItem = ({member, language, selected}) => (
     <Link to={{pathname: '/council', state: {memberSlug: member.data.slug, slave: true}}} href='/council'>
         <div className={`member-list-item ${selected ? 'selected' : ''}`}>
-            <div className='round member-pic' style={ {backgroundImage: `url('${member.data.picture}')`} } />
+            <div className='round member-pic' style={ {backgroundImage: member.data.picture ? `url('${member.data.picture}/-/resize/50x/')` : "url('/assets/member-placeholder.jpg')"} } />
             <div className='name-and-role'>
                 <div className='title'>{member.data.title}</div>
                 <div className='role'>{l(member.data, 'role', language)}</div>
