@@ -39,17 +39,17 @@ class Contact extends React.Component {
         if (this.props.side === 'left') return this.renderLeft();
         return (
             <form id='contact-form' className='padded' name="contact" method="POST" data-netlify="true" action='/contact/success'>
-                <input type="hidden" name="form-name" value="contact" />
-                <div className='field'>
+                <input key='hidden' type="hidden" name="form-name" value="contact" />
+                <div key='field-0' className='field'>
                     <label>Name: <input placeholder='Your name' type="text" name="name" /></label>   
                 </div >
-                <div className='field'>
+                <div key='field-1' className='field'>
                     <label>E-mail: <input placeholder='you@example.com'  type="email" name="email" /></label>
                 </div >
-                <div className='field'>
+                <div key='field-2' className='field'>
                     <label>Message: <textarea placeholder='Your message ...'  name="message"></textarea></label>
                 </div >
-                <div className='field'>
+                <div key='field-3' className='field'>
                     <button className='submit' type="submit">Send</button>
                 </div >
             </form>
