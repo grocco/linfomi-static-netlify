@@ -233,17 +233,19 @@ export default class Donations extends React.PureComponent {
     }
 
     renderBankTransferForm() {
+        const l = (s) => (s[this.props.language] || s.en);
         return (
             <div>
-                <div dangerouslySetInnerHTML={{ __html: i18n.pages.donations.bankTransfer.description[this.props.language] }} />
+                <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.donations.bankTransfer.description) }} />
             </div>
         )
     }
 
     renderPostOfficeAccountForm() {
+        const l = (s) => (s[this.props.language] || s.en);
         return (
             <div>
-                <div dangerouslySetInnerHTML={{ __html: i18n.pages.donations.post.description[this.props.language] }} />
+                <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.donations.post.description) }} />
             </div>
         )
     }

@@ -278,6 +278,10 @@ const contact = {
         en: 'Contact form',
         it: 'Formulario di contatto'
     },
+    map: {
+        en: 'Map',
+        it: 'Dove trovarci'
+    },
     send: {
         en: 'Send',
         it: 'Invia'

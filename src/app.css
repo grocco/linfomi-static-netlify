@@ -1249,3 +1249,16 @@ footer img {
   -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, .10), 0 3px 6px rgba(0, 0, 0, .08);
   box-shadow: 0 7px 14px rgba(50, 50, 93, .10), 0 3px 6px rgba(0, 0, 0, .08);
 }
+
+.map-element {
+  height: calc(100vh - 81px);
+}
+
+@media only screen and (max-width: 1023px) {
+  .map-container .breadcrumbs {
+    margin: 20px 20px;
+  }
+  .map-element {
+    height: calc(100vh - 81px - 30px - 80px);
+  }
+}

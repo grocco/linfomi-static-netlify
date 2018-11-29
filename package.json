@@ -18,6 +18,7 @@
     "paypal-checkout": "^4.0.235",
     "react": "^16.6.3",
     "react-dom": "^16.6.0",
+    "react-google-maps": "^9.4.5",
     "react-grid-system": "^4.3.1",
     "react-hot-loader": "^4.3.12",
     "react-markdown": "^4.0.3",
