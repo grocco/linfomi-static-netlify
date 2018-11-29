@@ -152,6 +152,10 @@ const home = {
                 en: 'President of the Foundation for the Institute of Oncology Research'
             }
         }
+    },
+    officialWebsite: {
+        en: 'Official Website',
+        it: 'Sito web ufficiale'
     }
 }
 

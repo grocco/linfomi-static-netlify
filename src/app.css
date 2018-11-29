@@ -220,6 +220,28 @@ body {
 }
 
 
+.external-link {
+  height: 80px;
+  display: flex;
+  border-bottom: solid 1px #eee;
+  border-top: solid 1px #eee;
+  padding: 0px 0px 0px 20px;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.external-link .name {
+  color: #de0000;
+}
+
+.external-link:hover {
+  background-color: #fcfcfc;
+}
+
+
 .reality-list-item {
   height: 80px;
   display: flex;
@@ -1109,7 +1131,9 @@ footer img {
   float: left;
   margin-right: 10px;
   margin-bottom: 5px;
-  margin-top: 5px;
+  margin-top: 0px;
+  max-height: 140px;
+  max-width: calc(100%);
 }
 
 .card-title {

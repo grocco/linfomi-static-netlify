@@ -68,20 +68,35 @@ export default class Home extends Component {
         const l = (s) => (s[this.props.language] || s.en);
         const ior = (
             <div>
-                <img className='card-img-wrap-left' width='100' src='/assets/IOR_logo.gif' alt='ior logo'/>
+                <img className='card-img-wrap-left' src='/assets/IOR_logo.gif' alt='ior logo'/>
                 <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.description) }} />
+                <a className={'external-link'} href='http://www.ior.iosi.ch/' target='__blank'>
+                    <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
+                    <div className='title'>{l(i18n.pages.home.content.realities.ior.title)}</div>
+                    <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                </a>
             </div>
         );
         const ielsg = (
             <div>
-                <img className='card-img-wrap-left' width='100' src='/assets/ielsg.jpg' alt='ielsg logo'/>
+                <img className='card-img-wrap-left' src='/assets/ielsg.jpg' alt='ielsg logo'/>
                 <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.description) }} />
+                <a className={'external-link'} href='http://www.ielsg.org/' target='__blank'>
+                    <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
+                    <div className='title'>{l(i18n.pages.home.content.realities.ielsg.title)}</div>
+                    <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                </a>
             </div>
         );
         const icml = (
             <div>
-                <img className='card-img-wrap-left' width='100' src='/assets/icml_logo.png' alt='icml logo'/>
+                <img className='card-img-wrap-left' src='/assets/icml_logo.png' alt='icml logo'/>
                 <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.description) }} />
+                <a className={'external-link'} href='http://www.lymphcon.ch/' target='__blank'>
+                    <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
+                    <div className='title'>{l(i18n.pages.home.content.realities.icml.title)}</div>
+                    <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                </a>            
             </div>
         );
         const history = (

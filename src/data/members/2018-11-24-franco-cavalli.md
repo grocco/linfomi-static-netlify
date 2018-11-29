@@ -18,7 +18,7 @@ bio: >-
 
   He has received 19 international awards - among them the Pezcoller Award in Trento, Italy, the New Drug Development Organization Honorary Award in Amsterdam, The Netherland  the Greidinger Award in Haifa, Israel, and the Waldman Award in Omaha, Nebraska, USA.
 title-it: Sign.
-role-it: Membro
+role-it: Presidente
 bio-fr: french vers
 email: test@example.com
 board-of-directors: true
