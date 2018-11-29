@@ -19,7 +19,6 @@ collections:
       - {label: "[EN] Title (eg: Prof. Franco Cavalli)", name: "title", widget: "string"}
       - {label: "[EN] Role", name: "role", widget: "string", required: false}
       - {label: "[EN] Bio", name: "bio", widget: "text"}
-      - {label: "[IT] Titolo (eg: Prof. Franco Cavalli)", name: "title-it", widget: "string"}
       - {label: "[IT] Ruolo", name: "role-it", widget: "string", required: false}
       - {label: "[IT] Biografia", name: "bio-it", widget: "text"}
       - {label: "[FR] Biographie", name: "bio-fr", widget: "text"}
