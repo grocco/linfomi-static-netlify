@@ -145,12 +145,13 @@ export default class Home extends Component {
         if ( this.props.side === 'left') {
             return this.renderLeft();
         }
+        const l = (s) => (s[this.props.language] || s.en);
          //   <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div> 
         return (<div className='padded'>
             { this.props.location.state && this.props.location.state.slave && 
                 <div className="breadcrumbs" onClick={this.props.history.goBack}>
                     <img className="arrow-left" src="/assets/arrow-right.png" alt="back" />
-                    <div className='go-back'>BACK</div>
+                    <div className='go-back'>{l(i18n.navigation.back)}</div>
                 </div>
             }
             {this.renderRight()}

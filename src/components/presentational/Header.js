@@ -6,7 +6,7 @@ import i18n from 'domain/i18n';
 class Header extends Component {
 
   render() {
-    const l = (s) => (s[this.props.language] || s.en);
+    const l = (s) => (s[this.props.language]);
     return (
     <div>
     <div className='page-slug'>{i18n.pages[this.props.pageSlug] ? l(i18n.pages[this.props.pageSlug].title) : ''}</div>
@@ -25,7 +25,22 @@ class Header extends Component {
           to='/' 
           href='/'
         >
-          <div className='logo-name'><div className='logo-name-inner'><br/>{"per l'"}<br/><br/>{"di"}</div>{"Fondazione"}<br/>{"Istituto"}<br/>{"Oncologico"}<br/>{"Ricerca"}</div>
+          <div className='logo-name'>
+            <div className='logo-name-inner'>
+              <br/>
+              {l(i18n.header.logo.forThe)}
+              <br/>
+              {l(i18n.header.logo.of1) || <br/> }
+              {l(i18n.header.logo.of2) || ' ' }
+            </div>
+            {l(i18n.header.logo.foundation)}
+            <br/>
+            {l(i18n.header.logo.institute)}
+            <br/>
+            {l(i18n.header.logo.oncology)}
+            <br/>
+            {l(i18n.header.logo.research)}
+          </div>
           <div 
             id='logo'
           />

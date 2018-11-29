@@ -1,4 +1,35 @@
 const header = {
+    logo: {
+        forThe: {
+            it: "per l'",
+            en: 'for the'
+        },
+        of1: {
+            it: null,
+            en: 'of'
+        },
+        of2: {
+            it: 'di',
+            en: null
+        },
+        foundation: {
+            it: 'Fondazione',
+            en: 'Foundation'
+        },
+        institute: {
+            it: 'Istituto',
+            en: 'Institute'
+        },
+        oncology: {
+            it: 'Oncologico',
+            en: 'Oncology'
+        },
+        research: {
+            it: 'Ricerca',
+            en: 'Research'
+        }
+
+    },
     buttons: {
         home: {
             title: {
@@ -126,24 +157,47 @@ const home = {
 
 const donations = {
     title: {
-        en: 'Make a donation'
+        en: 'Make a donation!',
+        it: 'Fai una donazione!'
     },
     intro: {
-        en: 'You can make a donation both on line as well as via bank transfer or on our post office account.<br/><br/>Thank you for your support!'
+        en: 'You can make a donation both on line as well as via bank transfer or on our post office account.<br/><br/>Thank you for your support!',
+        it: 'Accettiamo donazioni sia online che tramite bonifico sul conto bancario o postale.<br/><br/>Grazie per il sostegno!'
     },
     creditCard: {
         title: {
-            en: 'Donate online with your Credit Card'
+            en: 'Donate online with your Credit Card',
+            it: 'Fai una donazione via Carta di Credito'
+        },
+        confirmOrder: {
+            en: 'Confirm order',
+            it: 'Conferma ordine'
+        },
+        placeholders: {
+            nameOnCard: {
+                en: 'Name on the card',
+                it: 'Nome sulla carta'
+            },
+            email: {
+                en: 'E-mail address',
+                it: 'Indirizzo E-mail'
+            },
+            amount: {
+                en: 'Donation amount',
+                it: 'Ammontare della donazione'
+            }
         }
     },
     payPal: {
         title: {
-            en: 'Donate online through PayPal'
+            en: 'Donate online through PayPal',
+            it: 'Fai una donazione via PayPal'
         }
     },
     bankTransfer: {
         title: {
-            en: 'Bank account details'
+            en: 'Bank account details',
+            it: 'Dettagli del conto bancario'
         },
         description: {
             en: 'Fondazione per la Ricerca e la Cura dei Linfomi<br/>Banca dello Stato del Canton Ticino<br/>Via Pioda 7<br/>6900 Lugano<br/>Switzerland<br/><b>Account nr:</b> 336 9742/001.000.001<br/><b>IBAN code:</b> CH31 0076 4336 9742 C000 C<br/><b>SWIFT:</b> BSCTCH22LUG<br/><b>Clearing number:</b> 00764'
@@ -151,7 +205,8 @@ const donations = {
     },
     post: {
         title: {
-            en: 'Post office account details'
+            en: 'Post office account details',
+            it: 'Dettagli del conto Postale'
         },
         description: {
             en: '<b>no. CCP:</b> 65-433-5'
@@ -186,6 +241,18 @@ const council = {
     title: {
         en: 'Foundation Board of Trustees',
         it: 'Consiglio di Fondazione'
+    },
+    boardOfDirectors: { 
+        en: 'Board of directors', 
+        it: 'Comitato direttivo' 
+    },
+    current: {
+        en: 'Current members',
+        it: 'Membri attuali'
+    },
+    previous: {
+        en: 'Previous members',
+        it: 'Membri precedenti'
     }
 }
 
@@ -193,7 +260,55 @@ const council = {
 const contact = {
     title: {
         en: 'Contact',
-        it: 'Contatti'
+        it: 'Contatto'
+    },
+    thanks: {
+        en: 'Thanks for your submission!',
+        it: 'Grazie per il messaggio!'
+    },
+    backToYou: {
+        en: 'We will get back to you shortly.',
+        it: 'Vi risponderemo al più presto'
+    },
+    pleaseFill: {
+        en: 'Please fill out the form to contact us.',
+        it: 'Riempia per favore il formulario per conttattarci.'
+    },
+    form: {
+        en: 'Contact form',
+        it: 'Formulario di contatto'
+    },
+    send: {
+        en: 'Send',
+        it: 'Invia'
+    },
+    placeholders: {
+        name: {
+            en: 'Your name',
+            it: 'Il suo nome'
+        },
+        email: {
+            en: 'you@your-company.com',
+            it: 'lei@la-sua-ditta.com'
+        },
+        message: {
+            en: 'Your message ...',
+            it: 'Il suo messaggio ...'
+        }
+    },
+    labels: {
+        name: {
+            en: 'Name',
+            it: 'Nome'
+        },
+        email: {
+            en: 'E-mail address',
+            it: 'Indirizzo E-mail'
+        },
+        message: {
+            en: 'Message',
+            it: 'Messaggio'
+        }
     }
 }
 
@@ -216,8 +331,16 @@ const languages = {
     }
 };
 
+const navigation = {
+    back: {
+        en: 'BACK',
+        it: 'INDIETRO'
+    }
+};
+
 export default {
     header,
     pages,
-    languages
+    languages,
+    navigation
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import { withRouteData, Link } from 'react-static'
-//
+import { withRouteData, Link } from 'react-static';
+import i18n from 'domain/i18n';
 
 const l = (data, field, language) => {
     if (language === 'en') {
@@ -29,14 +29,14 @@ const Member = ({member, language, history}) => (
         { history.location.state && history.location.state.slave && 
             <div className="breadcrumbs" onClick={history.goBack}>
                 <img className="arrow-left" src="/assets/arrow-right.png" alt="back" />
-                <div className='go-back'>BACK</div>
+                <div className='go-back'>{i18n.navigation.back[language] || "BACK"}</div>
             </div>
         }
         <div className='aside-left'>
             <div className="image round" style={{backgroundImage: member.data.picture ? `url('${member.data.picture}/-/resize/150x/')` : "url('/assets/member-placeholder.jpg')"}} />
             <div className="title">{member.data.title}</div>
             <div className="role">{l(member.data, 'role', language)}</div>
-            <div className="board-of-directors">{member.data['board-of-directors'] ? { en: 'Board of directors', it: 'Comitato direttivo' }[language] : ''}</div>
+            <div className="board-of-directors">{member.data['board-of-directors'] ? l(i18n.pages.council.boardOfDirectors) : ''}</div>
             <div className="email" onClick={()=>`mailto:${member.data.email}`} />
         </div>
         <div className="bio bubble">{l(member.data, 'bio', language)}</div>
@@ -58,10 +58,11 @@ const MemberListItem = ({member, language, selected}) => (
 
 class Council extends React.Component {
     renderLeft(){
+        const l = (s) => (s[this.props.language] || s.en);
         const { members, language } = this.props;
         return (
             <div>
-                <div className='row-size-text'>Current Members:</div>
+                <div className='row-size-text'>{l(i18n.pages.council.current)}:</div>
                 <div className="members">
                 {members
                     .filter(member => !member.data['not-anymore'])
@@ -70,7 +71,7 @@ class Council extends React.Component {
                     <MemberListItem  key={member.data.slug} member={member} language={language} selected={this.props.history.location.state && this.props.history.location.state.memberSlug === member.data.slug}/>
                 ))}
                 </div>
-                <div className='row-size-text'>Previous members:</div>
+                <div className='row-size-text'>{l(i18n.pages.council.previous)}:</div>
                 <div className="members">
                 {members
                     .filter(member => member.data['not-anymore'])

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Elements } from 'react-stripe-elements';
 import {injectStripe, CardElement} from 'react-stripe-elements';
 import i18n from 'domain/i18n';
@@ -7,7 +7,6 @@ import { Link } from 'react-static';
 
 import ReactDOM from 'react-dom';
 import paypal from 'paypal-checkout';
-import { Row, Col } from 'react-grid-system';
 
 class PayPalButton extends React.Component {
   constructor(props) {
@@ -139,20 +138,21 @@ class CheckoutForm extends React.Component {
     }
   
     render() {
+    const l = (s) => (s[this.props.language] || s.en);
       return (
         <form onSubmit={this.handleSubmit} style={{width: '100%'}}>
           {/* <AddressSection /> */}
           <label className={'stripe-label'}>
-          <input style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-amount stripe-input-full'} placeholder={'Donation amount'} type='number' name='amount' value={this.state.amount} onChange={(event)=>this.setState({amount: event.target.value})} />
+          <input style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-amount stripe-input-full'} placeholder={l(i18n.pages.donations.creditCard.placeholders.amount)} type='number' name='amount' value={this.state.amount} onChange={(event)=>this.setState({amount: event.target.value})} />
           <div className='stripe-currency'>CHF</div></label>
           <label className={'stripe-label'}>
-          <input placeholder={'E-mail address'} style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-full'} type='email' name='email' value={this.state.email} onChange={(event)=>this.setState({email: event.target.value})} />
+          <input placeholder={l(i18n.pages.donations.creditCard.placeholders.email)} style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-full'} type='email' name='email' value={this.state.email} onChange={(event)=>this.setState({email: event.target.value})} />
           </label>
           <label className={'stripe-label'}>
-          <input placeholder={'Name on the card'} style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-full'} type='text' name='name' value={this.state.name.toUpperCase()} onChange={(event)=>this.setState({name: event.target.value})} />
+          <input placeholder={l(i18n.pages.donations.creditCard.placeholders.nameOnCard)} style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-full'} type='text' name='name' value={this.state.name.toUpperCase()} onChange={(event)=>this.setState({name: event.target.value})} />
           </label>
           <CardSection />
-          <button className={'stripe-button'}>Confirm order</button>
+          <button className={'stripe-button'}>{l(i18n.pages.donations.creditCard.confirmOrder)}</button>
         </form>
       );
     }
@@ -249,6 +249,7 @@ export default class Donations extends React.PureComponent {
     }
 
     render() {
+        const l = (s) => (s[this.props.language] || s.en);
         if (this.props.side === 'left') {
             return this.renderLeft();
         }
@@ -260,7 +261,7 @@ export default class Donations extends React.PureComponent {
                 { this.props.location.state && this.props.location.state.slave && 
                     <div className="breadcrumbs" onClick={this.props.history.goBack}>
                         <img className="arrow-left" src="/assets/arrow-right.png" alt="back" />
-                        <div className='go-back'>BACK</div>
+                        <div className='go-back'>{l(i18n.navigation.back)}</div>
                     </div>
                 }
                 {(()=>{
