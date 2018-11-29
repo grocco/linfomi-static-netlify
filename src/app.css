@@ -336,6 +336,24 @@ body {
   padding: 20px;
 }
 
+.bio {
+  /* flex-direction: column;
+  display: flex;
+  align-items: center;
+  background-color: #fcfcfc;
+  border-radius: 0px 0px 8px 8px;
+  padding: 20px; */
+}
+
+.bio p {
+  display: flex;
+  align-items: center;
+  /* background-color: #fcfcfc; */
+  border-radius: 0px 0px 8px 8px;
+  padding: 0px;
+  margin-top: 0px;
+}
+
 .realities {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -399,6 +417,11 @@ body {
   align-items: center;
 }
 
+.member .content {
+  display: flex;
+  flex-direction: row;
+}
+
 .member .aside-left {
   float: left;
   margin-right: 20px;
@@ -408,6 +431,11 @@ body {
 }
 
 @media only screen and (max-width: 1131px) and (min-width: 1023px), (max-width: 640px) {
+
+  .member .content {
+    flex-direction: column;
+  }
+
   .member .aside-left {
     float: inherit;
     margin: 0px auto;

@@ -11,6 +11,7 @@ bio: >-
   obtained the certification of specialist in hypertension of the European
   Hypertension Society (ESH).
 
+
   Professor Ferrari worked in Australia from 2003 to 2017, first in Perth,
   Western Australia, as Director of the Department of Nephrology at Fremantle
   Hospital and later in Sydney, where he was the Director of the Kidney
@@ -19,6 +20,7 @@ bio: >-
   the Australian Legion of Honor (Officer of the Order of Australia) for his
   contributions to the development of kidney transplant treatment.
 
+
   Professor Ferrari is the outgoing (2016-2017) president of the Australian and
   New Zealand Society of Nephrology (ANZSN) and is a member of several national
   and international professional committees, including ISN, ASN, EDTA, APSN and
@@ -26,9 +28,11 @@ bio: >-
   professor at the University of New South Wales in Sydney and full professor at
   the Università della Svizzera Italiana.
 
+
   He has established research programs in the vast areas of nephrology,
   including chronic renal disease and kidney transplantation, has an H index of
   48 and has published over 200 articles in peer-reviewed journals.
+
 
   Since 2018 he has been a member of the Foundation Board of the Foundation for
   the Institute of Oncology Research (IOR) and of the Foundation Board of the
@@ -43,6 +47,7 @@ bio-it: >-
   ed ha ottenuto la certificazione di specialista in ipertensione della Società
   Europea di Ipertensione (ESH)
 
+
   Il Professor Ferrari ha lavorato in Australia dal 2003 al 2017, dapprima a
   Perth, nell’Australia occidentale, come direttore del Dipartimento di
   nefrologia presso il Fremantle Hospital ed in seguito a Sydney, dove è stato
@@ -52,6 +57,7 @@ bio-it: >-
   (Officer of the Order of Australia) per i sui contributi nel campo dello
   sviluppo del trattamento del trapianto di reni.
 
+
   Il Professor Ferrari è il presidente uscente (2016-2017) della Australian and
   New Zealand Society of Nephrology (ANZSN) ed è membro di diversi comitati
   professionali nazionali e internazionali, tra cui ISN, ASN, EDTA, APSN e TTS e
@@ -59,9 +65,11 @@ bio-it: >-
   presso la University of New South Wales di Sydney e professore titolare
   dell’Università della Svizzera Italiana.
 
+
   Ha stabilito programmi di ricerca nelle vaste aree della nefrologia, tra cui
   la malattia renale cronica e il trapianto di rene, ha un indice H di 48 e ha
   pubblicato oltre 200 articoli su riviste peer-reviewed.
+
 
   Dal 2018 è membro del Consiglio di Fondazione della Fondazione per l’Istituto
   oncologico di ricerca (IOR) e del Consiglio di Fondazione del Servizio

@@ -4,10 +4,12 @@ const fs = require('fs')
 const klaw = require('klaw')
 const path = require('path')
 const matter = require('gray-matter')
+const showdown  = require('showdown')
 
 function getData () {
   const items = [];
   const membs = [];
+  const converter = new showdown.Converter();
   // Walk ("klaw") through posts directory and push file paths into items array //
   const getItems = () => new Promise(resolve => {
     // Check if posts directory exists //
@@ -51,7 +53,8 @@ function getData () {
             // If markdown file, read contents //
             const data = fs.readFileSync(item.path, 'utf8')
             // Convert to frontmatter object and markdown content //
-            const dataObj = matter(data)
+            const dataObj = matter(data);
+            ['bio', 'bio-it', 'bio-fr', 'bio-de'].forEach( field => dataObj.data[field] = converter.makeHtml(dataObj.data[field]));
             // Create slug for URL //
             dataObj.data.slug = dataObj.data.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')
             // Remove unused key //
@@ -96,7 +99,7 @@ export default {
     }
   },
   getSiteData: () => ({
-    title: 'React Static with Netlify CMS',
+    title: 'Foundation IOR',
   }),
   getRoutes: async () => {
     const [posts, members] = await getData()

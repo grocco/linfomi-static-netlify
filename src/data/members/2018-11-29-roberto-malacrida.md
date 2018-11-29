@@ -6,6 +6,7 @@ bio: >-
   Raised in Bellinzona, he is married to Ferdinanda and father of Martina and
   Filippo. 
 
+
   He was head of Intensive Medicine in Lugano and was the doctor in charge of
   REGA-Ticino and the Green Cross of Bellinzona. He has taught clinical humanism
   as a full professor at the Department of Psychology at the University of
@@ -13,6 +14,7 @@ bio: >-
   professor at the Faculty of Medicine at the University of Geneva. He has 50
   publications in "editorial control" journals, of which he is the first author
   and co-author of 3 articles in the New England Journal of Medicine. 
+
 
   He was president of the Swiss Society of Biomedical Ethics and member of the
   Central Ethics Commission of the Swiss Academy of Medical Sciences; co-founder
@@ -23,6 +25,7 @@ bio: >-
   Board of Directors of the EOC, he represents the Municipality of Bellinzona in
   the Board of Directors of the IOR.
 
+
   Since 2017 he has been a member of the Foundation Board of the Foundation for
   the Research and Treatment of Lymphomas in Ticino,cnow the Foundation for the
   Institute of Oncology Research (IOR).
@@ -30,6 +33,7 @@ role-it: Membro
 bio-it: >-
   Cresciuto a Bellinzona, è sposato con Ferdinanda e padre di Martina e di
   Filippo. 
+
 
   Primario di Medicina intensiva a Lugano, è stato medico responsabile della
   REGA-Ticino e della Croce Verde di Bellinzona. Ha insegnato l’umanesimo
@@ -39,16 +43,19 @@ bio-it: >-
   50 pubblicazioni su riviste a “controllo editoriale”, di cui è primo autore e
   coautore di 3 articoli nel New England Journal of Medicine. 
 
+
   È stato presidente della Società Svizzera di Etica Biomedica e membro della
   Commissione centrale di etica dell’Accademia Svizzera di Scienze Mediche;
   cofondatore e già vicepresidente della Commissione etica dell’Ente Ospedaliero
   Cantonale (EOC).
+
 
   Attualmente è segretario generale della Fondazione Sasso Corbaro, direttore
   della Rivista per le Medical Humanities, corresponsabile del MAS in etica
   clinica e Medical Humanities della SUPSI. Membro del Consiglio
   d’Amministrazione dell’EOC, rappresenta il Municipio di Bellinzona nel
   Consiglio direttivo dello IOR.
+
 
   Dal 2017 è membro del Consiglio di Fondazione della Fondazione per la Ricerca
   e la Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di

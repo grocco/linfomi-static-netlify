@@ -12,6 +12,7 @@ bio: >
   cantonal and on the ground domain at a SUP have given him a comprehensive view
   of the themes of Swiss university education and research.  
 
+
   Since 2014 he has been a member of the Board of Directors of the Foundation
   for Research and Treatment of Lymphomas in Ticino, now the Foundation for the
   Institute of Oncology Research (IOR).
@@ -26,6 +27,7 @@ bio-it: >-
   cantonale presso il DECS di Bellinzona. La pluriennale esperienza in ambito
   federale, cantonale e sul campo presso una SUP gli permettono una visione a
   360 gradi sulle tematiche di formazione e ricerca universitaria svizzera.  
+
 
   Dal 2014 è membro del Consiglio Direttivo della Fondazione per la Ricerca e la
   Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di

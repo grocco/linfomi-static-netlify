@@ -32,14 +32,16 @@ const Member = ({member, language, history}) => (
                 <div className='go-back'>{i18n.navigation.back[language] || "BACK"}</div>
             </div>
         }
-        <div className='aside-left'>
-            <div className="image round" style={{backgroundImage: member.data.picture ? `url('${member.data.picture}/-/resize/150x/')` : "url('/assets/member-placeholder.jpg')"}} />
-            <div className="title">{member.data.title}</div>
-            <div className="role">{l(member.data, 'role', language)}</div>
-            <div className="board-of-directors">{member.data['board-of-directors'] ? l(i18n.pages.council.boardOfDirectors) : ''}</div>
-            <div className="email" onClick={()=>`mailto:${member.data.email}`} />
+        <div className='content'>
+            <div className='aside-left'>
+                <div className="image round" style={{backgroundImage: member.data.picture ? `url('${member.data.picture}/-/resize/150x/')` : "url('/assets/member-placeholder.jpg')"}} />
+                <div className="title">{member.data.title}</div>
+                <div className="role">{l(member.data, 'role', language)}</div>
+                <div className="board-of-directors">{member.data['board-of-directors'] ? l(i18n.pages.council.boardOfDirectors) : ''}</div>
+                <div className="email" onClick={()=>`mailto:${member.data.email}`} />
+            </div>
+            <div className="bio" dangerouslySetInnerHTML={{__html:l(member.data, 'bio', language)}} />
         </div>
-        <div className="bio bubble">{l(member.data, 'bio', language)}</div>
     </div>
 );
 

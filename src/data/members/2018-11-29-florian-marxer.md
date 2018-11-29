@@ -15,6 +15,7 @@ bio: >-
   Asset Management AG (Glarus) and Alexander S. Onassis Public Benefit
   Foundation (Vaduz).
 
+
   Since 2016 he has been a member of the Foundation Board of the Foundation for
   Research and Treatment of Lymphomas in Ticino, now the Foundation for the
   Institute of Oncology Research (IOR).
@@ -31,6 +32,7 @@ bio-it: >-
   varie società e fondazioni, tra cui la VP Bank AG (Vaduz), la Belvédère Asset
   Management AG (Glarona) e la Alexander S. Onassis Public Benefit Foundation
   (Vaduz).
+
 
   Dal 2016 è membro del Consiglio di Fondazione della Fondazione per la Ricerca
   e la Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di

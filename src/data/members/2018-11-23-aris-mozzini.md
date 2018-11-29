@@ -8,9 +8,13 @@ bio: >-
   in the international financial sector he joined the university area, first at
   the current SEFRI in Bern, then as administrative manager of the SUPSI in
   Manno and finally in the university department of the cantonal administration
-  at the DECS in Bellinzona. His many years of experience in the federal,
+  at the DECS in Bellinzona. 
+  
+  
+  His many years of experience in the federal,
   cantonal and on the ground domain at a SUP have given him a comprehensive view
   of the themes of Swiss university education and research.  
+
 
   Since 2014 he has been a member of the Board of Directors of the Foundation
   for Research and Treatment of Lymphomas in Ticino, now the Foundation for the
@@ -24,9 +28,13 @@ bio-it: >-
   prima presso l’attuale SEFRI (Segreteria di Stato per la formazione, la
   ricerca e l'innovazione) a Berna, poi come responsabile amministrativo della
   SUPSI di Manno e infine ne settore universitario dell’amministrazione
-  cantonale presso il DECS di Bellinzona. La pluriennale esperienza in ambito
+  cantonale presso il DECS di Bellinzona. 
+  
+  
+  La pluriennale esperienza in ambito
   federale, cantonale e sul campo presso una SUP gli permettono una visione a
   360 gradi sulle tematiche di formazione e ricerca universitaria svizzera.  
+
 
   Dal 2014 è membro del Consiglio Direttivo della Fondazione per la Ricerca e la
   Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di
