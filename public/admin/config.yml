@@ -26,4 +26,5 @@ collections:
       - {label: "E-mail", name: "email", widget: "string", pattern: [ '[a-z0-9!#$%&''*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&''*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?', "Please insert a valid email"]}
       - {label: "Board of directors", name: "board-of-directors", widget: "boolean", required: false}
       - {label: "Not member anymore", name: "not-anymore", widget: "boolean", required: false}
+      - {label: "Sort order", name: "order", widget: "number", valueType: 'int', default: 1000, required: false}
       - {label: "Portrait Picture", name: "picture", widget: "image", required: false}

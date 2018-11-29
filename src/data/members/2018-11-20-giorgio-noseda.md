@@ -86,6 +86,7 @@ bio-fr: fremnch version here
 email: giorgio.noseda@bluewin.ch
 board-of-directors: true
 not-anymore: false
+order: 1
 picture: >-
   https://ucarecdn.com/d59656a0-09ed-4793-a807-1866c4275e4d/-/crop/564x719/219,0/-/preview/
 ---

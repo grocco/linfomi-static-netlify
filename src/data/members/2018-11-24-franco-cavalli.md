@@ -22,5 +22,6 @@ role-it: Membro
 bio-fr: french vers
 email: test@example.com
 board-of-directors: true
+order: 0
 ---
 

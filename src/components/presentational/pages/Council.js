@@ -9,6 +9,20 @@ const l = (data, field, language) => {
     return data[`${field}-${language}`]
 }
 
+const compareByField = (field, accessFunction) => (a,b) => {
+    if(accessFunction) {
+        a = accessFunction(a);
+        b = accessFunction(b);
+    }
+    if (a[field] === undefined || a[field] === null) return 1;
+    if (b[field] === undefined || b[field] === null) return -1;
+    if (a[field] < b[field])
+        return -1;
+    if (a[field] > b[field])
+        return 1;
+    return 0;
+}
+
 // <div className='breadcrumbs' onClick={history.goBack}>{'< back'}</div>
 const Member = ({member, language, history}) => (
     <div className="member padded" key={member.data.slug}>
@@ -49,13 +63,19 @@ class Council extends React.Component {
             <div>
                 <div className='row-size-text'>Current Members:</div>
                 <div className="members">
-                {members.filter(member => !member.data['not-anymore']).map(member => (
+                {members
+                    .filter(member => !member.data['not-anymore'])
+                    .sort(compareByField('order', el => el.data))
+                    .map(member => (
                     <MemberListItem  key={member.data.slug} member={member} language={language} selected={this.props.history.location.state && this.props.history.location.state.memberSlug === member.data.slug}/>
                 ))}
                 </div>
                 <div className='row-size-text'>Previous members:</div>
                 <div className="members">
-                {members.filter(member => member.data['not-anymore']).map(member => (
+                {members
+                    .filter(member => member.data['not-anymore'])
+                    .sort(compareByField('role', el => el.data))
+                    .map(member => (
                     <MemberListItem  key={member.data.slug} member={member} language={language} selected={this.props.history.location.state && this.props.history.location.state.memberSlug === member.data.slug}/>
                 ))}
                 </div>

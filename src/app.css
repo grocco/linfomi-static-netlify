@@ -287,12 +287,14 @@ body {
   content: '';  
   /* background-color: rgba(0,0,0,0.05); */
   /* transition: all 0.5s 0.5s; */
+  height: calc( 100vh - 81px );
 }
 
 
 @media only screen and (max-width: 1023px) {
   .hamburger-buttons.selected .buttonsUnderlay {
     top: 111px;
+    height: calc( 100vh - 111px );
   }
 }
 
