@@ -6,7 +6,7 @@ const l = (data, field, language) => {
     if (language === 'en') {
         return data[field]
     }
-    return data[`${field}-${language}`]
+    return data[`${field}-${language}`] || data[field];
 }
 
 const compareByField = (field, accessFunction) => (a,b) => {
@@ -25,7 +25,7 @@ const compareByField = (field, accessFunction) => (a,b) => {
 
 // <div className='breadcrumbs' onClick={history.goBack}>{'< back'}</div>
 const Member = ({member, language, history}) => (
-    <div className="member padded" key={member.data.slug}>
+    <div className="member" key={member.data.slug}>
         { history.location.state && history.location.state.slave && 
             <div className="breadcrumbs" onClick={history.goBack}>
                 <img className="arrow-left" src="/assets/arrow-right.png" alt="back" />
@@ -35,12 +35,14 @@ const Member = ({member, language, history}) => (
         <div className='content'>
             <div className='aside-left'>
                 <div className="image round" style={{backgroundImage: member.data.picture ? `url('${member.data.picture}/-/resize/150x/')` : "url('/assets/member-placeholder.jpg')"}} />
-                <div className="title">{member.data.title}</div>
-                <div className="role">{l(member.data, 'role', language)}</div>
-                <div className="board-of-directors">{member.data['board-of-directors'] ? l(i18n.pages.council.boardOfDirectors) : ''}</div>
-                <div className="email" onClick={()=>`mailto:${member.data.email}`} />
+                <div className='member-details'>
+                    <div className="board-of-directors">{member.data['board-of-directors'] ? i18n.pages.council.boardOfDirectors[language] : ''}</div>
+                    <div className="title">{member.data.title}</div>
+                    <div className="role">{l(member.data, 'role', language)}</div>
+                    <div className="email" onClick={()=>`mailto:${member.data.email}`} />
+                </div>
             </div>
-            <div className="bio" dangerouslySetInnerHTML={{__html:l(member.data, 'bio', language)}} />
+            <div className="bio padded" dangerouslySetInnerHTML={{__html:l(member.data, 'bio', language)}} />
         </div>
     </div>
 );
@@ -69,8 +71,8 @@ class Council extends React.Component {
                 {members
                     .filter(member => !member.data['not-anymore'])
                     .sort(compareByField('order', el => el.data))
-                    .map(member => (
-                    <MemberListItem  key={member.data.slug} member={member} language={language} selected={this.props.history.location.state && this.props.history.location.state.memberSlug === member.data.slug}/>
+                    .map((member, idx) => (
+                    <MemberListItem  key={member.data.slug} member={member} language={language} selected={this.props.history.location.state && ( this.props.history.location.state.memberSlug === member.data.slug || (idx === 0 && this.props.history.location.state.memberSlug === 'president' ))}/>
                 ))}
                 </div>
                 <div className='row-size-text'>{l(i18n.pages.council.previous)}:</div>
@@ -89,7 +91,7 @@ class Council extends React.Component {
     renderRight() {
         const { members, language, history } = this.props;
         let member = null;
-        if (! history.location.state) member = members[0]
+        if (! history.location.state || history.location.state.memberSlug === 'president') member = members.sort(compareByField('order', el => el.data))[0]
         else member = members.find(member => member.data.slug === history.location.state.memberSlug)
         return (
             <Member key={member.slug} member={member} language={language} history={history} />

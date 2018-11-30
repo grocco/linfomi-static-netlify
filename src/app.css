@@ -289,6 +289,10 @@ body {
   position: relative;
 }
 
+.member .breadcrumbs {
+  margin: 20px;
+}
+
 .breadcrumbs:hover {
   background-color: #fafafa;
 }
@@ -343,6 +347,13 @@ body {
   background-color: #fcfcfc;
   border-radius: 0px 0px 8px 8px;
   padding: 20px; */
+}
+
+@media only screen and (min-width: 1132px) {
+  .bio {
+    overflow: scroll;
+    height: calc( 100vh - 83px - 40px);
+  }
 }
 
 .bio p {
@@ -420,15 +431,27 @@ body {
 .member .content {
   display: flex;
   flex-direction: row;
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
 }
 
 .member .aside-left {
-  float: left;
+  /* float: left;
   margin-right: 20px;
   margin-bottom: 20px;
   position: relative;
+  width: 150px; */
+  float: left;
+  position: relative;
   width: 150px;
+  background-color: #fafafa;
+  padding: 20px;
 }
+
+.member-details {
+  margin-top: 20px;
+}
+
 
 @media only screen and (max-width: 1131px) and (min-width: 1023px), (max-width: 640px) {
 
@@ -438,8 +461,14 @@ body {
 
   .member .aside-left {
     float: inherit;
-    margin: 0px auto;
-    margin-bottom: 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    flex-direction: row;
+  }
+
+  .member-details {
+    margin-left: 20px;
+    margin-top: 0px;
   }
 }
 
@@ -447,7 +476,6 @@ body {
   width: 150px;
   height: 150px;
   background-size: 100%;
-  margin-bottom: 20px;
   background-repeat: no-repeat;
 }
 
@@ -471,10 +499,7 @@ body {
 .member .aside-left .board-of-directors  {
   color: #de0000;
   font-size: 12px;
-  position: absolute;
-  top: 155px;
-  width: 100%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .member-list-item .name-and-role {
@@ -1160,8 +1185,7 @@ footer img {
   margin-right: 10px;
   margin-bottom: 5px;
   margin-top: 0px;
-  max-height: 140px;
-  max-width: calc(100%);
+  width: 140px;
 }
 
 .card-title {
@@ -1313,4 +1337,9 @@ footer img {
   .map-element {
     height: calc(100vh - 81px - 30px - 80px);
   }
+}
+
+.enumeration {
+  color: #aaa;
+  display: inline-block;
 }

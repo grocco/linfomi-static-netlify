@@ -87,7 +87,7 @@ const home = {
             },
             fior: {
                 acronym: {
-                    it: 'FOndazione IOR',
+                    it: 'Fondazione IOR',
                     en: 'Foundation IOR'
                 },
                 title: {
