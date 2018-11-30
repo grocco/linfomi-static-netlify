@@ -16,7 +16,7 @@ export default class Home extends Component {
                 </Link> */}
                 <div className='home-intro'>
                     <Link to={{pathname:'/council', state: { memberSlug: 'president', slave: true}}} href='/president'>
-                        <div className='highlighted-image-left' id='president-pic' style={{backgroundImage: `url('/assets/president.jpg')`}}/>
+                        <div id='president-pic' style={{backgroundImage: `url('/assets/president.jpg')`}}/>
                     </Link>
                     <div className='thanks-and-introduction'>
                         <div>{l(i18n.pages.home.content.thanks)}</div >
@@ -76,7 +76,7 @@ export default class Home extends Component {
         const ior = (
             <div className='content'>
                 <div className='aside-left'>
-                    <img src='/assets/IOR_logo.gif' alt='ior logo'/>
+                <div className="image round" style={{backgroundImage: "url('/assets/IOR_logo.png')" }} />
                 </div>
                 <div className='aside-right'>
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.description) }} />
@@ -91,7 +91,7 @@ export default class Home extends Component {
         const ielsg = (
             <div className='content'>
                 <div className='aside-left'>
-                    <img src='/assets/ielsg.jpg' alt='ielsg logo'/>
+                    <div className="image round" style={{backgroundImage: "url('/assets/ielsg.jpg')" }} />
                 </div>
                 <div className='aside-right'>
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.description) }} />
@@ -106,7 +106,7 @@ export default class Home extends Component {
         const icml = (
             <div className='content'>
                 <div className='aside-left'>
-                    <img src='/assets/icml_logo.png' alt='icml logo'/>
+                    <div className="image round" style={{backgroundImage: "url('/assets/icml_logo.png')" }} />
                 </div>
                 <div className='aside-right'>
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.description) }} />
@@ -121,7 +121,7 @@ export default class Home extends Component {
         const history = (
             <div className='content'>
                 <div className='aside-left'>
-                    <img src='/assets/ior.svg' alt='ior logo'/>
+                <div className="image round" style={{backgroundImage: "url('/assets/foundation_ior_inverted.png')" }} />
                 </div>
                 <div className='aside-right'>
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.history.content) }} />   

@@ -10,7 +10,7 @@ export default withRouteData(({ post }) => (
     <br />
     <div>{post.data.title}</div>
     <Moment format="MMMM Do, YYYY">{post.data.date}</Moment>
-    <img className="image" src={`${post.data.thumbnail}/-/resize/150x/`} alt="" />
+    <img className="image" src={`${post.data.thumbnail}/-/resize/140x/`} alt="" />
     <Markdown source={post.content} escapeHtml={false} />
   </div>
 ))

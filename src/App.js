@@ -38,7 +38,7 @@ const Left = withRouteData(({ history, showHamburgerMenu }) => {
   return (<div 
     className={`frame left ${hide ? 'hidden' : ''}`}
     >
-        <div className='main' style={{ opacity: showHamburgerMenu ? 0.1 : 1 }}>
+        <div className='main'>
           <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'left'}))}/>
         </div>
     </div>
@@ -53,7 +53,7 @@ const Right = withRouteData(({ history, showHamburgerMenu }) => {
       className={`frame right ${!show ? 'hide' : ''}`}
     >
       {/* </div> */}
-      <div className='main' style={{ opacity: showHamburgerMenu ? 0.1 : 1 }}>
+      <div className='main' >
         <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'right'}))}/>
         {/* <div>Main Content</div>
         <div><input placeholder={'text input'} onChange={(e=>this.props.setWord(e.target.value))} /></div>
@@ -101,7 +101,6 @@ class AppPresentational extends React.Component {
             <div 
               className={`hamburger-buttons ${this.props.showHamburgerMenu ? ' selected' : ''}`}
             >
-            <div role='none' className='buttonsUnderlay' onClick={this.props.toggleHamburger} onKeyDown={this.props.toggleHamburger}/>
             <div className='languages hamburger-button'>
                 { this.props.languages && this.props.languages.map(language => 
                 <button 
@@ -133,6 +132,7 @@ class AppPresentational extends React.Component {
             )}
             </div>
           </div>
+            <div role='none' className={`buttonsUnderlay ${this.props.showHamburgerMenu ? 'selected' : ''}`} onClick={this.props.toggleHamburger} onKeyDown={this.props.toggleHamburger}/>
         <div className="app">
           {/* <Route path="/" component={Header} /> */}
           <Header />
