@@ -14,6 +14,7 @@ import i18n from 'domain/i18n';
 import config from 'config';
 import Modal from "./components/connected/Modal";
 // import Page from "./components/connected/Page";
+import window from 'domain/window';
 
 import './app.css'
 
@@ -93,6 +94,7 @@ class AppPresentational extends React.Component {
   }
 
   render() {
+    console.log(window.innerHeight - 81)
     return (
       <Router>
         <div>

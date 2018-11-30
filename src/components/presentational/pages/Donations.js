@@ -259,27 +259,29 @@ export default class Donations extends React.PureComponent {
         if (! this.props.location.state) return (<div className='padded'>{this.renderCreditCardForm()}</div>);
         //       <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div> 
         return (
-            <div className='padded'>
+            <div>
                 { this.props.location.state && this.props.location.state.slave && 
                     <div className="breadcrumbs" onClick={this.props.history.goBack}>
                         <img className="arrow-left" src="/assets/arrow-right.png" alt="back" />
                         <div className='go-back'>{l(i18n.navigation.back)}</div>
                     </div>
                 }
-                {(()=>{
-                    switch(this.props.location.state.method) {
-                        case 'credit-card':
-                            return this.renderCreditCardForm();
-                        case 'paypal':
-                            return this.renderPaypalForm();
-                        case 'bank-transfer':
-                            return this.renderBankTransferForm();
-                        case 'post-office-account':
-                            return this.renderPostOfficeAccountForm();
-                        default: 
-                            return this.renderCreditCardForm();
-                    }
-                })()}
+                <div className='padded'>
+                    {(()=>{
+                        switch(this.props.location.state.method) {
+                            case 'credit-card':
+                                return this.renderCreditCardForm();
+                            case 'paypal':
+                                return this.renderPaypalForm();
+                            case 'bank-transfer':
+                                return this.renderBankTransferForm();
+                            case 'post-office-account':
+                                return this.renderPostOfficeAccountForm();
+                            default: 
+                                return this.renderCreditCardForm();
+                        }
+                    })()}
+                </div>
             </div>
         )
     }

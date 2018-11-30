@@ -74,42 +74,58 @@ export default class Home extends Component {
     renderRight() {
         const l = (s) => (s[this.props.language] || s.en);
         const ior = (
-            <div>
-                <img className='card-img-wrap-left' src='/assets/IOR_logo.gif' alt='ior logo'/>
-                <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.description) }} />
-                <a className={'external-link'} href='http://www.ior.iosi.ch/' target='__blank'>
-                    <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
-                    <div className='title'>{l(i18n.pages.home.content.realities.ior.title)}</div>
-                    <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
-                </a>
+            <div className='content'>
+                <div className='aside-left'>
+                    <img src='/assets/IOR_logo.gif' alt='ior logo'/>
+                </div>
+                <div className='aside-right'>
+                    <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.description) }} />
+                    <a className={'external-link'} href='http://www.ior.iosi.ch/' target='__blank'>
+                        <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
+                        <div className='title'>{l(i18n.pages.home.content.realities.ior.title)}</div>
+                        <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                    </a>
+                </div>
             </div>
         );
         const ielsg = (
-            <div>
-                <img className='card-img-wrap-left' src='/assets/ielsg.jpg' alt='ielsg logo'/>
-                <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.description) }} />
-                <a className={'external-link'} href='http://www.ielsg.org/' target='__blank'>
-                    <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
-                    <div className='title'>{l(i18n.pages.home.content.realities.ielsg.title)}</div>
-                    <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
-                </a>
+            <div className='content'>
+                <div className='aside-left'>
+                    <img src='/assets/ielsg.jpg' alt='ielsg logo'/>
+                </div>
+                <div className='aside-right'>
+                    <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.description) }} />
+                    <a className={'external-link'} href='http://www.ielsg.org/' target='__blank'>
+                        <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
+                        <div className='title'>{l(i18n.pages.home.content.realities.ielsg.title)}</div>
+                        <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                    </a>
+                </div>
             </div>
         );
         const icml = (
-            <div>
-                <img className='card-img-wrap-left' src='/assets/icml_logo.png' alt='icml logo'/>
-                <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.description) }} />
-                <a className={'external-link'} href='http://www.lymphcon.ch/' target='__blank'>
-                    <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
-                    <div className='title'>{l(i18n.pages.home.content.realities.icml.title)}</div>
-                    <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
-                </a>            
+            <div className='content'>
+                <div className='aside-left'>
+                    <img src='/assets/icml_logo.png' alt='icml logo'/>
+                </div>
+                <div className='aside-right'>
+                    <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.description) }} />
+                    <a className={'external-link'} href='http://www.lymphcon.ch/' target='__blank'>
+                        <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
+                        <div className='title'>{l(i18n.pages.home.content.realities.icml.title)}</div>
+                        <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                    </a>            
+                </div>
             </div>
         );
         const history = (
-            <div className='page-history'>
-                {/* <div className='title'>{l(i18n.pages.history.title)}</div> */}
-                <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.history.content) }} />   
+            <div className='content'>
+                <div className='aside-left'>
+                    <img src='/assets/ior.svg' alt='ior logo'/>
+                </div>
+                <div className='aside-right'>
+                    <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.history.content) }} />   
+                </div>
             </div>
         )
         if ( ! this.props.location.state ) return history;
@@ -169,7 +185,7 @@ export default class Home extends Component {
         }
         const l = (s) => (s[this.props.language] || s.en);
          //   <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div> 
-        return (<div className='padded'>
+        return (<div className=''>
             { this.props.location.state && this.props.location.state.slave && 
                 <div className="breadcrumbs" onClick={this.props.history.goBack}>
                     <img className="arrow-left" src="/assets/arrow-right.png" alt="back" />

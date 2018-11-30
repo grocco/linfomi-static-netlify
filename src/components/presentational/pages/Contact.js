@@ -57,25 +57,27 @@ class Contact extends React.Component {
             return this.renderSuccess();
         }
         const form = (
-            <form id='contact-form' className='padded' name="contact" method="POST" data-netlify="true" action='/contact/success'>
+            <div>
                 <div className="breadcrumbs" onClick={this.props.history.goBack}>
                     <img className="arrow-left" src="/assets/arrow-right.png" alt="back" />
                     <div className='go-back'>{l(i18n.navigation.back)}</div>
                 </div>
-                <input key='hidden' type="hidden" name="form-name" value="contact" />
-                <div key='field-0' className='field'>
-                    <label>{l(i18n.pages.contact.labels.name)}: <input placeholder={l(i18n.pages.contact.placeholders.name)} type="text" name="name" /></label>   
-                </div >
-                <div key='field-1' className='field'>
-                    <label>{l(i18n.pages.contact.labels.email)}: <input placeholder={l(i18n.pages.contact.placeholders.email)}  type="email" name="email" /></label>
-                </div >
-                <div key='field-2' className='field'>
-                    <label>{l(i18n.pages.contact.labels.message)}: <textarea placeholder={l(i18n.pages.contact.placeholders.message)}  name="message" /></label>
-                </div >
-                <div key='field-3' className='field'>
-                    <button className='submit' type="submit">{l(i18n.pages.contact.send)}</button>
-                </div >
-            </form>
+                <form id='contact-form' className='padded' name="contact" method="POST" data-netlify="true" action='/contact/success'>
+                    <input key='hidden' type="hidden" name="form-name" value="contact" />
+                    <div key='field-0' className='field'>
+                        <label>{l(i18n.pages.contact.labels.name)}: <input placeholder={l(i18n.pages.contact.placeholders.name)} type="text" name="name" /></label>   
+                    </div >
+                    <div key='field-1' className='field'>
+                        <label>{l(i18n.pages.contact.labels.email)}: <input placeholder={l(i18n.pages.contact.placeholders.email)}  type="email" name="email" /></label>
+                    </div >
+                    <div key='field-2' className='field'>
+                        <label>{l(i18n.pages.contact.labels.message)}: <textarea placeholder={l(i18n.pages.contact.placeholders.message)}  name="message" /></label>
+                    </div >
+                    <div key='field-3' className='field'>
+                        <button className='submit' type="submit">{l(i18n.pages.contact.send)}</button>
+                    </div >
+                </form>
+            </div>
         );
         const map = (
             <div className='map-container'>

@@ -1,10 +1,26 @@
-::-webkit-scrollbar {
+/* ::-webkit-autobar {
   display: none;
   }
 
   * {
     -webkit-tap-highlight-color: transparent;
-  }
+  } */
+
+/* * {
+  overflow-x: hidden;
+} */
+
+/* ::-webkit-autobar {
+  -webkit-appearance: none;
+  width: 10px;
+}
+
+
+::-webkit-autobar-thumb {
+  border-radius: 5px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+} */
 
   button {
     border-width: 0px;
@@ -46,6 +62,7 @@ a{
 html {
   background-color: #fcfcfc;
   background-color: #fff;
+  overflow: hidden;
 }
 
 /* custom css starts here */
@@ -61,6 +78,7 @@ body {
   /* width: 1024px; */
   background-color: #fff;
   position: relative;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 1441px) {
@@ -111,7 +129,7 @@ body {
 .page-slug {
   position: fixed;
   color: #de0000;
-  z-index: 2;
+  z-index: 4;
   left: 80px;
   position: fixed;
   height: 80px;
@@ -131,7 +149,7 @@ body {
     line-height: inherit;
     position: fixed;
     width: calc(100% - 10px);
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #ddd;
     color: #de0000;
     padding: 5px;
     text-align: center;
@@ -225,7 +243,7 @@ body {
   display: flex;
   border-bottom: solid 1px #eee;
   border-top: solid 1px #eee;
-  padding: 0px 0px 0px 20px;
+  padding: 0px 40px 0px 20px;
   flex-direction: column;
   justify-content: center;
   position: relative;
@@ -289,7 +307,7 @@ body {
   position: relative;
 }
 
-.member .breadcrumbs {
+.breadcrumbs {
   margin: 20px;
 }
 
@@ -324,9 +342,9 @@ body {
   }
 }
 
-.hamburger-buttons.selected {
+/* .hamburger-buttons.selected {
   border-bottom: solid 1px #ddd;
-}
+} */
 
 .selected .arrow-right {
   opacity: 0.3;
@@ -340,23 +358,28 @@ body {
   padding: 20px;
 }
 
-.bio {
+.aside-right {
   /* flex-direction: column;
   display: flex;
   align-items: center;
   background-color: #fcfcfc;
   border-radius: 0px 0px 8px 8px;
   padding: 20px; */
+  overflow-x: none;
 }
 
 @media only screen and (min-width: 1132px) {
-  .bio {
-    overflow: scroll;
-    height: calc( 100vh - 83px - 40px);
+  .aside-right {
+    overflow-y: auto;
+    height: calc( 100vh - 81px );   
+    overflow-x: hidden;
+  }
+  .aside-right.padded {
+    height: calc( 100vh - 81px - 40px);    
   }
 }
 
-.bio p {
+.aside-right p {
   display: flex;
   align-items: center;
   /* background-color: #fcfcfc; */
@@ -428,14 +451,22 @@ body {
   align-items: center;
 }
 
-.member .content {
+.content {
   display: flex;
   flex-direction: row;
-  border-top: solid 1px #eee;
-  border-bottom: solid 1px #eee;
+  /* border-top: solid 1px #eee; */
+  /* border-bottom: solid 1px #eee; */
 }
 
-.member .aside-left {
+@media only screen and (max-width: 1023px) {
+
+  .content {
+    min-height: calc( 100vh - 81px - 81px - 30px);
+    border-top: solid 1px #eee;
+  }
+}
+ 
+.aside-left {
   /* float: left;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -444,8 +475,13 @@ body {
   float: left;
   position: relative;
   width: 150px;
-  background-color: #fafafa;
+  background-color: #fcfcfc;
   padding: 20px;
+  border-right: solid 1px #eee;
+}
+
+.aside-left img {    
+  width: 150px;
 }
 
 .member-details {
@@ -455,15 +491,16 @@ body {
 
 @media only screen and (max-width: 1131px) and (min-width: 1023px), (max-width: 640px) {
 
-  .member .content {
+  .content {
     flex-direction: column;
   }
 
-  .member .aside-left {
+  .aside-left {
     float: inherit;
     width: calc(100% - 40px);
     display: flex;
     flex-direction: row;
+    border-right-width: 0px; 
   }
 
   .member-details {
@@ -472,7 +509,7 @@ body {
   }
 }
 
-.member .aside-left .image {
+.aside-left .image {
   width: 150px;
   height: 150px;
   background-size: 100%;
@@ -480,7 +517,7 @@ body {
 }
 
 
-.member .aside-left .image, .member .aside-left .image::after {
+.aside-left .image, .aside-left .image::after {
   border-radius: 0px;
   border-top-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -491,12 +528,12 @@ body {
   background-color: #fcfcfc;
 }
 
-.member-list-item .role, .member .aside-left .role  {
+.member-list-item .role, .aside-left .role  {
   color: #999;
   font-size: 14px;
 }
 
-.member .aside-left .board-of-directors  {
+.aside-left .board-of-directors  {
   color: #de0000;
   font-size: 12px;
   /* text-align: center; */
@@ -521,22 +558,22 @@ header{
   color: #000;
   font-size: 15px;
   letter-spacing: 2px;
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #ddd;
   background-color: #fff;
   /* box-shadow: 0px 1px 0px 0px #ddd; */
   overflow: hidden;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 3;
   max-width: 1440px;
   /* left: 1px; */
 }
 
-@media only screen and (min-width: 1024px) {
+/* @media only screen and (min-width: 1024px) {
   header {
     box-shadow: 0px -4px 10px 0px #000;
   }
-}
+} */
 
 /* header::after {
   content: "";
@@ -622,13 +659,14 @@ button {
   background-repeat-y: no-repeat;
   background-size: 100%; */
   transition: opacity 0.5s;
-  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .frame {
   /* position: relative; */
   display: flex;
-  margin-top:80px;
+  margin-top: 81px;
   transition: all 0.5s;
   background-color: #fff;
 }
@@ -636,19 +674,24 @@ button {
 .frame.left {
   position: fixed;
   width: 512px;
-  overflow-y: scroll;
   min-height: calc( 100vh - 81px);
   max-height: 200vh;
   height: calc( 100vh - 81px);
+  /* box-shadow: 2px 2px 3px 0px #ccc; */
+  /* z-index: 2; */
+    overflow: hidden;
 }
 
 .frame.right {
   margin-left: 512px;
   width: calc(100% - 512px);
+  overflow: hidden;
 }
 
 .frame.right .main {
-  border-left: 1px solid #eee;
+  border-left: 1px solid #ddd;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .frame.right {
@@ -776,7 +819,7 @@ button {
 .hamburger-buttons {
   width: 100%;
   height: auto;
-  overflow: hidden;
+  overflow-y: auto;
   transition: all 0.5s;
   /* position: fixed;
   top: 82px;
@@ -788,11 +831,11 @@ button {
 
   margin-top: 81px;
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   background: #fff;
   width: 512px;
-  box-shadow: 2px 2px 4px 0px #ddd;
-  overflow: scroll;
+  /* box-shadow: 2px 2px 4px 0px #ddd; */
+  overflow-x: hidden;
 }
 
 
@@ -800,7 +843,7 @@ button {
  .hamburger-buttons {
    width: 100%;
    margin-top: 110px;
-   z-index: 2;
+   z-index: 4;
  }
 }
 
@@ -1003,7 +1046,8 @@ button[disabled]{
   justify-content: center;
 }
 .modal-content{
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .close-modal{

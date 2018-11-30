@@ -42,7 +42,7 @@ const Member = ({member, language, history}) => (
                     <div className="email" onClick={()=>`mailto:${member.data.email}`} />
                 </div>
             </div>
-            <div className="bio padded" dangerouslySetInnerHTML={{__html:l(member.data, 'bio', language)}} />
+            <div className="aside-right padded" dangerouslySetInnerHTML={{__html:l(member.data, 'bio', language)}} />
         </div>
     </div>
 );
