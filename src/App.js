@@ -18,6 +18,9 @@ import window from 'domain/window';
 
 import './app.css'
 
+import { triangle1, triangle2, triangle3, triangle4 } from './ui';
+
+
 // This is the default renderer for `<Routes>`
 const RenderRoutes = ({ getComponentForPath, side }) => (
   // The default renderer uses a catch all route to receive the pathname
@@ -38,6 +41,8 @@ const Left = withRouteData(({ history, showHamburgerMenu }) => {
   return (<div 
     className={`frame left ${hide ? 'hidden' : ''}`}
     >
+        { triangle3 }
+        { triangle4 }
         <div className='main'>
           <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'left'}))}/>
         </div>
@@ -53,6 +58,9 @@ const Right = withRouteData(({ history, showHamburgerMenu }) => {
       className={`frame right ${!show ? 'hide' : ''}`}
     >
       {/* </div> */}
+
+        { triangle1 }
+        { triangle2 }
       <div className='main' >
         <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'right'}))}/>
         {/* <div>Main Content</div>
