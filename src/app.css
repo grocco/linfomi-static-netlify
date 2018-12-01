@@ -354,7 +354,7 @@ body {
   z-index: 3;
 
   /* background-color: rgba(0,0,0,0.05); */
-  transition: all 0.5s, opacity 0.5s 0.5s, background-color 0.5s 0.5s, top 0.5s;
+  transition: opacity 0.5s 0s, background-color 0.5s 0s, top 0s;
 }
 
 .buttonsUnderlay {
@@ -368,7 +368,7 @@ body {
   width: 100%;
   height: calc( 100vh - 81px );
   pointer-events: none; */
-  transition: all 0.5s, opacity 0.5s 0s, background-color 0.5s 0s, top 0.5s 0.5s, z-index 0s 0.5s;
+  transition: opacity 0.5s 0s, background-color 0.5s 0s, top 0.5s 0.5s, z-index 0s 0.5s;
     background-color: rgba(0,0,0,0);
     content: '';
     position: fixed;
@@ -871,7 +871,7 @@ button {
   background: #fff; */
   border-top: solid 0px #fff;
   width: 50%;
-  border-right: solid 1px #ddd;
+  border-right: solid 1px #eee;
 
   margin-top: 81px;
   position: fixed;
@@ -896,7 +896,7 @@ button {
   height: 0px;
   text-align: center;
   line-height: 0px;
-  border-bottom: solid 0px #ddd;
+  border-bottom: solid 0px #eee;
   color: #fff;
   cursor: pointer;
   transition: all 0.5s;
@@ -911,7 +911,7 @@ button {
 
 .hamburger-buttons.selected {
   max-height: calc( 100vh - 81px );
-  border-top: solid 1px #ddd;
+  border-top: solid 1px #eee;
   /* border-top: solid 1px #ddd; */
 }
 
@@ -1033,7 +1033,7 @@ button[disabled]{
 }
 
 .language {
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #eee;
   margin-right: 10px;
   cursor: pointer;
   padding-right: 5px;
@@ -1284,7 +1284,7 @@ footer img {
   padding-left: 5%;
   padding-right: 5%;
   height: 100px;
-  border: 1px solid #ddd;
+  border: 1px solid #eee;
   display: flex;
   flex-direction: column;
   padding-top: 10px;
