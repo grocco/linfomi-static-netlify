@@ -2,9 +2,9 @@
   display: none;
   }
 
-  * {
-    -webkit-tap-highlight-color: transparent;
-  } */
+ 
+
+
 
 /* * {
   overflow-x: hidden;
@@ -21,6 +21,10 @@
   background-color: rgba(0,0,0,.5);
   -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 } */
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 
   button {
     border-width: 0px;
@@ -835,23 +839,23 @@ button {
 } */
 
 .hamburger-line {
-  height: 5px;
-  width: 30px;
+  height: 7px;
+  width: 40px;
   background: #f00;
   padding: 0;
   margin: 5px 0px;
-  border-radius: 5px;
+  border-radius: 2px;
   transition: all 0.5s;
 }
 
 .hamburger.selected .hamburger-line:last-of-type {
-  transform: rotate(45deg) translateY(-3px) translateX(-4px);
-  width: 15px;
+  transform: rotate(45deg) translateY(-3px) translateX(-7px);
+  width: 20px;
 }
 
 .hamburger.selected .hamburger-line:first-of-type {
-  transform: rotate(-45deg) translateY(3px) translateX(-4px);
-  width: 15px;
+  transform: rotate(-45deg) translateY(3px) translateX(-7px);
+  width: 20px;
 }
 
 .hamburger-buttons {
@@ -1496,4 +1500,20 @@ footer img {
     border-right: solid 1px #eee;
     background-color: #fff
   }
+}
+
+.hamburger-description {
+  position: absolute;
+  top: -15px;
+  color: #de0000;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.back-reverse {
+  transform: translateX(50%) rotateZ(-90deg);
+  position: absolute;
+  top: -20px;
+  right: 50%;
+  line-height: 12px;
 }

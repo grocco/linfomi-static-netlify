@@ -5,6 +5,13 @@ import i18n from 'domain/i18n';
 
 class Header extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      showHelp: true
+    }
+  }
+
   render() {
     const l = (s) => (s[this.props.language]);
     return (
@@ -13,11 +20,12 @@ class Header extends Component {
       <header>
         <div 
           className={`hamburger ${(this.props.showHamburgerMenu ? ' selected' : '')}`}
-          onClick={this.props.toggleHamburger}
+          onClick={()=>{this.props.toggleHamburger(); this.setState({ showHelp: false})}}
           onKeyDown={()=>0}
           role='none'
         >
           <div className="hamburger-line" />
+          { this.state.showHelp && <div className="hamburger-description">{(this.props.showHamburgerMenu ? '' : 'MENU')}</div> }
           <div className="hamburger-line" />
           <div className="hamburger-line"/>
         </div>
