@@ -256,7 +256,6 @@ export default class Donations extends React.PureComponent {
             return this.renderLeft();
         }
         // console.log(this.props.location.state)
-        if (! this.props.location.state) return (<div className='padded'>{this.renderCreditCardForm()}</div>);
         //       <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div> 
         return (
             <div>
@@ -266,21 +265,26 @@ export default class Donations extends React.PureComponent {
                         <div className='go-back'>{l(i18n.navigation.back)}</div>
                     </div>
                 }
-                <div className='padded'>
-                    {(()=>{
-                        switch(this.props.location.state.method) {
-                            case 'credit-card':
-                                return this.renderCreditCardForm();
-                            case 'paypal':
-                                return this.renderPaypalForm();
-                            case 'bank-transfer':
-                                return this.renderBankTransferForm();
-                            case 'post-office-account':
-                                return this.renderPostOfficeAccountForm();
-                            default: 
-                                return this.renderCreditCardForm();
-                        }
-                    })()}
+                <div className='content'>
+                    <div className='aside-left'>
+                        <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.address) }} />
+                    </div>
+                    <div style={{flex: 1}} className='padded'>
+                        {(()=>{
+                            switch(this.props.location.state && this.props.location.state.method) {
+                                case 'credit-card':
+                                    return this.renderCreditCardForm();
+                                case 'paypal':
+                                    return this.renderPaypalForm();
+                                case 'bank-transfer':
+                                    return this.renderBankTransferForm();
+                                case 'post-office-account':
+                                    return this.renderPostOfficeAccountForm();
+                                default: 
+                                    return this.renderCreditCardForm();
+                            }
+                        })()}
+                    </div>
                 </div>
             </div>
         )
