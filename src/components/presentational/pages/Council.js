@@ -92,7 +92,7 @@ class Council extends React.Component {
         );
         const sc = (
             <div>
-                <div className='row-size-text'>Members of the {l(i18n.pages['scientific-committee'].title)}:</div>
+                <div className='row-size-text'>{l(i18n.pages['scientific-committee'].title)} members:</div>
                 <div className="members">
                 {members
                     .filter(member => !member.data['not-anymore'])
