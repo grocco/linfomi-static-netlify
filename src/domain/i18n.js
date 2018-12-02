@@ -113,6 +113,9 @@ const home = {
                 description: {
                     it: 'Lo <b>IOR</b> ha iniziato la sua attività nel 2003 all’interno dell’edificio dell’Istituto di ricerca in biomedicina (IRB) di Bellinzona. In pochi anni i ricercatori dello IOR si sono affermati a livello internazionale, pubblicando ricerche di grande originalità e di notevole impatto nelle principali riviste scientifiche mondiali.<br/><br/>Inoltre questi ricercatori sono stati capaci di ottenere importanti contributi alla ricerca non solo dalle istanze nazionali svizzere, ma anche nell’ambito dei programmi molto selettivi dell’Unione Europea.<br/><br/>Questa qualità eccellente è stata riconosciuta dapprima dal Segretariato di Ricerca del Consiglio Federale (SEFRI), che ha accordato allo IOR i molto ambiti sussidi federali, ed in seguito dall’Università della Svizzera Italiana (USI), che ha affiliato lo IOR nel 2016 nell’ambito della Facoltà di Biomedicina appena creata.<br/><br/>A tutt’oggi (2018) quasi 70 persone lavorano nei laboratori dello IOR, con un budget annuale che si sta ormai avvicinando allo soglia del 10 milioni di franchi.',
                     en: 'The <b>IOR</b> (Institute of Oncology Research) started its activity in 2003 inside the building of the Institute for Research in Biomedicine  (IRB) in Bellinzona. In a few years, IOR researchers attained worldwide recognition through the publication of ground breaking research with a high impact in international leading scientific journals.<br/><br/>Furthermore the researchers were able to obtain important  financial contributions both in Switzerland and from the extremely selective European Union programmes.<br/><br/>This excellent quality level has been recognized first by the Research Secretariat of the Federal Council (SEFRI), which has granted to IOR the much sought-after federal subsides and later by the University of Southern Switzerland (USI), which affiliated the IOR in 2016 within the newly created Faculty of Biomedicine.<br/><br/>To date  (2018) almost 70 people work in the laboratories of the IOR with an annual budget that is approaching the threshold of 10 million francs.'
+                },
+                address: {
+                    'en': '<b>Institute of Oncology Research IOR</b><br/><br/>Via Vincenzo Vela 6<br/>CH-6500 Bellinzona<br/><br/>+41 91 820 0322',
                 }
             },
             ielsg: {
@@ -127,6 +130,9 @@ const home = {
                 description: {
                     it: 'Lo <b>IELSG</b> è nato nel 1996, quando si è capito che i linfomi extranodali (che rappresentano circa il 40% di tutti i linfomi maligni) non possono essere studiati da singoli istituti, ma solo da un gruppo internazionale cooperativo, perché il loro decorso è grandemente dipendente dalla localizzazione primaria del linfoma.<br/><br/>Siccome questi linfomi possono insorgere praticamente in tutti gli organi del nostro corpo, le diverse forme (linfoma celebrale, testicolare, polmonare, etc.) sono relativamente rare, ragion per cui solo un grande gruppo coinvolgente molte istituzioni può occuparsi del problema.<br/><br/>IELSG ha avuto un enorme successo: attualmente, sotto il coordinamento del Prof. Emanuele Zucca e dell’ufficio operativo situato all’Istituto Oncologico della Svizzera Italiana (IOSI) di Bellinzona, quasi 300 istituzioni in 4 continenti partecipano a questi studi, che hanno generato anche una cinquantina di lavori scientifici pubblicati in riviste molto importanti.',
                     en: 'The <b>IELSG</b> was born in 1996, when it became clear that only an international research group rather than single institutions can study extranodal lymphoma (which represent approximately 40% of all malignant lymphoma), due to the fact that outcomes are largely dependent on the localization of the primary lymphoma.<br/><br/>As these lymphoma can originate in all organs of our body, the various forms (cerebral, testicular, pulmonary, etc.) are relatively rare, creating the necessity for a large study group involving many institutions.<br/><br/>IELSG has enjoyed an enormous success: currently, under the coordination of Prof. Emanuele Zucca and the operational office located at the Institute of Oncology of Southern Switzerland (IOSI) in Bellinzona, almost 300 institutions on 4 continents participate in these studies, which have also generated about fifty scientific papers published in leading journals.'
+                },
+                address: {
+                    en: '<b>IELSG</b><br/><b>International Extranodal Lymphoma Study Group</b><br/><br/>Ospedale San Giovanni<br/>CH-6500 Bellinzona<br/><br/>+41 91 811 9040<br/><br/><a href=\'mailto:ielsg@eoc.ch\'>ielsg@eoc.ch</a>',
                 }
             },
             icml: {
@@ -141,6 +147,9 @@ const home = {
                 description: {
                     it: 'La <b>ICML</b> è stata organizzata per la prima volta nel 1981: dapprima ogni tre anni, dal 2011 ogni due anni. Questa conferenza è oramai diventata il convegno principale per tutti coloro che si occupano, a livello di ricerca o di trattamento di pazienti, di linfomi maligni.<br/><br/>Attualmente, per ragioni logistiche, siamo obbligati a limitare la partecipazione a non più di 3\'500 persone, anche se molte di più vorrebbero poter essere presenti.<br/><br/>È soprattutto grazie a ICML che il nome di Lugano è oramai conosciuto a livello mondiale nel settore della medicina, tant\'è vero che nella valutazione dei pazienti con questo tipo di tumore dappertutto si usa oggi la cosiddetta "Classificazione di Lugano".',
                     en: 'The <b>ICML</b> was organised for the first time in 1981: first every three years, since 2011 every two years. This conference has now become the main conference for all those involved in research or treatment of patients with malignant lymphoma.<br/><br/>Currently, for logistical reasons, we are obliged to limit the number of participants to 3\'500, although many more would like to attend.<br/><br/>It is mainly thanks to ICML that the name of Lugano is now known worldwide in the field of medicine, to such an extent that the " Lugano Classification" is universally used for the evaluation of patients with this type of cancer.'
+                },
+                address: {
+                    en: '<b>International Conference on Malignant Lymphoma</b><br/><br/>ICML Secretariat<br/>Via Vincenzo Vela 6<br/>CH-6500 Bellinzona<br/><br/>+41 (0)91 922 05 75'
                 }
             },
         },
@@ -327,8 +336,8 @@ const contact = {
         }
     },
     address: {
-        en: '<b>Fondazione per l’Istituto oncologico di ricerca (IOR)</b><br/><br/>Via Vela 6<br/>6500 Bellinzona<br/>Switzerland',
-        it: '<b>Fondazione per l’Istituto oncologico di ricerca (IOR)</b><br/><br/>Via Vela 6<br/>6500 Bellinzona<br/>Svizzera',
+        en: '<b>Fondazione per l’Istituto oncologico di ricerca (IOR)</b><br/><br/>Via Vincenzo Vela 6<br/>6500 Bellinzona<br/>Switzerland',
+        it: '<b>Fondazione per l’Istituto oncologico di ricerca (IOR)</b><br/><br/>Via Vincenzo Vela 6<br/>6500 Bellinzona<br/>Svizzera',
     }
 }
 

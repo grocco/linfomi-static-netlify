@@ -77,7 +77,8 @@ export default class Home extends Component {
         const ior = (
             <div className='content'>
                 <div className='aside-left'>
-                <div className="image " style={{backgroundImage: "url('/assets/IOR_logo.png')" }} />
+                    <div className="image " style={{backgroundImage: "url('/assets/IOR_logo.png')" }} />
+                    <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.address) }} />
                 </div>
                 <div className='aside-right'>
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.description) }} />
@@ -91,10 +92,9 @@ export default class Home extends Component {
         );
         const ielsg = (
             <div className='content'>
-                
-                
                 <div className='aside-left'>
                     <div className="image " style={{backgroundImage: "url('/assets/ielsg.jpg')" }} />
+                    <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.address) }} />
                 </div>
                 <div className='aside-right'>
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.description) }} />
@@ -108,10 +108,9 @@ export default class Home extends Component {
         );
         const icml = (
             <div className='content'>
-                
-                
                 <div className='aside-left'>
                     <div className="image " style={{backgroundImage: "url('/assets/icml_logo.png')" }} />
+                    <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.address) }} />
                 </div>
                 <div className='aside-right'>
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.description) }} />
@@ -128,7 +127,8 @@ export default class Home extends Component {
                 
                 
                 <div className='aside-left'>
-                <div className="image " style={{backgroundImage: "url('/assets/foundation_ior_inverted.png')" }} />
+                    <div className="image " style={{backgroundImage: "url('/assets/foundation_ior_inverted.png')" }} />
+                    <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.address) }} />
                 </div>
                 <div className='aside-right'>
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.history.content) }} />   

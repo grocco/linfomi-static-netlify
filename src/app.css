@@ -548,12 +548,6 @@ body {
 
 
 
-.aside-left .image {
-  width: 140px;
-  height: 140px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
 
 
 .aside-left .image, .aside-left .image::after {
@@ -1469,6 +1463,20 @@ footer img {
 }
 
 
+.aside-left .image {
+  width: 140px;
+  height: 140px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+
+.aside-left .description {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
 @media only screen and (max-width: 1131px) and (min-width: 1024px), (max-width: 640px) {
 
   .content {
@@ -1486,6 +1494,14 @@ footer img {
   .member-details {
     margin-left: 20px;
     margin-top: 0px;
+  }
+
+  .aside-left .description {
+    margin-left: 20px;
+    margin-top: 0px;
+  }
+  .aside-map {
+    display: none;
   }
 }
 
@@ -1544,11 +1560,6 @@ footer img {
   bottom: 0;
 }
 
-@media only screen and (max-width: 640px) {
-  .aside-map {
-    display: none;
-  }
-}
 
 @media only screen and (max-height: 640px) and (max-width: 640px) {
 
