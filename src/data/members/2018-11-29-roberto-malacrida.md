@@ -1,7 +1,7 @@
 ---
 layout: council
 title: Roberto Malacrida
-role: Member
+role: ''
 bio: >-
   Raised in Bellinzona, he is married to Ferdinanda and father of Martina and
   Filippo. 
@@ -29,7 +29,7 @@ bio: >-
   Since 2017 he has been a member of the Foundation Board of the Foundation for
   the Research and Treatment of Lymphomas in Ticino,cnow the Foundation for the
   Institute of Oncology Research (IOR).
-role-it: Membro
+role-it: ''
 bio-it: >-
   Cresciuto a Bellinzona, è sposato con Ferdinanda e padre di Martina e di
   Filippo. 

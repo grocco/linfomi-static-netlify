@@ -1,7 +1,7 @@
 ---
 layout: council
 title: Paolo Ferrari
-role: Member
+role: ''
 bio: >-
   Professor Paolo Ferrari is the current Head of the Medical Area of the Ente
   Ospedaliero Cantonale in Ticino and consultant physician in nephrology at the
@@ -37,7 +37,7 @@ bio: >-
   Since 2018 he has been a member of the Foundation Board of the Foundation for
   the Institute of Oncology Research (IOR) and of the Foundation Board of the
   Transfusion Service of Southern Switzerland.
-role-it: Membro
+role-it: ''
 bio-it: >-
   Il Professor Paolo Ferrari è l'attuale Capo Area medica dell'Ente Ospedaliero
   Cantonale in Ticino e medico consulente in nefrologia presso l’Ospedale Civico

@@ -1,7 +1,7 @@
 ---
 layout: council
 title: Michele Ghielmini
-role: Member
+role: ''
 bio: >-
   Compulsory and secondary school in Ticino.
 
@@ -39,7 +39,7 @@ bio: >-
   Since 1999 he has been a member of the Foundation Board of the Foundation for
   the Research and Treatment of Lymphomas in Ticino, now the Foundation for the
   Institute of Oncology Research (IOR).
-role-it: Membro
+role-it: ''
 bio-it: >-
   Scuola dell'obbligo e medie superiori in Ticino.
 

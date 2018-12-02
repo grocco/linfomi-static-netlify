@@ -1,6 +1,6 @@
 ---
 layout: council
-title: Prof. Giorgio Noseda
+title: Giorgio Noseda
 role: Vice-president
 bio: >-
   Born in Mendrisio, on July 14, 1938. 
@@ -10,8 +10,8 @@ bio: >-
   at the University of Bern. 
 
   He has devoted himself with great commitment to the fight against cancer.
-  
-  
+
+
   He was president of the Swiss Cancer League (1989-1992) and at the same time a
   member of the Board of Trustees of the Swiss Institute for Experimental Cancer
   Research (ISREC) in Lausanne. In 1996 he founded the Administrative Centre of
@@ -48,7 +48,6 @@ bio: >-
   Since 1999 he has been Vice-President and member of the Board of Directors of
   the Foundation for Research and Treatment of Lymphomas in Ticino, now the
   Foundation for the Institute of Oncology Research (IOR).
-title-it: Prof.
 role-it: Vice presidente
 bio-it: >-
   Nato a Mendrisio il 14 luglio 1938. 

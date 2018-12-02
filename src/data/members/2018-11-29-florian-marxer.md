@@ -1,7 +1,7 @@
 ---
 layout: council
 title: Florian Marxer
-role: Member
+role: ''
 bio: >-
   Born in St. Gallen in 1976, Florian Marxer graduated from high school in
   Feldkirch (Austria) in 1995. He studied law at the Universities of Innsbruck
@@ -19,7 +19,7 @@ bio: >-
   Since 2016 he has been a member of the Foundation Board of the Foundation for
   Research and Treatment of Lymphomas in Ticino, now the Foundation for the
   Institute of Oncology Research (IOR).
-role-it: Membro
+role-it: ''
 bio-it: >-
   Nato a San Gallo nel 1976, Florian Marxer ha conseguito la maturità al Liceo
   di Feldkirch (Austria) nel 1995. Ha studiato diritto alle Università di
