@@ -7,42 +7,9 @@ const matter = require('gray-matter')
 const showdown  = require('showdown')
 
 function getData () {
-  const items = [];
   const membs = [];
+  const scMembs = [];
   const converter = new showdown.Converter();
-  // Walk ("klaw") through posts directory and push file paths into items array //
-  const getItems = () => new Promise(resolve => {
-    // Check if posts directory exists //
-    if (fs.existsSync('./src/data/posts')) {
-      klaw('./src/data/posts')
-        .on('data', item => {
-          // Filter function to retrieve .md files //
-          if (path.extname(item.path) === '.md') {
-            // If markdown file, read contents //
-            const data = fs.readFileSync(item.path, 'utf8')
-            // Convert to frontmatter object and markdown content //
-            const dataObj = matter(data)
-            // Create slug for URL //
-            dataObj.data.slug = dataObj.data.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')
-            // Remove unused key //
-            delete dataObj.orig
-            // Push object into items array //
-            items.push(dataObj)
-          }
-        })
-        .on('error', e => {
-          console.error(e)
-        })
-        .on('end', () => {
-          // Resolve promise for async getRoutes request //
-          // posts = items for below routes //
-          resolve(items)
-        })
-    } else {
-      // If src/posts directory doesn't exist, return items as empty array //
-      resolve(items)
-    }
-  });
   const getMembs = () => new Promise(resolve => {
     // Check if posts directory exists //
     if (fs.existsSync('./src/data/members')) {
@@ -76,7 +43,40 @@ function getData () {
       resolve(membs)
     }
   });
-  return Promise.all([getItems(), getMembs()]);
+  const getSCMembs = () => new Promise(resolve => {
+    // Check if posts directory exists //
+    if (fs.existsSync('./src/data/scientific-committee')) {
+      klaw('./src/data/scientific-committee')
+        .on('data', item => {
+          // Filter function to retrieve .md files //
+          if (path.extname(item.path) === '.md') {
+            // If markdown file, read contents //
+            const data = fs.readFileSync(item.path, 'utf8')
+            // Convert to frontmatter object and markdown content //
+            const dataObj = matter(data);
+            ['bio', 'bio-it', 'bio-fr', 'bio-de'].forEach( field => dataObj.data[field] = converter.makeHtml(dataObj.data[field]));
+            // Create slug for URL //
+            dataObj.data.slug = dataObj.data.title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')
+            // Remove unused key //
+            delete dataObj.orig
+            // Push object into items array //
+            scMembs.push(dataObj)
+          }
+        })
+        .on('error', e => {
+          console.error(e)
+        })
+        .on('end', () => {
+          // Resolve promise for async getRoutes request //
+          // posts = items for below routes //
+          resolve(scMembs)
+        })
+    } else {
+      // If src/posts directory doesn't exist, return items as empty array //
+      resolve(scMembs)
+    }
+  });
+  return Promise.all([getSCMembs(), getMembs()]);
 }
 
 export default {
@@ -102,7 +102,7 @@ export default {
     title: 'Foundation IOR',
   }),
   getRoutes: async () => {
-    const [posts, members] = await getData()
+    const [scMembers, members] = await getData()
     return [
       {
         path: '/',
@@ -145,6 +145,15 @@ export default {
         getData: () => ({
           pageSlug: 'council',
           members,
+        })
+      },
+      {
+        path: '/scientific-committee',
+        component: 'src/components/connected/pages/Council',
+        getData: () => ({
+          pageSlug: 'scientific-committee',
+          members: scMembers,
+          scientificCommittee: true
         })
       },
       {

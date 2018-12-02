@@ -76,8 +76,6 @@ export default class Home extends Component {
         const l = (s) => (s[this.props.language] || s.en);
         const ior = (
             <div className='content'>
-                
-                
                 <div className='aside-left'>
                 <div className="image " style={{backgroundImage: "url('/assets/IOR_logo.png')" }} />
                 </div>

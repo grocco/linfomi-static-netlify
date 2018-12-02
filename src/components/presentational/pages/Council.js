@@ -47,14 +47,15 @@ const Member = ({member, language, history}) => (
     </div>
 );
 
-const MemberListItem = ({member, language, selected}) => (
-    <Link to={{pathname: '/council', state: {memberSlug: member.data.slug, slave: true}}} href='/council'>
+const MemberListItem = ({member, language, selected, scientificCommittee}) => (
+    <Link to={{pathname: scientificCommittee ? '/scientific-committee' : '/council', state: {memberSlug: member.data.slug, slave: true}}} href='/council'>
         <div className={`member-list-item ${selected ? 'selected' : ''}`}>
             <div className='round member-pic' style={ {backgroundImage: member.data.picture ? `url('${member.data.picture}/-/resize/50x/')` : "url('/assets/member-placeholder.jpg')"} } />
             <div className='name-and-role'>
                 <div className="board-of-directors">{member.data['board-of-directors'] ? i18n.pages.council.boardOfDirectors[language] : ''}</div>
                 <div className='title'>{member.data.name} {member.data.surname}</div>
                 <div className='role'>{l(member.data, 'role', language)}</div>
+                <div className='institute'>{member.data.institute}, {member.data.city}</div>
             </div>
             <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
         </div>
@@ -64,8 +65,8 @@ const MemberListItem = ({member, language, selected}) => (
 class Council extends React.Component {
     renderLeft(){
         const l = (s) => (s[this.props.language] || s.en);
-        const { members, language } = this.props;
-        return (
+        const { members, language, scientificCommittee } = this.props;
+        const council = (
             <div>
                 <div className='row-size-text'>{l(i18n.pages.council.current)}:</div>
                 <div className="members">
@@ -86,7 +87,21 @@ class Council extends React.Component {
                 ))}
                 </div>
             </div>
-        )
+        );
+        const sc = (
+            <div>
+                <div className='row-size-text'>{l(i18n.pages.scientificCommittee.title)}:</div>
+                <div className="members">
+                {members
+                    .filter(member => !member.data['not-anymore'])
+                    .sort((el1, el2) => compareByField('order', el => el.data)(el1,el2) || compareByField('surname', el => el.data)(el1,el2))
+                    .map((member, idx) => (
+                    <MemberListItem scientificCommittee={scientificCommittee}  key={member.data.slug} member={member} language={language} selected={this.props.history.location.state && ( this.props.history.location.state.memberSlug === member.data.slug || (idx === 0 && this.props.history.location.state.memberSlug === 'president' ))}/>
+                ))}
+                </div>
+            </div>
+        );
+        return scientificCommittee ? sc : council;
     }
 
     renderRight() {

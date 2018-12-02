@@ -52,7 +52,13 @@ const header = {
         council: {
             title: {
                 en: "Board",
-                it: "Consiglio",
+                it: "Consiglio di Fondazione",
+            }
+        },
+        "scientific-committee": {
+            title: {
+                en: "Scientific Committee",
+                it: "Comitato Scientifico",
             }
         },
         donations: {
@@ -320,13 +326,21 @@ const contact = {
     }
 }
 
+const scientificCommittee = {
+    title: {
+        en: 'Scientific Committee',
+        it: 'Comitato Scientifico'
+    }
+}
+
 const pages = {
     home,
     donations,
     president,
     history,
     council,
-    contact
+    contact,
+    scientificCommittee
 };
 
 const languages = {
