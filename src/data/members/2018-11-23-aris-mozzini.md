@@ -1,6 +1,8 @@
 ---
 layout: council
 title: Aris Mozzini
+name: Aris
+surname: Mozzini
 role: ''
 bio: >-
   Born in 1971 in Bellinzona, where he currently resides, he graduated as an
@@ -41,5 +43,6 @@ bio-it: >-
 bio-fr: french vers
 email: aris.mozzini@ti.ch
 board-of-directors: true
+order: 1000
 ---
 

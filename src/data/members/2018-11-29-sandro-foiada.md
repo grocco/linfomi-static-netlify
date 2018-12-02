@@ -1,6 +1,8 @@
 ---
 layout: council
 title: Sandro Foiada
+name: Sandro
+surname: Foiada
 role: 2017 - 2018
 bio: No biography available
 title-it: Sandro Foiada

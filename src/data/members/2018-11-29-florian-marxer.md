@@ -1,6 +1,8 @@
 ---
 layout: council
 title: Florian Marxer
+name: Florian
+surname: Marxer
 role: ''
 bio: >-
   Born in St. Gallen in 1976, Florian Marxer graduated from high school in

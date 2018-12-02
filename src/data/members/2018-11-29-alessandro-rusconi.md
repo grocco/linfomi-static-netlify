@@ -1,9 +1,10 @@
 ---
 layout: council
 title: Alessandro Rusconi
+name: Alessandro
+surname: Rusconi
 role: 2011 - 2014
 bio: No biography available
-title-it: Alessandro Rusconi
 role-it: 2011 - 2014
 bio-it: Biografia non disponibile
 bio-fr: '-'

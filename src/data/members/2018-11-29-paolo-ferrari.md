@@ -1,6 +1,8 @@
 ---
 layout: council
 title: Paolo Ferrari
+name: Paolo
+surname: Ferrari
 role: ''
 bio: >-
   Professor Paolo Ferrari is the current Head of the Medical Area of the Ente

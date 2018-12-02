@@ -516,7 +516,7 @@ body {
 @media only screen and (max-width: 1023px) {
 
   .content {
-    min-height: calc( 100vh - 81px - 81px - 30px);
+    min-height: calc( 100vh - 81px - 82px - 30px);
     border-top: solid 1px #eee;
   }
 }
@@ -574,11 +574,6 @@ body {
   font-size: 14px;
 }
 
-.aside-left .board-of-directors  {
-  color: #ee3333 /* #de0000 */;
-  font-size: 12px;
-  /* text-align: center; */
-}
 
 .member-list-item .name-and-role {
   display: flex;
@@ -1518,4 +1513,9 @@ footer img {
   top: -20px;
   right: 50%;
   line-height: 12px;
+}
+
+.board-of-directors {
+  font-size: 12px;
+  color: #666;
 }

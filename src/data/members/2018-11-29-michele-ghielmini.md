@@ -1,6 +1,8 @@
 ---
 layout: council
 title: Michele Ghielmini
+name: Michele
+surname: Ghielmini
 role: ''
 bio: >-
   Compulsory and secondary school in Ticino.

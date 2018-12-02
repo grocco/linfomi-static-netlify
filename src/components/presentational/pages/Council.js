@@ -37,7 +37,7 @@ const Member = ({member, language, history}) => (
                 <div className="image round" style={{backgroundImage: member.data.picture ? `url('${member.data.picture}/-/resize/140x/')` : "url('/assets/member-placeholder.jpg')"}} />
                 <div className='member-details'>
                     <div className="board-of-directors">{member.data['board-of-directors'] ? i18n.pages.council.boardOfDirectors[language] : ''}</div>
-                    <div className="title">{member.data.title}</div>
+                    <div className="title">{member.data.name} {member.data.surname}</div>
                     <div className="role">{l(member.data, 'role', language)}</div>
                     <div className="email" onClick={()=>`mailto:${member.data.email}`} />
                 </div>
@@ -52,7 +52,8 @@ const MemberListItem = ({member, language, selected}) => (
         <div className={`member-list-item ${selected ? 'selected' : ''}`}>
             <div className='round member-pic' style={ {backgroundImage: member.data.picture ? `url('${member.data.picture}/-/resize/50x/')` : "url('/assets/member-placeholder.jpg')"} } />
             <div className='name-and-role'>
-                <div className='title'>{member.data.title}</div>
+                <div className="board-of-directors">{member.data['board-of-directors'] ? i18n.pages.council.boardOfDirectors[language] : ''}</div>
+                <div className='title'>{member.data.name} {member.data.surname}</div>
                 <div className='role'>{l(member.data, 'role', language)}</div>
             </div>
             <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
@@ -70,7 +71,7 @@ class Council extends React.Component {
                 <div className="members">
                 {members
                     .filter(member => !member.data['not-anymore'])
-                    .sort(compareByField('order', el => el.data))
+                    .sort((el1, el2) => compareByField('order', el => el.data)(el1,el2) || compareByField('surname', el => el.data)(el1,el2))
                     .map((member, idx) => (
                     <MemberListItem  key={member.data.slug} member={member} language={language} selected={this.props.history.location.state && ( this.props.history.location.state.memberSlug === member.data.slug || (idx === 0 && this.props.history.location.state.memberSlug === 'president' ))}/>
                 ))}
@@ -79,7 +80,7 @@ class Council extends React.Component {
                 <div className="members">
                 {members
                     .filter(member => member.data['not-anymore'])
-                    .sort(compareByField('role', el => el.data))
+                    .sort(compareByField('surname', el => el.data))
                     .map(member => (
                     <MemberListItem  key={member.data.slug} member={member} language={language} selected={this.props.history.location.state && this.props.history.location.state.memberSlug === member.data.slug}/>
                 ))}

@@ -1,6 +1,8 @@
 ---
 layout: council
 title: Olga Jackson
+name: Olga
+surname: Jackson
 role: Secretary
 bio: >-
   Born in Prague in 1957, she emigrated with her parents to Switzerland in 1968.

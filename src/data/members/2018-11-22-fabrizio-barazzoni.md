@@ -1,6 +1,8 @@
 ---
 layout: council
 title: Fabrizio Barazzoni
+name: Fabrizio
+surname: Barazzoni
 role: ''
 bio: >-
   Born in 1954 in Thun, he graduated in 1974 from the Liceo Papio in Ascona,
@@ -82,6 +84,7 @@ bio-it: >-
 bio-fr: french version for fabrizio
 email: fabrizio.barazzoni@eoc.ch
 board-of-directors: true
+order: 1000
 picture: 'https://ucarecdn.com/ce3525d3-5aa5-485c-a2ab-5b92ea82d6c0/-/preview/'
 ---
 

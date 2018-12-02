@@ -1,6 +1,8 @@
 ---
 layout: council
 title: Giovanni Zürcher
+name: Giovanni
+surname: Zürcher
 role: Treasurer
 bio: >-
   Born on 4.8.1960, Giovanni Zuercher obtained the Federal Certificate of
@@ -29,6 +31,6 @@ bio-it: >-
 bio-fr: '-'
 email: giovanni.zuercher@pentagramsa.com
 board-of-directors: true
-order: 1001
+order: 1000
 ---
 

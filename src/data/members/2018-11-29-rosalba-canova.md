@@ -1,6 +1,8 @@
 ---
 layout: council
 title: Rosalba Canova
+name: Rosalba
+surname: Canova
 role: 1999 - 2008
 bio: No biography available
 title-it: Rosalba Canova

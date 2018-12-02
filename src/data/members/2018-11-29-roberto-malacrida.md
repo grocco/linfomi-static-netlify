@@ -1,6 +1,8 @@
 ---
 layout: council
 title: Roberto Malacrida
+name: Roberto
+surname: Malacrida
 role: ''
 bio: >-
   Raised in Bellinzona, he is married to Ferdinanda and father of Martina and

@@ -1,6 +1,8 @@
 ---
 layout: council
 title: Emilio Camponovo
+name: Emilio
+surname: Camponovo
 role: ''
 bio: >-
   Born in Chiasso in 1933, Emilio Camponovo attended compulsory schooling and a

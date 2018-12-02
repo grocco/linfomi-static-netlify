@@ -1,6 +1,8 @@
 ---
 layout: council
 title: Alba Masullo
+name: Alba
+surname: Masullo
 role: ''
 bio: >-
   Born in Saignelégier (Ct. Jura) in 1964, Alba Masullo graduated from high

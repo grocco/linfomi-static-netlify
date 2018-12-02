@@ -1,6 +1,8 @@
 ---
 layout: council
 title: Franco Cavalli
+name: Franco
+surname: Cavalli
 role: President
 bio: >-
   Born in Verscio, in 1942, he is Professor (full professor) of medical oncology
