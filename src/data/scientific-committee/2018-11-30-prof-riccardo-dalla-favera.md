@@ -10,5 +10,6 @@ bio: No biography available
 role-it: Chair
 bio-it: Biografia non disponibile
 email: test@example.com
+order: 1
 ---
 

@@ -102,13 +102,17 @@ class AppPresentational extends React.Component {
   }
 
   render() {
-    console.log(window.innerHeight - 81)
     return (
       <Router>
         <div>
             <div 
               className={`hamburger-buttons ${this.props.showHamburgerMenu ? ' selected' : ''}`}
             >
+            { this.props.showHamburgerMenu && <div className='menu-triangles'>
+              { triangle1 }
+              { triangle2 }
+            </div>
+            }
             <div className='languages hamburger-button'>
                 { this.props.languages && this.props.languages.map(language => 
                 <button 

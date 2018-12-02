@@ -39,6 +39,8 @@ const Member = ({member, language, history}) => (
                     <div className="board-of-directors">{member.data['board-of-directors'] ? i18n.pages.council.boardOfDirectors[language] : ''}</div>
                     <div className="title">{member.data.name} {member.data.surname}</div>
                     <div className="role">{l(member.data, 'role', language)}</div>
+                    <div className='institute'>{member.data.institute}</div>
+                    <div className='city'>{member.data.city}</div>
                     <div className="email" onClick={()=>`mailto:${member.data.email}`} />
                 </div>
             </div>
@@ -90,7 +92,7 @@ class Council extends React.Component {
         );
         const sc = (
             <div>
-                <div className='row-size-text'>{l(i18n.pages.scientificCommittee.title)}:</div>
+                <div className='row-size-text'>Members of the {l(i18n.pages['scientific-committee'].title)}:</div>
                 <div className="members">
                 {members
                     .filter(member => !member.data['not-anymore'])

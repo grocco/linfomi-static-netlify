@@ -50,18 +50,10 @@ class Contact extends React.Component {
         )
     }
 
-    render() {
+    renderRight() {
         const l = (s) => (s[this.props.language] || s.en);
-        if (this.props.side === 'left') return this.renderLeft();
-        if(this.props.success) {
-            return this.renderSuccess();
-        }
         const form = (
-            <div>
-                <div className="breadcrumbs" onClick={this.props.history.goBack}>
-                    <img className="arrow-left" src="/assets/arrow-right.png" alt="back" />
-                    <div className='go-back'>{l(i18n.navigation.back)}</div>
-                </div>
+            <div style={{flex: 1}}>
                 <form id='contact-form' className='padded' name="contact" method="POST" data-netlify="true" action='/contact/success'>
                     <input key='hidden' type="hidden" name="form-name" value="contact" />
                     <div key='field-0' className='field'>
@@ -80,11 +72,7 @@ class Contact extends React.Component {
             </div>
         );
         const map = (
-            <div className='map-container'>
-                <div className="breadcrumbs" onClick={this.props.history.goBack}>
-                    <img className="arrow-left" src="/assets/arrow-right.png" alt="back" />
-                    <div className='go-back'>{l(i18n.navigation.back)}</div>
-                </div>
+            <div  className='map-container'>
                 <MyMapComponent 
                     isMarkerShown
                     googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-7QaZ0BVi7guiWSBodnHCDr5LT4NoFtk&v=3.exp&libraries=geometry,drawing,places"
@@ -95,12 +83,42 @@ class Contact extends React.Component {
             </div>
         );
         if( this.props.history.location.state && this.props.history.location.state.slave === 'map') {
-            return map;
+            return (
+                <div className='content'>
+                    <div className='aside-left aside-map'>
+                        <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.address) }} />
+                    </div>
+                    <div style={{position:'relative', width: '100%', flex: 1}}>     
+                        {map}
+                    </div>
+                </div>
+            )
+        } 
+        return (
+            <div className='content'>
+                <div className='aside-left'>
+                    <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.address) }} />
+                </div>
+                {form}
+            </div>
+        );
+    }
+
+    render() {
+        const l = (s) => (s[this.props.language] || s.en);
+        if (this.props.side === 'left') return this.renderLeft();
+        if(this.props.success) {
+            return this.renderSuccess();
         }
-        if( this.props.history.location.state && this.props.history.location.state.slave === 'form') {
-            return form
-        }
-        return form;
+        return (<div className=''>
+            { this.props.history.location.state && this.props.history.location.state.slave && 
+                <div className="breadcrumbs" onClick={this.props.history.goBack}>
+                    <img className="arrow-left" src="/assets/arrow-right.png" alt="back" />
+                    <div className='go-back'>{l(i18n.navigation.back)}</div>
+                </div>
+            }
+            {this.renderRight()}
+        </div>);
     }
 }
 

@@ -92,8 +92,8 @@ body {
 
   body {
     font-family: RobotoLight, TradeGothic;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
   }
 }
 
@@ -134,11 +134,10 @@ body {
 }
 
 .page-slug {
-  position: fixed;
   color: #ee3333 /* #de0000 */;
   z-index: 4;
   left: 80px;
-  position: fixed;
+  position: absolute;
   height: 80px;
   display: block;
   line-height: 80px;
@@ -602,7 +601,7 @@ header{
   position: fixed;
   top: 0;
   z-index: 3;
-  max-width: 1440px;
+  max-width: 1439px;
   /* left: 1px; */
 }
 
@@ -648,24 +647,23 @@ opacity: 0;
 
 .header-button:hover, .aside-button:hover {
   color: #333;
-  transition: all 0.5s;
   background-color: #fcfcfc
 }
 
 
 
 .hamburger-button.languages:hover {
-  background-color: #fff;
+  background-color:transparent;
 }
 
 
 .hamburger-button .language:hover {
-  background-color: #fcfcfc;
+  background-color: rgba(245,245,245,0.2);
 }
 
 button.language {
   flex: 1;
-  transition: all 0.5s;
+  transition: all 0.5s, background-color 0s;
   height: 0px;
   line-height: 0px;
 }
@@ -897,11 +895,13 @@ button {
   transition: all 0.5s;
   opacity: 0.5;
   position: relative;
+  background: transparent;
 }
 
 .hamburger-button .language {
   margin-right: 0;
   padding-right: 0;
+  background: transparent;
 }
 
 .hamburger-buttons.selected {
@@ -921,14 +921,14 @@ button {
   line-height: 80px;
   color: #333;
   opacity: 1;
-  transition: all 0.5s;
+  transition: all 0.5s, background-color 0s;
   border-bottom-width: 1px;
-
 }
 
 .hamburger-button:hover {
   color: #333;
-  background-color: #fcfcfc;
+  transition: all 0s;
+  background-color: rgba(245,245,245,0.2);
 }
 
 .logo-name {
@@ -1446,8 +1446,12 @@ footer img {
   /* transform: rotateZ(90deg); */
   top: 0;
   z-index: 0;
-  left: 20px;
   height: calc( 100vh - 82px);
+}
+
+.content .content-triangle-2 {
+
+  left: 20px;
 }
 
 .frame-left-triangle-1 {
@@ -1523,4 +1527,33 @@ footer img {
 .institute {
   font-size: 12px;
   color: #999;
+}
+
+.city {
+  font-size: 12px;
+  color: #999;
+}
+
+.menu-triangles {
+  position: absolute;
+  background-color: #fdfdfd;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  top: 0px;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 640px) {
+  .aside-map {
+    display: none;
+  }
+}
+
+@media only screen and (max-height: 640px) and (max-width: 640px) {
+
+  .menu-triangles {
+    position: fixed;
+    top: 111px;
+  }
 }

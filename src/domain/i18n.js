@@ -210,7 +210,8 @@ const donations = {
             it: 'Dettagli del conto bancario'
         },
         description: {
-            en: 'Fondazione per la Ricerca e la Cura dei Linfomi<br/>Banca dello Stato del Canton Ticino<br/>Via Pioda 7<br/>6900 Lugano<br/>Switzerland<br/><b>Account nr:</b> 336 9742/001.000.001<br/><b>IBAN code:</b> CH31 0076 4336 9742 C000 C<br/><b>SWIFT:</b> BSCTCH22LUG<br/><b>Clearing number:</b> 00764'
+            en: 'Fondazione per l’Istituto Oncologico di Ricerca (IOR)<br/>Banca dello Stato del Canton Ticino<br/>Via Pioda 7<br/>6900 Lugano<br/>Switzerland<br/><b>IBAN code:</b> CH31 0076 4336 9742 C000 C<br/><b>SWIFT:</b> BSCTCH22LUG<br/><b>Clearing number:</b> 00764',
+            it: 'Fondazione per l’Istituto Oncologico di Ricerca (IOR)<br/>Banca dello Stato del Canton Ticino<br/>Via Pioda 7<br/>6900 Lugano<br/>Svizzera<br/><b>Codice IBAN:</b> CH31 0076 4336 9742 C000 C<br/><b>SWIFT:</b> BSCTCH22LUG<br/><b>Clearing number:</b> 00764'
         }
     },
     post: {
@@ -219,7 +220,8 @@ const donations = {
             it: 'Dettagli del conto Postale'
         },
         description: {
-            en: '<b>no. CCP:</b> 65-433-5'
+            en: 'Fondazione per l’Istituto Oncologico di Ricerca (IOR)<br/>PostFinance Ltd<br/>Mingerstrasse 20<br/>3030 Berna<br/>Switzerland<br/><b>Post account nr.:</b> 65-433-5</br/><b>IBAN code: CH91 0900 0000 6500 0433 5<b>SWIFT:</b> POFICHBEXXX',
+            it: 'Fondazione per l’Istituto Oncologico di Ricerca (IOR)<br/>PostFinance Ltd<br/>Mingerstrasse 20<br/>3030 Berna<br/>Svizzera<br/><b>no. CCP:</b> 65-433-5</br/><b>IBAN code: CH91 0900 0000 6500 0433 5<b>SWIFT:</b> POFICHBEXXX'
         }
     }
 }
@@ -323,6 +325,10 @@ const contact = {
             en: 'Message',
             it: 'Messaggio'
         }
+    },
+    address: {
+        en: '<b>Fondazione per l’Istituto oncologico di ricerca (IOR)</b><br/><br/>Via Vela 6<br/>6500 Bellinzona<br/>Switzerland',
+        it: '<b>Fondazione per l’Istituto oncologico di ricerca (IOR)</b><br/><br/>Via Vela 6<br/>6500 Bellinzona<br/>Svizzera',
     }
 }
 
@@ -340,7 +346,7 @@ const pages = {
     history,
     council,
     contact,
-    scientificCommittee
+    'scientific-committee': scientificCommittee
 };
 
 const languages = {
