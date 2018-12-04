@@ -51,13 +51,6 @@ export default class Intro extends Component {
                             <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
                         </div>
                     </Link>
-                    {/* <Link to={{pathname:'/home/', state: { reality: 'history', slave: true}}} href='/home'>
-                        <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'history' ? 'selected' : ''}`}>
-                            <div className='acronym'>{l(i18n.pages.home.content.realities.fior.acronym)}</div>
-                            <div className='title'>{l(i18n.pages.home.content.realities.fior.title)}</div>
-                            <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
-                        </div>
-                    </Link> */}
                 </div>
                 <div className='bubble' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.finalThoughts) }} />
                 <br/>
@@ -82,6 +75,8 @@ export default class Intro extends Component {
                         width: 180,
     height: 180,
     backgroundSize: 'cover'}}/>
+
+    <div className='cta'>Find out more</div>
 
 
 

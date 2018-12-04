@@ -99,8 +99,8 @@ const Menu = withRouteData(({showHamburgerMenu, language, languages, toggleHambu
         className={`hamburger-buttons ${showHamburgerMenu ? ' selected' : ''}`}
       >
       { showHamburgerMenu && <div className='menu-triangles'>
-        { triangle1 }
-        { triangle2 }
+        { triangle1({transform: 'rotateZ(270deg)'}) }
+        { triangle2() }
       </div>
       }
       <div className='languages hamburger-button'>

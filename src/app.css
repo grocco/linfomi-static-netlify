@@ -799,8 +799,9 @@ button {
   display: none;
   top: 5px;
   cursor: pointer;
-  transition: transform 0.5s, margin-top 1s;
+  transition: transform 0.5s, margin 0.5s;
   display: block;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -811,6 +812,7 @@ button {
 
 .hamburger.selected {
   transform: rotate(90deg);
+  margin-top: 10px;
 }
 
 /* .hamburger-line {
@@ -1010,6 +1012,7 @@ button[disabled]{
 .app{
   display: flex;
   flex-direction: column;
+  transition: margin 1s;
 }
 
 

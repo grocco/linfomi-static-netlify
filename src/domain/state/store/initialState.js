@@ -75,7 +75,7 @@ export const initialUiState = {
   modalTemplates, 
   currentModal: null, 
   word: "the initial word",
-  showHamburgerMenu: true,
+  showHamburgerMenu: false,
   screen: {
     width: window.innerWidth,
     height: window.innerHeight

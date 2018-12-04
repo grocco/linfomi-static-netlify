@@ -22,7 +22,7 @@ class Header extends Component {
           className={`hamburger ${(this.props.showHamburgerMenu ? ' selected' : '')}`}
           onClick={()=>{this.props.toggleHamburger(); this.setState({ showHelp: false})}}
           onKeyDown={()=>0}
-          // style={{marginTop: this.props.pageSlug === 'intro' ? 81 + 20 : null}}
+          // style={{marginTop: this.props.pageSlug === 'intro' ? 81 + 20 : null, marginLeft: this.props.pageSlug === 'intro' ? - 81 + 20 : null}}
           role='none'
         >
           <div className="hamburger-line" />
