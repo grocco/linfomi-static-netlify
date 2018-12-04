@@ -17,15 +17,16 @@ class Header extends Component {
     return (
     <div>
     <div className='page-slug'>{i18n.pages[this.props.pageSlug] ? l(i18n.pages[this.props.pageSlug].title) : ''}</div>
-      <header>
+      <header  style={{marginTop: this.props.pageSlug === 'intro' ? -81 : 0}}>
         <div 
           className={`hamburger ${(this.props.showHamburgerMenu ? ' selected' : '')}`}
           onClick={()=>{this.props.toggleHamburger(); this.setState({ showHelp: false})}}
           onKeyDown={()=>0}
+          // style={{marginTop: this.props.pageSlug === 'intro' ? 81 + 20 : null}}
           role='none'
         >
           <div className="hamburger-line" />
-          { this.state.showHelp && <div className="hamburger-description">{(this.props.showHamburgerMenu ? '' : 'MENU')}</div> }
+          <div className="hamburger-description">{(this.props.showHamburgerMenu ? '' : 'MENU')}</div>
           <div className="hamburger-line" />
           <div className="hamburger-line"/>
         </div>

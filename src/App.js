@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Link, Route, withRouteData } from 'react-static'
+import { Router, Link, Route, withRouteData, withSiteData } from 'react-static'
 import { hot } from 'react-hot-loader'
 //
 import Routes from 'react-static-routes'
@@ -36,13 +36,14 @@ const RenderRoutes = ({ getComponentForPath, side }) => (
 )
 
 
-const Left = withRouteData(({ history, showHamburgerMenu }) => {
+const Left = withRouteData(({ history, showHamburgerMenu, pageSlug }) => {
   const hide = history.location && history.location.state && history.location.state.slave;
   return (<div 
     className={`frame left ${hide ? 'hidden' : ''}`}
+    style={{height: pageSlug === 'intro' ? '100vh' : null}}
     >
-        { triangle3 }
-        { triangle4 }
+        <div>{ triangle3 }</div>
+        <div>{ triangle4 }</div>
         <div className='main'>
           <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'left'}))}/>
         </div>
@@ -50,17 +51,18 @@ const Left = withRouteData(({ history, showHamburgerMenu }) => {
   )
 });
 
-const Right = withRouteData(({ history, showHamburgerMenu }) => {
+const Right = withRouteData(({ history, showHamburgerMenu, pageSlug }) => {
   const show = history.location && history.location.state && history.location.state.slave;
   return (
     <div 
       // className={`frame ${(this.props.showHamburgerMenu ? 'selected' : '')}`}
       className={`frame right ${!show ? 'hide' : ''}`}
+      style={{height: pageSlug === 'intro' ? '100vh' : null}}
     >
       {/* </div> */}
 
-        { triangle1 }
-        { triangle2 }
+        { triangle1({opacity: pageSlug === 'intro' ? 0.4 : null, zIndex: pageSlug === 'intro' ? '1' : null, height: pageSlug === 'intro' ? '100vh' : null}) }
+        { triangle2({opacity: pageSlug === 'intro' ? 0.4 : null, zIndex: pageSlug === 'intro' ? '1' : null, height: pageSlug === 'intro' ? '100vh' : null}) }
       <div className='main' >
         <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'right'}))}/>
         {/* <div>Main Content</div>
@@ -71,6 +73,66 @@ const Right = withRouteData(({ history, showHamburgerMenu }) => {
     </div>
   )
 })
+
+const Content = withRouteData(({showHamburgerMenu, modal, pageSlug}) => (
+  <div className="app" style={{marginTop: pageSlug === 'intro' ? -81 : 0, transition: 'margin-top 1s'}}>
+    {/* <Route path="/" component={Header} /> */}
+    <Header />
+    {modal && <Modal
+      {...modal}
+    />}
+    <div
+    >
+      <Left 
+        showHamburgerMenu={showHamburgerMenu}
+      />
+      <Right
+        showHamburgerMenu={showHamburgerMenu}
+      />
+    </div>
+      {/* <Footer /> */}
+  </div>
+))
+
+const Menu = withRouteData(({showHamburgerMenu, language, languages, toggleHamburger, changeLanguage, buttons, pageSlug}) => (
+      <div 
+        className={`hamburger-buttons ${showHamburgerMenu ? ' selected' : ''}`}
+      >
+      { showHamburgerMenu && <div className='menu-triangles'>
+        { triangle1 }
+        { triangle2 }
+      </div>
+      }
+      <div className='languages hamburger-button'>
+          { languages && languages.map(_language => 
+          <button 
+            key={_language}
+            className={`language ${_language === language ? ' selected' : ''}`}
+            onClick={()=>{
+                toggleHamburger();
+                changeLanguage(_language);
+              }
+            }
+          >{i18n.languages.original[_language]}</button>
+          )}
+      </div>
+      { buttons && buttons.map(button => 
+            <button 
+              key={button.key}
+              className={`hamburger-button ${button.selected ? ' selected' : ''} ${button.featured ? ' featured' : ''}`}
+              onClick={()=>toggleHamburger()}
+            >
+              <Link 
+                to={button.key === 'president' ? {pathname:'/council', state: { memberSlug: 'prof-franco-cavalli', slave: true}} : `/${button.key}`} 
+                href={`/${button.key}`}
+                activeClassName='selected'
+              >
+                  {button.title}
+              </Link>
+            </button>
+        )}
+        </div>
+))
 
 class AppPresentational extends React.Component {
 
@@ -105,64 +167,19 @@ class AppPresentational extends React.Component {
     return (
       <Router>
         <div>
-            <div 
-              className={`hamburger-buttons ${this.props.showHamburgerMenu ? ' selected' : ''}`}
-            >
-            { this.props.showHamburgerMenu && <div className='menu-triangles'>
-              { triangle1 }
-              { triangle2 }
-            </div>
-            }
-            <div className='languages hamburger-button'>
-                { this.props.languages && this.props.languages.map(language => 
-                <button 
-                  key={language}
-                  className={`language ${this.props.language === language ? ' selected' : ''}`}
-                  onClick={()=>{
-                      this.props.toggleHamburger();
-                      this.props.changeLanguage(language);
-                    }
-                  }
-                >{i18n.languages.original[language]}</button>
-                )}
-            </div>
-            <div>
-            { this.props.buttons && this.props.buttons.map(button => 
-                <button 
-                  key={button.key}
-                  className={`hamburger-button ${button.selected ? ' selected' : ''} ${button.featured ? ' featured' : ''}`}
-                  onClick={()=>this.props.toggleHamburger()}
-                >
-                  <Link 
-                    to={button.key === 'president' ? {pathname:'/council', state: { memberSlug: 'prof-franco-cavalli', slave: true}} : `/${button.key}`} 
-                    href={`/${button.key}`}
-                    activeClassName='selected'
-                  >
-                      {button.title}
-                  </Link>
-                </button>
-            )}
-            </div>
-          </div>
-            <div role='none' className={`buttonsUnderlay ${this.props.showHamburgerMenu ? 'selected' : ''}`} onClick={this.props.toggleHamburger} onKeyDown={this.props.toggleHamburger}/>
-        <div className="app">
-          {/* <Route path="/" component={Header} /> */}
-          <Header />
-          {this.props.modal && <Modal
-            {...this.props.modal}
-          />}
-          <div
-            ref={(el)=>{this.frame=el}} 
-          >
-            <Left 
-              showHamburgerMenu={this.props.showHamburgerMenu}
-            />
-            <Right
-              showHamburgerMenu={this.props.showHamburgerMenu}
-            />
-          </div>
-           {/* <Footer /> */}
-        </div>
+          <Menu
+            showHamburgerMenu={this.props.showHamburgerMenu}
+            language={this.props.language}
+            languages={this.props.languages}
+            toggleHamburger={this.props.toggleHamburger}
+            changeLanguage={this.props.changeLanguage}
+            buttons={this.props.buttons}
+          />
+          <div role='none' className={`buttonsUnderlay ${this.props.showHamburgerMenu ? 'selected' : ''}`} onClick={this.props.toggleHamburger} onKeyDown={this.props.toggleHamburger}/>
+          <Content
+                showHamburgerMenu={this.props.showHamburgerMenu}
+                modal={this.props.modal}
+          />
         </div>
       </Router>
     );
@@ -219,4 +236,4 @@ const App = connect(
 //   </Router>
 // )
 
-export default hot(module)(App)
+export default hot(module)(withSiteData(App))

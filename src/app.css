@@ -172,6 +172,9 @@ body {
   margin-right: 20px;
   /* margin-bottom: 10px; */
   background-size: 100%;
+
+  /* TEST */
+  border-radius: 50%;
 }
 
 .page-home #president-signature {
@@ -591,11 +594,12 @@ header{
   /* border-bottom: 1px solid #ddd; TEST */
   background-color: #fff;
   /* box-shadow: 0px 1px 0px 0px #ddd; */
-  overflow: hidden;
+  /* overflow: hidden; */
   position: fixed;
   top: 0;
   z-index: 3;
   max-width: 1439px;
+  transition: margin-top 1s;
   /* left: 1px; */
 }
 
@@ -695,7 +699,7 @@ button {
   position: relative;
   display: flex;
   margin-top: 81px;
-  transition: all 0.5s;
+  transition: all 0.5s, height 0s;
   /* background-color: #fff; TEST*/
 }
 
@@ -795,7 +799,7 @@ button {
   display: none;
   top: 5px;
   cursor: pointer;
-  transition: transform 0.5s;
+  transition: transform 0.5s, margin-top 1s;
   display: block;
 }
 
@@ -1429,7 +1433,7 @@ footer img {
 
 .content-triangle-1 {
   position: absolute;
-  transform: rotateZ(270deg);
+  transform: rotateZ(290deg);
   top: 0;
   z-index: 0;
   height: calc( 100vh - 82px);
