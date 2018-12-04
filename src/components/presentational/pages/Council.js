@@ -57,7 +57,7 @@ const MemberListItem = ({member, language, selected, scientificCommittee}) => (
                 <div className="board-of-directors">{member.data['board-of-directors'] ? i18n.pages.council.boardOfDirectors[language] : ''}</div>
                 <div className='title'>{member.data.name} {member.data.surname}</div>
                 <div className='role'>{l(member.data, 'role', language)}</div>
-                <div className='institute'>{member.data.institute}, {member.data.city}</div>
+                <div className='institute'>{member.data.institute}{member.data.city && `, ${member.data.city}`}</div>
             </div>
             <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
         </div>
