@@ -106,9 +106,9 @@ export default {
     return [
       {
         path: '/',
-        component: 'src/components/connected/pages/Home',
+        component: 'src/components/connected/pages/Intro',
         getData: () => ({
-          pageSlug: 'home' 
+          pageSlug: 'intro' 
         })
       },
       {
