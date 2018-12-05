@@ -179,7 +179,7 @@ body {
   background-size: 100%;
 
   /* TEST */
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 .page-home #president-signature {
@@ -355,7 +355,7 @@ body {
  .buttonsUnderlay.selected {
   /* height: 100%; */
     opacity: 1;
-    top: 82px;
+    top: 81px;
   background-color: rgba(0,0,0,0.5);
   pointer-events: all;
   z-index: 0;
@@ -932,13 +932,13 @@ button {
 
 .hamburger-buttons.selected {
   max-height: calc( 100vh - 81px );
-  border-top: solid 1px #eee;
   /* border-top: solid 1px #ddd; */
 }
 
 @media only screen and (max-width: 1023px) {
   .hamburger-buttons.selected {
     max-height: calc( 100vh - 81px - 30px);
+    border-top: solid 1px #ddd;
   }
 }
 
@@ -1622,4 +1622,11 @@ footer img {
   background-repeat: no-repeat;
   z-index: 0;
   position: relative;
+}
+
+.article-top-image {
+  width: calc(100% - 40px);
+  /* width: 100%; */
+  margin: 0 20px;
+  margin-top: 20px;
 }

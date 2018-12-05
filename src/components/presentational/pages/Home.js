@@ -89,6 +89,7 @@ export default class Home extends Component {
                     <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.address) }} />
                 </div>
                 <div className='aside-right'>
+                    <img  className='article-top-image' src="/assets/example1.jpg" /> 
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.description) }} />
                     <a className={'external-link'} href='http://www.ior.iosi.ch/' target='__blank'>
                         <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
@@ -105,6 +106,8 @@ export default class Home extends Component {
                     <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.address) }} />
                 </div>
                 <div className='aside-right'>
+                <img  className='article-top-image' src="/assets/example2.jpg" /> 
+
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.description) }} />
                     <a className={'external-link'} href='http://www.ielsg.org/' target='__blank'>
                         <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
@@ -121,6 +124,8 @@ export default class Home extends Component {
                     <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.address) }} />
                 </div>
                 <div className='aside-right'>
+                <img className='article-top-image'  src="/assets/example3.jpg" /> 
+
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.description) }} />
                     <a className={'external-link'} href='http://www.lymphcon.ch/' target='__blank'>
                         <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
@@ -135,10 +140,13 @@ export default class Home extends Component {
                 
                 
                 <div className='aside-left'>
-                    <div className="image " style={{backgroundImage: "url('/assets/foundation_ior_inverted.png')" }} />
+                    <div className="image " style={{backgroundImage: "url('/assets/fondazione_ior.png')" }} />
                     <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.fior.address) }} />
                 </div>
                 <div className='aside-right'>
+
+                <img className='article-top-image' src="/assets/example2.jpg" /> 
+
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.history.content) }} />   
                 </div>
             </div>
