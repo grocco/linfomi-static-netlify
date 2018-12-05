@@ -83,7 +83,6 @@ export default class Intro extends Component {
     height: 180,
     backgroundSize: 'cover'}}/>
 
-    <div className='cta'>Find out more</div>
 
 
 
