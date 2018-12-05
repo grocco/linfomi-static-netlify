@@ -7,6 +7,5 @@ institute: Inselspital Bern
 city: Bern
 bio: No biography available
 bio-it: Biografia non disponibile
-email: test@example.com
 ---
 

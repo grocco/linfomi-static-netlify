@@ -7,6 +7,5 @@ institute: Contract Research Organisation
 city: Paris
 bio: No biography available
 bio-it: Biografia non disponibile
-email: test@example.com
 ---
 

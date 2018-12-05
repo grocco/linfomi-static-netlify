@@ -9,7 +9,6 @@ title-it: Sandro Foiada
 role-it: 2017 - 2018
 bio-it: Biografia non disponibile
 bio-fr: '-'
-email: test@example.com
 not-anymore: true
 ---
 

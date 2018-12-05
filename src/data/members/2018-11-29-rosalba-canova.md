@@ -9,7 +9,6 @@ title-it: Rosalba Canova
 role-it: 1999 - 2008
 bio-it: Nessuna biografia disponibile
 bio-fr: '-'
-email: test@example.com
 not-anymore: true
 ---
 
