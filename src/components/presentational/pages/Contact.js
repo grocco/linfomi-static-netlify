@@ -58,7 +58,7 @@ class Contact extends React.Component {
 
     renderRight() {
         const l = (s) => (s[this.props.language] || s.en);
-        if (!this.props.history.location.state || ! this.props.history.location.state.slave) return (
+        if ((!this.props.history.location.state || ! this.props.history.location.state.slave) && window.innerWidth > 1300) return (
             <div className='placeholder-image' style={ { backgroundImage: 'url(\'https://www.savoylimerick.com/cmsGallery/imagerow/11811/resized/1500x800/office_people_brochure.jpg\')'}} />
         );
         const form = (

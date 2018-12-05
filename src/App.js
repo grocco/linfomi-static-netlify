@@ -75,7 +75,7 @@ const Right = withRouteData(({ history, showHamburgerMenu, pageSlug }) => {
 })
 
 const Content = withRouteData(({showHamburgerMenu, modal, pageSlug}) => (
-  <div className="app" style={{marginTop: pageSlug === 'intro' ? -81 : 0, transition: 'margin-top 1s'}}>
+  <div className={`app ${pageSlug === 'intro' ? 'intro' : ''}`} >
     {/* <Route path="/" component={Header} /> */}
     <Header />
     {modal && <Modal
@@ -96,9 +96,9 @@ const Content = withRouteData(({showHamburgerMenu, modal, pageSlug}) => (
 
 const Menu = withRouteData(({showHamburgerMenu, language, languages, toggleHamburger, changeLanguage, buttons, pageSlug}) => (
       <div 
-        className={`hamburger-buttons ${showHamburgerMenu && pageSlug !== 'intro'  ? ' selected' : ''}`}
+        className={`hamburger-buttons ${showHamburgerMenu ? ' selected' : ''}`}
       >
-      <div role='none' className={`buttonsUnderlay ${showHamburgerMenu && pageSlug !== 'intro' ? 'selected' : ''}`} onClick={toggleHamburger} onKeyDown={toggleHamburger}/>
+      <div role='none' className={`buttonsUnderlay ${showHamburgerMenu ? 'selected' : ''}`} onClick={toggleHamburger} onKeyDown={toggleHamburger}/>
 
       { showHamburgerMenu && <div className='menu-triangles'>
         { triangle1({transform: 'rotateZ(270deg)'}) }

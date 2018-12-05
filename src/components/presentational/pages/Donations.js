@@ -3,6 +3,7 @@ import { Elements } from 'react-stripe-elements';
 import {injectStripe, CardElement} from 'react-stripe-elements';
 import i18n from 'domain/i18n';
 import { Link } from 'react-static';
+import window from 'domain/window';
 // CardSection.js
 
 import ReactDOM from 'react-dom';
@@ -257,7 +258,7 @@ export default class Donations extends React.PureComponent {
         }
         // console.log(this.props.location.state)
         //       <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div> 
-        if (!this.props.location.state || ! this.props.location.state.slave) return (
+        if ((!this.props.location.state || ! this.props.location.state.slave) && window.innerWidth > 1300) return (
             <div className='placeholder-image' style={ { backgroundImage: 'url(\'https://goalde.files.wordpress.com/2013/04/gerber-mark-handspic.jpg\')'}} />
         );
         return (

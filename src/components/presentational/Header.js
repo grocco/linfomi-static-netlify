@@ -16,8 +16,8 @@ class Header extends Component {
     const l = (s) => (s[this.props.language]);
     return (
     <div>
-    <div className='page-slug'>{i18n.pages[this.props.pageSlug] ? l(i18n.pages[this.props.pageSlug].title) : ''}</div>
-      <header  style={{marginTop: this.props.pageSlug === 'intro' ? -81 : 0}}>
+    <div className={`page-slug ${this.props.pageSlug === 'intro' ? 'intro' : ''}`}>{i18n.pages[this.props.pageSlug] ? l(i18n.pages[this.props.pageSlug].title) : ''}</div>
+      <header  className={this.props.pageSlug === 'intro' ? 'intro' : ''}>
         <div 
           className={`hamburger ${(this.props.showHamburgerMenu ? ' selected' : '')}`}
           onClick={()=>{this.props.toggleHamburger(); this.setState({ showHelp: false})}}

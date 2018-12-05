@@ -358,6 +358,13 @@ const scientificCommittee = {
     }
 }
 
+const intro = {
+    title: {
+        en: 'Welcome',
+        it: 'Benvenuti'
+    }
+}
+
 const pages = {
     home,
     donations,
@@ -365,7 +372,8 @@ const pages = {
     history,
     council,
     contact,
-    'scientific-committee': scientificCommittee
+    'scientific-committee': scientificCommittee,
+    intro
 };
 
 const languages = {

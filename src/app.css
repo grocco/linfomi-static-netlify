@@ -27,6 +27,21 @@
   user-select: none;
 }
 
+
+.page-slug {
+  color: #ee3333 /* #de0000 */;
+  z-index: 4;
+  left: 80px;
+  position: absolute;
+  height: 80px;
+  display: block;
+  line-height: 80px;
+  border-bottom-width: 0px;
+  width: auto;
+  padding-left: 20px;
+}
+
+
   button {
     border-width: 0px;
     padding: 0px;
@@ -135,18 +150,6 @@ body {
   src: url(/fonts/Roboto-Light.ttf);
 }
 
-.page-slug {
-  color: #ee3333 /* #de0000 */;
-  z-index: 4;
-  left: 80px;
-  position: absolute;
-  height: 80px;
-  display: block;
-  line-height: 80px;
-  border-bottom-width: 0px;
-  width: auto;
-  padding-left: 20px;
-}
 
 @media only screen and (max-width: 1023px) {
   .page-slug {
@@ -618,6 +621,13 @@ header{
   transition: margin-top 1s;
   /* left: 1px; */
 }
+@media only screen and (min-width: 1024px) {
+  header.intro {
+    margin-top: -81px;
+  }
+}
+
+
 
 /* @media only screen and (min-width: 1024px) {
   header {
@@ -1029,6 +1039,13 @@ button[disabled]{
   display: flex;
   flex-direction: column;
   transition: margin 1s;
+  margin-top: 0px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .app.intro {
+    margin-top: -81px;
+  }
 }
 
 
