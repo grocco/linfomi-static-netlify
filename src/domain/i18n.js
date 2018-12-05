@@ -21,12 +21,12 @@ const header = {
             en: 'Institute'
         },
         oncology: {
-            it: 'Oncologico',
-            en: 'Oncology'
+            it: 'oncologico',
+            en: 'oncology'
         },
         research: {
-            it: 'Ricerca',
-            en: 'Research'
+            it: 'ricerca',
+            en: 'research'
         }
 
     },
@@ -100,6 +100,9 @@ const home = {
                     it: 'La Fondazione per l\'Istituto oncologico di ricerca' ,
                     en: 'The Foundation for the Institute of Oncology Research'
                 },
+                address: {
+                    en: '<b>The Foundation for the Institute of Oncology Research</b>'
+                }
             },
             ior: {
                 acronym: {
@@ -115,7 +118,7 @@ const home = {
                     en: 'The <b>IOR</b> (Institute of Oncology Research) started its activity in 2003 inside the building of the Institute for Research in Biomedicine  (IRB) in Bellinzona. In a few years, IOR researchers attained worldwide recognition through the publication of ground breaking research with a high impact in international leading scientific journals.<br/><br/>Furthermore the researchers were able to obtain important  financial contributions both in Switzerland and from the extremely selective European Union programmes.<br/><br/>This excellent quality level has been recognized first by the Research Secretariat of the Federal Council (SEFRI), which has granted to IOR the much sought-after federal subsides and later by the University of Southern Switzerland (USI), which affiliated the IOR in 2016 within the newly created Faculty of Biomedicine.<br/><br/>To date  (2018) almost 70 people work in the laboratories of the IOR with an annual budget that is approaching the threshold of 10 million francs.'
                 },
                 address: {
-                    'en': '<b>Institute of Oncology Research IOR</b><br/><br/>Via Vincenzo Vela 6<br/>CH-6500 Bellinzona<br/><br/>+41 91 820 0322',
+                    'en': '<b>Institute of Oncology Research IOR</b>', // <br/><br/>Via Vincenzo Vela 6<br/>CH-6500 Bellinzona<br/><br/>+41 91 820 0322',
                 }
             },
             ielsg: {
@@ -132,7 +135,7 @@ const home = {
                     en: 'The <b>IELSG</b> was born in 1996, when it became clear that only an international research group rather than single institutions can study extranodal lymphoma (which represent approximately 40% of all malignant lymphoma), due to the fact that outcomes are largely dependent on the localization of the primary lymphoma.<br/><br/>As these lymphoma can originate in all organs of our body, the various forms (cerebral, testicular, pulmonary, etc.) are relatively rare, creating the necessity for a large study group involving many institutions.<br/><br/>IELSG has enjoyed an enormous success: currently, under the coordination of Prof. Emanuele Zucca and the operational office located at the Institute of Oncology of Southern Switzerland (IOSI) in Bellinzona, almost 300 institutions on 4 continents participate in these studies, which have also generated about fifty scientific papers published in leading journals.'
                 },
                 address: {
-                    en: '<b>IELSG</b><br/><b>International Extranodal Lymphoma Study Group</b><br/><br/>Ospedale San Giovanni<br/>CH-6500 Bellinzona<br/><br/>+41 91 811 9040<br/><br/><a href=\'mailto:ielsg@eoc.ch\'>ielsg@eoc.ch</a>',
+                    en: '<b>IELSG</b><br/><b>International Extranodal Lymphoma Study Group</b>', // <br/><br/>Ospedale San Giovanni<br/>CH-6500 Bellinzona<br/><br/>+41 91 811 9040<br/><br/><a href=\'mailto:ielsg@eoc.ch\'>ielsg@eoc.ch</a>',
                 }
             },
             icml: {
@@ -149,7 +152,7 @@ const home = {
                     en: 'The <b>ICML</b> was organised for the first time in 1981: first every three years, since 2011 every two years. This conference has now become the main conference for all those involved in research or treatment of patients with malignant lymphoma.<br/><br/>Currently, for logistical reasons, we are obliged to limit the number of participants to 3\'500, although many more would like to attend.<br/><br/>It is mainly thanks to ICML that the name of Lugano is now known worldwide in the field of medicine, to such an extent that the " Lugano Classification" is universally used for the evaluation of patients with this type of cancer.'
                 },
                 address: {
-                    en: '<b>International Conference on Malignant Lymphoma</b><br/><br/>ICML Secretariat<br/>Via Vincenzo Vela 6<br/>CH-6500 Bellinzona<br/><br/>+41 (0)91 922 05 75'
+                    en: '<b>International Conference on Malignant Lymphoma</b>', // <br/><br/>ICML Secretariat<br/>Via Vincenzo Vela 6<br/>CH-6500 Bellinzona<br/><br/>+41 (0)91 922 05 75'
                 }
             },
         },
@@ -176,17 +179,17 @@ const home = {
 
 const donations = {
     title: {
-        en: 'Make a donation!',
-        it: 'Fai una donazione!'
+        en: 'DONATIONS',
+        it: 'DONAZIONI'
     },
     intro: {
-        en: 'You can make a donation both on line as well as via bank transfer or on our post office account.<br/><br/>Thank you for your support!',
-        it: 'Accettiamo donazioni sia online che tramite bonifico sul conto bancario o postale.<br/><br/>Grazie per il sostegno!'
+        en: 'Possible both online as well as via bank transfer or on our post office account.<br/><br/>Thank you for your support!',
+        it: 'Possibili sia online che tramite bonifico sul conto bancario o postale.<br/><br/>Grazie per il sostegno!'
     },
     creditCard: {
         title: {
-            en: 'Donate online with your Credit Card',
-            it: 'Fai una donazione via Carta di Credito'
+            en: 'via Credit Card',
+            it: 'via Carta di Credito'
         },
         confirmOrder: {
             en: 'Confirm order',
@@ -209,14 +212,14 @@ const donations = {
     },
     payPal: {
         title: {
-            en: 'Donate online through PayPal',
-            it: 'Fai una donazione via PayPal'
+            en: 'via PayPal',
+            it: 'via PayPal'
         }
     },
     bankTransfer: {
         title: {
-            en: 'Bank account details',
-            it: 'Dettagli del conto bancario'
+            en: 'via bank account',
+            it: 'via conto bancario'
         },
         description: {
             en: 'Banca dello Stato del Canton Ticino<br/>Via Pioda 7<br/>6900 Lugano<br/>Switzerland<br/><br/><b>IBAN code:</b> CH31 0076 4336 9742 C000 C<br/><b>SWIFT:</b> BSCTCH22LUG<br/><b>Clearing number:</b> 00764',
@@ -225,12 +228,12 @@ const donations = {
     },
     post: {
         title: {
-            en: 'Post office account details',
-            it: 'Dettagli del conto Postale'
+            en: 'via post account',
+            it: 'via conto postale'
         },
         description: {
-            en: 'PostFinance Ltd<br/>Mingerstrasse 20<br/>3030 Berna<br/>Switzerland<br/><br/><b>Post account nr.:</b> 65-433-5</br/><b>IBAN code: CH91 0900 0000 6500 0433 5<b>SWIFT:</b> POFICHBEXXX',
-            it: 'PostFinance Ltd<br/>Mingerstrasse 20<br/>3030 Berna<br/>Svizzera<br/><br/><b>no. CCP:</b> 65-433-5</br/><b>IBAN code: CH91 0900 0000 6500 0433 5<b>SWIFT:</b> POFICHBEXXX'
+            en: 'PostFinance Ltd<br/>Mingerstrasse 20<br/>3030 Berna<br/>Switzerland<br/><br/><b>Post account nr.:</b> 65-433-5</br/><b>IBAN code: CH91 0900 0000 6500 0433 5<br/><b>SWIFT:</b> POFICHBEXXX',
+            it: 'PostFinance Ltd<br/>Mingerstrasse 20<br/>3030 Berna<br/>Svizzera<br/><br/><b>no. CCP:</b> 65-433-5</br/><b>IBAN code: CH91 0900 0000 6500 0433 5<br/><b>SWIFT:</b> POFICHBEXXX'
         }
     }
 }
@@ -338,6 +341,13 @@ const contact = {
     address: {
         en: '<b>Fondazione per l’Istituto oncologico di ricerca (IOR)</b><br/><br/>Via Vincenzo Vela 6<br/>6500 Bellinzona<br/>Switzerland',
         it: '<b>Fondazione per l’Istituto oncologico di ricerca (IOR)</b><br/><br/>Via Vincenzo Vela 6<br/>6500 Bellinzona<br/>Svizzera',
+    },
+    details: {
+        en: '<b>Fondazione per l\'Istituto oncologico ri ricerca (IOR)</b><br/>Via Vincenzo Vela 6<br/>6500 CH-Bellinzona<br/><br/>Ufficio del Presidente:<br/>Tel. +41 (0)91 811 86 66<br/>sarahjane.ortelligiannakis@eoc.ch<br/><br/>Segretaria della Fondazione:<br/>Tel. +41 (0)91 921 45 61<br/>olga.jackson@lymphcon.ch',
+    },
+    detailsItem: {
+        en: 'Contact details',
+        it: 'Contatti'
     }
 }
 
