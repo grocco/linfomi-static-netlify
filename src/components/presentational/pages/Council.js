@@ -41,7 +41,7 @@ const Member = ({member, language, history}) => (
                     <div className="role">{l(member.data, 'role', language)}</div>
                     <div className='institute'>{member.data.institute}</div>
                     <div className='city'>{member.data.city}</div>
-                    <div className="email" onClick={()=>`mailto:${member.data.email}`} />
+                    <a className="email" href={`mailto:${member.data.email}`}><img style={{width: 25}} src='https://www.new-soil.com/wp-content/uploads/2018/02/mail-icon.png' /></a>
                 </div>
             </div>
             <div className="aside-right padded" dangerouslySetInnerHTML={{__html:l(member.data, 'bio', language)}} />
@@ -49,8 +49,8 @@ const Member = ({member, language, history}) => (
     </div>
 );
 
-const MemberListItem = ({member, language, selected, scientificCommittee}) => (
-    <Link to={{pathname: scientificCommittee ? '/scientific-committee' : '/council', state: {memberSlug: member.data.slug, slave: true}}} href='/council'>
+const MemberListItem = ({member, language, selected, scientificCommittee}) => {
+    const inner = (
         <div className={`member-list-item ${selected ? 'selected' : ''}`}>
             <div className='round member-pic' style={ {backgroundImage: member.data.picture ? `url('${member.data.picture}/-/resize/50x/')` : "url('/assets/member-placeholder.jpg')"} } />
             <div className='name-and-role'>
@@ -59,10 +59,16 @@ const MemberListItem = ({member, language, selected, scientificCommittee}) => (
                 <div className='role'>{l(member.data, 'role', language)}</div>
                 <div className='institute'>{member.data.institute}{member.data.city && `, ${member.data.city}`}</div>
             </div>
-            <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+            { !scientificCommittee && <img className='arrow-right' src='/assets/arrow-right.png' alt='select' /> }
         </div>
+    )
+    if (scientificCommittee) return inner;
+    return (
+    <Link to={{pathname: '/council', state: {memberSlug: member.data.slug, slave: true}}} href='/council'>
+        { inner }
     </Link>
-);
+)
+    };
 
 class Council extends React.Component {
     renderLeft(){
@@ -92,7 +98,7 @@ class Council extends React.Component {
         );
         const sc = (
             <div>
-                <div className='row-size-text'>{l(i18n.pages['scientific-committee'].title)} members:</div>
+                <div className='row-size-text'>{l(i18n.pages.council.current)}:</div>
                 <div className="members">
                 {members
                     .filter(member => !member.data['not-anymore'])
@@ -107,9 +113,12 @@ class Council extends React.Component {
     }
 
     renderRight() {
-        const { members, language, history } = this.props;
+        const { members, language, history, scientificCommittee } = this.props;
         let member = null;
-        if (! history.location.state || history.location.state.memberSlug === 'president') member = members.sort(compareByField('order', el => el.data))[0]
+        if (! history.location.state) return (
+            <div className='placeholder-image' style={ { backgroundImage: scientificCommittee ? 'url(\'https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/4ZrVLdVKeijzurndz/hospital-profession-people-and-medicine-concept-group-of-happy-doctors-meeting-on-conference-or-medical-seminar-and-looking-to-something-at-hospital_ewt0_t3hx__F0000.png\')' : 'url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GTYSdDW/group-of-happy-doctors-meeting-at-hospital-office_vk3wwzkb__F0000.png")'}} />
+        );
+        if( history.location.state.memberSlug === 'president') member = members.sort(compareByField('order', el => el.data))[0]
         else member = members.find(member => member.data.slug === history.location.state.memberSlug)
         return (
             <Member key={member.slug} member={member} language={language} history={history} />

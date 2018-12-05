@@ -29,6 +29,13 @@ export default class Home extends Component {
                 <div className='lt-480'><br/><div className='bubble'>{l(i18n.pages.home.content.realities.introduction)}</div ></div>
                         
                 <div className='realities'>
+                    {/* <Link to={{pathname:'/home/', state: { reality: 'history', slave: true}}} href='/home'>
+                        <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'history' ? 'selected' : ''}`}>
+                            <div className='acronym'>{l(i18n.pages.home.content.realities.fior.acronym)}</div>
+                            <div className='title'>{l(i18n.pages.home.content.realities.fior.title)}</div>
+                            <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                        </div>
+                    </Link> */}
                     <Link to={{pathname:'/home/', state: { reality: 'ior', slave: true}}} href='/home'>
                         <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'ior' ? 'selected' : ''}`}>
                             <div className='acronym'><div className='enumeration'>1.</div> {l(i18n.pages.home.content.realities.ior.acronym)}</div>
@@ -57,6 +64,7 @@ export default class Home extends Component {
                             <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
                         </div>
                     </Link>
+                    
                 </div>
                 <div className='bubble' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.finalThoughts) }} />
                 <br/>
@@ -128,7 +136,7 @@ export default class Home extends Component {
                 
                 <div className='aside-left'>
                     <div className="image " style={{backgroundImage: "url('/assets/foundation_ior_inverted.png')" }} />
-                    <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.address) }} />
+                    <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.fior.address) }} />
                 </div>
                 <div className='aside-right'>
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.history.content) }} />   

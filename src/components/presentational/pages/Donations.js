@@ -257,6 +257,9 @@ export default class Donations extends React.PureComponent {
         }
         // console.log(this.props.location.state)
         //       <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div> 
+        if (!this.props.location.state || ! this.props.location.state.slave) return (
+            <div className='placeholder-image' style={ { backgroundImage: 'url(\'https://goalde.files.wordpress.com/2013/04/gerber-mark-handspic.jpg\')'}} />
+        );
         return (
             <div>
                 { this.props.location.state && this.props.location.state.slave && 
@@ -269,7 +272,7 @@ export default class Donations extends React.PureComponent {
                     <div className='aside-left'>
                         <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.address) }} />
                     </div>
-                    <div style={{flex: 1}} className='padded'>
+                    <div style={{flex: 1}} className='padded aside-right'>
                         {(()=>{
                             switch(this.props.location.state && this.props.location.state.method) {
                                 case 'credit-card':

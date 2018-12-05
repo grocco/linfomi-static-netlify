@@ -61,8 +61,8 @@ const Right = withRouteData(({ history, showHamburgerMenu, pageSlug }) => {
     >
       {/* </div> */}
 
-        { triangle1({opacity: pageSlug === 'intro' ? 0.4 : null, zIndex: pageSlug === 'intro' ? '1' : null, height: pageSlug === 'intro' ? '100vh' : null}) }
-        { triangle2({opacity: pageSlug === 'intro' ? 0.4 : null, zIndex: pageSlug === 'intro' ? '1' : null, height: pageSlug === 'intro' ? '100vh' : null}) }
+        { triangle1({opacity: pageSlug === 'intro' || !show ? 0.4 : null, zIndex: pageSlug === 'intro' || !show ? '1' : null, height: pageSlug === 'intro' ? '100vh' : null}) }
+        { triangle2({opacity: pageSlug === 'intro' || !show ? 0.4 : null, zIndex: pageSlug === 'intro' || !show ? '1' : null, height: pageSlug === 'intro' ? '100vh' : null}) }
       <div className='main' >
         <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'right'}))}/>
         {/* <div>Main Content</div>
@@ -96,8 +96,10 @@ const Content = withRouteData(({showHamburgerMenu, modal, pageSlug}) => (
 
 const Menu = withRouteData(({showHamburgerMenu, language, languages, toggleHamburger, changeLanguage, buttons, pageSlug}) => (
       <div 
-        className={`hamburger-buttons ${showHamburgerMenu ? ' selected' : ''}`}
+        className={`hamburger-buttons ${showHamburgerMenu && pageSlug !== 'intro'  ? ' selected' : ''}`}
       >
+      <div role='none' className={`buttonsUnderlay ${showHamburgerMenu && pageSlug !== 'intro' ? 'selected' : ''}`} onClick={toggleHamburger} onKeyDown={toggleHamburger}/>
+
       { showHamburgerMenu && <div className='menu-triangles'>
         { triangle1({transform: 'rotateZ(270deg)'}) }
         { triangle2() }
@@ -175,7 +177,6 @@ class AppPresentational extends React.Component {
             changeLanguage={this.props.changeLanguage}
             buttons={this.props.buttons}
           />
-          <div role='none' className={`buttonsUnderlay ${this.props.showHamburgerMenu ? 'selected' : ''}`} onClick={this.props.toggleHamburger} onKeyDown={this.props.toggleHamburger}/>
           <Content
                 showHamburgerMenu={this.props.showHamburgerMenu}
                 modal={this.props.modal}

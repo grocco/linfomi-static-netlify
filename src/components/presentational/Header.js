@@ -33,6 +33,7 @@ class Header extends Component {
         <Link 
           to='/' 
           href='/'
+          onClick={()=>this.props.changePage('intro')}
         >
           <div className='logo-name'>
             <div className='logo-name-inner'>
