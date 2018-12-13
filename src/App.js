@@ -164,24 +164,24 @@ class AppPresentational extends React.Component {
 
   render() {
     return (
-      <Router>
-        <div>
-          {this.props.modal && <Modal
-          {...this.props.modal}
-          />}
-          <Menu
-            showHamburgerMenu={this.props.showHamburgerMenu}
-            language={this.props.language}
-            languages={this.props.languages}
-            toggleHamburger={this.props.toggleHamburger}
-            changeLanguage={this.props.changeLanguage}
-            buttons={this.props.buttons}
-          />
-          <Content
-                showHamburgerMenu={this.props.showHamburgerMenu}
-          />
-        </div>
-      </Router>
+        <Router>
+          <div>
+            {this.props.modal && <Modal
+            {...this.props.modal}
+            />}
+            <Menu
+              showHamburgerMenu={this.props.showHamburgerMenu}
+              language={this.props.language}
+              languages={this.props.languages}
+              toggleHamburger={this.props.toggleHamburger}
+              changeLanguage={this.props.changeLanguage}
+              buttons={this.props.buttons}
+            />
+            <Content
+                  showHamburgerMenu={this.props.showHamburgerMenu}
+            />
+          </div>
+        </Router>
     );
   }
 
