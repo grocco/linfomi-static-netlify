@@ -60,9 +60,9 @@ if (typeof document !== 'undefined') {
   // Render!
   render(App)
 
-  window.addEventListener('resize', () => {
-    store.dispatch(screenResize(window.innerWidth, window.innerHeight));
-  });
-  store.dispatch(screenResize(window.innerWidth, window.innerHeight));
+  // window.addEventListener('resize', () => {
+  //   store.dispatch(screenResize(window.innerWidth, window.innerHeight));
+  // });
+ store.dispatch(screenResize(window.innerWidth, window.innerHeight));
 
 }
