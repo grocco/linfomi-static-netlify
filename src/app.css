@@ -1525,10 +1525,15 @@ footer img {
   pointer-events: none;
 }
 
-.content .content-triangle-2 {
+.frame.right .content-triangle-2 {
 
-  left: 20px;
   pointer-events: none;
+}
+
+@media only screen and (min-width: 1132px) {
+  .frame.right .content-triangle-2 {
+    left: 20px;
+  }
 }
 
 .frame-left-triangle-1 {

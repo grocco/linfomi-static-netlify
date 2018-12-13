@@ -101,7 +101,8 @@ const home = {
                     en: 'The Foundation for the Institute of Oncology Research'
                 },
                 address: {
-                    en: '<b>The Foundation for the Institute of Oncology Research</b>'
+                    en: '<b>The Foundation for the Institute of Oncology Research</b>',
+                    it: '<b></b>'
                 }
             },
             ior: {

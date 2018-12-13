@@ -62,7 +62,7 @@ const Right = withRouteData(({ history, showHamburgerMenu, pageSlug }) => {
       {/* </div> */}
 
         { triangle1({opacity: pageSlug === 'intro' || !show ? 0.4 : null, zIndex: pageSlug === 'intro' || !show ? '1' : null, height: pageSlug === 'intro' ? '100vh' : null}) }
-        { triangle2({opacity: pageSlug === 'intro' || !show ? 0.4 : null, zIndex: pageSlug === 'intro' || !show ? '1' : null, height: pageSlug === 'intro' ? '100vh' : null}) }
+        { triangle2({left: pageSlug === 'intro' || !show ? 0 : null, opacity: pageSlug === 'intro' || !show ? 0.4 : null, zIndex: pageSlug === 'intro' || !show ? '1' : null, height: pageSlug === 'intro' ? '100vh' : null}) }
       <div className='main' >
         <Routes render={args => RenderRoutes(Object.assign({},args,{side: 'right'}))}/>
         {/* <div>Main Content</div>
