@@ -30,9 +30,9 @@ class Contact extends React.Component {
     renderLeft() {
         const l = (s) => (s[this.props.language] || s.en);
         return (
-            <div className='padded'>
-                <div className='bubble'>{l(i18n.pages.contact.pleaseFill)}</div>
-                <br/>
+            <div className='padded' style={{paddingTop: 0}}>
+                {/* <div className='bubble'>{l(i18n.pages.contact.pleaseFill)}</div> */}
+                {/* <br/> */}
                 <div className='list-items'>
                     <Link key='form' to={{pathname: '/contact', state: { slave: 'details' }}} href='/contact/details'>
                         <div className='list-item'>
