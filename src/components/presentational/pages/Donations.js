@@ -284,6 +284,8 @@ export default class Donations extends React.PureComponent {
                 }
                 <div className='content'>
                     <div className='aside-left'>
+                        <div className="image " style={{backgroundImage: "url('/assets/fondazione_ior.png')" }} />
+                        <br/>
                         <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.address) }} />
                     </div>
                     <div style={{flex: 1}} className='padded aside-right'>

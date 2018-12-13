@@ -232,8 +232,8 @@ const donations = {
             it: 'via conto postale'
         },
         description: {
-            en: 'PostFinance Ltd<br/>Mingerstrasse 20<br/>3030 Berna<br/>Switzerland<br/><br/><b>Post account nr.:</b> 65-433-5</br/><b>IBAN code: CH91 0900 0000 6500 0433 5<br/><b>SWIFT:</b> POFICHBEXXX',
-            it: 'PostFinance Ltd<br/>Mingerstrasse 20<br/>3030 Berna<br/>Svizzera<br/><br/><b>no. CCP:</b> 65-433-5</br/><b>IBAN code: CH91 0900 0000 6500 0433 5<br/><b>SWIFT:</b> POFICHBEXXX'
+            en: 'PostFinance Ltd<br/>Mingerstrasse 20<br/>3030 Berna<br/>Switzerland<br/><br/><b>Post account nr.:</b> 65-433-5</br/><b>IBAN code:</b> CH91 0900 0000 6500 0433 5<br/><b>SWIFT:</b> POFICHBEXXX',
+            it: 'PostFinance Ltd<br/>Mingerstrasse 20<br/>3030 Berna<br/>Svizzera<br/><br/><b>no. CCP:</b> 65-433-5</br/><b>IBAN code:</b> CH91 0900 0000 6500 0433 5<br/><b>SWIFT:</b> POFICHBEXXX'
         }
     }
 }
