@@ -92,10 +92,12 @@ const Content = withRouteData(({showHamburgerMenu, pageSlug}) => (
 ))
 
 const Menu = withRouteData(({showHamburgerMenu, language, languages, toggleHamburger, changeLanguage, buttons, pageSlug}) => (
+      <div>
+      <div role='none' className={`buttonsUnderlay ${showHamburgerMenu ? 'selected' : ''}`} onClick={toggleHamburger} onKeyDown={toggleHamburger}/>
+
       <div 
         className={`hamburger-buttons ${showHamburgerMenu ? ' selected' : ''}`}
       >
-      <div role='none' className={`buttonsUnderlay ${showHamburgerMenu ? 'selected' : ''}`} onClick={toggleHamburger} onKeyDown={toggleHamburger}/>
 
       { showHamburgerMenu && <div className='menu-triangles'>
         { triangle1({transform: 'rotateZ(270deg)'}) }
@@ -130,6 +132,7 @@ const Menu = withRouteData(({showHamburgerMenu, language, languages, toggleHambu
               </Link>
             </button>
         )}
+        </div>
         </div>
 ))
 
