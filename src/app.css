@@ -512,6 +512,25 @@ body {
   background-color: rgba(255,255,255,0.6);
 }
 
+.member-list-item.simple .member-pic, .member-list-item.simple .arrow-right {
+  display: none;
+}
+
+.member-list-item.simple .name-and-role {
+  padding-left: 6px;
+} 
+
+
+.member-list-item:hover {
+  /* background-color: #fcfcfc; TEST*/
+  background-color: rgba(245,245,245,0.2);
+}
+
+.member-list-item.simple:hover {
+  background-color: rgba(255,255,255,0.6);
+  cursor: default;
+}
+
 .content {
   display: flex;
   flex-direction: row;
@@ -579,10 +598,6 @@ body {
 }
 
 
-.member-list-item:hover {
-  /* background-color: #fcfcfc; TEST*/
-  background-color: rgba(245,245,245,0.2);
-}
 
 .member-list-item .role, .aside-left .role  {
   color: #999;
@@ -1114,11 +1129,12 @@ button[disabled]{
 
 
 .modal-container{
-  height: calc(100% - 80px);
-  padding: 0 240px;
+  height: 100%;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 .modal-content{
   overflow-y: auto;
@@ -1142,6 +1158,11 @@ button[disabled]{
   /* text-transform: lowercase; */
 }
 
+.modal-buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
 .modal-title::first-letter{
   text-transform: capitalize;
 }
@@ -1152,16 +1173,33 @@ button[disabled]{
   color: #333;
   letter-spacing: 1.67px;
   line-height: 43px;
-  max-width: 820px;
+  /* max-width: 820px; */
 }
 
-.modal button{
+
+@media only screen and (max-width: 480px) {
+  .modal-text{
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .modal-title{
+    font-size: 40px;
+  }
+}
+
+.modal button {
   width: auto;
-  padding-left: 14px;
-  margin-right: 22px;
-  margin-top: 50px;
+  padding: 20px;
   text-transform: uppercase;
   line-height: 1.2em;
+  border: 1px solid #999;
+  margin-top: 20px;
+}
+
+
+.modal button:hover {
+  cursor: pointer;
+  background-color: #f5f5f5;
 }
 
 footer{
@@ -1474,6 +1512,7 @@ footer img {
   z-index: 0;
   height: calc( 100vh - 82px);
   right: 0;
+  pointer-events: none;
 }
 .content-triangle-2 {
   position: absolute;
@@ -1481,11 +1520,13 @@ footer img {
   top: 0;
   z-index: 0;
   height: calc( 100vh - 82px);
+  pointer-events: none;
 }
 
 .content .content-triangle-2 {
 
   left: 20px;
+  pointer-events: none;
 }
 
 .frame-left-triangle-1 {
@@ -1493,6 +1534,7 @@ footer img {
   /* transform: rotateZ(90deg); */
   bottom: 0;
   z-index: 0;
+  pointer-events: none;
 }
 
 .frame-left-triangle-2 {
@@ -1500,6 +1542,7 @@ footer img {
   transform: rotateZ(90deg);
   top: 0;
   z-index: 0;
+  pointer-events: none;
 }
 
 

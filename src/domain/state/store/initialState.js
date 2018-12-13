@@ -61,7 +61,7 @@ export const modalTemplates = {
     title: 'Thank you for your donation!',
     content: <div className='modal-text'>You donated <ReadFromState text="/amount/"/> CHF.<br/>A receipt has been sent to <ReadFromState text="/email/"/></div>,
     buttonLeft: {
-      text: "OK",
+      text: "CLOSE",
       action: "HIDE_MODAL"
     },
     closeable: true

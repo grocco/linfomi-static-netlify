@@ -74,13 +74,10 @@ const Right = withRouteData(({ history, showHamburgerMenu, pageSlug }) => {
   )
 })
 
-const Content = withRouteData(({showHamburgerMenu, modal, pageSlug}) => (
+const Content = withRouteData(({showHamburgerMenu, pageSlug}) => (
   <div className={`app ${pageSlug === 'intro' ? 'intro' : ''}`} >
     {/* <Route path="/" component={Header} /> */}
     <Header />
-    {modal && <Modal
-      {...modal}
-    />}
     <div
     >
       <Left 
@@ -169,6 +166,9 @@ class AppPresentational extends React.Component {
     return (
       <Router>
         <div>
+          {this.props.modal && <Modal
+          {...this.props.modal}
+          />}
           <Menu
             showHamburgerMenu={this.props.showHamburgerMenu}
             language={this.props.language}
@@ -179,7 +179,6 @@ class AppPresentational extends React.Component {
           />
           <Content
                 showHamburgerMenu={this.props.showHamburgerMenu}
-                modal={this.props.modal}
           />
         </div>
       </Router>

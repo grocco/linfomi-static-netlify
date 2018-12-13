@@ -52,7 +52,7 @@ const Member = ({member, language, history}) => (
 
 const MemberListItem = ({member, language, selected, scientificCommittee}) => {
     const inner = (
-        <div className={`member-list-item ${selected ? 'selected' : ''}`}>
+        <div className={`member-list-item ${selected ? 'selected' : ''} ${scientificCommittee || member.data['not-anymore'] ? 'simple' : ''}`}>
             <div className='round member-pic' style={ {backgroundImage: member.data.picture ? `url('${member.data.picture}/-/resize/50x/')` : "url('/assets/member-placeholder.jpg')"} } />
             <div className='name-and-role'>
                 <div className="board-of-directors">{member.data['board-of-directors'] ? i18n.pages.council.boardOfDirectors[language] : ''}</div>
@@ -60,10 +60,10 @@ const MemberListItem = ({member, language, selected, scientificCommittee}) => {
                 <div className='role'>{l(member.data, 'role', language)}</div>
                 <div className='institute'>{member.data.institute}{member.data.city && `, ${member.data.city}`}</div>
             </div>
-            { !scientificCommittee && <img className='arrow-right' src='/assets/arrow-right.png' alt='select' /> }
+            <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
         </div>
     )
-    if (scientificCommittee) return inner;
+    if (scientificCommittee || member.data['not-anymore']) return inner;
     return (
     <Link to={{pathname: '/council', state: {memberSlug: member.data.slug, slave: true}}} href='/council'>
         { inner }

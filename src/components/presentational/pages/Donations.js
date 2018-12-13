@@ -26,17 +26,20 @@ class PayPalButton extends React.Component {
   }
 
   payment(data, actions) {
-    return actions.payment.create({
-      transactions: [
-        {
-          amount: { total: this.state.amount, currency: this.state.currency }
-        }
-      ]
+    const payment = actions.payment.create({
+        transactions: [
+            {
+            amount: { total: this.state.amount, currency: this.state.currency }
+            }
+        ]
     });
+    return payment;
   }
 
   onAuthorize(data, actions) {
-    return actions.payment.execute();
+    const execution = actions.payment.execute().then((data)=> this.props.onTransactionSuccessful(this.state.amount, data.payer.payer_info.email));
+    // this.props.onTransactionSuccessful(this.state.amount, this.state.email, 'paypal');
+    return execution;
   }
 
   render() {
@@ -92,12 +95,19 @@ class CheckoutForm extends React.Component {
       const _props = this.props;
       const _state = this.state;
   
-      _props.onDonate(this.state.amount);
+      this.setState({ initiated: true });
       // Within the context of `Elements`, this call to createToken knows which Element to
       // tokenize, since there's only one in this group.
-      _props.stripe.createToken({name: this.state.name, email: this.state.email, amount: this.state.amount * 100}).then(({token}) => {
+      _props.stripe.createToken({
+          name: this.state.name, 
+          email: this.state.email, 
+          amount: this.state.amount * 100,
+          receipt_email: this.state.email,
+          description: 'Donation to IOR'
+        }).then(({token}) => {
         // console.log('Received Stripe token:', token);
-        _props.onTransactionStart(this.state.amount);
+        _props.onDonate(this.state.amount);
+        // _props.onTransactionStart(this.state.amount);
         fetch('https://us-central1-ior-web.cloudfunctions.net/charge/donations/charge', {
             method: 'POST',
             mode: 'cors',
@@ -135,13 +145,14 @@ class CheckoutForm extends React.Component {
     state = {
         amount: 100,
         email: '',
-        name: ''
+        name: '',
+        initiated: false
     }
   
     render() {
     const l = (s) => (s[this.props.language] || s.en);
       return (
-        <form onSubmit={this.handleSubmit} style={{width: '100%'}}>
+        <form onSubmit={this.handleSubmit} style={{width: '100%', opacity: this.state.initiated ? 0.5 : null}}>
           {/* <AddressSection /> */}
           <label className={'stripe-label'}>
           <input style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-amount stripe-input-full'} placeholder={l(i18n.pages.donations.creditCard.placeholders.amount)} type='number' name='amount' value={this.state.amount} onChange={(event)=>this.setState({amount: event.target.value})} />
@@ -224,6 +235,8 @@ export default class Donations extends React.PureComponent {
         return (
             <div className='paypal-form'>
                 <PayPalButton
+                    onDonate={this.props.onDonate}
+                    onTransactionSuccessful={this.props.onTransactionSuccessful}
                     env='sandbox'
                     sandboxID='AaTUAdq41QA5Yjlf9OIq-zF_wLzlacj6WGR611rHtuzl79SPSYXDQQw-d5la_0_uYTVhuueBORehUjtx'
                     currency='CHF'
