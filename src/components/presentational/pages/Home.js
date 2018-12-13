@@ -151,7 +151,13 @@ export default class Home extends Component {
                 </div>
             </div>
         )
-        if ( ! this.props.location.state ) return history;
+        const intro = (<div className='placeholder-image' style={{height: 'calc(100vh - 81px)', backgroundImage: "url('http://media.ticinotopten.ch/Castelgrande-30037-full-HD.jpg')"}}>
+            <div  style={{backgroundImage: `url('/assets/fondazione_ior.png')`,
+                width: 180,
+                height: 180,
+                backgroundSize: 'cover'}}/>
+        </div>);
+        if ( ! this.props.location.state ) return intro;
         switch( this.props.location.state.reality) {
             case 'ior':
                 return ior;
@@ -162,7 +168,7 @@ export default class Home extends Component {
             case 'history':
                 return history;
             default:
-                return history;
+                return intro;
         }
 
         // return (

@@ -343,7 +343,7 @@ const contact = {
         it: '<b>Fondazione per l’Istituto oncologico di ricerca (IOR)</b><br/><br/>Via Vincenzo Vela 6<br/>6500 Bellinzona<br/>Svizzera',
     },
     details: {
-        en: '<b>Fondazione per l\'Istituto oncologico ri ricerca (IOR)</b><br/>Via Vincenzo Vela 6<br/>6500 CH-Bellinzona<br/><br/>Ufficio del Presidente:<br/>Tel. +41 (0)91 811 86 66<br/>sarahjane.ortelligiannakis@eoc.ch<br/><br/>Segretaria della Fondazione:<br/>Tel. +41 (0)91 921 45 61<br/>olga.jackson@lymphcon.ch',
+        en: '<b>Ufficio del Presidente</b><br/>Ospedale San Giovanni<br/>CH-6500 Bellinzona<br/>Tel. +41 (0)91 811 86 66<br/>sarahjane.ortelligiannakis@eoc.ch<br/><br/><b>Segretaria della Fondazione</b><br/>Tel. +41 (0)91 921 45 61<br/>olga.jackson@lymphcon.ch',
     },
     detailsItem: {
         en: 'Contact details',

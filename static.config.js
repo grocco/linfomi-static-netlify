@@ -112,6 +112,13 @@ export default {
         })
       },
       {
+        path: '/intro',
+        component: 'src/components/connected/pages/Intro',
+        getData: () => ({
+          pageSlug: 'intro' 
+        })
+      },
+      {
         path: '/home',
         component: 'src/components/connected/pages/Home',
         getData: () => ({
