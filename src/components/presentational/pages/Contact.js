@@ -101,7 +101,7 @@ class Contact extends React.Component {
             return (
                 <div className='content'>
                     <div className='aside-left aside-map'>
-                        <div className="image " style={{backgroundImage: "url('/assets/fondazione_ior.png')" }} />
+                        <div className="image " style={{backgroundImage: `url('/assets/${l(i18n.assets.logos.foundation)}')` }} />
                         <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.address) }} />
                     </div>
                     <div style={{position:'relative', width: '100%', flex: 1}}>     
@@ -113,7 +113,7 @@ class Contact extends React.Component {
         return (
             <div className='content'>
                 <div className='aside-left'>
-                    <div className="image " style={{backgroundImage: "url('/assets/fondazione_ior.png')" }} />
+                    <div className="image " style={{backgroundImage: `url('/assets/${l(i18n.assets.logos.foundation)}')` }} />
                     <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.address) }} />
                 </div>
                 {details}

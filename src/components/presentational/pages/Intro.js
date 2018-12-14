@@ -85,7 +85,7 @@ export default class Intro extends Component {
         return <div className='placeholder-image' style={{height: 'calc(100vh - 0px)', backgroundImage: "url('http://media.ticinotopten.ch/Castelgrande-30037-full-HD.jpg')"}}>
              {/* http://www.linuxcmd.org/lcshow/big/0/451_red-wallpaper.png */}
 
-                        <div  style={{backgroundImage: `url('/assets/fondazione_ior.png')`,
+                        <div  style={{backgroundImage: `url('/assets/${l(i18n.assets.logos.foundation)}')`,
                         width: 180,
     height: 180,
     backgroundSize: 'cover'}}/>

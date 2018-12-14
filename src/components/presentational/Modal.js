@@ -4,14 +4,15 @@ import React, { Component } from "react";
 class Modal extends Component {
 
   render() {
+    const l = (s) => (s[this.props.language]);
     return (<div className='modal'>
       {/* {this.renderHeader()} */}
       <div className='modal-container'>
-        <div className='modal-title'>{this.props.title}</div>
-        <div className='modal-content'>{this.props.content}</div>
+        <div className='modal-title'>{l(this.props.title)}</div>
+        <div className='modal-content'>{l(this.props.content)}</div>
         <div className='modal-buttons-container'>
-          {this.props.buttonLeft && <button onClick={()=>this.props.buttonClick(this.props.buttonLeft.action)}>{this.props.buttonLeft.text}</button>}
-          {this.props.buttonRight && <button onClick={()=>this.props.buttonClick(this.props.buttonRight.action)} style={{ background: 'white', color: 'black' }}>{this.props.buttonRight.text}</button>}
+          {this.props.buttonLeft && <button onClick={()=>this.props.buttonClick(this.props.buttonLeft.action)}>{l(this.props.buttonLeft.text)}</button>}
+          {this.props.buttonRight && <button onClick={()=>this.props.buttonClick(this.props.buttonRight.action)} style={{ background: 'white', color: 'black' }}>{l(this.props.buttonRight.text)}</button>}
         </div>
       </div>
     </div>)

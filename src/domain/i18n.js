@@ -1,3 +1,65 @@
+import React from 'react';
+import { connect } from 'react-redux';
+
+class StringStateInjector extends React.Component {
+    render() {
+        const {
+            word,
+            args
+        } = this.props;
+        const text = this.props.text;
+        const finalText = text
+        .replace("/word/", word)
+        .replace("/code/", args.code || '')
+        .replace("/amount/", args.amount || '')
+        .replace("/email/", args.email || '')
+        .replace("/description/", args.description || '')
+        return finalText
+    }
+}
+
+const mapStateToProps = state => ({
+    word: state.ui.word,
+    args: state.ui.currentModalArguments || {}
+});
+
+const ReadFromState = connect(mapStateToProps)(StringStateInjector)
+  
+const modal = {
+    descriptions: {
+        onDonate: {
+            en: 'Checking credit card validity...',
+            it: 'Verificando la validità della carta di credito...'
+        } 
+    },
+    DONATION_START: {
+        content: {
+            en: <div className='modal-text'>We are processing your transaction.<br/>Checking credit card validity...</div>,
+            it: <div className='modal-text'>Stiamo processando la vostra transazione.<br/>Verificando la validità della carta di credito...</div>
+        },
+        title: {
+            en: 'Transaction in progress',
+            it: 'Transazione in corso'
+        }
+    },
+    DONATION_SUCCESSFUL: {
+        content: {
+            en: <div className='modal-text'>You donated <ReadFromState text="/amount/"/> CHF.<br/>A receipt has been sent to <ReadFromState text="/email/"/></div>,
+            it: <div className='modal-text'>Ha donato <ReadFromState text="/amount/"/> CHF.<br/>Le abbiamo spedito una ricevuta a <ReadFromState text="/email/"/></div>
+        },
+        title: {
+            en: 'Thank you for your donation!',
+            it: 'Grazie per la sua donazione!'
+        },
+        buttonLeft: {
+            text: {
+                en: 'CLOSE',
+                it: 'CHIUDI'
+            }
+        }
+    }
+}
+
 const header = {
     logo: {
         forThe: {
@@ -394,7 +456,28 @@ const navigation = {
     }
 };
 
+const assets = {
+    logos: {
+        foundation: {
+            it: 'fondazione_ior.png',
+            en: 'foundation_ior.png'
+        },
+        icml: {
+            en: 'icml_logo.png'
+        },
+        ielsg: {
+            en: 'ielsg.jpg'
+        },
+        ior: {
+            en: 'IOR_logo.png'
+        }
+
+    }
+}
+
 export default {
+    modal,
+    assets,
     header,
     pages,
     languages,

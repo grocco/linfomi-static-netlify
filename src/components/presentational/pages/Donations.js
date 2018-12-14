@@ -89,6 +89,7 @@ class CardSection extends React.Component {
 
 class CheckoutForm extends React.Component {
     handleSubmit = (ev) => {
+    const l = (s) => (s[this.props.language]);
       // We don't want to let default form submission happen here, which would refresh the page.
       ev.preventDefault();
 
@@ -106,7 +107,7 @@ class CheckoutForm extends React.Component {
           description: 'Donation to IOR'
         }).then(({token}) => {
         // console.log('Received Stripe token:', token);
-        _props.onDonate(this.state.amount);
+        _props.onDonate(this.state.amount, l(i18n.modal.descriptions.onDonate));
         // _props.onTransactionStart(this.state.amount);
         fetch('https://us-central1-ior-web.cloudfunctions.net/charge/donations/charge', {
             method: 'POST',
@@ -235,7 +236,6 @@ export default class Donations extends React.PureComponent {
         return (
             <div className='paypal-form'>
                 <PayPalButton
-                    onDonate={this.props.onDonate}
                     onTransactionSuccessful={this.props.onTransactionSuccessful}
                     env='sandbox'
                     sandboxID='AaTUAdq41QA5Yjlf9OIq-zF_wLzlacj6WGR611rHtuzl79SPSYXDQQw-d5la_0_uYTVhuueBORehUjtx'
@@ -284,7 +284,7 @@ export default class Donations extends React.PureComponent {
                 }
                 <div className='content'>
                     <div className='aside-left'>
-                        <div className="image " style={{backgroundImage: "url('/assets/fondazione_ior.png')" }} />
+                        <div className="image " style={{backgroundImage: `url('/assets/${l(i18n.assets.logos.foundation)}')` }} />
                         <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.address) }} />
                     </div>
                     <div style={{flex: 1}} className='padded aside-right'>
