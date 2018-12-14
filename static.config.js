@@ -88,7 +88,7 @@ export default {
           <Head>
             <script id="stripe-js" src="https://js.stripe.com/v3/" async />
             {/* {renderMeta.styleTags} */}
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <title>Foundation IOR</title>
           </Head>
           <Body >
@@ -106,9 +106,16 @@ export default {
     return [
       {
         path: '/',
-        component: 'src/components/connected/pages/Home',
+        component: 'src/components/connected/pages/Intro',
         getData: () => ({
-          pageSlug: 'home' 
+          pageSlug: 'intro' 
+        })
+      },
+      {
+        path: '/intro',
+        component: 'src/components/connected/pages/Intro',
+        getData: () => ({
+          pageSlug: 'intro' 
         })
       },
       {

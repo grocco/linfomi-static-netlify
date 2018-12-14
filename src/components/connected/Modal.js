@@ -4,6 +4,7 @@ import { hideModal, actionFunctions } from 'domain/state/actions';
 
 const mapStateToProps = state => ({
   loading: state.ui.loading,
+  language: state.ui.language
 });
 
 const mapDispatchToProps = dispatch => ({

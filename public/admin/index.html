@@ -31,25 +31,6 @@
                 node.style.cssText = "position: absolute;left:50%;top:0px;transform:translate(-50%);z-index: 1000;background-color: #aaa;color: #fff;padding: 0px 4px 2px 4px;font-size: 11px;";
                 document.body.appendChild(node);
                 clearTimeout(timeout);
-
-                CMS.registerPreviewStyle("/admin/admin.css");
-
-                var MemberPreview = createClass({
-                  render: function() {
-                    var entry = this.props.entry;
-                    var image = entry.getIn(['data', 'picture']);
-                    var bg = this.props.getAsset(image);
-                    return h('div', {},
-                      h('h1', {}, entry.getIn(['data', 'title'])),
-                      h('img', {src: bg.toString()}),
-                      h('div', {"className": "bio"}, this.props.widgetFor('bio'))
-                    );
-                  }
-                });
-
-                CMS.registerPreviewTemplate('council', MemberPreview);
-
-
               } else {
                 window.setTimeout(timeoutFunction, 1000)
               }

@@ -10,10 +10,52 @@ class Main extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <App />
+        {this.props.children || <App />}
       </Provider>
     )
   }
+}
+
+if (typeof document !== 'undefined') {
+  const StripeProvider = require('react-stripe-elements').StripeProvider;
+
+  class MMain extends React.Component {
+    constructor() {
+      super();
+      this.state = {stripe: null};
+    }
+    componentDidMount() {
+      if (window.Stripe) {
+        this.setState({stripe: window.Stripe('pk_test_xpM7sZ6yRB83nlEQu6MAI64U')});
+      } else {
+        document.querySelector('#stripe-js').addEventListener('load', () => {
+          // Create Stripe instance once Stripe.js loads
+          this.setState({stripe: window.Stripe('pk_test_xpM7sZ6yRB83nlEQu6MAI64U')});
+        });
+      }
+    }
+    render() {
+      return (
+        <StripeProvider stripe={this.state.stripe}>
+          <Main>{this.props.children}</Main>
+        </StripeProvider>
+      )
+    }
+  }
+
+  const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
+  const render = Comp => {
+      renderMethod((<MMain><Comp /></MMain>), document.getElementById('root'))
+  }
+
+  // Render!
+  render(App)
+
+  // window.addEventListener('resize', () => {
+  //   store.dispatch(screenResize(window.innerWidth, window.innerHeight));
+  // });
+ store.dispatch(screenResize(window.innerWidth, window.innerHeight));
+
 }
 
 export default Main;
@@ -42,27 +84,3 @@ export default Main;
 //   store.dispatch(screenResize(window.innerWidth, window.innerHeight));
 // } else {
 
-// Render your app
-if (typeof document !== 'undefined') {
-
-  const StripeProvider = require('react-stripe-elements').StripeProvider;
-  const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
-  const render = Comp => {
-      renderMethod(
-        <StripeProvider apiKey="pk_test_xpM7sZ6yRB83nlEQu6MAI64U">
-          <Provider store={store}>
-            <Comp />
-          </Provider>
-        </StripeProvider>
-      , document.getElementById('root'))
-  }
-
-  // Render!
-  render(App)
-
-  window.addEventListener('resize', () => {
-    store.dispatch(screenResize(window.innerWidth, window.innerHeight));
-  });
-  store.dispatch(screenResize(window.innerWidth, window.innerHeight));
-
-}
