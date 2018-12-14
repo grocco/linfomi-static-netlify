@@ -9,7 +9,7 @@ bio: >-
 
   He was Head of internal medicine at the Mendrisio Regional Hospital,
   cardiology at the Civic Hospital of Lugano and full professor (now emeritus)
-  at the University of Bern. 
+  at the University of Bern.
 
   He has devoted himself with great commitment to the fight against cancer.
 
@@ -93,7 +93,6 @@ bio-it: >-
   Dal 1999 è Vice-Presidente e membro del Consiglio Direttivo della Fondazione
   per la Ricerca e la Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto
   oncologico di ricerca (IOR).
-bio-fr: fremnch version here
 email: giorgio.noseda@bluewin.ch
 board-of-directors: true
 not-anymore: false
