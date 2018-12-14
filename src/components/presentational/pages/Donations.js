@@ -3,6 +3,7 @@ import { Elements } from 'react-stripe-elements';
 import {injectStripe, CardElement} from 'react-stripe-elements';
 import i18n from 'domain/i18n';
 import { Link } from 'react-static';
+import window from 'domain/window';
 // CardSection.js
 
 import ReactDOM from 'react-dom';
@@ -25,17 +26,20 @@ class PayPalButton extends React.Component {
   }
 
   payment(data, actions) {
-    return actions.payment.create({
-      transactions: [
-        {
-          amount: { total: this.state.amount, currency: this.state.currency }
-        }
-      ]
+    const payment = actions.payment.create({
+        transactions: [
+            {
+            amount: { total: this.state.amount, currency: this.state.currency }
+            }
+        ]
     });
+    return payment;
   }
 
   onAuthorize(data, actions) {
-    return actions.payment.execute();
+    const execution = actions.payment.execute().then((data)=> this.props.onTransactionSuccessful(this.state.amount, data.payer.payer_info.email));
+    // this.props.onTransactionSuccessful(this.state.amount, this.state.email, 'paypal');
+    return execution;
   }
 
   render() {
@@ -85,18 +89,26 @@ class CardSection extends React.Component {
 
 class CheckoutForm extends React.Component {
     handleSubmit = (ev) => {
+    const l = (s) => (s[this.props.language]);
       // We don't want to let default form submission happen here, which would refresh the page.
       ev.preventDefault();
 
       const _props = this.props;
       const _state = this.state;
   
-      _props.onDonate(this.state.amount);
+      this.setState({ initiated: true });
       // Within the context of `Elements`, this call to createToken knows which Element to
       // tokenize, since there's only one in this group.
-      _props.stripe.createToken({name: this.state.name, email: this.state.email, amount: this.state.amount * 100}).then(({token}) => {
+      _props.stripe.createToken({
+          name: this.state.name, 
+          email: this.state.email, 
+          amount: this.state.amount * 100,
+          receipt_email: this.state.email,
+          description: 'Donation to IOR'
+        }).then(({token}) => {
         // console.log('Received Stripe token:', token);
-        _props.onTransactionStart(this.state.amount);
+        _props.onDonate(this.state.amount, l(i18n.modal.descriptions.onDonate));
+        // _props.onTransactionStart(this.state.amount);
         fetch('https://us-central1-ior-web.cloudfunctions.net/charge/donations/charge', {
             method: 'POST',
             mode: 'cors',
@@ -134,13 +146,14 @@ class CheckoutForm extends React.Component {
     state = {
         amount: 100,
         email: '',
-        name: ''
+        name: '',
+        initiated: false
     }
   
     render() {
     const l = (s) => (s[this.props.language] || s.en);
       return (
-        <form onSubmit={this.handleSubmit} style={{width: '100%'}}>
+        <form onSubmit={this.handleSubmit} style={{width: '100%', opacity: this.state.initiated ? 0.5 : null}}>
           {/* <AddressSection /> */}
           <label className={'stripe-label'}>
           <input style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-amount stripe-input-full'} placeholder={l(i18n.pages.donations.creditCard.placeholders.amount)} type='number' name='amount' value={this.state.amount} onChange={(event)=>this.setState({amount: event.target.value})} />
@@ -223,6 +236,7 @@ export default class Donations extends React.PureComponent {
         return (
             <div className='paypal-form'>
                 <PayPalButton
+                    onTransactionSuccessful={this.props.onTransactionSuccessful}
                     env='sandbox'
                     sandboxID='AaTUAdq41QA5Yjlf9OIq-zF_wLzlacj6WGR611rHtuzl79SPSYXDQQw-d5la_0_uYTVhuueBORehUjtx'
                     currency='CHF'
@@ -257,6 +271,9 @@ export default class Donations extends React.PureComponent {
         }
         // console.log(this.props.location.state)
         //       <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div> 
+        if ((!this.props.location.state || ! this.props.location.state.slave) && window.innerWidth > 1300) return (
+            <div className='placeholder-image' style={ { backgroundImage: 'url(\'https://goalde.files.wordpress.com/2013/04/gerber-mark-handspic.jpg\')'}} />
+        );
         return (
             <div>
                 { this.props.location.state && this.props.location.state.slave && 
@@ -267,9 +284,10 @@ export default class Donations extends React.PureComponent {
                 }
                 <div className='content'>
                     <div className='aside-left'>
-                        <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.address) }} />
+                        <div className="image " style={{backgroundImage: `url('/assets/${l(i18n.assets.logos.foundation)}')` }} />
+                        <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.address) }} />
                     </div>
-                    <div style={{flex: 1}} className='padded'>
+                    <div style={{flex: 1}} className='padded aside-right'>
                         {(()=>{
                             switch(this.props.location.state && this.props.location.state.method) {
                                 case 'credit-card':

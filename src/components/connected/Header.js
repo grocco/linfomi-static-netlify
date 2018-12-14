@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import Presentational from 'components/presentational/Header';
 import i18n from 'domain/i18n';
-import { changeLanguage, /* changePage, */ toggleHamburger } from 'domain/state/actions';
+import { changeLanguage, changePage, toggleHamburger } from 'domain/state/actions';
 // import { withRouter } from "react-router-dom";
 
 const mapStateToProps = state => ({
@@ -18,7 +18,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch) => ({
   changeLanguage: (language) => dispatch(changeLanguage(language)),
-  // changePage: (page) => {dispatch(changePage(page)).then(()=>ownProps.history.push('/'+page))},
+  changePage: (page) => dispatch(changePage(page)),
   toggleHamburger: () => dispatch(toggleHamburger())
 });
 

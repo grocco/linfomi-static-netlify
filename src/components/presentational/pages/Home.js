@@ -29,6 +29,13 @@ export default class Home extends Component {
                 <div className='lt-480'><br/><div className='bubble'>{l(i18n.pages.home.content.realities.introduction)}</div ></div>
                         
                 <div className='realities'>
+                    <Link to={{pathname:'/home/', state: { reality: 'history', slave: true}}} href='/home'>
+                        <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'history' ? 'selected' : ''}`}>
+                            <div className='acronym'>{l(i18n.pages.home.content.realities.fior.acronym)}</div>
+                            <div className='title'>{l(i18n.pages.home.content.realities.fior.title)}</div>
+                            <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
+                        </div>
+                    </Link>
                     <Link to={{pathname:'/home/', state: { reality: 'ior', slave: true}}} href='/home'>
                         <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'ior' ? 'selected' : ''}`}>
                             <div className='acronym'><div className='enumeration'>1.</div> {l(i18n.pages.home.content.realities.ior.acronym)}</div>
@@ -50,13 +57,14 @@ export default class Home extends Component {
                             <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
                         </div>
                     </Link>
-                    <Link to={{pathname:'/home/', state: { reality: 'history', slave: true}}} href='/home'>
+                    {/* <Link to={{pathname:'/home/', state: { reality: 'history', slave: true}}} href='/home'>
                         <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'history' ? 'selected' : ''}`}>
                             <div className='acronym'>{l(i18n.pages.home.content.realities.fior.acronym)}</div>
                             <div className='title'>{l(i18n.pages.home.content.realities.fior.title)}</div>
                             <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
                         </div>
-                    </Link>
+                    </Link> */}
+                    
                 </div>
                 <div className='bubble' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.finalThoughts) }} />
                 <br/>
@@ -77,10 +85,11 @@ export default class Home extends Component {
         const ior = (
             <div className='content'>
                 <div className='aside-left'>
-                    <div className="image " style={{backgroundImage: "url('/assets/IOR_logo.png')" }} />
+                    <div className="image " style={{backgroundImage: `url('/assets/${l(i18n.assets.logos.ior)}')` }} />
                     <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.address) }} />
                 </div>
                 <div className='aside-right'>
+                    <img  className='article-top-image' src="/assets/example1.jpg" /> 
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.description) }} />
                     <a className={'external-link'} href='http://www.ior.iosi.ch/' target='__blank'>
                         <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
@@ -93,10 +102,12 @@ export default class Home extends Component {
         const ielsg = (
             <div className='content'>
                 <div className='aside-left'>
-                    <div className="image " style={{backgroundImage: "url('/assets/ielsg.jpg')" }} />
+                    <div className="image " style={{backgroundImage: `url('/assets/${l(i18n.assets.logos.ielsg)}')` }} />
                     <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.address) }} />
                 </div>
                 <div className='aside-right'>
+                <img  className='article-top-image' src="/assets/example2.jpg" /> 
+
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.description) }} />
                     <a className={'external-link'} href='http://www.ielsg.org/' target='__blank'>
                         <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
@@ -109,10 +120,12 @@ export default class Home extends Component {
         const icml = (
             <div className='content'>
                 <div className='aside-left'>
-                    <div className="image " style={{backgroundImage: "url('/assets/icml_logo.png')" }} />
+                    <div className="image " style={{backgroundImage: `url('/assets/${l(i18n.assets.logos.icml)}')` }} />
                     <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.address) }} />
                 </div>
                 <div className='aside-right'>
+                <img className='article-top-image'  src="/assets/example3.jpg" /> 
+
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.description) }} />
                     <a className={'external-link'} href='http://www.lymphcon.ch/' target='__blank'>
                         <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
@@ -127,15 +140,24 @@ export default class Home extends Component {
                 
                 
                 <div className='aside-left'>
-                    <div className="image " style={{backgroundImage: "url('/assets/foundation_ior_inverted.png')" }} />
-                    <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.address) }} />
+                    <div className="image " style={{backgroundImage: `url('/assets/${l(i18n.assets.logos.foundation)}')` }} />
+                    <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.fior.address) }} />
                 </div>
                 <div className='aside-right'>
+
+                <img className='article-top-image' src="/assets/example2.jpg" /> 
+
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.history.content) }} />   
                 </div>
             </div>
         )
-        if ( ! this.props.location.state ) return history;
+        const intro = (<div className='placeholder-image' style={{height: 'calc(100vh - 81px)', backgroundImage: "url('http://media.ticinotopten.ch/Castelgrande-30037-full-HD.jpg')"}}>
+            <div  style={{backgroundImage: `url('/assets/${l(i18n.assets.logos.foundation)}')`,
+                width: 180,
+                height: 180,
+                backgroundSize: 'cover'}}/>
+        </div>);
+        if ( ! this.props.location.state ) return intro;
         switch( this.props.location.state.reality) {
             case 'ior':
                 return ior;
@@ -146,43 +168,8 @@ export default class Home extends Component {
             case 'history':
                 return history;
             default:
-                return history;
+                return intro;
         }
-
-        // return (
-        //     <div>
-        //         <div>
-        //             {/* <div className={'card-title'} >
-        //                 <div className={'card-h2'}>{l(i18n.pages.home.content.realities.ior.acronym)}</div>
-        //                 <div className={'card-h3'}>{l(i18n.pages.home.content.realities.ior.title)}</div>
-        //             </div> */}
-        //             <div>
-        //                 <img className={'card-img-wrap-left'} width={'100%'} src={'/assets/IOR_logo.gif'} />
-        //                 <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.description) }} />
-        //             </div>
-        //         </div>
-        //         <div >
-        //             {/* <div className={'card-title'} >
-        //                 <div className={'card-h2'}>{l(i18n.pages.home.content.realities.ielsg.acronym)}</div>
-        //                 <div className={'card-h3'}>{l(i18n.pages.home.content.realities.ielsg.title)}</div>
-        //             </div>                             */}
-        //             <div>
-        //                 <img className={'card-img-wrap-left'} width={'100'} src={'/assets/ielsg.jpg'} />
-        //                 <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.description) }} />
-        //             </div>
-        //         </div>
-        //         <div>
-        //             {/* <div className={'card-title'} >
-        //                 <div className={'card-h2'}>{l(i18n.pages.home.content.realities.icml.acronym)}</div>
-        //                 <div className={'card-h3'}>{l(i18n.pages.home.content.realities.icml.title)}</div>
-        //             </div>                             */}
-        //             <div>
-        //                 <img className={'card-img-wrap-left'} width={'100'} src={'/assets/icml_logo.png'} />
-        //                 <div dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.description) }} />
-        //             </div>
-        //         </div>
-        //     </div>
-        // )
         
     }
 

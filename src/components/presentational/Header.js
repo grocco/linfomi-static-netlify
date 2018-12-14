@@ -16,22 +16,24 @@ class Header extends Component {
     const l = (s) => (s[this.props.language]);
     return (
     <div>
-    <div className='page-slug'>{i18n.pages[this.props.pageSlug] ? l(i18n.pages[this.props.pageSlug].title) : ''}</div>
-      <header>
+    <div className={`page-slug ${this.props.pageSlug === 'intro' ? 'intro' : ''}`}>{i18n.pages[this.props.pageSlug] ? l(i18n.pages[this.props.pageSlug].title) : ''}</div>
+      <header  className={this.props.pageSlug === 'intro' ? 'intro' : ''}>
         <div 
           className={`hamburger ${(this.props.showHamburgerMenu ? ' selected' : '')}`}
           onClick={()=>{this.props.toggleHamburger(); this.setState({ showHelp: false})}}
           onKeyDown={()=>0}
+          // style={{marginTop: this.props.pageSlug === 'intro' ? 81 + 20 : null, marginLeft: this.props.pageSlug === 'intro' ? - 81 + 20 : null}}
           role='none'
         >
           <div className="hamburger-line" />
-          { this.state.showHelp && <div className="hamburger-description">{(this.props.showHamburgerMenu ? '' : 'MENU')}</div> }
+          <div className="hamburger-description">{(this.props.showHamburgerMenu ? '' : 'MENU')}</div>
           <div className="hamburger-line" />
           <div className="hamburger-line"/>
         </div>
         <Link 
           to='/' 
           href='/'
+          onClick={()=>this.props.changePage('intro')}
         >
           <div className='logo-name'>
             <div className='logo-name-inner'>

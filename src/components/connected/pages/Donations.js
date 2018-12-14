@@ -7,8 +7,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onDonate: (amount) => dispatch(showModal({name: 'DONATION_START', amount, description: 'Checking credit card validity...'})),
-  onTransactionStart: (amount) => dispatch(showModal({name: 'DONATION_START', amount, description: 'Performing transaction...'})),
+  onDonate: (amount, description) => dispatch(showModal({name: 'DONATION_START', amount, description})),
+  onTransactionStart: (amount, description) => dispatch(showModal({name: 'DONATION_START', amount, description})),
   onTransactionSuccessful: (amount, email) => dispatch(showModal({name: 'DONATION_SUCCESSFUL', amount, email }))
 });
 
