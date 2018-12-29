@@ -53,7 +53,7 @@ const Member = ({member, language, history}) => (
 const MemberListItem = ({member, language, selected, scientificCommittee}) => {
     const inner = (
         <div className={`member-list-item ${selected ? 'selected' : ''} ${scientificCommittee || member.data['not-anymore'] ? 'simple' : ''}`}>
-            <div className='round member-pic' style={ {backgroundImage: member.data.picture ? `url('${member.data.picture}/-/resize/50x/')` : "url('/assets/member-placeholder.jpg')"} } />
+            <div className='round member-pic' style={ {backgroundImage: member.data.picture ? `url('${member.data.picture}/-/scale_crop/50x/')` : "url('/assets/member-placeholder.jpg')"} } />
             <div className='name-and-role'>
                 <div className="board-of-directors">{member.data['board-of-directors'] ? i18n.pages.council.boardOfDirectors[language] : ''}</div>
                 <div className='title'>{member.data.name} {member.data.surname}</div>
