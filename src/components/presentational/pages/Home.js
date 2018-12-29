@@ -106,7 +106,7 @@ export default class Home extends Component {
                     <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.address) }} />
                 </div>
                 <div className='aside-right'>
-                <img  className='article-top-image' src="/assets/example2.jpg" /> 
+                <img  className='article-top-image' src="https://ucarecdn.com/50483b97-e86f-4b87-9b9e-df1cccb8f083/-/preview//-/resize/800x/" /> 
 
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.description) }} />
                     <a className={'external-link'} href='http://www.ielsg.org/' target='__blank'>
@@ -124,7 +124,7 @@ export default class Home extends Component {
                     <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.address) }} />
                 </div>
                 <div className='aside-right'>
-                <img className='article-top-image'  src="/assets/example3.jpg" /> 
+                <img className='article-top-image'  src="https://ucarecdn.com/4a8002af-d818-483c-883c-1a9a084533ad/-/preview//-/resize/800x/" /> 
 
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.description) }} />
                     <a className={'external-link'} href='http://www.lymphcon.ch/' target='__blank'>
