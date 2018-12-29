@@ -58,8 +58,9 @@ bio-it: >-
   Dal 2008 è membro del Consiglio di Fondazione della Fondazione per la Ricerca
   e la Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di
   ricerca (IOR).
-bio-fr: '-'
 email: alba.masullo@legacancro-ti.ch
 order: 1000
+picture: >-
+  https://ucarecdn.com/0f867b55-89e4-43a8-8b3c-00aa53b57c61/-/crop/2467x2393/572,588/-/preview/
 ---
 
