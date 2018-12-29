@@ -62,8 +62,9 @@ bio-it: >-
   Dal 2017 è membro del Consiglio di Fondazione della Fondazione per la Ricerca
   e la Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di
   ricerca (IOR).
-bio-fr: '-'
 email: roberto.malacrida@bellinzona.ch
 order: 1000
+picture: >-
+  https://ucarecdn.com/94904ed9-b822-4b9b-9616-49161f1f972e/-/crop/2695x2640/0,261/-/preview/
 ---
 
