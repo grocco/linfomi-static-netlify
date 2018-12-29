@@ -40,9 +40,10 @@ bio-it: >-
   Dal 2014 è membro del Consiglio Direttivo della Fondazione per la Ricerca e la
   Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di
   ricerca (IOR).
-bio-fr: french vers
 email: aris.mozzini@ti.ch
 board-of-directors: true
 order: 1000
+picture: >-
+  https://ucarecdn.com/e4953768-c813-4959-ba07-baa1ab425ae2/-/crop/2142x2071/340,603/-/preview/
 ---
 
