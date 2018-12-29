@@ -76,8 +76,9 @@ bio-it: >-
   Dal 2018 è membro del Consiglio di Fondazione della Fondazione per l’Istituto
   oncologico di ricerca (IOR) e del Consiglio di Fondazione del Servizio
   Trasfusionale della Svizzera Italiana.
-bio-fr: '-'
 email: paolo.ferrari@eoc.ch
 order: 1000
+picture: >-
+  https://ucarecdn.com/a55a0eb0-e5ab-4872-84a0-49fc3a8df093/-/crop/2360x2370/731,450/-/preview/
 ---
 
