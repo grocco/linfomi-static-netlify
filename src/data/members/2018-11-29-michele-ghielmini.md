@@ -80,8 +80,9 @@ bio-it: >-
   Dal 1999 è membro del Consiglio di Fondazione della Fondazione per la Ricerca
   e la Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di
   ricerca (IOR).
-bio-fr: '-'
 email: michele.ghielmini@eoc.ch
 order: 1000
+picture: >-
+  https://ucarecdn.com/107b70c1-d392-47af-9ef4-a747c088d2aa/-/crop/2532x2390/68,537/-/preview/
 ---
 
