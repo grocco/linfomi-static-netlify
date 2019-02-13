@@ -39,8 +39,8 @@ bio-it: >-
   Dal 2016 è membro del Consiglio di Fondazione della Fondazione per la Ricerca
   e la Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di
   ricerca (IOR).
-bio-fr: '-'
 email: florian.marxer@marxerpartner.com
 order: 1000
+picture: 'https://ucarecdn.com/0d9f2060-d1bd-4560-8f76-4254d9398b00/'
 ---
 
