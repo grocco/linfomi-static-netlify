@@ -145,7 +145,7 @@ export default class Home extends Component {
                 </div>
                 <div className='aside-right'>
 
-                <img className='article-top-image' src="/assets/example2.jpg" /> 
+                <img className='article-top-image' src="https://ucarecdn.com/380d5fcf-b56d-40d7-bd43-57397f05994d/temporary.jpg" /> 
 
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.history.content) }} />   
                 </div>
