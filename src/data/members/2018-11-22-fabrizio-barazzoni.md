@@ -81,10 +81,9 @@ bio-it: >-
   Dal 1999 è membro del Consiglio Direttivo della Fondazione per la Ricerca e la
   Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di
   ricerca (IOR).
-bio-fr: french version for fabrizio
 email: fabrizio.barazzoni@eoc.ch
 board-of-directors: true
 order: 1000
-picture: 'https://ucarecdn.com/ce3525d3-5aa5-485c-a2ab-5b92ea82d6c0/-/preview/'
+picture: 'https://ucarecdn.com/14e90c6a-e89c-4bdb-9c1c-50753a6f0126/'
 ---
 
