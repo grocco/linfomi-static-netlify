@@ -117,7 +117,7 @@ class Council extends React.Component {
         const { members, language, history, scientificCommittee } = this.props;
         let member = null;
         if (! history.location.state && (window.innerWidth > 1300 || scientificCommittee)) return (
-            <div className='placeholder-image' style={ { backgroundImage: scientificCommittee ? 'url(\'https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/4ZrVLdVKeijzurndz/hospital-profession-people-and-medicine-concept-group-of-happy-doctors-meeting-on-conference-or-medical-seminar-and-looking-to-something-at-hospital_ewt0_t3hx__F0000.png\')' : 'url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/GTYSdDW/group-of-happy-doctors-meeting-at-hospital-office_vk3wwzkb__F0000.png")'}} />
+            <div className='placeholder-image' style={ { backgroundImage: scientificCommittee ? 'url("https://ucarecdn.com/2c429942-1df9-4663-8458-75f5d10506b8/test1.jpg")' : 'url("https://ucarecdn.com/2c429942-1df9-4663-8458-75f5d10506b8/test1.jpg")'}} />
         );
         if( !history.location.state || history.location.state.memberSlug === 'president') member = members.sort(compareByField('order', el => el.data))[0]
         else member = members.find(member => member.data.slug === history.location.state.memberSlug)
