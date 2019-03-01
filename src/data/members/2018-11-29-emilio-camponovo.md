@@ -60,8 +60,8 @@ bio-it: >
   Dal 1999 è membro del Consiglio di Fondazione della Fondazione per la Ricerca
   e la Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di
   ricerca (IOR).
-bio-fr: '-'
 email: emilio.camponovo@aurofin.ch
 order: 1000
+picture: 'https://ucarecdn.com/6c4c7efe-ff92-4195-88c0-093450d61e07/'
 ---
 
