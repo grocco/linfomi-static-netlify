@@ -1,6 +1,7 @@
 export default {
     aside: false,
-    headerButtons: true,   
+    headerButtons: true,
+    version: 2 
 }
 
 // export default {

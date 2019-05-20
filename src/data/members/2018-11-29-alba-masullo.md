@@ -27,7 +27,7 @@ bio: >-
   suffering from cancer and their families.
 
 
-  Since 2008, he has been a member of the Foundation Board of the Foundation for
+  Since 2008, she has been a member of the Foundation Board of the Foundation for
   Research and Treatment of Lymphomas in Ticino, now the Foundation for the
   Institute of Oncology Research (IOR).
 role-it: ''

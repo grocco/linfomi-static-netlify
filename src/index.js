@@ -4,7 +4,10 @@ import { Provider } from 'react-redux';
 import store from 'domain/state/store';
 import { screenResize } from 'domain/state/actions';
 import window from 'domain/window';
-import App from './App';
+import config from './config';
+
+const App = config.version === 2 ? require('./App2').default : require('./App').default ;
+
 
 class Main extends React.Component {
   render() {

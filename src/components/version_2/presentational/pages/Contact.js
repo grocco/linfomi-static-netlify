@@ -59,9 +59,9 @@ class Contact extends React.Component {
 
     renderRight() {
         const l = (s) => (s[this.props.language] || s.en);
-        if ((!this.props.history.location.state || ! this.props.history.location.state.slave) && window.innerWidth > 1300) return (
-            <div className='placeholder-image' style={ { backgroundImage: 'url(\'https://www.savoylimerick.com/cmsGallery/imagerow/11811/resized/1500x800/office_people_brochure.jpg\')'}} />
-        );
+        // if ((!this.props.history.location.state || ! this.props.history.location.state.slave) && window.innerWidth > 1300) return (
+        //     <div className='placeholder-image' style={ { backgroundImage: 'url(\'https://www.savoylimerick.com/cmsGallery/imagerow/11811/resized/1500x800/office_people_brochure.jpg\')'}} />
+        // );
         const form = (
             <div style={{flex: 1}}>
                 <form id='contact-form' className='padded' name="contact" method="POST" data-netlify="true" action='/contact/success'>
@@ -127,7 +127,7 @@ class Contact extends React.Component {
         if(this.props.success) {
             return this.renderSuccess();
         }
-        return (<div className=''>
+        return (<div className='page'>
             { this.props.history.location.state && this.props.history.location.state.slave && 
                 <div className="breadcrumbs" onClick={this.props.history.goBack}>
                     <img className="arrow-left" src="/assets/arrow-right.png" alt="back" />

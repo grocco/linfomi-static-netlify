@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import config from 'config';
 
 class StringStateInjector extends React.Component {
     render() {
@@ -92,7 +93,123 @@ const header = {
         }
 
     },
-    buttons: {
+    buttons: config.version === 2 ? {
+        // home: {
+        //     title: {
+        //         en: "Welcome",
+        //         it: "Benvenuti",
+        //     }
+        // },
+        link_ior: {
+            title: {
+                it: 'Istituto oncologico di ricerca',
+                en: 'Institute of oncology research'
+            },
+            address: {
+                it: 'http://www.ior.iosi.ch/',
+                en: 'http://www.ior.iosi.ch/'
+            }
+        },
+        link_ielsg: {
+            title: {
+                it: 'International Extranodal Lymphoma Study Group',
+                en: 'International Extranodal Lymphoma Study Group'
+            },
+            address: {
+                it: 'http://www.ielsg.org/',
+                en: 'http://www.ielsg.org/'
+            }
+        },
+        link_icml: {
+            title: {
+                it: 'Conferenza Internazionale sui Linfomi Maligni',
+                en: 'International Conference on Malignant Lymphoma'
+            },
+            address: {
+                it: 'http://www.lymphcon.ch/',
+                en: 'http://www.lymphcon.ch/'
+            }
+        },
+        home: {
+            title: {
+                en: "Home",
+                it: "Pagina iniziale",
+            }
+        },
+        "council": {
+            title: {
+                en: "Board",
+                it: "Comitato",
+            }
+        },
+        "scientific": {
+            title: {
+                en: "Scientific Council",
+                it: "Consiglio Scientifico",
+            }
+        },
+        "members": {
+            title: {
+                en: "Members",
+                it: "Membri",
+            }
+        },
+        "president": {
+            title: {
+                en: "President",
+                it: "Presidente",
+            }
+        },
+        "donations-and-contacts": {
+            title: {
+                en: "Donations and Contacts",
+                it: "Donazioni e Contatti",
+            }
+        },
+        foundation: {
+            title: {
+                en: "Foundation IOR",
+                it: "Fondazione IOR",
+            }
+        },
+        ior: {
+            title: {
+                en: "IOR",
+                it: "IOR",
+            }
+        },
+        "ielsg": {
+            title: {
+                en: "IELSG",
+                it: "IELSG",
+            }
+        },
+        "icml": {
+            title: {
+                en: "ICML",
+                it: "ICML",
+            }
+        },
+        home3: {
+            title: {
+                en: "Home3",
+                it: "Pagina iniziale",
+            }
+        },
+        "council3": {
+            title: {
+                en: "Board3",
+                it: "Comitato",
+            }
+        },
+        "donations-and-contacts3": {
+            title: {
+                en: "Donations and Contacts3",
+                it: "Donazioni e Contatti",
+            }
+        }
+        
+    } : {
         home: {
             title: {
                 en: "Welcome",
@@ -113,14 +230,14 @@ const header = {
         // },
         council: {
             title: {
-                en: "Board",
+                en: "Foundation Board of Trustees",
                 it: "Consiglio di Fondazione",
             }
         },
         "scientific-committee": {
             title: {
-                en: "Scientific Committee",
-                it: "Comitato Scientifico",
+                en: "Scientific Council",
+                it: "Consiglio Scientifico",
             }
         },
         donations: {
@@ -242,8 +359,8 @@ const home = {
 
 const donations = {
     title: {
-        en: 'DONATIONS',
-        it: 'DONAZIONI'
+        en: 'Donations and contacts',
+        it: 'Donazioni e contatti'
     },
     intro: {
         en: 'Possible both online as well as via bank transfer or on our post office account.<br/><br/>Thank you for your support!',
@@ -334,12 +451,16 @@ const council = {
         it: 'Comitato direttivo' 
     },
     current: {
-        en: 'Current members',
-        it: 'Membri attuali'
+        en: 'Foundation Board of Trustees',
+        it: 'Consiglio di fondazione'
     },
     previous: {
-        en: 'Previous members',
-        it: 'Membri precedenti'
+        en: 'Past members',
+        it: 'Membri in passato'
+    },
+    scientific: {
+        en: 'Scientific Council',
+        it: 'Consiglio Scientifico'
     }
 }
 
@@ -416,8 +537,8 @@ const contact = {
 
 const scientificCommittee = {
     title: {
-        en: 'Scientific Committee',
-        it: 'Comitato Scientifico'
+        en: 'Scientific Council',
+        it: 'Consiglio Scientifico'
     }
 }
 

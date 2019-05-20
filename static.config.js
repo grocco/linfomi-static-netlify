@@ -98,74 +98,82 @@ export default {
       )  
     }
   },
-  getSiteData: () => ({
-    title: 'Foundation IOR',
-  }),
-  getRoutes: async () => {
-    const [scMembers, members] = await getData()
-    return [
+  getSiteData: async () => {
+    const [scMembers, members] = await getData();
+    return {
+      title: 'Foundation IOR',
+      scMembers,
+      members
+    }
+  },
+  getRoutes: () => [
       {
         path: '/',
-        component: 'src/components/connected/pages/Intro',
+        component: 'src/components/version_2/connected/pages/Intro',
         getData: () => ({
           pageSlug: 'intro' 
         })
       },
       {
         path: '/intro',
-        component: 'src/components/connected/pages/Intro',
+        component: 'src/components/version_2/connected/pages/Intro',
         getData: () => ({
           pageSlug: 'intro' 
         })
       },
       {
         path: '/home',
-        component: 'src/components/connected/pages/Home',
+        component: 'src/components/version_2/connected/pages/Home',
         getData: () => ({
           pageSlug: 'home' 
         })
       },
       {
         path: '/history',
-        component: 'src/components/connected/pages/History',
+        component: 'src/components/version_2/connected/pages/History',
         getData: () => ({
           pageSlug: 'history' 
         })
       },
       {
         path: '/president',
-        component: 'src/components/connected/pages/President',
+        component: 'src/components/version_2/connected/pages/President',
         getData: () => ({
           pageSlug: 'president' 
         })
       },
       {
         path: '/donations',
-        component: 'src/components/connected/pages/Donations',
+        component: 'src/components/version_2/connected/pages/Donations',
+        getData: () => ({
+          pageSlug: 'donations' 
+        })
+      },
+      {
+        path: '/donations-and-contacts',
+        component: 'src/components/version_2/connected/pages/Donations',
         getData: () => ({
           pageSlug: 'donations' 
         })
       },
       {
         path: '/council',
-        component: 'src/components/connected/pages/Council',
+        component: 'src/components/version_2/connected/pages/Council',
         getData: () => ({
           pageSlug: 'council',
-          members,
         })
       },
       {
         path: '/scientific-committee',
-        component: 'src/components/connected/pages/Council',
+        component: 'src/components/version_2/connected/pages/Council',
         getData: () => ({
           pageSlug: 'scientific-committee',
-          members: scMembers,
           scientificCommittee: true
         })
       },
       {
         path: '/contact/success',
-        component: 'src/components/connected/pages/Contact',
+        component: 'src/components/version_2/connected/pages/Contact',
         getData: () => ({
           pageSlug: 'contact',
           success: true
@@ -173,7 +181,7 @@ export default {
       },
       {
         path: '/contact',
-        component: 'src/components/connected/pages/Contact',
+        component: 'src/components/version_2/connected/pages/Contact',
         getData: () => ({
           pageSlug: 'contact',
         })
@@ -183,7 +191,7 @@ export default {
         component: 'src/containers/404',
       },
     ]
-  },
+  ,
   webpack: (config, { stage }) => {
     if (stage === 'prod') {
       config.entry = ['babel-polyfill', config.entry]

@@ -53,3 +53,8 @@ export const changePage = (page) => {
 export const toggleHamburger = () => ({
     type: "TOGGLE_HAMBURGER"
 })
+
+export const changeMenu = (menu) => ({
+    type: "CHANGE_MENU",
+    menu
+})

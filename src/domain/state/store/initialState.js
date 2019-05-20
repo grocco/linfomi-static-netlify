@@ -32,5 +32,168 @@ export const initialUiState = {
   screen: {
     width: window.innerWidth,
     height: window.innerHeight
+  },
+  menu: {
+    current: 'menu1home',
+    links: {
+      menu1home: [ 
+        {
+          name: 'foundation',
+        }, 
+        {
+          name: 'council'
+        }, 
+        {
+          name: 'donations-and-contacts'
+        }
+      ],
+      menu2foundation: [ 
+        {
+          name: 'foundation',
+          active: true,
+        }, 
+        {
+          name: 'ior',
+          submenu: true
+        }, 
+        {
+          name: 'ielsg',
+          submenu: true
+        }, 
+        {
+          name: 'icml',
+          submenu: true
+        },
+        {
+          name: 'council',
+        }, 
+        {
+          name: 'donations-and-contacts'
+        }
+      ],
+      menu2ior: [ 
+        {
+          name: 'link_ior',
+          link: true
+        },
+        {
+          name: 'foundation',
+          active: true,
+        },
+        {
+          name: 'ior',
+          active: true,
+          submenu: true
+        }, 
+        {
+          name: 'ielsg',
+          submenu: true
+        }, 
+        {
+          name: 'icml',
+          submenu: true
+        },
+        {
+          name: 'council',
+        }, 
+        {
+          name: 'donations-and-contacts'
+        }
+      ],
+      menu2ielsg: [ 
+        {
+          name: 'link_ielsg',
+          link: true
+        },
+        {
+          name: 'foundation',
+          active: true,
+        },
+        {
+          name: 'ior',
+          submenu: true
+        }, 
+        {
+          name: 'ielsg',
+          active: true,
+          submenu: true
+        }, 
+        {
+          name: 'icml',
+          submenu: true
+        },
+        {
+          name: 'council',
+        }, 
+        {
+          name: 'donations-and-contacts'
+        }
+      ],
+      menu2icml: [ 
+        {
+          name: 'link_icml',
+          link: true
+        },
+        {
+          name: 'foundation',
+          active: true,
+        },
+        {
+          name: 'ior',
+          submenu: true
+        }, 
+        {
+          name: 'ielsg',
+          submenu: true
+        }, 
+        {
+          name: 'icml',
+          active: true,
+          submenu: true
+        },
+        {
+          name: 'council',
+        }, 
+        {
+          name: 'donations-and-contacts'
+        }
+      ],
+      menu1council: [ 
+        {
+          name: 'foundation',
+        }, 
+        {
+          name: 'council',
+          active: true
+        }, 
+        {
+          name: 'president',
+          submenu: true
+        }, 
+        {
+          name: 'members',
+          submenu: true
+        },
+        {
+          name: 'scientific',
+          submenu: true
+        },
+        {
+          name: 'donations-and-contacts'
+        }
+      ],
+      menu1donations: [ 
+        {
+          name: 'foundation',
+        }, 
+        {
+          name: 'council'
+        }, 
+        {
+          name: 'donations-and-contacts',
+          active: true
+        }
+      ],
+    }
   }
 }

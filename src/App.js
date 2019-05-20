@@ -3,17 +3,19 @@ import { Router, Link, Route, withRouteData, withSiteData } from 'react-static'
 import { hot } from 'react-hot-loader'
 //
 import Routes from 'react-static-routes'
+import config from 'config';
 
 
 import { setWord, showModal, toggleHamburger, changeLanguage } from 'domain/state/actions';
+
 import Header from 'components/connected/Header';
 import Aside from 'components/connected/Aside';
 import Footer from 'components/connected/Footer';
+import Modal from "./components/connected/Modal";
+
+// import Page from "./components/connected/Page";
 import { connect } from 'react-redux';
 import i18n from 'domain/i18n';
-import config from 'config';
-import Modal from "./components/connected/Modal";
-// import Page from "./components/connected/Page";
 import window from 'domain/window';
 
 import './app.css'
