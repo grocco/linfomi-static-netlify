@@ -31,7 +31,7 @@ import './app2.css'
 import { triangle1, triangle2, triangle3, triangle4 } from './ui';
 
 let Donations = null;
-if (window.defined) {
+if (!window.server) {
   Donations = require('components/version_2/connected/pages/Donations');
 }
 
@@ -62,7 +62,7 @@ const RenderRoutes = ({ getComponentForPath, side }) => (
             <div id='menu1scientific' className='menuLocator'  >menu1</div>
             <Council {...props} scientific current={props.location.pathname === '/scientific'} />
             <div id='menu1donations' className='menuLocator'  >menu1</div>
-            { window.defined && <Donations {...props} current={props.location.pathname === '/donations-and-contacts'} /> }
+            { !window.server && <Donations {...props} current={props.location.pathname === '/donations-and-contacts'} /> }
             {/* <History {...props} current={props.location.pathname === '/hostory'} /> */}
             {/* <President {...props} current={props.location.pathname === '/president'} /> */}
             <Footer />
