@@ -7,7 +7,10 @@ import window from 'domain/window';
 // CardSection.js
 
 import ReactDOM from 'react-dom';
-import paypal from 'paypal-checkout';
+let paypal = {};
+if(document) {
+    let paypal =require('paypal-checkout');
+}
 
 class PayPalButton extends React.Component {
   constructor(props) {
@@ -43,6 +46,7 @@ class PayPalButton extends React.Component {
   }
 
   render() {
+    if (!paypal) return null;
     const PPButton = paypal.Button.driver('react', { React, ReactDOM });
     return (
         <div style={{width: '100%'}}>

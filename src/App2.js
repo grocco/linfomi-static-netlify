@@ -22,7 +22,7 @@ import window from 'domain/window';
 import Intro from 'components/version_2/connected/pages/Intro';
 import Home from 'components/version_2/connected/pages/Home';
 import Council from 'components/version_2/connected/pages/Council';
-import Donations from 'components/version_2/connected/pages/Donations';
+
 import History from 'components/version_2/connected/pages/History';
 import President from 'components/version_2/connected/pages/President';
 
@@ -30,6 +30,10 @@ import './app2.css'
 
 import { triangle1, triangle2, triangle3, triangle4 } from './ui';
 
+let Donations = null;
+if (window.defined) {
+  Donations = require('components/version_2/connected/pages/Donations');
+}
 
 // This is the default renderer for `<Routes>`
 const RenderRoutes = ({ getComponentForPath, side }) => (
@@ -58,7 +62,7 @@ const RenderRoutes = ({ getComponentForPath, side }) => (
             <div id='menu1scientific' className='menuLocator'  >menu1</div>
             <Council {...props} scientific current={props.location.pathname === '/scientific'} />
             <div id='menu1donations' className='menuLocator'  >menu1</div>
-            <Donations {...props} current={props.location.pathname === '/donations-and-contacts'} />
+            { window.defined && <Donations {...props} current={props.location.pathname === '/donations-and-contacts'} /> }
             {/* <History {...props} current={props.location.pathname === '/hostory'} /> */}
             {/* <President {...props} current={props.location.pathname === '/president'} /> */}
             <Footer />
