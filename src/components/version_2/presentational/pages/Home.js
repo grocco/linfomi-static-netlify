@@ -194,12 +194,12 @@ export default class Home extends Component {
     render() {
         const l = (s) => (s[this.props.language] || s.en);
         const renderReality = (realityId) => (
-            <div className='page content'>
+            <div key={realityId} className='page content'>
             {this.props.current && this.props.location.state && this.props.location.state.reality === realityId && <div id='current'>current</div>}
 
                 <div className='aside-left'>
-                    { assets[realityId].slice(0,4).map( image =>
-                        (<div className="image " style={{backgroundImage: `url('${image}')` }} />)
+                    { assets[realityId].slice(0,4).map( (image,idx) =>
+                        (<div key={image+idx} className="image " style={{backgroundImage: `url('${image}')` }} />)
                     )}
                     {/* <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.address) }} /> */}
                 </div>
@@ -215,8 +215,8 @@ export default class Home extends Component {
                 </div>
 
                 <div className='aside-right'>
-                    { assets.ior.slice(4,8).map( image =>
-                        (<div className="image " style={{backgroundImage: `url('${image}')` }} />)
+                    { assets.ior.slice(4,8).map( (image,idx) =>
+                        (<div key={image+idx} className="image " style={{backgroundImage: `url('${image}')` }} />)
                     )}
                     {/* <a className={'external-link'} href='http://www.ior.iosi.ch/' target='__blank'>
                         <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
