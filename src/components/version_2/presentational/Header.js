@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Link, withRouteData } from 'react-static'
 import { changeLanguage } from 'domain/state/actions';
 import i18n from 'domain/i18n';
+import window from 'domain/window';
 
 class Header extends Component {
 
