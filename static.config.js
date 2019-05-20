@@ -128,6 +128,55 @@ export default {
           pageSlug: 'home' 
         })
       },
+
+      {
+        path: '/scientific',
+        component: 'src/components/version_2/connected/pages/Home',
+        getData: () => ({
+          pageSlug: 'scientific' 
+        })
+      },
+
+      {
+        path: '/foundation',
+        component: 'src/components/version_2/connected/pages/Home',
+        getData: () => ({
+          pageSlug: 'foundation' 
+        })
+      },
+
+
+      {
+        path: '/members',
+        component: 'src/components/version_2/connected/pages/Home',
+        getData: () => ({
+          pageSlug: 'members' 
+        })
+      },
+
+      {
+        path: '/ior',
+        component: 'src/components/version_2/connected/pages/Home',
+        getData: () => ({
+          pageSlug: 'ior' 
+        })
+      },
+
+      {
+        path: '/ielsg',
+        component: 'src/components/version_2/connected/pages/Home',
+        getData: () => ({
+          pageSlug: 'ielsg' 
+        })
+      },
+
+      {
+        path: '/icml',
+        component: 'src/components/version_2/connected/pages/Home',
+        getData: () => ({
+          pageSlug: 'icml' 
+        })
+      },
       {
         path: '/history',
         component: 'src/components/version_2/connected/pages/History',
