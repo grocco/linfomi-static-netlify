@@ -116,7 +116,7 @@ class Council extends React.Component {
     renderRight() {
         const { members, language, history, scientificCommittee } = this.props;
         let member = null;
-        if (! history.location.state && (window.server && window.innerWidth > 1300 || scientificCommittee)) return (
+        if (! history.location.state && (!window.server && window.innerWidth > 1300 || scientificCommittee)) return (
             <div className='placeholder-image' style={ { backgroundImage: scientificCommittee ? 'url("https://ucarecdn.com/2c429942-1df9-4663-8458-75f5d10506b8/test1.jpg")' : 'url("https://ucarecdn.com/2c429942-1df9-4663-8458-75f5d10506b8/test1.jpg")'}} />
         );
         if( !history.location.state || history.location.state.memberSlug === 'president') member = members.sort(compareByField('order', el => el.data))[0]

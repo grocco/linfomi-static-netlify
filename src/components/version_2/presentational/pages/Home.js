@@ -143,7 +143,7 @@ export default class Home extends Component {
                             </Link> */}
                             <div onClick={()=> this.props.history.replace('/ior', { reality: 'ior'}).then(()=> {
                             {/* window.requestAnimationFrame(()=>{ */}
-                                window.server && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
+                                !window.server && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
                             {/* })  */}
                             })} >                        <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'ior' ? 'selected' : ''}`}>
                                     <div className='acronym'><div className='enumeration'>1.</div> {l(i18n.pages.home.content.realities.ior.acronym)}</div>
@@ -153,7 +153,7 @@ export default class Home extends Component {
                             </div>
                             <div onClick={()=> this.props.history.replace('/ielsg', { reality: 'ielsg'}).then(()=> {
                             {/* window.requestAnimationFrame(()=>{ */}
-                                window.server && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
+                                !window.server && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
                             {/* })  */}
                             })} >                        <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'ielsg' ? 'selected' : ''}`}>
                                     <div className='acronym'><div className='enumeration'>2.</div> {l(i18n.pages.home.content.realities.ielsg.acronym)}</div>
@@ -163,7 +163,7 @@ export default class Home extends Component {
                             </div>
                             <div onClick={()=> this.props.history.replace('/icml', { reality: 'icml'}).then(()=> {
                             {/* window.requestAnimationFrame(()=>{ */}
-                                window.server && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
+                                !window.server && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
                             {/* })  */}
                             })} >                        <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'icml' ? 'selected' : ''}`}>
                                     <div className='acronym'><div className='enumeration'>3.</div> {l(i18n.pages.home.content.realities.icml.acronym)}</div>

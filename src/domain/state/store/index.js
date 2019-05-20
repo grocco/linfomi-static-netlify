@@ -5,7 +5,7 @@ import thunk from 'redux-thunk';
 import window from 'domain/window';
 import reducers from '../reducers';
 
-const composeEnhancers = window.server && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = !window.server && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
     reducers,

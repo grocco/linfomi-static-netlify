@@ -30,8 +30,8 @@ export const initialUiState = {
   word: "the initial word",
   showHamburgerMenu: false,
   screen: {
-    width: window.server && window.innerWidth,
-    height: window.server && window.innerHeight
+    width: !window.server && window.innerWidth,
+    height: !window.server && window.innerHeight
   },
   menu: {
     current: 'menu1home',
