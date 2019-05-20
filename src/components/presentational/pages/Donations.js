@@ -275,7 +275,7 @@ export default class Donations extends React.PureComponent {
         }
         // console.log(this.props.location.state)
         //       <div className='breadcrumbs' onClick={this.props.history.goBack}>{'< back'}</div> 
-        if ((!this.props.location.state || ! this.props.location.state.slave) && window && window.innerWidth > 1300) return (
+        if ((!this.props.location.state || ! this.props.location.state.slave) && window.server && window.innerWidth > 1300) return (
             <div className='placeholder-image' style={ { backgroundImage: 'url(\'https://goalde.files.wordpress.com/2013/04/gerber-mark-handspic.jpg\')'}} />
         );
         return (

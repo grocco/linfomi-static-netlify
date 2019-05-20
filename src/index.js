@@ -28,12 +28,12 @@ if (typeof document !== 'undefined') {
       this.state = {stripe: null};
     }
     componentDidMount() {
-      if (window && window.Stripe) {
+      if (window.server && window.Stripe) {
         this.setState({stripe: window.Stripe('pk_test_xpM7sZ6yRB83nlEQu6MAI64U')});
       } else {
         document.querySelector('#stripe-js').addEventListener('load', () => {
           // Create Stripe instance once Stripe.js loads
-          this.setState({stripe: window && window.Stripe('pk_test_xpM7sZ6yRB83nlEQu6MAI64U')});
+          this.setState({stripe: window.server && window.Stripe('pk_test_xpM7sZ6yRB83nlEQu6MAI64U')});
         });
       }
     }

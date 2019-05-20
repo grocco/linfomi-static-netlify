@@ -32,7 +32,7 @@ import { triangle1, triangle2, triangle3, triangle4 } from './ui';
 
 let Donations = null;
 if (!window.server) {
-  Donations = require('components/version_2/connected/pages/Donations');
+  Donations = require('components/version_2/connected/pages/Donations').default;
 }
 
 // This is the default renderer for `<Routes>`
@@ -119,7 +119,7 @@ class AppPresentational extends React.Component {
     let currentMenu = this.props.menus[0];
     this.props.menus.forEach(
       menu => {
-        if (window && window.pageYOffset + 102 > document.getElementById(menu).offsetTop) currentMenu = menu
+        if (window.server && window.pageYOffset + 102 > document.getElementById(menu).offsetTop) currentMenu = menu
       }
     )
     if (this.props.currentMenu !== currentMenu) this.props.changeMenu(currentMenu);
