@@ -1,8 +1,6 @@
 import React from 'react';
 import { withRouteData, Link } from 'react-static'
 import i18n from 'domain/i18n';
-// import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
-import window from 'domain/window';
 
 // const MyMapComponent = withScriptjs(withGoogleMap((props) =>
 //   <GoogleMap

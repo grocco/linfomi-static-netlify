@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import i18n from 'domain/i18n';
 import { withRouteData } from 'react-static';
+import window from 'domain/window';
 
 class Intro extends Component {
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import i18n from 'domain/i18n';
 import { Link } from 'react-static';
 import assets from 'domain/assets';
+import window from 'domain/window';
 
 
 export default class Home extends Component {
@@ -32,7 +33,7 @@ export default class Home extends Component {
           window.removeEventListener('scroll', this.handleScroll);
         }
       }
-      
+
     handleScroll() {
         const navHeight = 101;
         if (this.presidentCard) {
