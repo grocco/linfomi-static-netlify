@@ -30,8 +30,8 @@ export const initialUiState = {
   word: "the initial word",
   showHamburgerMenu: false,
   screen: {
-    width: window.innerWidth,
-    height: window.innerHeight
+    width: window && window.innerWidth,
+    height: window && window.innerHeight
   },
   menu: {
     current: 'menu1home',
@@ -165,10 +165,28 @@ export const initialUiState = {
         {
           name: 'council',
           active: true
+        },
+        {
+          name: 'members',
+          submenu: true,
+          active: true
+        },
+        {
+          name: 'scientific',
+          submenu: true
+        },
+        {
+          name: 'donations-and-contacts'
+        }
+      ],
+
+      menu1scientific: [ 
+        {
+          name: 'foundation',
         }, 
         {
-          name: 'president',
-          submenu: true
+          name: 'council',
+          active: true
         }, 
         {
           name: 'members',
@@ -176,7 +194,8 @@ export const initialUiState = {
         },
         {
           name: 'scientific',
-          submenu: true
+          submenu: true,
+          active: true
         },
         {
           name: 'donations-and-contacts'

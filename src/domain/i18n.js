@@ -144,14 +144,14 @@ const header = {
         },
         "scientific": {
             title: {
-                en: "Scientific Council",
-                it: "Consiglio Scientifico",
+                en: "Past Members and Scientific Council",
+                it: "Membri in passato e Consiglio Scientifico",
             }
         },
         "members": {
             title: {
-                en: "Members",
-                it: "Membri",
+                en: "Board of Trustees",
+                it: "Consiglio di Fondazione",
             }
         },
         "president": {

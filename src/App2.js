@@ -54,7 +54,9 @@ const RenderRoutes = ({ getComponentForPath, side }) => (
             <div id='menu2icml' className='menuLocator'  >menu2</div>
             <Home {...props} current={props.location.pathname === '/icml'} reality='icml' />
             <div id='menu1council' className='menuLocator'  >menu1</div>
-            <Council {...props} current={props.location.pathname === '/council'} />
+            <Council {...props} current={props.location.pathname === '/council' || props.location.pathname === '/members'} />
+            <div id='menu1scientific' className='menuLocator'  >menu1</div>
+            <Council {...props} scientific current={props.location.pathname === '/scientific'} />
             <div id='menu1donations' className='menuLocator'  >menu1</div>
             <Donations {...props} current={props.location.pathname === '/donations-and-contacts'} />
             {/* <History {...props} current={props.location.pathname === '/hostory'} /> */}
@@ -94,11 +96,15 @@ const Content = withRouteData(({ pageSlug }) => (
 class AppPresentational extends React.Component {
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    if(window) {
+      window.addEventListener('scroll', this.handleScroll);
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    if(window) {
+      window.removeEventListener('scroll', this.handleScroll);
+    }
   }
 
   handleScroll = () => {
@@ -109,7 +115,7 @@ class AppPresentational extends React.Component {
     let currentMenu = this.props.menus[0];
     this.props.menus.forEach(
       menu => {
-        if (window.pageYOffset + 102 > document.getElementById(menu).offsetTop) currentMenu = menu
+        if (window && window.pageYOffset + 102 > document.getElementById(menu).offsetTop) currentMenu = menu
       }
     )
     if (this.props.currentMenu !== currentMenu) this.props.changeMenu(currentMenu);

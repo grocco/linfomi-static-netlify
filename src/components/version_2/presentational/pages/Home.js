@@ -20,10 +20,19 @@ export default class Home extends Component {
         this.handleScroll = this.handleScroll.bind(this);
     }
 
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll)
-    }
 
+    componentDidMount() {
+        if(window) {
+          window.addEventListener('scroll', this.handleScroll);
+        }
+      }
+    
+      componentWillUnmount() {
+        if(window) {
+          window.removeEventListener('scroll', this.handleScroll);
+        }
+      }
+      
     handleScroll() {
         const navHeight = 101;
         if (this.presidentCard) {
@@ -64,10 +73,6 @@ export default class Home extends Component {
         }
 
         
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
     }
 
     renderIntro() {
@@ -137,7 +142,7 @@ export default class Home extends Component {
                             </Link> */}
                             <div onClick={()=> this.props.history.replace('/ior', { reality: 'ior'}).then(()=> {
                             {/* window.requestAnimationFrame(()=>{ */}
-                                window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
+                                window && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
                             {/* })  */}
                             })} >                        <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'ior' ? 'selected' : ''}`}>
                                     <div className='acronym'><div className='enumeration'>1.</div> {l(i18n.pages.home.content.realities.ior.acronym)}</div>
@@ -147,7 +152,7 @@ export default class Home extends Component {
                             </div>
                             <div onClick={()=> this.props.history.replace('/ielsg', { reality: 'ielsg'}).then(()=> {
                             {/* window.requestAnimationFrame(()=>{ */}
-                                window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
+                                window && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
                             {/* })  */}
                             })} >                        <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'ielsg' ? 'selected' : ''}`}>
                                     <div className='acronym'><div className='enumeration'>2.</div> {l(i18n.pages.home.content.realities.ielsg.acronym)}</div>
@@ -157,7 +162,7 @@ export default class Home extends Component {
                             </div>
                             <div onClick={()=> this.props.history.replace('/icml', { reality: 'icml'}).then(()=> {
                             {/* window.requestAnimationFrame(()=>{ */}
-                                window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
+                                window && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
                             {/* })  */}
                             })} >                        <div className={`reality-list-item ${this.props.location.state && this.props.location.state.reality === 'icml' ? 'selected' : ''}`}>
                                     <div className='acronym'><div className='enumeration'>3.</div> {l(i18n.pages.home.content.realities.icml.acronym)}</div>

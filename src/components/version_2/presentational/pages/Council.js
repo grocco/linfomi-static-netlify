@@ -65,7 +65,15 @@ class MemberListItem extends React.Component {
     }
 
     componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll)
+        if(window) {
+          window.addEventListener('scroll', this.handleScroll);
+        }
+      }
+    
+    componentWillUnmount() {
+        if(window) {
+            window.removeEventListener('scroll', this.handleScroll);
+        }
     }
 
     handleScroll() {
@@ -81,10 +89,6 @@ class MemberListItem extends React.Component {
             l.style.position = 'relative';
             l.style.top = '0px';
         }
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
     }
 
     render() {
@@ -142,9 +146,9 @@ class Council extends React.Component {
 
     renderList(){
         const _l = (s) => (s[this.props.language] || s.en);
-        const { members, language, scientificCommittee, scMembers } = this.props;
+        const { members, language, scientificCommittee, scMembers, scientific } = this.props;
         const council = (
-            <div>
+             !scientific ? <div>
                 <div className='row-size-text'>{_l(i18n.pages.council.current)}</div>
                 <div className="members">
                 {members && members
@@ -154,6 +158,7 @@ class Council extends React.Component {
                     <MemberListItem history={this.props.history}  key={member.data.slug} member={member} language={language} selected={this.props.history.location.state && ( this.props.history.location.state.memberSlug === member.data.slug || (idx === 0 && this.props.history.location.state.memberSlug === 'president' ))}/>
                 ))}
                 </div>
+            </div> :
                 <div className='other-members'> 
                     <div className="members" style={ {flex: 2}}>
                     <div className='row-size-text'>{_l(i18n.pages.council.previous)}</div>
@@ -179,7 +184,6 @@ class Council extends React.Component {
                     ))}
                     </div>
                 </div>
-            </div>
         );
         const sc = (
             <div>

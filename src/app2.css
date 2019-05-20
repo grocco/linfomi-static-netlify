@@ -120,9 +120,17 @@ header .menu {
   transform: translateX(-50%);
 }
 
-.map-container, .map-element {
+.map-container {
+  height: 300px;
+  display: block;
+}
+
+.map-container .map-element {
     height: 300px;
     width: 100%;
+    position: absolute;
+    left:0;
+    bottom: 0;
 }
 
 .page-home #president-pic {

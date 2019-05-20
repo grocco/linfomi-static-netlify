@@ -58,7 +58,7 @@ class Header extends Component {
                     </Link> */}
                     <div onClick={()=> this.props.history.replace(`/${button.key}`, { reality: button.key}).then(()=> {
                       {/* window.requestAnimationFrame(()=>{ */}
-                          window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
+                          window && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
                       {/* })  */}
                       })} >{button.title}</div>
                   </div>
@@ -81,7 +81,7 @@ class Header extends Component {
                     </Link> */}
                     <div onClick={()=> this.props.history.replace(`/${button.key}`, { reality: button.key}).then(()=> {
                       {/* window.requestAnimationFrame(()=>{ */}
-                          window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
+                          window && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
                       {/* })  */}
                       })} >{button.title}</div>
                   </div>

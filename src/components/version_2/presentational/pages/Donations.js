@@ -11,16 +11,16 @@ import window from 'domain/window';
 import ReactDOM from 'react-dom';
 import paypal from 'paypal-checkout';
 
-// import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 
-// const MyMapComponent = withScriptjs(withGoogleMap((props) =>
-//   <GoogleMap
-//     defaultZoom={14}
-//     defaultCenter={{ lat: 46.194635, lng: 9.022549 }}
-//   >
-//     {props.isMarkerShown && <Marker position={{ lat: 46.194635, lng: 9.022549 }} />}
-//   </GoogleMap>
-// ));
+const MyMapComponent = withScriptjs(withGoogleMap((props) =>
+  <GoogleMap
+    defaultZoom={14}
+    defaultCenter={{ lat: 46.194635, lng: 9.022549 }}
+  >
+    {props.isMarkerShown && <Marker position={{ lat: 46.194635, lng: 9.022549 }} />}
+  </GoogleMap>
+));
 
 class PayPalButton extends React.Component {
   constructor(props) {
@@ -203,7 +203,15 @@ export default class Donations extends React.PureComponent {
     }
 
     componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll)
+        if(window) {
+          window.addEventListener('scroll', this.handleScroll);
+        }
+      }
+    
+    componentWillUnmount() {
+        if(window) {
+            window.removeEventListener('scroll', this.handleScroll);
+        }
     }
 
     handleScroll() {
@@ -233,9 +241,6 @@ export default class Donations extends React.PureComponent {
         
     }
 
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
-    }
 
     renderLeft() {
         const l = (s) => (s[this.props.language] || s.en);
@@ -389,7 +394,7 @@ export default class Donations extends React.PureComponent {
                         </div>
                         <div style={{flex: 1}}>
                         <div style={{marginRight: 0}} className='row-size-text'>{l(i18n.pages.contact.title)}</div>
-                            <form id='contact-form' className='padded' name="contact" method="POST" data-netlify="true" action='/contact/success'>
+                            <form id='contact-form' className='' name="contact" method="POST" data-netlify="true" action='/contact/success'>
                                 <input key='hidden' type="hidden" name="form-name" value="contact" />
                                 <div key='field-0' className='field'>
                                     <label>{l(i18n.pages.contact.labels.name)}: <input placeholder={l(i18n.pages.contact.placeholders.name)} type="text" name="name" /></label>   
@@ -406,13 +411,13 @@ export default class Donations extends React.PureComponent {
                             </form>
                         </div>
                         <div  className='map-container'>
-                            {/* <MyMapComponent 
+                            <MyMapComponent 
                                 isMarkerShown
                                 googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-7QaZ0BVi7guiWSBodnHCDr5LT4NoFtk&v=3.exp&libraries=geometry,drawing,places"
                                 loadingElement={<div className='map-element' />}
                                 containerElement={<div className='map-element' />}
                                 mapElement={<div className='map-element' />}
-                            /> */}
+                            />
                         </div>
                     </div>
                 </div>
