@@ -61,6 +61,6 @@ bio-it: >-
 email: alba.masullo@legacancro-ti.ch
 order: 1000
 picture: >-
-  https://ucarecdn.com/0f867b55-89e4-43a8-8b3c-00aa53b57c61/-/crop/2467x2393/572,588/-/preview/
+  https://ucarecdn.com/adf34dc4-ef1f-4ba0-836f-908865980b4e
 ---
 

@@ -50,8 +50,8 @@ class Intro extends Component {
         return <div className='page intro-image' >
                 {/* http://www.linuxcmd.org/lcshow/big/0/451_red-wallpaper.png */}
 
-                            <div onClick={()=> this.props.history.replace('/home')} className='top-logo-container' ref={(el)=>this.topLogo=el}  >
-                                <img src={`/assets/${l(i18n.assets.logos.foundation)}`} className='top-logo'  />
+                            <div  className='top-logo-container' ref={(el)=>this.topLogo=el}  >
+                                <img onClick={()=> !window.server && window.requestAnimationFrame(()=>document.getElementById('menu1home').scrollIntoView())} src={`/assets/${l(i18n.assets.logos.foundation)}`} className='top-logo'  />
                             </div>
         </div>
     }

@@ -374,7 +374,7 @@ header .menu {
 
 .aside-right .image {
   width: 300px;
-  height: 200px;
+  height: 220px;
   margin: 20px 0px;
 
   margin: 20px 0px;
@@ -441,6 +441,7 @@ header .menu {
 
 .president-card-inner {
   width: 220px;
+  cursor: pointer;
 }
 
 .aside-left {
@@ -481,7 +482,7 @@ header .menu {
   top: 0px;
   left: auto;
   z-index: 1001;
-  cursor: pointer;
+  /* cursor: pointer; */
   padding: 20px;
   background-color: rgba(255,255,255,0.5);
   width: 220px;
@@ -489,6 +490,8 @@ header .menu {
 }
 
 .top-logo {
+    cursor: pointer;
+
   width: 100%;
   border-radius: 4px;
 }
@@ -802,4 +805,10 @@ footer {
   transform: translateY(-1px);
   -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, .10), 0 3px 6px rgba(0, 0, 0, .08);
   box-shadow: 0 7px 14px rgba(50, 50, 93, .10), 0 3px 6px rgba(0, 0, 0, .08);
+}
+
+.aside-center .reality-description img {
+  width: 434px;
+  border-radius: 8px;
+  margin-top: 20px;
 }

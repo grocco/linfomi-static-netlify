@@ -108,16 +108,26 @@ export default class Home extends Component {
                     </Link> */}
                     <div className='aside-left'>
                         <div className='president-card'><div ref={(el)=>this.presidentCard=el} className='president-card-inner'>
-                            <Link to={{pathname:'/council', state: { memberSlug: 'president', slave: true}}} href='/president'>
+                            <div onClick={()=> this.props.history.replace(`/council`).then(()=> {
+                                {/* window.requestAnimationFrame(()=>{ */}
+                                    !window.server && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
+                                {/* })  */}
+                                })} >
                                 <div className='smoothed-corners-pic' id='president-pic' style={{backgroundImage: `url('https://ucarecdn.com/4dece25b-6ccd-45c2-8edd-0689eb017984/-/crop/2763x2736/0,431/-/preview//-/scale_crop/140x140/')`}}/>
-                            </Link>
-                            <Link className='bubble' to={{pathname:'/council', state: { memberSlug: 'president', slave: true}}} href='/council'>
+                            </div>
+                            <div className='bubble' 
+                                onClick={()=> this.props.history.replace(`/council`).then(()=> {
+                                    {/* window.requestAnimationFrame(()=>{ */}
+                                        !window.server && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
+                                    {/* })  */}
+                                    })} 
+                            >
                                 <img id='president-signature' src='/assets/signature-cavalli.png' alt='signature'/>
                                 <div>{l(i18n.pages.home.content.signature.name)}
                                     <br/><br/>
                                     {l(i18n.pages.home.content.signature.description)}
                                 </div >
-                            </Link>
+                            </div>
                         </div></div>
                     </div>
                     <div className='aside-center padded bubble-text snap-right'>
@@ -198,7 +208,7 @@ export default class Home extends Component {
             {this.props.current && this.props.location.state && this.props.location.state.reality === realityId && <div id='current'>current</div>}
 
                 <div className='aside-left'>
-                    { assets[realityId].slice(0,4).map( (image,idx) =>
+                    { assets[realityId].slice(0,Math.ceil(assets[realityId].length/2)).map( (image,idx) =>
                         (<div key={image+idx} className="image " style={{backgroundImage: `url('${image}')` }} />)
                     )}
                     {/* <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.address) }} /> */}
@@ -211,11 +221,12 @@ export default class Home extends Component {
                             <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities[realityId].address) }} />
                         </div>
                         <div className='padded bubble-text' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities[realityId].description) }} />
+                    { realityId === 'icml' && <img src={'https://ucarecdn.com/883b1339-5d6c-4727-8a1c-d950eea180d4/-/resize/434x/'} /> }
                     </div>
                 </div>
 
                 <div className='aside-right'>
-                    { assets.ior.slice(4,8).map( (image,idx) =>
+                    { assets[realityId].slice(Math.ceil(assets[realityId].length/2),assets[realityId].length).map( (image,idx) =>
                         (<div key={image+idx} className="image " style={{backgroundImage: `url('${image}')` }} />)
                     )}
                     {/* <a className={'external-link'} href='http://www.ior.iosi.ch/' target='__blank'>

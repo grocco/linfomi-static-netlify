@@ -218,9 +218,9 @@ export default class Donations extends React.PureComponent {
         const navHeight = 101;
         if (this.address) {
             const l = this.address;
-            if(navHeight + 20 + l.clientHeight >= l.parentElement.parentElement.getBoundingClientRect().bottom) {
+            if(navHeight + 20 + l.clientHeight >= l.parentElement.parentElement.getBoundingClientRect().bottom - 320) {
                 l.style.position = 'absolute';
-                l.style.bottom = '0px';
+                l.style.bottom = '320px';
                 l.style.top = null;
             }
             else if(l.parentElement.getBoundingClientRect().top > navHeight + 20) {
