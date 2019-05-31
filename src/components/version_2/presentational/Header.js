@@ -43,7 +43,7 @@ class Header extends Component {
                       className={`menu-button link ${button.selected ? ' selected' : ''} ${button.featured ? ' featured' : ''}`}
                       // onClick={()=>{this.props.changePage(button.key)}}
                     >
-                      <div>Official Website</div>
+                      <div>{l(i18n.pages.home.officialWebsite)}</div>
                       <a href={button.address}>{button.title}</a>
                     </div>
                   )

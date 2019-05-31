@@ -22,8 +22,8 @@ export const modalTemplates = {
 };
 
 export const initialUiState = { 
-  language: 'en', 
-  languages: ['en', 'it'],// 'fr', ],//'de', 'es'],
+  language: 'it', 
+  languages: ['it', 'en'],// 'fr', ],//'de', 'es'],
   page: 'home',
   modalTemplates, 
   currentModal: null, 
@@ -41,35 +41,45 @@ export const initialUiState = {
           name: 'foundation',
         }, 
         {
-          name: 'council'
+          name: 'council',
         }, 
         {
-          name: 'donations-and-contacts'
-        }
+          name: 'scientific',
+          submenu: true
+        },
+        {
+          name: 'donations-and-contacts',
+          submenu: true
+        },
       ],
       menu2foundation: [ 
         {
-          name: 'foundation',
-          active: true,
-        }, 
-        {
           name: 'ior',
-          submenu: true
+          // submenu: true
         }, 
         {
           name: 'ielsg',
-          submenu: true
+          // submenu: true
         }, 
         {
           name: 'icml',
-          submenu: true
+          // submenu: true
         },
+                                {
+                                  name: 'foundation',
+                                  active: true,
+                                }, 
         {
           name: 'council',
         }, 
         {
-          name: 'donations-and-contacts'
-        }
+          name: 'scientific',
+          submenu: true
+        },
+        {
+          name: 'donations-and-contacts',
+          submenu: true
+        },
       ],
       menu2ior: [ 
         {
@@ -77,28 +87,33 @@ export const initialUiState = {
           link: true
         },
         {
-          name: 'foundation',
-          active: true,
-        },
-        {
           name: 'ior',
           active: true,
-          submenu: true
+          // submenu: true
         }, 
         {
           name: 'ielsg',
-          submenu: true
+          // submenu: true
         }, 
         {
           name: 'icml',
-          submenu: true
+          // submenu: true
         },
+                                  {
+                                    name: 'foundation',
+                                    active: true,
+                                  },
         {
           name: 'council',
         }, 
         {
-          name: 'donations-and-contacts'
-        }
+          name: 'scientific',          
+          submenu: true
+        },
+        {
+          name: 'donations-and-contacts',
+          submenu: true
+        },
       ],
       menu2ielsg: [ 
         {
@@ -106,28 +121,33 @@ export const initialUiState = {
           link: true
         },
         {
-          name: 'foundation',
-          active: true,
-        },
-        {
           name: 'ior',
-          submenu: true
+          // submenu: true
         }, 
         {
           name: 'ielsg',
           active: true,
-          submenu: true
+          // submenu: true
         }, 
         {
           name: 'icml',
-          submenu: true
+          // submenu: true
         },
+                                  {
+                                    name: 'foundation',
+                                    active: true,
+                                  },
         {
           name: 'council',
         }, 
         {
-          name: 'donations-and-contacts'
-        }
+          name: 'scientific',          
+          submenu: true
+        },
+        {
+          name: 'donations-and-contacts',
+          submenu: true
+        },
       ],
       menu2icml: [ 
         {
@@ -135,28 +155,33 @@ export const initialUiState = {
           link: true
         },
         {
-          name: 'foundation',
-          active: true,
-        },
-        {
           name: 'ior',
-          submenu: true
+          // submenu: true
         }, 
         {
           name: 'ielsg',
-          submenu: true
+          // submenu: true
         }, 
         {
           name: 'icml',
           active: true,
-          submenu: true
+          // submenu: true
         },
+                                  {
+                                    name: 'foundation',
+                                    active: true,
+                                  },
         {
           name: 'council',
         }, 
         {
-          name: 'donations-and-contacts'
-        }
+          name: 'scientific',
+          submenu: true
+        },
+        {
+          name: 'donations-and-contacts',
+          submenu: true
+        },
       ],
       menu1council: [ 
         {
@@ -164,19 +189,28 @@ export const initialUiState = {
         }, 
         {
           name: 'council',
-          active: true
-        },
-        {
-          name: 'members',
-          submenu: true,
-          active: true
+          active: true,
         },
         {
           name: 'scientific',
           submenu: true
         },
+        // {
+        //   name: 'members',
+        //   submenu: true,
+        //   active: true
+        // },
+        // {
+        //   name: 'exmembers',
+        //   submenu: true
+        // },
+        // {
+        //   name: 'scientific',
+        //   submenu: true,
+        // },
         {
-          name: 'donations-and-contacts'
+          name: 'donations-and-contacts',
+          submenu: true
         }
       ],
 
@@ -184,34 +218,49 @@ export const initialUiState = {
         {
           name: 'foundation',
         }, 
-        {
-          name: 'council',
-          active: true
-        }, 
-        {
-          name: 'members',
-          submenu: true
-        },
-        {
-          name: 'scientific',
-          submenu: true,
-          active: true
-        },
-        {
-          name: 'donations-and-contacts'
-        }
+        // {
+          //   name: 'members',
+          //   submenu: true
+          // },
+          // {
+            //   name: 'exmembers',
+            //   submenu: true,
+            //   active: true
+            // },
+            // {
+              //   name: 'scientific',
+              //   submenu: true,
+              //   active: true
+              // },
+              {
+                name: 'council',
+              }, 
+              {
+                name: 'scientific',
+                submenu: true,
+                active: true
+              },
+              {
+                name: 'donations-and-contacts',
+                submenu: true,
+              },
       ],
       menu1donations: [ 
         {
           name: 'foundation',
         }, 
         {
-          name: 'council'
+          name: 'council',
         }, 
         {
+          name: 'scientific',
+          submenu: true
+        },
+        {
           name: 'donations-and-contacts',
+          submenu: true,
           active: true
-        }
+        },
       ],
     }
   }

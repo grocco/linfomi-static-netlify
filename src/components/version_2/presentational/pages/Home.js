@@ -58,20 +58,20 @@ export default class Home extends Component {
             }
         }
 
-        if (this.realityDescription) {
-            const l = this.realityDescription;
-            if(l.parentElement.getBoundingClientRect().top > navHeight + 20) {
-                l.style.position = 'relative';
-                l.style.top = '0px';
-            }
-            else if(l.parentElement.getBoundingClientRect().top <= navHeight + 20  ) {
-                l.style.position = 'fixed';
-                const spaceLeft = l.parentElement.getBoundingClientRect().bottom - (navHeight + 20);
-                const scrollAmount = l.clientHeight * (spaceLeft/l.parentElement.clientHeight);
-                l.style.top = `${Math.min(-l.clientHeight + (navHeight + spaceLeft + 20 + 20) ,navHeight + 20 - (l.clientHeight - scrollAmount))}px`;
-                l.style.bottom = null;
-            } 
-        }
+        // if (this.realityDescription) {
+        //     const l = this.realityDescription;
+        //     if(l.parentElement.getBoundingClientRect().top > navHeight + 20) {
+        //         l.style.position = 'relative';
+        //         l.style.top = '0px';
+        //     }
+        //     else if(l.parentElement.getBoundingClientRect().top <= navHeight + 20  ) {
+        //         l.style.position = 'fixed';
+        //         const spaceLeft = l.parentElement.getBoundingClientRect().bottom - (navHeight + 20);
+        //         const scrollAmount = l.clientHeight * (spaceLeft/l.parentElement.clientHeight);
+        //         l.style.top = `${Math.min(-l.clientHeight + (navHeight + spaceLeft + 20 + 20) ,navHeight + 20 - (l.clientHeight - scrollAmount))}px`;
+        //         l.style.bottom = null;
+        //     } 
+        // }
 
         
     }
@@ -222,6 +222,7 @@ export default class Home extends Component {
                         </div>
                         <div className='padded bubble-text' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities[realityId].description) }} />
                     { realityId === 'icml' && <img src={'https://ucarecdn.com/883b1339-5d6c-4727-8a1c-d950eea180d4/-/resize/434x/'} /> }
+                    { realityId === 'ior' && <img src={'https://ucarecdn.com/6231b3af-07d7-4b83-bae5-05dbbe08790a/-/resize/434x/'} /> }
                     </div>
                 </div>
 
@@ -238,43 +239,52 @@ export default class Home extends Component {
             </div>
         );
         const ielsg = (
-            <div className='page content'>
+            <div key='ielsg' className='page'>
+                <div className='content ielsg'>
             {this.props.current && this.props.location.state && this.props.location.state.reality === 'ielsg' && <div id='current'>current</div>}
 
                 <div className='aside-left'>
-                    <div className="image " style={{backgroundImage: `url('/assets/${l(i18n.assets.logos.ielsg)}')` }} />
-                    <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.address) }} />
+                    <div  className="image " style={{height: 240, backgroundImage: `url('${assets.ielsg[0]}')` }} />
+                    {/* <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.address) }} /> */}
                 </div>
-                <div className='aside-right'>
-                <img  className='article-top-image' src="https://ucarecdn.com/50483b97-e86f-4b87-9b9e-df1cccb8f083/-/preview//-/resize/800x/" /> 
 
-                    <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.description) }} />
-                    {/* <a className={'external-link'} href='http://www.ielsg.org/' target='__blank'>
-                        <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
-                        <div className='title'>{l(i18n.pages.home.content.realities.ielsg.title)}</div>
-                        <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
-                    </a> */}
+                <div className='aside-center with-title'>
+                    <div className='reality-description'>
+                        <div className='title'>
+                            <div className="image " style={{backgroundImage: `url('/assets/${l(i18n.assets.logos.ielsg)}')` }} />
+                            <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.address) }} />
+                        </div>
+                        <div className='padded bubble-text' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.description.first) }} />
+                    
+                    </div>
                 </div>
+                </div>
+
+                <div className='padded bubble-text' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.description.second) }} />
+            <img style={{marginTop: 20, borderRadius: 8}} src={'https://ucarecdn.com/cf565a57-7dac-4fd3-a365-29738034afec/-/resize/1000x/'} />
+
             </div>
         );
         const icml = (
-            <div className='page content'>
+            <div key='icml' className='page'>
+                <div className='content ielsg'>
             {this.props.current && this.props.location.state && this.props.location.state.reality === 'icml' && <div id='current'>current</div>}
 
-                <div className='aside-left'>
-                    <div className="image " style={{backgroundImage: `url('/assets/${l(i18n.assets.logos.icml)}')` }} />
-                    <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.address) }} />
+                <div className='aside-center with-title' >
+                        <div className='title'>
+                            <div className="image " style={{backgroundImage: `url('/assets/${l(i18n.assets.logos.icml)}')` }} />
+                            <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.address) }} />
+                        </div>
+                        <div className='padded bubble-text' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.description) }} />                    
                 </div>
                 <div className='aside-right'>
-                <img className='article-top-image'  src="https://ucarecdn.com/4a8002af-d818-483c-883c-1a9a084533ad/-/preview//-/resize/800x/" /> 
-
-                    <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.icml.description) }} />
-                    {/* <a className={'external-link'} href='http://www.lymphcon.ch/' target='__blank'>
-                        <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
-                        <div className='title'>{l(i18n.pages.home.content.realities.icml.title)}</div>
-                        <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
-                    </a>             */}
+                    <div  className="image " style={{height: 409, width: 409,  backgroundImage: `url('${assets.icml[0]}')` }} />
+                    {/* <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.address) }} /> */}
                 </div>
+                </div>
+
+            <img style={{ borderRadius: 8}} src={'https://ucarecdn.com/883b1339-5d6c-4727-8a1c-d950eea180d4/-/resize/1000x/'} />
+
             </div>
         );
         
@@ -286,9 +296,11 @@ export default class Home extends Component {
         </div>);
         {/* if ( ! this.props.location.state ) return this.renderIntro(); */}
         switch( this.props.reality) {
-            case 'ior':
             case 'ielsg':
+                return ielsg;
             case 'icml':
+                return icml;
+            case 'ior':
                 return renderReality(this.props.reality);
             default:
                 return this.renderIntro();

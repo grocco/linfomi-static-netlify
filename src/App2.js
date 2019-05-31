@@ -60,7 +60,7 @@ const RenderRoutes = ({ getComponentForPath, side }) => (
             <div id='menu1council' className='menuLocator'  >menu1</div>
             <Council {...props} current={props.location.pathname === '/council' || props.location.pathname === '/members'} />
             <div id='menu1scientific' className='menuLocator'  >menu1</div>
-            <Council {...props} scientific current={props.location.pathname === '/scientific'} />
+            <Council {...props} scientific current={props.location.pathname === '/scientific' || props.location.pathname === '/exmembers'} />
             <div id='menu1donations' className='menuLocator'  >menu1</div>
             { !window.server && <Donations {...props} current={props.location.pathname === '/donations-and-contacts'} /> }
             {/* <History {...props} current={props.location.pathname === '/hostory'} /> */}

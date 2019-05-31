@@ -138,20 +138,26 @@ const header = {
         },
         "council": {
             title: {
-                en: "Board",
-                it: "Comitato",
+                en: "Foundation Council",
+                it: "Consiglio di Fondazione",
             }
         },
         "scientific": {
             title: {
-                en: "Past Members and Scientific Council",
-                it: "Membri in passato e Consiglio Scientifico",
+                en: "Scientific Council",
+                it: "Consiglio Scientifico",
+            }
+        },
+        "exmembers": {
+            title: {
+                en: "Past Members",
+                it: "Membri in Passato"
             }
         },
         "members": {
             title: {
-                en: "Board of Trustees",
-                it: "Consiglio di Fondazione",
+                en: "Current members",
+                it: "Membri attuali",
             }
         },
         "president": {
@@ -168,7 +174,7 @@ const header = {
         },
         foundation: {
             title: {
-                en: "Foundation IOR",
+                en: "IOR Foundation",
                 it: "Fondazione IOR",
             }
         },
@@ -263,7 +269,7 @@ const home = {
     content: {
         thanks: {
             en: 'Thank you for entering the website of the Foundation for the Institute of Oncology Research',
-            it: 'Grazie per essere entrati nel sito della Fondazione per l’Istituto Oncologico di Ricerca.',
+            it: 'Grazie per essere entrati nel sito della Fondazione per l\'Istituto Oncologico di Ricerca.',
         },
         realities: {
             introduction: {
@@ -281,7 +287,7 @@ const home = {
                 },
                 address: {
                     en: '<b>The Foundation for the Institute of Oncology Research</b>',
-                    it: '<b></b>'
+                    it: '<b>La Fondazione per l\'Istituto oncologico di ricerca</b>'
                 }
             },
             ior: {
@@ -294,11 +300,12 @@ const home = {
                     en: 'Institute of Oncology Research'
                 },
                 description: {
-                    it: 'Lo <b>IOR</b> ha iniziato la sua attività nel 2003 all’interno dell’edificio dell’Istituto di ricerca in biomedicina (IRB) di Bellinzona. In pochi anni i ricercatori dello IOR si sono affermati a livello internazionale, pubblicando ricerche di grande originalità e di notevole impatto nelle principali riviste scientifiche mondiali.<br/><br/>Inoltre questi ricercatori sono stati capaci di ottenere importanti contributi alla ricerca non solo dalle istanze nazionali svizzere, ma anche nell’ambito dei programmi molto selettivi dell’Unione Europea.<br/><br/>Questa qualità eccellente è stata riconosciuta dapprima dal Segretariato di Ricerca del Consiglio Federale (SEFRI), che ha accordato allo IOR i molto ambiti sussidi federali, ed in seguito dall’Università della Svizzera Italiana (USI), che ha affiliato lo IOR nel 2016 nell’ambito della Facoltà di Biomedicina appena creata.<br/><br/>A tutt’oggi (2018) quasi 70 persone lavorano nei laboratori dello IOR, con un budget annuale che si sta ormai avvicinando allo soglia del 10 milioni di franchi.',
+                    it: 'Lo <b>IOR</b> ha iniziato la sua attività nel 2003 all\'interno dell\'edificio dell\'Istituto di ricerca in biomedicina (IRB) di Bellinzona. In pochi anni i ricercatori dello IOR si sono affermati a livello internazionale, pubblicando ricerche di grande originalità e di notevole impatto nelle principali riviste scientifiche mondiali.<br/><br/>Inoltre questi ricercatori sono stati capaci di ottenere importanti contributi alla ricerca non solo dalle istanze nazionali svizzere, ma anche nell\'ambito dei programmi molto selettivi dell\'Unione Europea.<br/><br/>Questa qualità eccellente è stata riconosciuta dapprima dal Segretariato di Ricerca del Consiglio Federale (SEFRI), che ha accordato allo IOR i molto ambiti sussidi federali, ed in seguito dall\'Università della Svizzera Italiana (USI), che ha affiliato lo IOR nel 2016 nell\'ambito della Facoltà di Biomedicina appena creata.<br/><br/>A tutt\'oggi (2018) quasi 70 persone lavorano nei laboratori dello IOR, con un budget annuale che si sta ormai avvicinando allo soglia del 10 milioni di franchi.',
                     en: 'The <b>IOR</b> (Institute of Oncology Research) started its activity in 2003 inside the building of the Institute for Research in Biomedicine  (IRB) in Bellinzona. In a few years, IOR researchers attained worldwide recognition through the publication of ground breaking research with a high impact in international leading scientific journals.<br/><br/>Furthermore the researchers were able to obtain important  financial contributions both in Switzerland and from the extremely selective European Union programmes.<br/><br/>This excellent quality level has been recognized first by the Research Secretariat of the Federal Council (SEFRI), which has granted to IOR the much sought-after federal subsides and later by the University of Southern Switzerland (USI), which affiliated the IOR in 2016 within the newly created Faculty of Biomedicine.<br/><br/>To date  (2018) almost 70 people work in the laboratories of the IOR with an annual budget that is approaching the threshold of 10 million francs.'
                 },
                 address: {
-                    'en': '<b>Institute of Oncology Research IOR</b>', // <br/><br/>Via Vincenzo Vela 6<br/>CH-6500 Bellinzona<br/><br/>+41 91 820 0322',
+                    'en': '<b>Institute of Oncology Research</b>',
+                    it: '<b>Istituto oncologico di ricerca</b>' // <br/><br/>Via Vincenzo Vela 6<br/>CH-6500 Bellinzona<br/><br/>+41 91 820 0322',
                 }
             },
             ielsg: {
@@ -308,14 +315,21 @@ const home = {
                 },
                 title: {
                     it: 'International Extranodal Lymphoma Study Group',
-                    en: 'International Extranodal Lymphoma Study Group'
+                    en: 'Internatioercanal Extranodal Lymphoma Study Group'
                 },
                 description: {
-                    it: 'Lo <b>IELSG</b> è nato nel 1996, quando si è capito che i linfomi extranodali (che rappresentano circa il 40% di tutti i linfomi maligni) non possono essere studiati da singoli istituti, ma solo da un gruppo internazionale cooperativo, perché il loro decorso è grandemente dipendente dalla localizzazione primaria del linfoma.<br/><br/>Siccome questi linfomi possono insorgere praticamente in tutti gli organi del nostro corpo, le diverse forme (linfoma celebrale, testicolare, polmonare, etc.) sono relativamente rare, ragion per cui solo un grande gruppo coinvolgente molte istituzioni può occuparsi del problema.<br/><br/>IELSG ha avuto un enorme successo: attualmente, sotto il coordinamento del Prof. Emanuele Zucca e dell’ufficio operativo situato all’Istituto Oncologico della Svizzera Italiana (IOSI) di Bellinzona, quasi 300 istituzioni in 4 continenti partecipano a questi studi, che hanno generato anche una cinquantina di lavori scientifici pubblicati in riviste molto importanti.',
-                    en: 'The <b>IELSG</b> was born in 1996, when it became clear that only an international research group rather than single institutions can study extranodal lymphoma (which represent approximately 40% of all malignant lymphoma), due to the fact that outcomes are largely dependent on the localization of the primary lymphoma.<br/><br/>As these lymphoma can originate in all organs of our body, the various forms (cerebral, testicular, pulmonary, etc.) are relatively rare, creating the necessity for a large study group involving many institutions.<br/><br/>IELSG has enjoyed an enormous success: currently, under the coordination of Prof. Emanuele Zucca and the operational office located at the Institute of Oncology of Southern Switzerland (IOSI) in Bellinzona, almost 300 institutions on 4 continents participate in these studies, which have also generated about fifty scientific papers published in leading journals.'
+                    first: {
+                        it: 'Lo <b>IELSG</b> è nato nel 1996, quando si è capito che i linfomi extranodali (che rappresentano circa il 40% di tutti i linfomi maligni) non possono essere studiati da singoli istituti, ma solo da un gruppo internazionale cooperativo, perché il loro decorso è grandemente dipendente dalla localizzazione primaria del linfoma.',
+                        en: 'The <b>IELSG</b> was born in 1996, when it became clear that only an international research group rather than single institutions can study extranodal lymphoma (which represent approximately 40% of all malignant lymphoma), due to the fact that outcomes are largely dependent on the localization of the primary lymphoma.'
+                    },
+                    second: {
+                        it: 'Siccome questi linfomi possono insorgere praticamente in tutti gli organi del nostro corpo, le diverse forme (linfoma celebrale, testicolare, polmonare, etc.) sono relativamente rare, ragion per cui solo un grande gruppo coinvolgente molte istituzioni può occuparsi del problema.<br/><br/>IELSG ha avuto un enorme successo: attualmente, sotto il coordinamento del Prof. Emanuele Zucca e dell\'ufficio operativo situato all\'Istituto Oncologico della Svizzera Italiana (IOSI) di Bellinzona, quasi 300 istituzioni in 4 continenti partecipano a questi studi, che hanno generato anche una cinquantina di lavori scientifici pubblicati in riviste molto importanti.',
+                        en: 'As these lymphoma can originate in all organs of our body, the various forms (cerebral, testicular, pulmonary, etc.) are relatively rare, creating the necessity for a large study group involving many institutions.<br/><br/>IELSG has enjoyed an enormous success: currently, under the coordination of Prof. Emanuele Zucca and the operational office located at the Institute of Oncology of Southern Switzerland (IOSI) in Bellinzona, almost 300 institutions on 4 continents participate in these studies, which have also generated about fifty scientific papers published in leading journals.'
+                    },
                 },
                 address: {
-                    en: '<b>IELSG</b><br/><b>International Extranodal Lymphoma Study Group</b>', // <br/><br/>Ospedale San Giovanni<br/>CH-6500 Bellinzona<br/><br/>+41 91 811 9040<br/><br/><a href=\'mailto:ielsg@eoc.ch\'>ielsg@eoc.ch</a>',
+                    en: '<b>International Extranodal Lymphoma Study Group</b>',
+                    it: '<b>International Extranodal Lymphoma Study Group</b>' // <br/><br/>Ospedale San Giovanni<br/>CH-6500 Bellinzona<br/><br/>+41 91 811 9040<br/><br/><a href=\'mailto:ielsg@eoc.ch\'>ielsg@eoc.ch</a>',
                 }
             },
             icml: {
@@ -332,7 +346,7 @@ const home = {
                     en: 'The <b>ICML</b> was organised for the first time in 1981: first every three years, since 2011 every two years. This conference has now become the main conference for all those involved in research or treatment of patients with malignant lymphoma.<br/><br/>Currently, for logistical reasons, we are obliged to limit the number of participants to 3\'500, although many more would like to attend.<br/><br/>It is mainly thanks to ICML that the name of Lugano is now known worldwide in the field of medicine, to such an extent that the " Lugano Classification" is universally used for the evaluation of patients with this type of cancer.'
                 },
                 address: {
-                    en: '<b>International Conference on Malignant Lymphoma</b>', // <br/><br/>ICML Secretariat<br/>Via Vincenzo Vela 6<br/>CH-6500 Bellinzona<br/><br/>+41 (0)91 922 05 75'
+                    en: '<b>International Conference on Malignant Lymphoma (ICML)</b>', // <br/><br/>ICML Secretariat<br/>Via Vincenzo Vela 6<br/>CH-6500 Bellinzona<br/><br/>+41 (0)91 922 05 75'
                 }
             },
         },
@@ -346,8 +360,8 @@ const home = {
                 en: 'Prof. Franco Cavalli'
             },
             description: {
-                it: 'Presidente della Fondazione per l\'Istituto oncologico di ricerca',
-                en: 'President of the Foundation for the Institute of Oncology Research'
+                it: 'Presidente della Fondazione',
+                en: 'President of the Foundation'
             }
         }
     },
@@ -437,7 +451,7 @@ const history = {
     },
     content: {
         en: 'The Foundation was founded on 11.1.1999 as a Foundation for the Research and Treatment of Lymphoma in Tessin, mainly because the International Conference on Malignant Lymphoma in Lugano (ICML), from a humble beginning in 1981 had grown to such a size that it needed a legal and administrative body to continue to manage the event.<br/><br/>Slowly, the Foundation became associated with oncological research in Tessin, financing specific projects, principally in the field of malignant lymphoma. In particular, the Foundation played an important role in financing the development of the IELSG (International Extranodal Lymphoma Study Group) and also in supporting the database of the IOSI (Institute of Oncology of Southern Switzerland), a fundamental tool for identifying clinical research topics.<br/><br/>In 2011, the Foundation was obliged, for legal and administrative reasons, to take over the management of the research laboratories of the IOSI, situated in the building of the IRB (Institute of Research in Biomedicine) in Bellinzona, which from that moment on were renamed the Institute of Oncology Research (IOR).<br/><br/>This step was strongly advocated by the federal authorities, which in view of the high level of quality of the research, wanted to support the laboratories with federal subsidies. This however required the separation of the administration from that of the EOC (Ente Ospedaliero Cantonale) respectively of IOSI, to avoid the problem of federal funding to a cantonal institution.<br/><br/>This passage has also allowed a more flexible management of the IOR, which since then has had a very rapid development.<br/><br/>Since the management of the IOR has become the principal activity of the Foundation and so in order to create a parallel structure to that of the IRB, in 2018 it was decided to change the name of the Foundation, transforming it into "Foundation for the Institute of Oncology Research". This change was accepted by the Federal Institutions and the Foundation Control during 2018 and is now fully effective.',
-        it: 'La Fondazione è nata l’11.1.1999 quale Fondazione per la Ricerca e la Cura dei Linfomi nel Ticino, principalmente perché la gestione della Conferenza Internazionale sui Linfomi Maligni a Lugano (ICML), che dal 1981 era ormai cresciuta a dismisura, necessitava di un contenitore legale ed amministrativo.<br/><br/>A poco a poco la Fondazione si è poi inserita nel panorama ticinese della ricerca oncologica finanziando progetti mirati, soprattutto nel settore dei linfomi maligni. In particolare ha avuto un ruolo importante nell’aiutare finanziariamente lo sviluppo dello IELSG (International Extranodal Lymphoma Study Group) ed anche nel sostenere il database dello IOSI (Istituto Oncologico della Svizzera Italiana), uno strumento fondamentale per permettere di individuare temi di ricerca clinici.<br/><br/>Nel 2011 la Fondazione ha dovuto riprendere per ragioni legali ed amministrativi la gestione dei laboratori di ricerca dello IOSI, situati nell’edificio IRB (Istituto di ricerca in biomedicina) a Bellinzona, che da quel momento sono stati ribattezzati Istituto Oncologico di Ricerca (IOR).<br/><br/>Questo passo era stato fortemente caldeggiato dalle autorità federali, che di fronte alla qualità dei lavori di ricerca portati avanti in questi laboratori, avevano deciso di sostenerli con dei sussidi federali. Questo sostegno richiedeva però lo scorporo dell’amministrazione da quella dell’EOC (Ente Ospedaliero Cantonale) e rispettivamente dello IOSI, per evitare il problema dei finanziamenti federali ad un istanza cantonale.<br/><br/>Questo passo ha permesso anche una gestione più elastica dello IOR, che da allora ha avuto uno sviluppo molto rapido.<br/><br/>Essendo diventata la gestione dello IOR l’attività principale della Fondazione e anche per avere una struttura parallela a quella dell’IRB, nel 2018 si decise di cambiare la denominazione della Fondazione, trasformandola in "Fondazione per l’Istituto oncologico di ricerca". Questo cambiamento è stato accettato nel corso del 2018 dalle Istanze Federali e dal Controllo delle Fondazioni ed è quindi ora pienamente effettivo.'
+        it: 'La Fondazione è nata l\'11.1.1999 quale Fondazione per la Ricerca e la Cura dei Linfomi nel Ticino, principalmente perché la gestione della Conferenza Internazionale sui Linfomi Maligni a Lugano (ICML), che dal 1981 era ormai cresciuta a dismisura, necessitava di un contenitore legale ed amministrativo.<br/><br/>A poco a poco la Fondazione si è poi inserita nel panorama ticinese della ricerca oncologica finanziando progetti mirati, soprattutto nel settore dei linfomi maligni. In particolare ha avuto un ruolo importante nell\'aiutare finanziariamente lo sviluppo dello IELSG (International Extranodal Lymphoma Study Group) ed anche nel sostenere il database dello IOSI (Istituto Oncologico della Svizzera Italiana), uno strumento fondamentale per permettere di individuare temi di ricerca clinici.<br/><br/>Nel 2011 la Fondazione ha dovuto riprendere per ragioni legali ed amministrativi la gestione dei laboratori di ricerca dello IOSI, situati nell\'edificio IRB (Istituto di ricerca in biomedicina) a Bellinzona, che da quel momento sono stati ribattezzati Istituto Oncologico di Ricerca (IOR).<br/><br/>Questo passo era stato fortemente caldeggiato dalle autorità federali, che di fronte alla qualità dei lavori di ricerca portati avanti in questi laboratori, avevano deciso di sostenerli con dei sussidi federali. Questo sostegno richiedeva però lo scorporo dell\'amministrazione da quella dell\'EOC (Ente Ospedaliero Cantonale) e rispettivamente dello IOSI, per evitare il problema dei finanziamenti federali ad un istanza cantonale.<br/><br/>Questo passo ha permesso anche una gestione più elastica dello IOR, che da allora ha avuto uno sviluppo molto rapido.<br/><br/>Essendo diventata la gestione dello IOR l\'attività principale della Fondazione e anche per avere una struttura parallela a quella dell\'IRB, nel 2018 si decise di cambiare la denominazione della Fondazione, trasformandola in "Fondazione per l\'Istituto oncologico di ricerca". Questo cambiamento è stato accettato nel corso del 2018 dalle Istanze Federali e dal Controllo delle Fondazioni ed è quindi ora pienamente effettivo.'
     }
 }
 
@@ -452,7 +466,7 @@ const council = {
     },
     current: {
         en: 'Foundation Board of Trustees',
-        it: 'Consiglio di fondazione'
+        it: 'Consiglio di Fondazione'
     },
     previous: {
         en: 'Past members',
@@ -523,8 +537,8 @@ const contact = {
         }
     },
     address: {
-        en: '<b>Fondazione per l’Istituto oncologico di ricerca (IOR)</b><br/><br/>Via Vincenzo Vela 6<br/>6500 Bellinzona<br/>Switzerland',
-        it: '<b>Fondazione per l’Istituto oncologico di ricerca (IOR)</b><br/><br/>Via Vincenzo Vela 6<br/>6500 Bellinzona<br/>Svizzera',
+        en: '<b>Fondazione per l\'Istituto oncologico di ricerca (IOR)</b><br/><br/>Via Vincenzo Vela 6<br/>6500 Bellinzona<br/>Switzerland',
+        it: '<b>Fondazione per l\'Istituto oncologico di ricerca (IOR)</b><br/><br/>Via Vincenzo Vela 6<br/>6500 Bellinzona<br/>Svizzera',
     },
     details: {
         en: '<b>Ufficio del Presidente</b><br/>Ospedale San Giovanni<br/>CH-6500 Bellinzona<br/>Tel. +41 (0)91 811 86 66<br/>sarahjane.ortelligiannakis@eoc.ch<br/><br/><b>Segretaria della Fondazione</b><br/>Tel. +41 (0)91 921 45 61<br/>olga.jackson@lymphcon.ch',
@@ -590,7 +604,7 @@ const assets = {
             en: 'ielsg.jpg'
         },
         ior: {
-            en: 'IOR_logo.png'
+            en: 'ior.jpeg'
         }
 
     }

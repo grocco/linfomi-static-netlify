@@ -137,6 +137,15 @@ export default {
         })
       },
 
+
+      {
+        path: '/exmembers',
+        component: 'src/components/version_2/connected/pages/Home',
+        getData: () => ({
+          pageSlug: 'exmembers' 
+        })
+      },
+
       {
         path: '/foundation',
         component: 'src/components/version_2/connected/pages/Home',
