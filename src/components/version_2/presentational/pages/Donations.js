@@ -4,6 +4,7 @@ import {injectStripe, CardElement} from 'react-stripe-elements';
 import i18n from 'domain/i18n';
 import { Link } from 'react-static';
 import window from 'domain/window';
+import config from 'config';
 // CardSection.js
 
 
@@ -436,7 +437,7 @@ export default class Donations extends React.PureComponent {
                         <div  className='map-container'>
                             <MyMapComponent 
                                 isMarkerShown
-                                googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-7QaZ0BVi7guiWSBodnHCDr5LT4NoFtk&v=3.exp&libraries=geometry,drawing,places"
+                                googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${config.googleMapsKey}&v=3.exp&libraries=geometry,drawing,places`}
                                 loadingElement={<div className='map-element' />}
                                 containerElement={<div className='map-element' />}
                                 mapElement={<div className='map-element' />}

@@ -83,7 +83,6 @@ class Contact extends React.Component {
             <div  className='map-container'>
                 {/* <MyMapComponent 
                     isMarkerShown
-                    googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-7QaZ0BVi7guiWSBodnHCDr5LT4NoFtk&v=3.exp&libraries=geometry,drawing,places"
                     loadingElement={<div className='map-element' />}
                     containerElement={<div className='map-element' />}
                     mapElement={<div className='map-element' />}
