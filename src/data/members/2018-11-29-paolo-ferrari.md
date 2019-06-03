@@ -37,7 +37,7 @@ bio: >-
 
 
   Since 2018 he has been a member of the Foundation Board of the Foundation for
-  the Institute of Oncology Research (IOR) and of the Foundation Board of the
+  the Institute of oncology research (IOR) and of the Foundation Board of the
   Transfusion Service of Southern Switzerland.
 role-it: ''
 bio-it: >-

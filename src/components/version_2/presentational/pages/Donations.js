@@ -8,8 +8,8 @@ import window from 'domain/window';
 
 
 
-import ReactDOM from 'react-dom';
-import paypal from 'paypal-checkout';
+// import ReactDOM from 'react-dom';
+// import paypal from 'paypal-checkout';
 
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 
@@ -22,69 +22,69 @@ const MyMapComponent = withScriptjs(withGoogleMap((props) =>
   </GoogleMap>
 ));
 
-class PayPalButton extends React.Component {
-  constructor(props) {
-    super(props);
+// class PayPalButton extends React.Component {
+//   constructor(props) {
+//     super(props);
 
-    this.state = {
-      env: this.props.env,
-      client: {
-        sandbox: this.props.sandboxID,
-        production: this.props.productionID
-      },
-      amount: 100,
-      currency: this.props.currency,
-      commit: this.props.commit
-    };
-  }
+//     this.state = {
+//       env: this.props.env,
+//       client: {
+//         sandbox: this.props.sandboxID,
+//         production: this.props.productionID
+//       },
+//       amount: 100,
+//       currency: this.props.currency,
+//       commit: this.props.commit
+//     };
+//   }
 
-  payment(data, actions) {
-    const payment = actions.payment.create({
-        transactions: [
-            {
-            amount: { total: this.state.amount, currency: this.state.currency }
-            }
-        ]
-    });
-    return payment;
-  }
+//   payment(data, actions) {
+//     const payment = actions.payment.create({
+//         transactions: [
+//             {
+//             amount: { total: this.state.amount, currency: this.state.currency }
+//             }
+//         ]
+//     });
+//     return payment;
+//   }
 
-  onAuthorize(data, actions) {
-    const execution = actions.payment.execute().then((data)=> this.props.onTransactionSuccessful(this.state.amount, data.payer.payer_info.email));
-    // this.props.onTransactionSuccessful(this.state.amount, this.state.email, 'paypal');
-    return execution;
-  }
+//   onAuthorize(data, actions) {
+//     const execution = actions.payment.execute().then((data)=> this.props.onTransactionSuccessful(this.state.amount, data.payer.payer_info.email));
+//     // this.props.onTransactionSuccessful(this.state.amount, this.state.email, 'paypal');
+//     return execution;
+//   }
 
-  render() {
-    const PPButton = paypal.Button.driver('react', { React, ReactDOM });
-    return (
-        <div style={{width: '100%'}}>
-        <label className={'stripe-label'}>
-          <input style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-amount stripe-input-full'} placeholder={'Donation amount'} type='number' name='amount' value={this.state.amount} onChange={(event)=>this.setState({amount: event.target.value})} />
-          <div className='stripe-currency'>CHF</div></label>
-          <PPButton
-            commit={ this.state.commit }
-            env={ this.state.env }
-            client={ this.state.client }
-            payment={ (data, actions) => this.payment(data, actions) }
-            onAuthorize={ (data, actions) => this.onAuthorize(data, actions) }
-            {...this.props}
-            locale={'en_US'}
-            style={{
-                color: 'blue',
-                shape: 'rect',
-                size: 'responsive',
-                label: 'pay',
-                tagline: false,
-                layout: 'horizontal',
-                fundingicons: 'true',
-            }}
-        />
+//   render() {
+//     const PPButton = paypal.Button.driver('react', { React, ReactDOM });
+//     return (
+//         <div style={{width: '100%'}}>
+//         <label className={'stripe-label'}>
+//           <input style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-amount stripe-input-full'} placeholder={'Donation amount'} type='number' name='amount' value={this.state.amount} onChange={(event)=>this.setState({amount: event.target.value})} />
+//           <div className='stripe-currency'>CHF</div></label>
+//           <PPButton
+//             commit={ this.state.commit }
+//             env={ this.state.env }
+//             client={ this.state.client }
+//             payment={ (data, actions) => this.payment(data, actions) }
+//             onAuthorize={ (data, actions) => this.onAuthorize(data, actions) }
+//             {...this.props}
+//             locale={'en_US'}
+//             style={{
+//                 color: 'blue',
+//                 shape: 'rect',
+//                 size: 'responsive',
+//                 label: 'pay',
+//                 tagline: false,
+//                 layout: 'horizontal',
+//                 fundingicons: 'true',
+//             }}
+//         />
 
-      </div>
-    );
-  }
-}
+//       </div>
+//     );
+//   }
+// }
 
 
 class CardSection extends React.Component {
@@ -117,7 +117,10 @@ class CheckoutForm extends React.Component {
           email: this.state.email, 
           amount: this.state.amount * 100,
           receipt_email: this.state.email,
-          description: 'Donation to IOR'
+          description: 'Donation to IOR',
+          address_line1: this.state.address_line1,
+          address_city: this.state.address_city,
+          address_country: this.state.address_country
         }).then(({token}) => {
         // console.log('Received Stripe token:', token);
         _props.onDonate(this.state.amount, l(i18n.modal.descriptions.onDonate));
@@ -132,7 +135,10 @@ class CheckoutForm extends React.Component {
                 tokenId: token.id,
                 name: this.state.name,
                 email: this.state.email,
-                amount: this.state.amount * 100
+                amount: this.state.amount * 100,
+                address_line1: this.state.address_line1,
+                address_city: this.state.address_city,
+                address_country: this.state.address_country
             })
         })
         .then(function(response) {
@@ -160,6 +166,9 @@ class CheckoutForm extends React.Component {
         amount: 100,
         email: '',
         name: '',
+        address_line1: '',
+        address_city: '',
+        address_country: '',
         initiated: false
     }
   
@@ -173,6 +182,15 @@ class CheckoutForm extends React.Component {
           <div className='stripe-currency'>CHF</div></label>
           <label className={'stripe-label'}>
           <input placeholder={l(i18n.pages.donations.creditCard.placeholders.email)} style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-full'} type='email' name='email' value={this.state.email} onChange={(event)=>this.setState({email: event.target.value})} />
+          </label>
+          <label className={'stripe-label'}>
+          <input placeholder={l(i18n.pages.donations.creditCard.placeholders.address_line1)} style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-full'} type='text' name='address_line1' value={this.state.address_line1} onChange={(event)=>this.setState({address_line1: event.target.value})} />
+          </label>
+          <label className={'stripe-label'}>
+          <input placeholder={l(i18n.pages.donations.creditCard.placeholders.address_city)} style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-full'} type='text' name='address_city' value={this.state.address_city} onChange={(event)=>this.setState({address_city: event.target.value})} />
+          </label>
+          <label className={'stripe-label'}>
+          <input placeholder={l(i18n.pages.donations.creditCard.placeholders.address_country)} style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-full'} type='text' name='address_country' value={this.state.address_country} onChange={(event)=>this.setState({address_country: event.target.value})} />
           </label>
           <label className={'stripe-label'}>
           <input placeholder={l(i18n.pages.donations.creditCard.placeholders.nameOnCard)} style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-full'} type='text' name='name' value={this.state.name.toUpperCase()} onChange={(event)=>this.setState({name: event.target.value})} />
@@ -256,12 +274,12 @@ export default class Donations extends React.PureComponent {
                             <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
                         </div>
                     </Link>
-                    <Link to={{pathname: '/donations', state: { method: 'paypal', slave: true}}} href='/donations'>
+                    {/* <Link to={{pathname: '/donations', state: { method: 'paypal', slave: true}}} href='/donations'>
                         <div className={`donation-list-item ${this.props.location.state && this.props.location.state.method === 'paypal' ? 'selected' : ''}`}>
                             <div>{l(i18n.pages.donations.payPal.title)}</div>
                             <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
                         </div>
-                    </Link>
+                    </Link> */}
                     <Link to={{pathname: '/donations', state: { method: 'bank-transfer', slave: true}}} href='/donations'>
                         <div className={`donation-list-item ${this.props.location.state && this.props.location.state.method === 'bank-transfer' ? 'selected' : ''}`}>
                             <div>{l(i18n.pages.donations.bankTransfer.title)}</div>
@@ -293,21 +311,21 @@ export default class Donations extends React.PureComponent {
         )
     }
 
-    renderPaypalForm() {
-        const l = (s) => (s[this.props.language] || s.en);
-        return (
-            <div className='paypal-form'>
-                <div className='row-size-text'>{l(i18n.pages.donations.payPal.title)}</div>
-                <PayPalButton
-                    onTransactionSuccessful={this.props.onTransactionSuccessful}
-                    env='sandbox'
-                    sandboxID='AaTUAdq41QA5Yjlf9OIq-zF_wLzlacj6WGR611rHtuzl79SPSYXDQQw-d5la_0_uYTVhuueBORehUjtx'
-                    currency='CHF'
-                    commit
-                />
-            </div>
-        )
-    }
+    // renderPaypalForm() {
+    //     const l = (s) => (s[this.props.language] || s.en);
+    //     return (
+    //         <div className='paypal-form'>
+    //             <div className='row-size-text'>{l(i18n.pages.donations.payPal.title)}</div>
+    //             <PayPalButton
+    //                 onTransactionSuccessful={this.props.onTransactionSuccessful}
+    //                 env='sandbox'
+    //                 sandboxID='AaTUAdq41QA5Yjlf9OIq-zF_wLzlacj6WGR611rHtuzl79SPSYXDQQw-d5la_0_uYTVhuueBORehUjtx'
+    //                 currency='CHF'
+    //                 commit
+    //             />
+    //         </div>
+    //     )
+    // }
 
     renderBankTransferForm() {
         const l = (s) => (s[this.props.language] || s.en);
@@ -385,13 +403,18 @@ export default class Donations extends React.PureComponent {
                         <div  style={{flex: 1}}>
 
                             { this.renderBankTransferForm() }
-                                { this.renderPaypalForm() }
+                                {/* { this.renderPaypalForm() } */}
+                            { this.renderPostOfficeAccountForm() }
                             </div>
                             <div style={{flex: 1, marginLeft: 20}}>
-                            { this.renderPostOfficeAccountForm() }
-                                { this.renderCreditCardForm() }
+                            { this.renderCreditCardForm() }
+
                             </div>
                         </div>
+
+                        {/* <div className='payment-methods' >
+                        { this.renderCreditCardForm() }
+                        </div> */}
                         <div style={{flex: 1}}>
                         <div style={{marginRight: 0}} className='row-size-text'>{l(i18n.pages.contact.title)}</div>
                             <form id='contact-form' className='' name="contact" method="POST" data-netlify="true" action='/contact/success'>

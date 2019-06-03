@@ -49,7 +49,7 @@ bio: >-
 
   Since 1999 he has been Vice-President and member of the Board of Directors of
   the Foundation for Research and Treatment of Lymphomas in Ticino, now the
-  Foundation for the Institute of Oncology Research (IOR).
+  Foundation for the Institute of oncology research (IOR).
 role-it: Vice presidente
 bio-it: >-
   Nato a Mendrisio il 14 luglio 1938. 

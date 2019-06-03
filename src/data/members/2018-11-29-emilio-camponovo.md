@@ -30,7 +30,7 @@ bio: >-
 
   Since 1999 he has been a member of the Foundation Board of the Foundation for
   the Research and Treatment of Lymphomas in Ticino, now the Foundation for the
-  Institute of Oncology Research (IOR).
+  Institute of oncology research (IOR).
 role-it: ''
 bio-it: >
   Nato a Chiasso nel 1933, Emilio Camponovo ha frequentato le scuole
@@ -58,7 +58,7 @@ bio-it: >
 
 
   Dal 1999 è membro del Consiglio di Fondazione della Fondazione per la Ricerca
-  e la Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di
+  e la Cura dei Linfomi nel Ticino, ora Fondazione per l'istituto oncologico di
   ricerca (IOR).
 email: emilio.camponovo@aurofin.ch
 order: 1000

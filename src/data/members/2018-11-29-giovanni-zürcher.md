@@ -22,7 +22,7 @@ bio: >-
 
   Since 1999 he has been the Treasurer and member of the Board of Directors of
   the Foundation for the Research and Treatment of Lymphomas in Ticino, now the
-  Foundation for the Institute of Oncology Research (IOR).
+  Foundation for the Institute of oncology research (IOR).
 role-it: Cassiere
 bio-it: >-
   Nato il 4.8.1960, Giovanni Zuercher ha ottenuto il diploma Federale di

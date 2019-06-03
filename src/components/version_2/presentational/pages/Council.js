@@ -102,7 +102,7 @@ class MemberListItem extends React.Component {
                         >
                 <div className='pic-name-role'>
                     <div ref={(el)=>this.lift=el} className='lift-container'>
-                        <div className='round member-pic' style={ {backgroundImage: member.data.picture ? `url('${member.data.picture}/-/scale_crop/60x60/')` : "url('/assets/member-placeholder.jpg')"} } />
+                        <div className='round member-pic' style={ {backgroundSize: 'cover',backgroundImage: member.data.picture ? `url('${member.data.picture}/-/scale_crop/440x440/')` : "url('/assets/member-placeholder.jpg')"} } />
                         <div className='name-and-role'>
                             <div className='title'>{member.data.surname} {member.data.name}</div>
                             <div className="board-of-directors">{member.data['board-of-directors'] ? i18n.pages.council.boardOfDirectors[language] : ''}</div>
@@ -176,6 +176,7 @@ class Council extends React.Component {
                     <div className='row-size-text'>{_l(i18n.pages.council.scientific)}</div>
                     {scMembers && scMembers
                         .sort(compareByField('surname', el => el.data))
+                        .sort((a,b)=>a.data.role !== undefined ? -1 : 1)
                         .map(member => (
                         <div className='scientific-council-member'  key={member.data.slug}>
                             <span >{member.data.surname} {member.data.name} {l(member.data, 'role', language) && `(${l(member.data, 'role', language)})`}</span>                       

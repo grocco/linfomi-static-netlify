@@ -30,7 +30,7 @@ bio: >-
 
   Since 2017 he has been a member of the Foundation Board of the Foundation for
   the Research and Treatment of Lymphomas in Ticino,cnow the Foundation for the
-  Institute of Oncology Research (IOR).
+  Institute of oncology research (IOR).
 role-it: ''
 bio-it: >-
   Cresciuto a Bellinzona, è sposato con Ferdinanda e padre di Martina e di
@@ -60,7 +60,7 @@ bio-it: >-
 
 
   Dal 2017 è membro del Consiglio di Fondazione della Fondazione per la Ricerca
-  e la Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di
+  e la Cura dei Linfomi nel Ticino, ora Fondazione per l'istituto oncologico di
   ricerca (IOR).
 email: roberto.malacrida@bellinzona.ch
 order: 1000

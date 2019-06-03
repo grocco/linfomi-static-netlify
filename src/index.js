@@ -19,6 +19,8 @@ class Main extends React.Component {
   }
 }
 
+const pk = 'pk_test_jkNc2tU1W0U8ssVMw0myhPnA00PajLTKwz' // 'pk_live_oBxXZPfdCmST9slFK1SSRiJs00Trm1agMS'
+
 if (typeof document !== 'undefined') {
   const StripeProvider = require('react-stripe-elements').StripeProvider;
 
@@ -29,11 +31,11 @@ if (typeof document !== 'undefined') {
     }
     componentDidMount() {
       if (!window.server && window.Stripe) {
-        this.setState({stripe: window.Stripe('pk_test_xpM7sZ6yRB83nlEQu6MAI64U')});
+        this.setState({stripe: window.Stripe(pk)});
       } else {
         document.querySelector('#stripe-js').addEventListener('load', () => {
           // Create Stripe instance once Stripe.js loads
-          this.setState({stripe: !window.server && window.Stripe('pk_test_xpM7sZ6yRB83nlEQu6MAI64U')});
+          this.setState({stripe: !window.server && window.Stripe(pk)});
         });
       }
     }
@@ -70,7 +72,7 @@ export default Main;
 //   const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate || ReactDOM.render
 //   const render = Comp => {
 //     renderMethod(
-//       <StripeProvider apiKey="pk_test_xpM7sZ6yRB83nlEQu6MAI64U">
+//       <StripeProvider apiKey="pk_live_oBxXZPfdCmST9slFK1SSRiJs00Trm1agMS">
 //         <Provider store={store}>
 //           <Comp />
 //         </Provider>

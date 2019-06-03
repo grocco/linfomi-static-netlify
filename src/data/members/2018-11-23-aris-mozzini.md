@@ -20,7 +20,7 @@ bio: >-
 
   Since 2014 he has been a member of the Board of Directors of the Foundation
   for Research and Treatment of Lymphomas in Ticino, now the Foundation for the
-  Institute of Oncology Research (IOR).
+  Institute of oncology research (IOR).
 role-it: ''
 bio-it: >-
   Nato nel 1971 a Bellinzona dove attualmente risiede, ha conseguito la licenza
@@ -38,7 +38,7 @@ bio-it: >-
 
 
   Dal 2014 è membro del Consiglio Direttivo della Fondazione per la Ricerca e la
-  Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di
+  Cura dei Linfomi nel Ticino, ora Fondazione per l'istituto oncologico di
   ricerca (IOR).
 email: aris.mozzini@ti.ch
 board-of-directors: true

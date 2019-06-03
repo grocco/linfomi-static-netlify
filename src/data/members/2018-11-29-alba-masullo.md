@@ -29,7 +29,7 @@ bio: >-
 
   Since 2008, she has been a member of the Foundation Board of the Foundation for
   Research and Treatment of Lymphomas in Ticino, now the Foundation for the
-  Institute of Oncology Research (IOR).
+  Institute of oncology research (IOR).
 role-it: ''
 bio-it: >-
   Nata a Saignelégier (Ct. Jura) nel 1964, Alba Masullo ha conseguito la
@@ -56,7 +56,7 @@ bio-it: >-
 
 
   Dal 2008 è membro del Consiglio di Fondazione della Fondazione per la Ricerca
-  e la Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di
+  e la Cura dei Linfomi nel Ticino, ora Fondazione per l'istituto oncologico di
   ricerca (IOR).
 email: alba.masullo@legacancro-ti.ch
 order: 1000
