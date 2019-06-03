@@ -55,6 +55,11 @@ class Contact extends React.Component {
         )
     }
 
+    onSubmit(e) {
+        e.preventDefault();
+        alert('yo')
+    }
+
     renderRight() {
         const l = (s) => (s[this.props.language] || s.en);
         // if ((!this.props.history.location.state || ! this.props.history.location.state.slave) && window.innerWidth > 1300) return (
@@ -62,7 +67,7 @@ class Contact extends React.Component {
         // );
         const form = (
             <div style={{flex: 1}}>
-                <form id='contact-form' className='padded' name="contact" method="POST" data-netlify="true" action='/contact/success'>
+                <form onSubmit={this.onSubmit} id='contact-form' className='padded' name="contact" method="POST" data-netlify="true" action='/contact/success'>
                     <input key='hidden' type="hidden" name="form-name" value="contact" />
                     <div key='field-0' className='field'>
                         <label>{l(i18n.pages.contact.labels.name)}: <input placeholder={l(i18n.pages.contact.placeholders.name)} type="text" name="name" /></label>   
