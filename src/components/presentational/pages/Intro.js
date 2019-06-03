@@ -18,7 +18,7 @@ export default class Intro extends Component {
                 
                 <div className='home-intro' >
                     <Link to={{pathname:'/council', state: { memberSlug: 'president', slave: true}}} href='/president'>
-                        <div id='president-pic' style={{backgroundImage: `url('https://ucarecdn.com/4dece25b-6ccd-45c2-8edd-0689eb017984/-/crop/2763x2736/0,431/-/preview//-/scale_crop/140x140/')`}}/>
+                        <div id='president-pic' style={{backgroundImage: `url('https://ucarecdn.com/4dece25b-6ccd-45c2-8edd-0689eb017984/-/crop/2763x2736/0,431/-/preview//-/scale_crop/220x220/')`}}/>
                     </Link>
                     <div className='thanks-and-introduction'>
                         <div>{l(i18n.pages.home.content.thanks)}</div >

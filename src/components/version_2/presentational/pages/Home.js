@@ -113,7 +113,7 @@ export default class Home extends Component {
                                     !window.server && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
                                 {/* })  */}
                                 })} >
-                                <div className='smoothed-corners-pic' id='president-pic' style={{backgroundImage: `url('https://ucarecdn.com/4dece25b-6ccd-45c2-8edd-0689eb017984/-/crop/2763x2736/0,431/-/preview//-/scale_crop/140x140/')`}}/>
+                                <div className='smoothed-corners-pic' id='president-pic' style={{backgroundImage: `url('https://ucarecdn.com/4dece25b-6ccd-45c2-8edd-0689eb017984/-/crop/2763x2736/0,431/-/preview//-/scale_crop/220x220/')`}}/>
                             </div>
                             <div className='bubble' 
                                 onClick={()=> this.props.history.replace(`/council`).then(()=> {

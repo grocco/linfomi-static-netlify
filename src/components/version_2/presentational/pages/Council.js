@@ -36,7 +36,7 @@ const Member = ({member, language, history}) => (
         }
         <div className='content'>
             <div className='aside-left'>
-                <div className="image round" style={{backgroundImage: member.data.picture ? `url('${member.data.picture}/-/scale_crop/140x140/')` : "url('/assets/member-placeholder.jpg')"}} />
+                <div className="image round" style={{backgroundImage: member.data.picture ? `url('${member.data.picture}/-/scale_crop/220x220/')` : "url('/assets/member-placeholder.jpg')"}} />
                 <div className='member-details'>
                     <div className="board-of-directors">{member.data['board-of-directors'] ? i18n.pages.council.boardOfDirectors[language] : ''}</div>
                     <div className="title">{member.data.surname} {member.data.name}</div>

@@ -12,7 +12,7 @@ export default withRouteData(({ members }) => (
         <li key={member.data.slug}>
             <div>{member.data.title}</div >
             <div>{member.data.bio}</div >
-            <img className="image" src={member.data.picture ? `${member.data.picture}/-/scale_crop/140x140/` : '/assets/member-placeholder.jpg'} alt="" />
+            <img className="image" src={member.data.picture ? `${member.data.picture}/-/scale_crop/220x220/` : '/assets/member-placeholder.jpg'} alt="" />
         </li>
       ))}
     </ul>
