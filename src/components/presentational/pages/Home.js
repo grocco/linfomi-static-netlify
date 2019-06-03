@@ -71,7 +71,7 @@ export default class Home extends Component {
                 <Link className='bubble' to={{pathname:'/council', state: { memberSlug: 'president', slave: true}}} href='/council'>
                     <img id='president-signature' src='/assets/signature-cavalli.png' alt='signature'/>
                     <div>{l(i18n.pages.home.content.signature.name)}
-                        <br/><br/>
+                        <br/>
                         {l(i18n.pages.home.content.signature.description)}
                     </div >
                 </Link>
