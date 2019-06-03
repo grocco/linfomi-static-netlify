@@ -261,7 +261,7 @@ export default class Home extends Component {
                 </div>
 
                 <div className='padded bubble-text' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.description.second) }} />
-            <img style={{marginTop: 20, borderRadius: 8}} src={'https://ucarecdn.com/cf565a57-7dac-4fd3-a365-29738034afec/-/resize/1000x/'} />
+            <img style={{marginTop: 20, borderRadius: 4}} src={'https://ucarecdn.com/cf565a57-7dac-4fd3-a365-29738034afec/-/resize/1000x/'} />
 
             </div>
         );
@@ -283,7 +283,7 @@ export default class Home extends Component {
                 </div>
                 </div>
 
-            <img style={{ borderRadius: 8}} src={'https://ucarecdn.com/883b1339-5d6c-4727-8a1c-d950eea180d4/-/resize/1000x/'} />
+            <img style={{ borderRadius: 4}} src={'https://ucarecdn.com/883b1339-5d6c-4727-8a1c-d950eea180d4/-/resize/1000x/'} />
 
             </div>
         );

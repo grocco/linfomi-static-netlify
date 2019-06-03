@@ -352,14 +352,14 @@ header .menu {
 
 .member-list-item:nth-child(odd) .short-description {
   background-color: #f5f5f5;
-  border-radius: 8px 0px 0px 8px;
+  border-radius:4px 0px 0px 4px;
   border: solid 1px #eee;
 }
 
 
 .member-list-item:nth-child(even) .pic-name-role {
   background-color: #f5f5f5;
-  border-radius: 0px 8px 8px 0px;
+  border-radius: 0px 4px 4px 0px;
   border: solid 1px #eee;
 }
 
@@ -388,7 +388,7 @@ header .menu {
   margin: 20px 0px;
 
   margin: 20px 0px;
-  border-radius: 8px;
+  border-radius:4px;
   border: solid 1px #ccc;
 
   background-size: cover;
@@ -400,7 +400,7 @@ header .menu {
   margin: 20px 0px;
 
   margin: 20px 0px;
-  border-radius: 8px;
+  border-radius:4px;
   border: solid 1px #ccc;
 
   background-size: cover;
@@ -415,7 +415,7 @@ header .menu {
   background-color: #fafafa;
   color: #333;
   padding-right: 20px;
-  border-radius: 0px 8px 8px 0px;
+  border-radius: 0px 4px 4px 0px;
   border: solid 1px #eee;
 }
 
@@ -475,12 +475,12 @@ header .menu {
 
 .bubble-text {
   background: #fafafa;
-  border-radius: 8px;
+  border-radius:4px;
   border: solid 1px #eee;
 }
 
 .smoothed-corners-pic {
-  border-radius: 8px;
+  border-radius:4px;
   border: solid 1px #ccc;
 }
 
@@ -491,12 +491,12 @@ header .menu {
 
 .snap-right {
   margin-right: -20px;
-  border-radius: 8px 0px 0px 8px;
+  border-radius:4px 0px 0px 4px;
 }
 
 .snap-left {
   margin-left: -20px;
-  border-radius: 0px 8px 8px 0px;
+  border-radius: 0px 4px 4px 0px;
 }
 
 .top-logo-container {
@@ -832,7 +832,7 @@ footer {
 
 .aside-center .reality-description img {
   width: 434px;
-  border-radius: 8px;
+  border-radius:4px;
   margin-top: 20px;
 }
 
