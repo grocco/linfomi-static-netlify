@@ -381,6 +381,10 @@ const donations = {
         it: 'Possibili sia online che tramite bonifico sul conto bancario o postale.<br/><br/>Grazie per il sostegno!'
     },
     creditCard: {
+        thanks: {
+            en: 'Thank you for your donation!',
+            it: 'Grazie per la sua donazione!'
+        },
         title: {
             en: 'via Credit Card',
             it: 'via Carta di Credito'

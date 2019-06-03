@@ -111,14 +111,15 @@ class CheckoutForm extends React.Component {
       const _state = this.state;
   
       this.setState({ initiated: true });
+      const that = this;
       // Within the context of `Elements`, this call to createToken knows which Element to
       // tokenize, since there's only one in this group.
       _props.stripe.createToken({
           name: this.state.name, 
           email: this.state.email, 
-          amount: this.state.amount * 100,
-          receipt_email: this.state.email,
-          description: 'Donation to IOR',
+        //   amount: this.state.amount * 100,
+        //   receipt_email: this.state.email,
+        //   description: 'Donation to IOR',
           address_line1: this.state.address_line1,
           address_city: this.state.address_city,
           address_country: this.state.address_country
@@ -146,7 +147,9 @@ class CheckoutForm extends React.Component {
             return response.json();
         })
         .then(function(transaction) {
-            _props.onTransactionSuccessful(_state.amount, _state.email)
+            that.setState({ initiated: false, done: true });
+            _props.onTransactionSuccessful(_state.amount, _state.email);
+            
             // console.log(JSON.stringify(transaction));
         });
       });
@@ -170,13 +173,17 @@ class CheckoutForm extends React.Component {
         address_line1: '',
         address_city: '',
         address_country: '',
-        initiated: false
+        initiated: false,
+        done: false
     }
   
     render() {
     const l = (s) => (s[this.props.language] || s.en);
+    if (this.state.done) {
+        return <div className='thanks-credit-card'>{l(i18n.pages.donations.creditCard.thanks)}</div>
+    }
       return (
-        <form onSubmit={this.handleSubmit} style={{width: '100%', opacity: this.state.initiated ? 0.5 : null}}>
+        <form onSubmit={this.handleSubmit} style={{width: '100%', opacity: this.state.initiated ? 0.5 : 1}}>
           {/* <AddressSection /> */}
           <label className={'stripe-label'}>
           <input style={styles.StripeElement.base} className={'StripeElement stripe-input stripe-input-amount stripe-input-full'} placeholder={l(i18n.pages.donations.creditCard.placeholders.amount)} type='number' name='amount' value={this.state.amount} onChange={(event)=>this.setState({amount: event.target.value})} />

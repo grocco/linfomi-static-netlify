@@ -19,7 +19,7 @@ class Main extends React.Component {
   }
 }
 
-const pk = 'pk_test_jkNc2tU1W0U8ssVMw0myhPnA00PajLTKwz' // 'pk_live_oBxXZPfdCmST9slFK1SSRiJs00Trm1agMS'
+const pk = 'pk_live_oBxXZPfdCmST9slFK1SSRiJs00Trm1agMS' // 'pk_test_jkNc2tU1W0U8ssVMw0myhPnA00PajLTKwz'
 
 if (typeof document !== 'undefined') {
   const StripeProvider = require('react-stripe-elements').StripeProvider;
