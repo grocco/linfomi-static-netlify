@@ -9,7 +9,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   onDonate: (amount, description) => dispatch(showModal({name: 'DONATION_START', amount, description})),
   onTransactionStart: (amount, description) => dispatch(showModal({name: 'DONATION_START', amount, description})),
-  onTransactionSuccessful: (amount, email) => dispatch(showModal({name: 'DONATION_SUCCESSFUL', amount, email }))
+  onTransactionSuccessful: (amount, email) => dispatch(showModal({name: 'DONATION_SUCCESSFUL', amount, email })),
+  onTransactionFailed: (amount, email) => dispatch(showModal({name: 'DONATION_FAILED', amount, email }))
 });
 
 const Connected = connect(

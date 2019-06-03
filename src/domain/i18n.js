@@ -58,6 +58,22 @@ const modal = {
                 it: 'CHIUDI'
             }
         }
+    },
+    DONATION_FAILED: {
+        content: {
+            en: <div className='modal-text'>Your donation of <ReadFromState text="/amount/"/> CHF failed.<br/>Please check your credit card and personal details and try again</div>,
+            it: <div className='modal-text'>La sua donazione di <ReadFromState text="/amount/"/> CHF è fallita.<br/>Per favore controlli i dettagli della sua carta di credito e provi nuovamente</div>
+        },
+        title: {
+            en: 'Donation failed...',
+            it: 'Donazione fallita...'
+        },
+        buttonLeft: {
+            text: {
+                en: 'CLOSE',
+                it: 'CHIUDI'
+            }
+        }
     }
 }
 

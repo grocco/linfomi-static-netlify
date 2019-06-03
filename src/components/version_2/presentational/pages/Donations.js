@@ -124,6 +124,7 @@ class CheckoutForm extends React.Component {
           address_city: this.state.address_city,
           address_country: this.state.address_country
         }).then(({token}) => {
+        if(!token) {_props.onTransactionFailed(_state.amount, _state.email); that.setState({ initiated: false});return}
         // console.log('Received Stripe token:', token);
         _props.onDonate(this.state.amount, l(i18n.modal.descriptions.onDonate));
         // _props.onTransactionStart(this.state.amount);
@@ -143,13 +144,11 @@ class CheckoutForm extends React.Component {
                 address_country: this.state.address_country
             })
         })
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(transaction) {
+        .catch(()=>{that.setState({ initiated: false});_props.onTransactionFailed(_state.amount, _state.email);})
+        .then(response => response.json())
+        .then(() => {
             that.setState({ initiated: false, done: true });
             _props.onTransactionSuccessful(_state.amount, _state.email);
-            
             // console.log(JSON.stringify(transaction));
         });
       });

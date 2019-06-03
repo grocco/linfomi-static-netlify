@@ -19,6 +19,15 @@ export const modalTemplates = {
     },
     closeable: true
   },
+  DONATION_FAILED: {
+    title: i18n.modal.DONATION_FAILED.title,
+    content: i18n.modal.DONATION_FAILED.content,
+    buttonLeft: {
+      text: i18n.modal.DONATION_FAILED.buttonLeft.text,
+      action: "HIDE_MODAL"
+    },
+    closeable: true
+  },
 };
 
 export const initialUiState = { 
