@@ -961,7 +961,12 @@ opacity: 0;
 
   html {
     padding: 0px;
+    user-select: none;
     /* overflow-x: hidden; */
+  }
+
+  * {
+    user-select: none;
   }
 
   .ielsg .reality-description {
