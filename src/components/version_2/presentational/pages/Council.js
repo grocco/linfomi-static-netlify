@@ -77,17 +77,19 @@ class MemberListItem extends React.Component {
     }
 
     handleScroll() {
-        const navHeight = 101;
-        const l = this.lift;
-        if(l.parentElement.parentElement.getBoundingClientRect().bottom - 20 <= navHeight + l.clientHeight ) {
-            l.style.position = 'fixed';
-            l.style.top = `${l.parentElement.parentElement.getBoundingClientRect().bottom - l.clientHeight}px`;
-        } else  if(navHeight >= l.parentElement.parentElement.getBoundingClientRect().top) {
-            l.style.position = 'fixed';
-            l.style.top = `${navHeight + 20}px`;
-        } else {
-            l.style.position = 'relative';
-            l.style.top = '0px';
+        if(window.innerWidth > 1023) {
+            const navHeight = 101;
+            const l = this.lift;
+            if(l.parentElement.parentElement.getBoundingClientRect().bottom - 20 <= navHeight + l.clientHeight ) {
+                l.style.position = 'fixed';
+                l.style.top = `${l.parentElement.parentElement.getBoundingClientRect().bottom - l.clientHeight}px`;
+            } else  if(navHeight >= l.parentElement.parentElement.getBoundingClientRect().top) {
+                l.style.position = 'fixed';
+                l.style.top = `${navHeight + 20}px`;
+            } else {
+                l.style.position = 'relative';
+                l.style.top = '0px';
+            }
         }
     }
 

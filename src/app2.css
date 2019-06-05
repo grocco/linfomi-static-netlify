@@ -155,7 +155,7 @@ header .menu {
     width: 220px;
     height: 220px;
     display: inline-block;
-    float: left;
+    /* float: left; */
     /* margin-bottom: 10px; */
     background-size: 100%;
   
@@ -943,4 +943,262 @@ opacity: 0;
 .modal button:hover {
   cursor: pointer;
   background-color: #f5f5f5;
+}
+
+
+@media only screen and (max-width: 1063px) {
+
+  html {
+    padding: 0px;
+    overflow-x: hidden;
+  }
+  
+
+  .row-size-text {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  .page-columns {
+    flex-direction: column;
+  }
+
+
+  header {
+    position: absolute;
+  }
+  #nav .menu-buttons {
+    display: none;
+  }
+
+  .aside-left {
+    width: auto;
+  }
+
+  .president-card, .president-card-inner {
+    width: 100%;
+    text-align: center;
+  }
+
+  .bubble {
+    width: 100%;
+  }
+
+  .snap-right {
+    margin: 0px -20px;
+    border-radius: 0px;
+    margin-top: 20px;
+  }
+
+
+  .aside-left .image, .aside-right .image {
+    display: none;
+  }
+
+  .reality-description {
+    width: 100%;
+  }
+
+  .aside-center.with-title {
+    margin: 20px -20px;
+  }
+
+  .content {
+    display: inherit;
+  }
+
+  .aside-center .title .description {
+    font-size: 14px;
+  }
+
+  .aside-center .reality-description img {
+    width: 100%;
+  }
+
+  .page > img {
+    width: calc(100% + 40px);
+    margin: 0px -20px !important;
+    border-radius: 0px !important;
+  }
+
+  .page > .padded.bubble-text {
+    margin: 20px -20px;
+    border-radius: 0px;
+  }
+
+  .reality-list-item .acronym {
+    display: inline;
+    margin-right: 5px;
+  }
+  .reality-list-item .title {
+    display: inline;
+  }
+  .reality-list-item {
+    margin: 15px 0px;
+  }
+  .reality-list-item .acronym .enumeration {
+    display: inline;
+  }
+
+  .bubble-text {
+    border-radius: 0px;
+  }
+
+  .member-list-item {
+    display: block;
+  }
+
+  .member-list-item .short-description {
+    padding: 20px;
+    margin: 20px -20px;
+  }
+
+  .pic-name-role {
+    width: 220px;
+    margin: 0 auto;
+  }
+
+  .round.member-pic::after {
+    content: none;
+  }
+
+  .member-list-item .email {
+    top: 240px;
+    right: calc(50% - 110px);  
+  }
+
+  .member-list-item:nth-child(even) .pic-name-role {
+    background-color:inherit;
+    border-radius: inherit;
+    border: inherit;
+  }
+
+  .member-list-item .short-description {
+    background-color: #f5f5f5;
+    border-radius: 4px 0px 0px 4px;
+    border: solid 1px #eee;
+  }
+
+  .other-members {
+    flex-direction: column;
+  }
+
+  .other-members .members:first-of-type, .other-members .members:last-of-type {
+    margin: 0px -20px;
+  }
+
+  .scientific-council-member {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .scientific-council-member > span:first-of-type {
+    margin-bottom: 15px;
+  }
+
+  .contact-address .image {
+    display: block;
+  }
+
+
+  .contact-address {
+    margin: 0 auto;
+  }
+
+  .aside-center {
+    margin: 0;
+  }
+
+  .payment-methods {
+    flex-direction: column;
+    margin: 0px -20px;
+    margin-top: 20px;
+  }
+
+  .credit-card-form form {
+    padding: 20px;
+    width: calc(100% - 40px) !important;
+  }
+
+  .page .content .aside-center > div > .row-size-text {
+    margin: 0px -20px;
+    margin-bottom: 20px;
+    width: calc(100% + 40px)
+  }
+
+  footer {
+    flex-direction: column;
+    height: 160px;
+    text-align: center;
+  }
+
+  .footer-link {
+    margin-bottom: 10px;
+  }
+
+
+  /* .intro-image {
+
+    border-top: solid 1px #ccc;
+  } */
+
+  .languages {
+    position: absolute;
+    right: 20px;
+  }
+
+
+}
+
+
+/* @media only screen and (max-width: 1023px) {
+
+  .top-logo-container {
+    position: absolute;
+  }
+   
+   .top-logo, .top-logo-container {
+    width: 60px;
+    height: 60px;
+    max-width: 60px;
+    max-height: 60px;
+  }
+  .top-logo-container {
+
+    left: 0;
+    top: -100px;
+  } 
+
+   #current {
+    top: 0px;
+  }
+} */
+
+
+@media only screen and (max-width: 1000px) {
+  
+  header .menu {
+    top: 1px;
+    height: 0px;
+    border: none;
+  }
+
+  header {
+    
+    position: fixed;
+    top: -1px;
+    height: 60px;
+  }
+
+  header .menu {
+    border: none;
+    width: 100%;
+    left: 0;
+    display: block;
+    transform: none;
+    padding: 20px 0px;
+    border-bottom: solid 1px #ddd;
+    height: 100%;
+  }
+
 }

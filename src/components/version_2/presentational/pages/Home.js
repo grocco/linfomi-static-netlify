@@ -35,26 +35,28 @@ export default class Home extends Component {
       }
 
     handleScroll() {
-        const navHeight = 101;
-        if (this.presidentCard) {
-            const l = this.presidentCard;
-            if(navHeight + 20 + l.clientHeight >= l.parentElement.parentElement.getBoundingClientRect().bottom) {
-                l.style.position = 'absolute';
-                l.style.bottom = '0px';
-                l.style.top = null;
-            }
-            else if(l.parentElement.getBoundingClientRect().top > navHeight + 20) {
-                l.style.position = 'relative';
-                l.style.top = '0px';
-            }
-            else if(l.parentElement.getBoundingClientRect().top <= navHeight + 20  ) {
-                l.style.position = 'fixed';
-                l.style.top = `${navHeight + 20}px`;
-                l.style.bottom = null;
-            } else {
-                l.style.position = 'fixed';
-                l.style.top = `${navHeight + 20}px`;
-                l.style.bottom = null;
+        if(window.innerWidth > 1023) {
+            const navHeight = 101;
+            if (this.presidentCard) {
+                const l = this.presidentCard;
+                if(navHeight + 20 + l.clientHeight >= l.parentElement.parentElement.getBoundingClientRect().bottom) {
+                    l.style.position = 'absolute';
+                    l.style.bottom = '0px';
+                    l.style.top = null;
+                }
+                else if(l.parentElement.getBoundingClientRect().top > navHeight + 20) {
+                    l.style.position = 'relative';
+                    l.style.top = '0px';
+                }
+                else if(l.parentElement.getBoundingClientRect().top <= navHeight + 20  ) {
+                    l.style.position = 'fixed';
+                    l.style.top = `${navHeight + 20}px`;
+                    l.style.bottom = null;
+                } else {
+                    l.style.position = 'fixed';
+                    l.style.top = `${navHeight + 20}px`;
+                    l.style.bottom = null;
+                }
             }
         }
 
