@@ -77,7 +77,7 @@ class Council extends React.Component {
         const { members, language, scientificCommittee } = this.props;
         const council = (
             <div>
-                <div className='row-size-text'>{l(i18n.pages.council.current)}:</div>
+                <div className='row-size-text'><span>{l(i18n.pages.council.current)}:</span></div>
                 <div className="members">
                 {members
                     .filter(member => !member.data['not-anymore'])
@@ -86,7 +86,7 @@ class Council extends React.Component {
                     <MemberListItem  key={member.data.slug} member={member} language={language} selected={this.props.history.location.state && ( this.props.history.location.state.memberSlug === member.data.slug || (idx === 0 && this.props.history.location.state.memberSlug === 'president' ))}/>
                 ))}
                 </div>
-                <div className='row-size-text'>{l(i18n.pages.council.previous)}:</div>
+                <div className='row-size-text'><span>{l(i18n.pages.council.previous)}:</span></div>
                 <div className="members">
                 {members
                     .filter(member => member.data['not-anymore'])
@@ -99,7 +99,7 @@ class Council extends React.Component {
         );
         const sc = (
             <div>
-                <div className='row-size-text'>{l(i18n.pages.council.current)}:</div>
+                <div className='row-size-text'><span>{l(i18n.pages.council.current)}:</span></div>
                 <div className="members">
                 {members
                     .filter(member => !member.data['not-anymore'])

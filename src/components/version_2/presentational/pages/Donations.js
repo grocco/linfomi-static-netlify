@@ -308,7 +308,7 @@ export default class Donations extends React.PureComponent {
         const l = (s) => (s[this.props.language] || s.en);
         return (
             <div className='credit-card-form'>
-                <div style={{marginTop: 0}} className='row-size-text'>{l(i18n.pages.donations.creditCard.title)}</div>
+                <div style={{marginTop: 0}} className='row-size-text'><span>{l(i18n.pages.donations.creditCard.title)}</span></div>
                 <Elements locale={this.props.language}>
                     <InjectedCheckoutForm 
                         {...this.props}
@@ -338,7 +338,7 @@ export default class Donations extends React.PureComponent {
         const l = (s) => (s[this.props.language] || s.en);
         return (
             <div>
-                <div className='row-size-text'>{l(i18n.pages.donations.bankTransfer.title)}</div>
+                <div className='row-size-text'><span>{l(i18n.pages.donations.bankTransfer.title)}</span></div>
                 <div className='transfer-description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.donations.bankTransfer.description) }} />
             </div>
         )
@@ -348,7 +348,7 @@ export default class Donations extends React.PureComponent {
         const l = (s) => (s[this.props.language] || s.en);
         return (
             <div>
-                <div className='row-size-text'>{l(i18n.pages.donations.post.title)}</div>
+                <div className='row-size-text'><span>{l(i18n.pages.donations.post.title)}</span></div>
                 <div className='transfer-description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.donations.post.description) }} />
             </div>
         )
@@ -375,7 +375,7 @@ export default class Donations extends React.PureComponent {
         return (
             <div className='page'>
             {this.props.current && <div id='current'>current</div>}
-            <div className='row-size-text'>{l(i18n.pages.donations.title)}</div>
+            <div className='row-size-text'><span>{l(i18n.pages.donations.title)}</span></div>
 
                 { this.props.location.state && this.props.location.state.slave && 
                     <div className="breadcrumbs" onClick={this.props.history.goBack}>
@@ -423,7 +423,7 @@ export default class Donations extends React.PureComponent {
                         { this.renderCreditCardForm() }
                         </div> */}
                         <div style={{flex: 1}}>
-                        <div style={{marginRight: 0}} className='row-size-text'>{l(i18n.pages.contact.title)}</div>
+                        <div style={{marginRight: 0}} className='row-size-text'><span>{l(i18n.pages.contact.title)}</span></div>
                             <form id='contact-form' className='' name="contact" method="POST" data-netlify="true" action='/contact/success'>
                                 <input key='hidden' type="hidden" name="form-name" value="contact" />
                                 <div key='field-0' className='field'>

@@ -151,7 +151,7 @@ class Council extends React.Component {
         const { members, language, scientificCommittee, scMembers, scientific } = this.props;
         const council = (
              !scientific ? <div>
-                <div className='row-size-text'>{_l(i18n.pages.council.current)}</div>
+                <div className='row-size-text'><span>{_l(i18n.pages.council.current)}</span></div>
                 <div className="members">
                 {members && members
                     .filter(member => !member.data['not-anymore'])
@@ -163,7 +163,7 @@ class Council extends React.Component {
             </div> :
                 <div className='other-members'> 
                     <div className="members" style={ {flex: 2}}>
-                    <div className='row-size-text'>{_l(i18n.pages.council.previous)}</div>
+                    <div className='row-size-text'><span>{_l(i18n.pages.council.previous)}</span></div>
                     {members && members
                         .filter(member => member.data['not-anymore'])
                         .sort(compareByField('surname', el => el.data))
@@ -175,7 +175,7 @@ class Council extends React.Component {
                     ))}
                     </div>
                     <div className="members" style={ {flex: 3}}>
-                    <div className='row-size-text'>{_l(i18n.pages.council.scientific)}</div>
+                    <div className='row-size-text'><span>{_l(i18n.pages.council.scientific)}</span></div>
                     {scMembers && scMembers
                         .sort(compareByField('surname', el => el.data))
                         .sort((a,b)=>a.data.role !== undefined ? -1 : 1)
@@ -190,7 +190,7 @@ class Council extends React.Component {
         );
         const sc = (
             <div>
-                <div className='row-size-text'>{l(i18n.pages.council.current)}</div>
+                <div className='row-size-text'><span>{l(i18n.pages.council.current)}</span></div>
                 <div className="members">
                 {members && members
                     .filter(member => !member.data['not-anymore'])

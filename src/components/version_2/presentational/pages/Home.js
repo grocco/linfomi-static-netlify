@@ -99,7 +99,7 @@ export default class Home extends Component {
         return (
             <div style={{position: 'relative'}}>
                 {this.props.current && <div id='current'>current</div>}
-                <div className='row-size-text'>{l(i18n.pages.home.content.realities.fior.title)}</div>
+                <div className='row-size-text'><span>{l(i18n.pages.home.content.realities.fior.title)}</span></div>
                 <div className='page page-home page-columns'>
                 
                     {/* <Link to={{pathname:'/home/', state: { reality: 'history'}}} href='/home'>
@@ -224,7 +224,7 @@ export default class Home extends Component {
                         </div>
                         <div className='padded bubble-text' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities[realityId].description) }} />
                     { realityId === 'icml' && <img src={'https://ucarecdn.com/883b1339-5d6c-4727-8a1c-d950eea180d4/-/resize/434x/'} /> }
-                    { realityId === 'ior' && <img src={'https://ucarecdn.com/6231b3af-07d7-4b83-bae5-05dbbe08790a/-/resize/434x/'} /> }
+                    { realityId === 'ior' && <img src={`https://ucarecdn.com/6231b3af-07d7-4b83-bae5-05dbbe08790a/-/resize/${Math.min(1000, window.innerWidth-2)}x/`} /> }
                     </div>
                 </div>
 
