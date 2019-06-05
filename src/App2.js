@@ -105,6 +105,12 @@ class AppPresentational extends React.Component {
     }
   }
 
+  componentWillMount() {
+    setTimeout(()=> {
+      document.getElementById('initial-loading').style.opacity='0';
+    }, 3000)
+  }
+
   componentWillUnmount() {
     if(window) {
       window.removeEventListener('scroll', this.handleScroll);

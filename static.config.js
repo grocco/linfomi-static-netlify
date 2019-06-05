@@ -93,6 +93,26 @@ export default {
             <title>Foundation IOR</title>
           </Head>
           <Body >
+            <div id='initial-loading' style={{ position: 'fixed',
+                top: 0,
+                bottom: 0,
+                left: 0,
+                right: 0,
+                background: '#000',
+                zIndex: 9999999
+              }} >
+              <img width={220} height={220} src='/assets/logo.png'
+              style={
+                {
+                  width: 220,
+                  height: 220,
+                  position: 'absolute',
+                  top:'50%',
+                  left:'50%',
+                  transform: 'translate(-50%,-50%)'
+                }
+              }/>
+              </div>
             {children}
           </Body>
         </Html>
