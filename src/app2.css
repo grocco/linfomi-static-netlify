@@ -1235,6 +1235,7 @@ opacity: 0;
   z-index: 9999999;
   transition: opacity 1s;
   opacity: 1;
+  pointer-events: none;
 }
 
 
