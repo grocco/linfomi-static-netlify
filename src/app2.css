@@ -43,6 +43,7 @@ body {
   bottom: 20px;
   right: 72px;
   border-right-color: transparent;
+  width: auto;
 }
 
 .menu-button {
@@ -64,9 +65,10 @@ body {
 
 .menu-button.link {
   color: royalblue;
+  text-decoration: none;
 }
 
-.menu-button.link a {
+.menu-button.link span {
   text-decoration: none;
   color: #333;
 }

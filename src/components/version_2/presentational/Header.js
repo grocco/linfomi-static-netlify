@@ -1,26 +1,25 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
-import { Link, withRouteData } from 'react-static'
-import { changeLanguage } from 'domain/state/actions';
-import i18n from 'domain/i18n';
-import window from 'domain/window';
+import { Link, withRouteData } from "react-static";
+import { changeLanguage } from "domain/state/actions";
+import i18n from "domain/i18n";
+import window from "domain/window";
 
 class Header extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
       showHelp: true
-    }
+    };
   }
 
   render() {
-    const l = (s) => (s[this.props.language]);
+    const l = s => s[this.props.language];
     return (
-    <div>
-    {/* <div className={`page-slug ${this.props.pageSlug === 'intro' ? 'intro' : ''}`}>{i18n.pages[this.props.pageSlug] ? l(i18n.pages[this.props.pageSlug].title) : ''}</div> */}
-      <header  className={this.props.pageSlug === 'intro' ? 'intro' : ''}>
-        {/* <div 
+      <div>
+        {/* <div className={`page-slug ${this.props.pageSlug === 'intro' ? 'intro' : ''}`}>{i18n.pages[this.props.pageSlug] ? l(i18n.pages[this.props.pageSlug].title) : ''}</div> */}
+        <header className={this.props.pageSlug === "intro" ? "intro" : ""}>
+          {/* <div 
           className={`hamburger ${(this.props.showHamburgerMenu ? ' selected' : '')}`}
           onClick={()=>{this.props.toggleHamburger(); this.setState({ showHelp: false})}}
           onKeyDown={()=>0}
@@ -32,77 +31,110 @@ class Header extends Component {
           <div className="hamburger-line" />
           <div className="hamburger-line"/>
         </div> */}
-        <div id='nav' className='menu'>
-          <div className='menu-buttons'>
-          { this.props.buttons && this.props.buttons.filter(button=>!button.submenu).map(button => 
-              {
-                if (button.key.startsWith('link')) {
-                  return (
-                    <div 
+          <div id="nav" className="menu">
+            <div className="menu-buttons">
+              {this.props.buttons &&
+                this.props.buttons
+                  .filter(button => !button.submenu)
+                  .map(button => {
+                    if (button.key.startsWith("link")) {
+                      return (
+                        <a
+                          href={button.address}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          key={button.key}
+                          className={`menu-button link ${button.selected ? " selected" : ""} ${
+                            button.featured ? " featured" : ""
+                          }`}
+                          // onClick={()=>{this.props.changePage(button.key)}}
+                        >
+                          <div>{l(i18n.pages.home.officialWebsite)}</div>
+                          <span>{button.title}</span>
+                        </a>
+                      );
+                    }
+                    return (
+                      <div
+                        key={button.key}
+                        className={`menu-button ${button.selected ? " selected" : ""} ${
+                          button.featured ? " featured" : ""
+                        }`}
+                        // onClick={()=>{this.props.changePage(button.key)}}
+                      >
+                        {/* <Link to={ { pathname: `/${button.key}`, state: { reality: button.reality} } } href={`/${button.key}`}>
+                      {button.title}
+                    </Link> */}
+                        <div
+                          onClick={() =>
+                            this.props.history.replace(`/${button.key}`, { reality: button.key }).then(() => {
+                              {
+                                /* window.requestAnimationFrame(()=>{ */
+                              }
+                              !window.server &&
+                                window.requestAnimationFrame(() => document.getElementById("current").scrollIntoView());
+                              {
+                                /* })  */
+                              }
+                            })
+                          }
+                        >
+                          {button.title}
+                        </div>
+                      </div>
+                    );
+                  })}
+            </div>
+
+            <div className="menu-buttons submenu">
+              {this.props.buttons &&
+                this.props.buttons
+                  .filter(button => button.submenu)
+                  .map(button => (
+                    <div
                       key={button.key}
-                      className={`menu-button link ${button.selected ? ' selected' : ''} ${button.featured ? ' featured' : ''}`}
+                      className={`menu-button ${button.selected ? " selected" : ""} ${
+                        button.featured ? " featured" : ""
+                      }`}
                       // onClick={()=>{this.props.changePage(button.key)}}
                     >
-                      <div>{l(i18n.pages.home.officialWebsite)}</div>
-                      <a href={button.address}>{button.title}</a>
+                      {/* <Link to={ { pathname: `/${button.key}`, state: { reality: button.reality} } } href={`/${button.key}`}>
+                      {button.title}
+                    </Link> */}
+                      <div
+                        onClick={() =>
+                          this.props.history.replace(`/${button.key}`, { reality: button.key }).then(() => {
+                            {
+                              /* window.requestAnimationFrame(()=>{ */
+                            }
+                            !window.server &&
+                              window.requestAnimationFrame(() => document.getElementById("current").scrollIntoView());
+                            {
+                              /* })  */
+                            }
+                          })
+                        }
+                      >
+                        {button.title}
+                      </div>
                     </div>
-                  )
-                }
-                return (
-                  <div 
-                    key={button.key}
-                    className={`menu-button ${button.selected ? ' selected' : ''} ${button.featured ? ' featured' : ''}`}
-                    // onClick={()=>{this.props.changePage(button.key)}}
+                  ))}
+            </div>
+            <div className="languages">
+              {this.props.languages &&
+                this.props.languages.map(_language => (
+                  <div
+                    key={_language}
+                    className={`language ${_language === this.props.language ? " selected" : ""}`}
+                    onClick={() => {
+                      this.props.changeLanguage(_language);
+                    }}
                   >
-                    {/* <Link to={ { pathname: `/${button.key}`, state: { reality: button.reality} } } href={`/${button.key}`}>
-                      {button.title}
-                    </Link> */}
-                    <div onClick={()=> this.props.history.replace(`/${button.key}`, { reality: button.key}).then(()=> {
-                      {/* window.requestAnimationFrame(()=>{ */}
-                          !window.server && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
-                      {/* })  */}
-                      })} >{button.title}</div>
+                    {i18n.languages.original[_language]}
                   </div>
-                )
-              }
-            )
-          }
-          </div>
-
-          <div className='menu-buttons submenu'>
-          { this.props.buttons && this.props.buttons.filter(button=>button.submenu).map(button => 
-            (
-                  <div 
-                    key={button.key}
-                    className={`menu-button ${button.selected ? ' selected' : ''} ${button.featured ? ' featured' : ''}`}
-                    // onClick={()=>{this.props.changePage(button.key)}}
-                  >
-                    {/* <Link to={ { pathname: `/${button.key}`, state: { reality: button.reality} } } href={`/${button.key}`}>
-                      {button.title}
-                    </Link> */}
-                    <div onClick={()=> this.props.history.replace(`/${button.key}`, { reality: button.key}).then(()=> {
-                      {/* window.requestAnimationFrame(()=>{ */}
-                          !window.server && window.requestAnimationFrame(()=>document.getElementById('current').scrollIntoView())
-                      {/* })  */}
-                      })} >{button.title}</div>
-                  </div>
-                )
-          )
-          }
-          </div>
-          <div className='languages'>
-            { this.props.languages && this.props.languages.map(_language => 
-            <div 
-              key={_language}
-              className={`language ${_language === this.props.language ? ' selected' : ''}`}
-              onClick={()=>{
-                  this.props.changeLanguage(_language);
-                }
-              }
-            >{i18n.languages.original[_language]}</div>
-            )}
-          </div>
-        {/* <Link 
+                ))}
+            </div>
+            {/* <Link 
           to='/' 
           href='/'
           onClick={()=>this.props.changePage('intro')}
@@ -127,13 +159,11 @@ class Header extends Component {
             id='logo'
           />
         </Link> */}
-        
-        </div>
-      </header>
-     
-    </div>)
+          </div>
+        </header>
+      </div>
+    );
   }
-
 }
 
 export default withRouteData(Header);
