@@ -1260,3 +1260,15 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.page.intro-image::after {
+  content: "Il mercato di Bellinzona © Svizzera Turismo Markus Buehler Rasom";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  border-top-left-radius: 4px;
+}
