@@ -91,10 +91,6 @@ export const initialUiState = {
           // submenu: true
         },
         {
-          name: "foundation",
-          active: true
-        },
-        {
           name: "council"
         },
         {
@@ -127,10 +123,6 @@ export const initialUiState = {
         {
           name: "icml"
           // submenu: true
-        },
-        {
-          name: "foundation",
-          active: true
         },
         {
           name: "council"
@@ -168,10 +160,6 @@ export const initialUiState = {
           // submenu: true
         },
         {
-          name: "foundation",
-          active: true
-        },
-        {
           name: "council"
         },
         {
@@ -205,10 +193,6 @@ export const initialUiState = {
           name: "icml",
           active: true
           // submenu: true
-        },
-        {
-          name: "foundation",
-          active: true
         },
         {
           name: "council"
