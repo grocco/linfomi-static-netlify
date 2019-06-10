@@ -331,7 +331,7 @@ const home = {
                 },
                 title: {
                     it: 'International Extranodal Lymphoma Study Group',
-                    en: 'Internatioercanal Extranodal Lymphoma Study Group'
+                    en: 'International Extranodal Lymphoma Study Group'
                 },
                 description: {
                     first: {
