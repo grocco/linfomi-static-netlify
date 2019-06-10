@@ -1,6 +1,6 @@
 // import store from 'domain/state/store';
-import window from 'domain/window';
-import i18n from 'domain/i18n';
+import window from "domain/window";
+import i18n from "domain/i18n";
 
 export const modalTemplates = {
   DONATION_START: {
@@ -27,15 +27,15 @@ export const modalTemplates = {
       action: "HIDE_MODAL"
     },
     closeable: true
-  },
+  }
 };
 
-export const initialUiState = { 
-  language: 'it', 
-  languages: ['it', 'en'],// 'fr', ],//'de', 'es'],
-  page: 'home',
-  modalTemplates, 
-  currentModal: null, 
+export const initialUiState = {
+  language: "it",
+  languages: ["it", "en"], // 'fr', ],//'de', 'es'],
+  page: "home",
+  modalTemplates,
+  currentModal: null,
   word: "the initial word",
   showHamburgerMenu: false,
   screen: {
@@ -43,165 +43,207 @@ export const initialUiState = {
     height: !window.server && window.innerHeight
   },
   menu: {
-    current: 'menu1home',
+    current: "menu1home",
     links: {
-      menu1home: [ 
+      menu1home: [
         {
-          name: 'foundation',
-        }, 
+          name: "foundation"
+        },
         {
-          name: 'council',
-        }, 
+          name: "ior"
+          // submenu: true
+        },
         {
-          name: 'scientific',
+          name: "ielsg"
+          // submenu: true
+        },
+        {
+          name: "icml"
+          // submenu: true
+        },
+        {
+          name: "council"
+        },
+        {
+          name: "scientific",
           submenu: true
         },
         {
-          name: 'donations-and-contacts',
+          name: "donations-and-contacts",
           submenu: true
-        },
+        }
       ],
-      menu2foundation: [ 
+      menu2foundation: [
         {
-          name: 'ior',
-          // submenu: true
-        }, 
+          name: "foundation",
+          active: true
+        },
         {
-          name: 'ielsg',
-          // submenu: true
-        }, 
-        {
-          name: 'icml',
+          name: "ior"
           // submenu: true
         },
-                                {
-                                  name: 'foundation',
-                                  active: true,
-                                }, 
         {
-          name: 'council',
-        }, 
+          name: "ielsg"
+          // submenu: true
+        },
         {
-          name: 'scientific',
+          name: "icml"
+          // submenu: true
+        },
+        {
+          name: "foundation",
+          active: true
+        },
+        {
+          name: "council"
+        },
+        {
+          name: "scientific",
           submenu: true
         },
         {
-          name: 'donations-and-contacts',
+          name: "donations-and-contacts",
           submenu: true
-        },
+        }
       ],
-      menu2ior: [ 
+      menu2ior: [
         {
-          name: 'link_ior',
+          name: "foundation"
+          // active: true
+        },
+        {
+          name: "link_ior",
           link: true
         },
         {
-          name: 'ior',
-          active: true,
-          // submenu: true
-        }, 
-        {
-          name: 'ielsg',
-          // submenu: true
-        }, 
-        {
-          name: 'icml',
+          name: "ior",
+          active: true
           // submenu: true
         },
-                                  {
-                                    name: 'foundation',
-                                    active: true,
-                                  },
         {
-          name: 'council',
-        }, 
+          name: "ielsg"
+          // submenu: true
+        },
         {
-          name: 'scientific',          
+          name: "icml"
+          // submenu: true
+        },
+        {
+          name: "foundation",
+          active: true
+        },
+        {
+          name: "council"
+        },
+        {
+          name: "scientific",
           submenu: true
         },
         {
-          name: 'donations-and-contacts',
+          name: "donations-and-contacts",
           submenu: true
-        },
+        }
       ],
-      menu2ielsg: [ 
+      menu2ielsg: [
         {
-          name: 'link_ielsg',
+          name: "link_ielsg",
           link: true
         },
+
         {
-          name: 'ior',
-          // submenu: true
-        }, 
+          name: "foundation"
+          // active: true
+        },
         {
-          name: 'ielsg',
-          active: true,
-          // submenu: true
-        }, 
-        {
-          name: 'icml',
+          name: "ior"
           // submenu: true
         },
-                                  {
-                                    name: 'foundation',
-                                    active: true,
-                                  },
         {
-          name: 'council',
-        }, 
+          name: "ielsg",
+          active: true
+          // submenu: true
+        },
         {
-          name: 'scientific',          
+          name: "icml"
+          // submenu: true
+        },
+        {
+          name: "foundation",
+          active: true
+        },
+        {
+          name: "council"
+        },
+        {
+          name: "scientific",
           submenu: true
         },
         {
-          name: 'donations-and-contacts',
+          name: "donations-and-contacts",
           submenu: true
-        },
+        }
       ],
-      menu2icml: [ 
+      menu2icml: [
         {
-          name: 'link_icml',
+          name: "link_icml",
           link: true
         },
+
         {
-          name: 'ior',
-          // submenu: true
-        }, 
+          name: "foundation"
+          // active: true
+        },
         {
-          name: 'ielsg',
-          // submenu: true
-        }, 
-        {
-          name: 'icml',
-          active: true,
+          name: "ior"
           // submenu: true
         },
-                                  {
-                                    name: 'foundation',
-                                    active: true,
-                                  },
         {
-          name: 'council',
-        }, 
+          name: "ielsg"
+          // submenu: true
+        },
         {
-          name: 'scientific',
+          name: "icml",
+          active: true
+          // submenu: true
+        },
+        {
+          name: "foundation",
+          active: true
+        },
+        {
+          name: "council"
+        },
+        {
+          name: "scientific",
           submenu: true
         },
         {
-          name: 'donations-and-contacts',
+          name: "donations-and-contacts",
           submenu: true
-        },
+        }
       ],
-      menu1council: [ 
+      menu1council: [
         {
-          name: 'foundation',
-        }, 
-        {
-          name: 'council',
-          active: true,
+          name: "foundation"
         },
         {
-          name: 'scientific',
+          name: "ior"
+          // submenu: true
+        },
+        {
+          name: "ielsg"
+          // submenu: true
+        },
+        {
+          name: "icml"
+          // submenu: true
+        },
+        {
+          name: "council",
+          active: true
+        },
+        {
+          name: "scientific",
           submenu: true
         },
         // {
@@ -218,59 +260,87 @@ export const initialUiState = {
         //   submenu: true,
         // },
         {
-          name: 'donations-and-contacts',
+          name: "donations-and-contacts",
           submenu: true
         }
       ],
 
-      menu1scientific: [ 
+      menu1scientific: [
         {
-          name: 'foundation',
-        }, 
-        // {
-          //   name: 'members',
-          //   submenu: true
-          // },
-          // {
-            //   name: 'exmembers',
-            //   submenu: true,
-            //   active: true
-            // },
-            // {
-              //   name: 'scientific',
-              //   submenu: true,
-              //   active: true
-              // },
-              {
-                name: 'council',
-              }, 
-              {
-                name: 'scientific',
-                submenu: true,
-                active: true
-              },
-              {
-                name: 'donations-and-contacts',
-                submenu: true,
-              },
-      ],
-      menu1donations: [ 
-        {
-          name: 'foundation',
-        }, 
-        {
-          name: 'council',
-        }, 
-        {
-          name: 'scientific',
-          submenu: true
+          name: "foundation"
         },
         {
-          name: 'donations-and-contacts',
+          name: "ior"
+          // submenu: true
+        },
+        {
+          name: "ielsg"
+          // submenu: true
+        },
+        {
+          name: "icml"
+          // submenu: true
+        },
+        // {
+        //   name: 'members',
+        //   submenu: true
+        // },
+        // {
+        //   name: 'members',
+        //   submenu: true
+        // },
+        // {
+        //   name: 'exmembers',
+        //   submenu: true,
+        //   active: true
+        // },
+        // {
+        //   name: 'scientific',
+        //   submenu: true,
+        //   active: true
+        // },
+        {
+          name: "council"
+        },
+        {
+          name: "scientific",
           submenu: true,
           active: true
         },
+        {
+          name: "donations-and-contacts",
+          submenu: true
+        }
       ],
+      menu1donations: [
+        {
+          name: "foundation"
+        },
+        {
+          name: "ior"
+          // submenu: true
+        },
+        {
+          name: "ielsg"
+          // submenu: true
+        },
+        {
+          name: "icml"
+          // submenu: true
+        },
+        {
+          name: "council"
+        },
+        {
+          name: "scientific",
+          submenu: true
+        },
+        {
+          name: "donations-and-contacts",
+          submenu: true,
+          active: true
+        }
+      ]
     }
   }
-}
+};
