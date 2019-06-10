@@ -50,6 +50,18 @@ export const initialUiState = {
           name: "foundation"
         },
         {
+          name: "ior"
+          // submenu: true
+        },
+        {
+          name: "ielsg"
+          // submenu: true
+        },
+        {
+          name: "icml"
+          // submenu: true
+        },
+        {
           name: "council"
         },
         {
@@ -63,6 +75,10 @@ export const initialUiState = {
       ],
       menu2foundation: [
         {
+          name: "foundation",
+          active: true
+        },
+        {
           name: "ior"
           // submenu: true
         },
@@ -73,10 +89,6 @@ export const initialUiState = {
         {
           name: "icml"
           // submenu: true
-        },
-        {
-          name: "foundation",
-          active: true
         },
         {
           name: "council"
@@ -91,6 +103,10 @@ export const initialUiState = {
         }
       ],
       menu2ior: [
+        {
+          name: "foundation"
+          // active: true
+        },
         {
           name: "link_ior",
           link: true
@@ -109,10 +125,6 @@ export const initialUiState = {
           // submenu: true
         },
         {
-          name: "foundation",
-          active: true
-        },
-        {
           name: "council"
         },
         {
@@ -129,6 +141,11 @@ export const initialUiState = {
           name: "link_ielsg",
           link: true
         },
+
+        {
+          name: "foundation"
+          // active: true
+        },
         {
           name: "ior"
           // submenu: true
@@ -141,10 +158,6 @@ export const initialUiState = {
         {
           name: "icml"
           // submenu: true
-        },
-        {
-          name: "foundation",
-          active: true
         },
         {
           name: "council"
@@ -163,6 +176,11 @@ export const initialUiState = {
           name: "link_icml",
           link: true
         },
+
+        {
+          name: "foundation"
+          // active: true
+        },
         {
           name: "ior"
           // submenu: true
@@ -175,10 +193,6 @@ export const initialUiState = {
           name: "icml",
           active: true
           // submenu: true
-        },
-        {
-          name: "foundation",
-          active: true
         },
         {
           name: "council"
@@ -195,6 +209,18 @@ export const initialUiState = {
       menu1council: [
         {
           name: "foundation"
+        },
+        {
+          name: "ior"
+          // submenu: true
+        },
+        {
+          name: "ielsg"
+          // submenu: true
+        },
+        {
+          name: "icml"
+          // submenu: true
         },
         {
           name: "council",
@@ -227,6 +253,18 @@ export const initialUiState = {
         {
           name: "foundation"
         },
+        {
+          name: "ior"
+          // submenu: true
+        },
+        {
+          name: "ielsg"
+          // submenu: true
+        },
+        {
+          name: "icml"
+          // submenu: true
+        },
         // {
         //   name: 'members',
         //   submenu: true
@@ -257,6 +295,18 @@ export const initialUiState = {
       menu1donations: [
         {
           name: "foundation"
+        },
+        {
+          name: "ior"
+          // submenu: true
+        },
+        {
+          name: "ielsg"
+          // submenu: true
+        },
+        {
+          name: "icml"
+          // submenu: true
         },
         {
           name: "council"
