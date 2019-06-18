@@ -69,6 +69,10 @@ export const initialUiState = {
           submenu: true
         },
         {
+          name: "exmembers",
+          submenu: true
+        },
+        {
           name: "donations-and-contacts",
           submenu: true
         }
@@ -95,6 +99,10 @@ export const initialUiState = {
         },
         {
           name: "scientific",
+          submenu: true
+        },
+        {
+          name: "exmembers",
           submenu: true
         },
         {
@@ -129,6 +137,67 @@ export const initialUiState = {
         },
         {
           name: "scientific",
+          submenu: true
+        },
+        {
+          name: "exmembers",
+          submenu: true
+        },
+        {
+          name: "donations-and-contacts",
+          submenu: true
+        }
+      ],
+
+      menu1scientific: [
+        {
+          name: "foundation"
+        },
+        {
+          name: "link_ior",
+          link: true
+        },
+        {
+          name: "ior",
+          // submenu: true
+          active: true
+        },
+        {
+          name: "ielsg"
+          // submenu: true
+        },
+        {
+          name: "icml"
+          // submenu: true
+        },
+        // {
+        //   name: 'members',
+        //   submenu: true
+        // },
+        // {
+        //   name: 'members',
+        //   submenu: true
+        // },
+        // {
+        //   name: 'exmembers',
+        //   submenu: true,
+        //   active: true
+        // },
+        // {
+        //   name: 'scientific',
+        //   submenu: true,
+        //   active: true
+        // },
+        {
+          name: "council"
+        },
+        {
+          name: "scientific",
+          submenu: true,
+          active: true
+        },
+        {
+          name: "exmembers",
           submenu: true
         },
         {
@@ -167,6 +236,10 @@ export const initialUiState = {
           submenu: true
         },
         {
+          name: "exmembers",
+          submenu: true
+        },
+        {
           name: "donations-and-contacts",
           submenu: true
         }
@@ -202,6 +275,10 @@ export const initialUiState = {
           submenu: true
         },
         {
+          name: "exmembers",
+          submenu: true
+        },
+        {
           name: "donations-and-contacts",
           submenu: true
         }
@@ -230,6 +307,10 @@ export const initialUiState = {
           name: "scientific",
           submenu: true
         },
+        {
+          name: "exmembers",
+          submenu: true
+        },
         // {
         //   name: 'members',
         //   submenu: true,
@@ -249,7 +330,7 @@ export const initialUiState = {
         }
       ],
 
-      menu1scientific: [
+      menu1exmembers: [
         {
           name: "foundation"
         },
@@ -270,6 +351,10 @@ export const initialUiState = {
         //   submenu: true
         // },
         // {
+        //   name: 'members',
+        //   submenu: true
+        // },
+        // {
         //   name: 'exmembers',
         //   submenu: true,
         //   active: true
@@ -284,6 +369,10 @@ export const initialUiState = {
         },
         {
           name: "scientific",
+          submenu: true
+        },
+        {
+          name: "exmembers",
           submenu: true,
           active: true
         },
@@ -313,6 +402,10 @@ export const initialUiState = {
         },
         {
           name: "scientific",
+          submenu: true
+        },
+        {
+          name: "exmembers",
           submenu: true
         },
         {

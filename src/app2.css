@@ -1274,3 +1274,8 @@ footer {
   padding: 5px;
   border-top-left-radius: 4px;
 }
+
+
+.other-members .members:last-of-type {
+  margin: 0 -20px;
+}
