@@ -3,7 +3,7 @@ layout: council
 title: Emilio Camponovo
 name: Emilio
 surname: Camponovo
-role: ''
+role: ""
 bio: >-
   Born in Chiasso in 1933, Emilio Camponovo attended compulsory schooling and a
   three-year apprenticeship at an international transport company with a
@@ -30,8 +30,8 @@ bio: >-
 
   Since 1999 he has been a member of the Foundation Board of the Foundation for
   the Research and Treatment of Lymphomas in Ticino, now the Foundation for the
-  Institute of oncology research (IOR).
-role-it: ''
+  Institute of Oncology Research (IOR).
+role-it: ""
 bio-it: >
   Nato a Chiasso nel 1933, Emilio Camponovo ha frequentato le scuole
   dell’obbligo e un apprendistato triennale presso una società di trasporti
@@ -62,6 +62,5 @@ bio-it: >
   ricerca (IOR).
 email: emilio.camponovo@aurofin.ch
 order: 1000
-picture: 'https://ucarecdn.com/6c4c7efe-ff92-4195-88c0-093450d61e07/'
+picture: "https://ucarecdn.com/6c4c7efe-ff92-4195-88c0-093450d61e07/"
 ---
-

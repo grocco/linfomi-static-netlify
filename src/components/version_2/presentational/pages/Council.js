@@ -71,22 +71,40 @@ class MemberListItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
+    this.cleanAnimations = this.cleanAnimations.bind(this);
+    this.setupAnimations = this.setupAnimations.bind(this);
   }
 
   componentDidMount() {
+    this.setupAnimations();
+    window.addEventListener("resize", () => {
+      this.cleanAnimations();
+      this.setupAnimations();
+    });
+  }
+
+  componentWillUnmount() {
+    this.cleanAnimations();
+  }
+
+  setupAnimations() {
     if (window) {
       window.addEventListener("scroll", this.handleScroll);
     }
   }
 
-  componentWillUnmount() {
+  cleanAnimations() {
     if (window) {
+      const l = this.lift;
+
+      l.style.position = "relative";
+      l.style.top = "0px";
       window.removeEventListener("scroll", this.handleScroll);
     }
   }
 
   handleScroll() {
-    if (window.innerWidth > 1023) {
+    if (window.innerWidth > 1063) {
       const navHeight = 101;
       const l = this.lift;
       if (l.parentElement.parentElement.getBoundingClientRect().bottom - 20 <= navHeight + l.clientHeight) {

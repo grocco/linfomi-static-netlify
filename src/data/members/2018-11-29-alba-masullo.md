@@ -3,7 +3,7 @@ layout: council
 title: Alba Masullo
 name: Alba
 surname: Masullo
-role: ''
+role: ""
 bio: >-
   Born in Saignelégier (Ct. Jura) in 1964, Alba Masullo graduated from high
   school in Lugano 1 in 1985, then - after a few years of university studies in
@@ -29,8 +29,8 @@ bio: >-
 
   Since 2008, she has been a member of the Foundation Board of the Foundation for
   Research and Treatment of Lymphomas in Ticino, now the Foundation for the
-  Institute of oncology research (IOR).
-role-it: ''
+  Institute of Oncology Research (IOR).
+role-it: ""
 bio-it: >-
   Nata a Saignelégier (Ct. Jura) nel 1964, Alba Masullo ha conseguito la
   maturità economico-sociale al Liceo di Lugano 1 nel 1985, quindi – dopo alcuni
@@ -63,4 +63,3 @@ order: 1000
 picture: >-
   https://ucarecdn.com/adf34dc4-ef1f-4ba0-836f-908865980b4e
 ---
-

@@ -14,38 +14,72 @@ collections:
     folder: "src/data/members" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter. 
-      - {label: "Layout", name: "layout", widget: "hidden", default: "council"}
-      - {label: "Title (eg: Prof. Franco Cavalli)", name: "title", widget: "string"}
-      - {label: "name", name: "name", widget: "string"}
-      - {label: "Surname", name: "surname", widget: "string"}
-      - {label: "[EN] Role", name: "role", widget: "string", required: false}
-      - {label: "[EN] Bio", name: "bio", widget: "text"}
-      - {label: "[IT] Ruolo", name: "role-it", widget: "string", required: false}
-      - {label: "[IT] Biografia", name: "bio-it", widget: "text"}
+    fields: # The fields for each document, usually in front matter.
+      - { label: "Layout", name: "layout", widget: "hidden", default: "council" }
+      - { label: "Title (eg: Prof. Franco Cavalli)", name: "title", widget: "string" }
+      - { label: "name", name: "name", widget: "string" }
+      - { label: "Surname", name: "surname", widget: "string" }
+      - { label: "[EN] Role", name: "role", widget: "string", required: false }
+      - { label: "[EN] Bio", name: "bio", widget: "text" }
+      - { label: "[IT] Ruolo", name: "role-it", widget: "string", required: false }
+      - { label: "[IT] Biografia", name: "bio-it", widget: "text" }
       # - {label: "[FR] Biographie", name: "bio-fr", widget: "text"}
-      - {label: "E-mail", name: "email", widget: "string", pattern: [ '[a-z0-9!#$%&''*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&''*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?', "Please insert a valid email"], required: false}
-      - {label: "Board of directors", name: "board-of-directors", widget: "boolean", required: false}
-      - {label: "Not member anymore", name: "not-anymore", widget: "boolean", required: false}
-      - {label: "Position (sort order)", name: "order", widget: "number", valueType: 'int', default: 1000, required: false}
-      - {label: "Portrait Picture", name: "picture", widget: "image", required: false}
+      - {
+          label: "E-mail",
+          name: "email",
+          widget: "string",
+          pattern:
+            [
+              '[a-z0-9!#$%&''*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&''*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?',
+              "Please insert a valid email",
+            ],
+          required: false,
+        }
+      - { label: "Board of directors", name: "board-of-directors", widget: "boolean", required: false }
+      - { label: "Not member anymore", name: "not-anymore", widget: "boolean", required: false }
+      - {
+          label: "Position (sort order)",
+          name: "order",
+          widget: "number",
+          valueType: "int",
+          default: 1000,
+          required: false,
+        }
+      - { label: "Portrait Picture", name: "picture", widget: "image", required: false }
   - name: "scientific-committee" # Used in routes, e.g., /admin/collections/coucil
-    label: "Scientific Council Member" # Used in the UI
+    label: "Scientific Board Member" # Used in the UI
     folder: "src/data/scientific-committee" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter. 
-      - {label: "Layout", name: "layout", widget: "hidden", default: "council"}
-      - {label: "Title (eg: Prof. Franco Cavalli)", name: "title", widget: "string"}
-      - {label: "name", name: "name", widget: "string"}
-      - {label: "Surname", name: "surname", widget: "string"}
-      - {label: "Institute", name: "institute", widget: "string"}
-      - {label: "Institute Location", name: "location", widget: "string"}
-      - {label: "[EN] Role", name: "role", widget: "string", required: false}
-      - {label: "[EN] Bio", name: "bio", widget: "text"}
-      - {label: "[IT] Ruolo", name: "role-it", widget: "string", required: false}
-      - {label: "[IT] Biografia", name: "bio-it", widget: "text"}
+    fields: # The fields for each document, usually in front matter.
+      - { label: "Layout", name: "layout", widget: "hidden", default: "council" }
+      - { label: "Title (eg: Prof. Franco Cavalli)", name: "title", widget: "string" }
+      - { label: "name", name: "name", widget: "string" }
+      - { label: "Surname", name: "surname", widget: "string" }
+      - { label: "Institute", name: "institute", widget: "string" }
+      - { label: "Institute Location", name: "location", widget: "string" }
+      - { label: "[EN] Role", name: "role", widget: "string", required: false }
+      - { label: "[EN] Bio", name: "bio", widget: "text" }
+      - { label: "[IT] Ruolo", name: "role-it", widget: "string", required: false }
+      - { label: "[IT] Biografia", name: "bio-it", widget: "text" }
       # - {label: "[FR] Biographie", name: "bio-fr", widget: "text"}
-      - {label: "E-mail", name: "email", widget: "string", pattern: [ '[a-z0-9!#$%&''*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&''*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?', "Please insert a valid email"], required: false}
-      - {label: "Position (sort order)", name: "order", widget: "number", valueType: 'int', default: 1000, required: false}
-      - {label: "Portrait Picture", name: "picture", widget: "image", required: false}
+      - {
+          label: "E-mail",
+          name: "email",
+          widget: "string",
+          pattern:
+            [
+              '[a-z0-9!#$%&''*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&''*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?',
+              "Please insert a valid email",
+            ],
+          required: false,
+        }
+      - {
+          label: "Position (sort order)",
+          name: "order",
+          widget: "number",
+          valueType: "int",
+          default: 1000,
+          required: false,
+        }
+      - { label: "Portrait Picture", name: "picture", widget: "image", required: false }

@@ -3,7 +3,7 @@ layout: council
 title: Michele Ghielmini
 name: Michele
 surname: Ghielmini
-role: ''
+role: ""
 bio: >-
   Compulsory and secondary school in Ticino.
 
@@ -40,8 +40,8 @@ bio: >-
 
   Since 1999 he has been a member of the Foundation Board of the Foundation for
   the Research and Treatment of Lymphomas in Ticino, now the Foundation for the
-  Institute of oncology research (IOR).
-role-it: ''
+  Institute of Oncology Research (IOR).
+role-it: ""
 bio-it: >-
   Scuola dell'obbligo e medie superiori in Ticino.
 
@@ -56,11 +56,11 @@ bio-it: >-
 
   Titolo di Privat Dozent all'Università di Berna nel 2001, titolo di Professore
   Onorario all'Università di Berna nel 2007. Dal 01.07.2007 primario di
-  oncologia medica presso lo IOSI (Istituto Oncologico della Svizzera Italiana).
+  oncologia medica presso lo IOSI (Istituto Oncologico della Svizzera italiana).
 
 
   Dal 01.07.2011 direttore sanitario dello IOSI (Istituto Oncologico della
-  Svizzera Italiana).
+  Svizzera italiana).
 
 
   Dal 2001 al 2006 è stato Presidente del Gruppo Linfomi presso la SAKK (Gruppo
@@ -85,4 +85,3 @@ order: 1000
 picture: >-
   https://ucarecdn.com/107b70c1-d392-47af-9ef4-a747c088d2aa/-/crop/2532x2390/68,537/-/preview/
 ---
-

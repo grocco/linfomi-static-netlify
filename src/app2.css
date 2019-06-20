@@ -15,7 +15,7 @@ html {
 
 body {
   margin: 0 auto;
-  font-family: Roboto-Light;
+  font-family: 'Roboto Light', Roboto-Light;
   font-size: 1em;
   max-width: 1000px;
   background: #fff;
@@ -912,7 +912,7 @@ footer {
 }
 
 .modal-title {
-  font-family: RobotoLight, TradeGothic, SuisseMedium, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Roboto Light', Roboto-Light, TradeGothic, SuisseMedium, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 50px;
   color: #333;
   letter-spacing: 4px;
@@ -929,7 +929,7 @@ footer {
 }
 
 .modal-text {
-  font-family: RobotoLight, TradeGothic, SuisseLight, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Roboto Light', Roboto-Light, TradeGothic, SuisseLight, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 25px;
   color: #333;
   letter-spacing: 1.67px;
@@ -994,7 +994,7 @@ footer {
 
 
   header {
-    position: absolute;
+    /* width: 1000px; */
   }
 
   #nav .menu-buttons {
@@ -1164,7 +1164,7 @@ footer {
 
   footer {
     flex-direction: column;
-    height: 160px;
+    /* height: 160px; */
     text-align: center;
   }
 
@@ -1211,7 +1211,7 @@ footer {
 } */
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1063px) {
 
   header .menu {
     top: 1px;
@@ -1224,6 +1224,8 @@ footer {
     position: fixed;
     top: -1px;
     height: 60px;
+    padding: 0 20px;
+
   }
 
   header .menu {
@@ -1235,6 +1237,7 @@ footer {
     padding: 20px 0px;
     border-bottom: solid 1px #ddd;
     height: 100%;
+    max-width: none;
   }
 
 }
@@ -1278,4 +1281,28 @@ footer {
 
 .other-members .members:last-of-type {
   margin: 0 -20px;
+}
+
+.reality-website {
+  padding: 10px 10px;
+  background: #fafafa;
+  margin: 20px 0px;
+  border-top: solid 10px #eee;
+}
+
+.reality-website>span {
+  float: right;
+}
+
+.reality-website>span>a {
+  color: royalblue;
+  text-decoration: none;
+}
+
+.reality-website>div {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
 }

@@ -3,7 +3,7 @@ layout: council
 title: Paolo Ferrari
 name: Paolo
 surname: Ferrari
-role: ''
+role: ""
 bio: >-
   Professor Paolo Ferrari is the current Head of the Medical Area of the Ente
   Ospedaliero Cantonale in Ticino and consultant physician in nephrology at the
@@ -28,7 +28,7 @@ bio: >-
   and international professional committees, including ISN, ASN, EDTA, APSN and
   TTS and associate editor of numerous nephrology journals. He is assistant
   professor at the University of New South Wales in Sydney and full professor at
-  the Università della Svizzera Italiana.
+  the Università della Svizzera italiana.
 
 
   He has established research programs in the vast areas of nephrology,
@@ -37,9 +37,9 @@ bio: >-
 
 
   Since 2018 he has been a member of the Foundation Board of the Foundation for
-  the Institute of oncology research (IOR) and of the Foundation Board of the
+  the Institute of Oncology Research (IOR) and of the Foundation Board of the
   Transfusion Service of Southern Switzerland.
-role-it: ''
+role-it: ""
 bio-it: >-
   Il Professor Paolo Ferrari è l'attuale Capo Area medica dell'Ente Ospedaliero
   Cantonale in Ticino e medico consulente in nefrologia presso l’Ospedale Civico
@@ -65,7 +65,7 @@ bio-it: >-
   professionali nazionali e internazionali, tra cui ISN, ASN, EDTA, APSN e TTS e
   editore associato di numerose riviste di nefrologia. È professore aggiunto
   presso la University of New South Wales di Sydney e professore titolare
-  dell’Università della Svizzera Italiana.
+  dell’Università della Svizzera italiana.
 
 
   Ha stabilito programmi di ricerca nelle vaste aree della nefrologia, tra cui
@@ -75,10 +75,9 @@ bio-it: >-
 
   Dal 2018 è membro del Consiglio di Fondazione della Fondazione per l’Istituto
   oncologico di ricerca (IOR) e del Consiglio di Fondazione del Servizio
-  Trasfusionale della Svizzera Italiana.
+  Trasfusionale della Svizzera italiana.
 email: paolo.ferrari@eoc.ch
 order: 1000
 picture: >-
   https://ucarecdn.com/a55a0eb0-e5ab-4872-84a0-49fc3a8df093/-/crop/2360x2370/731,450/-/preview/
 ---
-

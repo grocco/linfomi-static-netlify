@@ -30,7 +30,7 @@ bio: >-
   Research (Lugano, since 1984), of the Foundation for the European School of
   Oncology (Bellinzona, since 1990) and of the Foundation for the Institute of
   Oncology Research (IOR), associated with the Faculty of Biomedicine of the
-  Università della Svizzera Italiana (USI). In 1997 he participated in the
+  Università della Svizzera italiana (USI). In 1997 he participated in the
   foundation of the Institute for Research in Biomedicine (IRB) in Bellinzona,
   associated with the Faculty of Biomedicine of the Università della Svizzera
   Italiana, and chaired it until 2012. 
@@ -49,7 +49,7 @@ bio: >-
 
   Since 1999 he has been Vice-President and member of the Board of Directors of
   the Foundation for Research and Treatment of Lymphomas in Ticino, now the
-  Foundation for the Institute of oncology research (IOR).
+  Foundation for the Institute of Oncology Research (IOR).
 role-it: Vice presidente
 bio-it: >-
   Nato a Mendrisio il 14 luglio 1938. 
@@ -77,7 +77,7 @@ bio-it: >-
   vice- presidente della Fondazione ticinese per la ricerca sul cancro (Lugano,
   dal 1984),  della Fondazione per la Scuola europea di oncologia (Bellinzona,
   dal 1990) e della Fondazione per l’Istituto oncologico di ricerca  (IOR),
-  associato alla Facoltà di Biomedicina dell’Università della Svizzera Italiana
+  associato alla Facoltà di Biomedicina dell’Università della Svizzera italiana
   (USI). Nel 1997 ha partecipato alla fondazione dell’Istituto di Ricerca in
   Biomedicina (IRB) a Bellinzona, associato alla Facoltà di Biomedicina
   dell’USI, e lo ha presieduto fino al 2012. È stato membro del Gran Consiglio
@@ -97,6 +97,5 @@ email: giorgio.noseda@bluewin.ch
 board-of-directors: true
 not-anymore: false
 order: 1
-picture: 'https://ucarecdn.com/b2f589d8-0c8f-4d8f-9aef-f7d2c449b4f6/'
+picture: "https://ucarecdn.com/b2f589d8-0c8f-4d8f-9aef-f7d2c449b4f6/"
 ---
-

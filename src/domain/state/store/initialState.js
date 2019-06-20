@@ -115,10 +115,10 @@ export const initialUiState = {
           name: "foundation"
           // active: true
         },
-        {
-          name: "link_ior",
-          link: true
-        },
+        // {
+        //   name: "link_ior",
+        //   link: true
+        // },
         {
           name: "ior",
           active: true
@@ -153,10 +153,10 @@ export const initialUiState = {
         {
           name: "foundation"
         },
-        {
-          name: "link_ior",
-          link: true
-        },
+        // {
+        //   name: "link_ior",
+        //   link: true
+        // },
         {
           name: "ior",
           // submenu: true
@@ -206,10 +206,10 @@ export const initialUiState = {
         }
       ],
       menu2ielsg: [
-        {
-          name: "link_ielsg",
-          link: true
-        },
+        // {
+        //   name: "link_ielsg",
+        //   link: true
+        // },
 
         {
           name: "foundation"
@@ -245,10 +245,10 @@ export const initialUiState = {
         }
       ],
       menu2icml: [
-        {
-          name: "link_icml",
-          link: true
-        },
+        // {
+        //   name: "link_icml",
+        //   link: true
+        // },
 
         {
           name: "foundation"
