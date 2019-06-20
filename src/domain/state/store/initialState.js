@@ -31,7 +31,7 @@ export const modalTemplates = {
 };
 
 export const initialUiState = {
-  language: "en",
+  language: "it",
   languages: ["it", "en"], // 'fr', ],//'de', 'es'],
   page: "home",
   modalTemplates,
