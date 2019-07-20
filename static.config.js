@@ -101,7 +101,7 @@ export default {
             <script id="stripe-js" src="https://js.stripe.com/v3/" async />
             {/* {renderMeta.styleTags} */}
             <meta charSet="UTF-8" />
-            <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet" />
+            <link href="/assets/css/fonts.css" rel="stylesheet" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <title>Foundation IOR</title>
           </Head>

@@ -82,6 +82,5 @@ bio-it: >-
   ricerca (IOR).
 email: michele.ghielmini@eoc.ch
 order: 1000
-picture: >-
-  https://ucarecdn.com/107b70c1-d392-47af-9ef4-a747c088d2aa/-/crop/2532x2390/68,537/-/preview/
+picture: "/assets/images/members/ghielmini.jpg"
 ---

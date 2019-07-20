@@ -233,7 +233,9 @@ header .menu {
 
 #president-signature {
   width: 130px;
-  margin: 20px 0px;
+  margin: 10px 0px;
+  height: 0px;
+  opacity: 0;
 }
 
 .round.member-pic {

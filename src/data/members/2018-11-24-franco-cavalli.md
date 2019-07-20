@@ -156,6 +156,5 @@ bio-it: >-
 email: franco.cavalli@eoc.ch
 board-of-directors: true
 order: 0
-picture: >-
-  https://ucarecdn.com/4dece25b-6ccd-45c2-8edd-0689eb017984/-/crop/2763x2736/0,431/-/preview/
+picture: "/assets/images/members/cavalli.jpg"
 ---

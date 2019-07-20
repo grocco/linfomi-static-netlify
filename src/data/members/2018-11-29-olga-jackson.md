@@ -69,7 +69,5 @@ bio-it: >-
   nel Ticino, ora Fondazione per l'Istituto oncologico di ricerca (IOR).
 email: olga.jackson@lymphcon.ch
 order: 1000
-picture: >-
-  https://ucarecdn.com/491a6468-a0ea-414f-a66f-3b6018a02c28/-/crop/2698x2673/0,366/-/preview/
+picture: "/assets/images/members/jackson.jpg"
 ---
-

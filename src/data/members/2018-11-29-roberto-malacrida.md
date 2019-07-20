@@ -66,6 +66,5 @@ bio-it: >-
   ricerca (IOR).
 email: roberto.malacrida@bellinzona.ch
 order: 1000
-picture: >-
-  https://ucarecdn.com/94904ed9-b822-4b9b-9616-49161f1f972e/-/crop/2695x2640/0,261/-/preview/
+picture: "/assets/images/members/malacrida.jpg"
 ---
