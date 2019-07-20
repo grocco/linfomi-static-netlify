@@ -84,5 +84,5 @@ bio-it: >-
 email: fabrizio.barazzoni@eoc.ch
 board-of-directors: true
 order: 1000
-picture: "https://ucarecdn.com/14e90c6a-e89c-4bdb-9c1c-50753a6f0126/"
+picture: "/assets/images/members/barazzoni.jpg"
 ---

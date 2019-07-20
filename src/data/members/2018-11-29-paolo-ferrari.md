@@ -78,6 +78,5 @@ bio-it: >-
   Trasfusionale della Svizzera italiana.
 email: paolo.ferrari@eoc.ch
 order: 1000
-picture: >-
-  https://ucarecdn.com/a55a0eb0-e5ab-4872-84a0-49fc3a8df093/-/crop/2360x2370/731,450/-/preview/
+picture: "/assets/images/members/ferrari.jpg"
 ---

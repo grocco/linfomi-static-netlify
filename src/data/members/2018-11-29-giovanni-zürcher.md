@@ -46,5 +46,5 @@ bio-it: >-
 email: giovanni.zuercher@pentagramsa.com
 board-of-directors: true
 order: 1000
-picture: "https://ucarecdn.com/66fd6236-d67b-4ab9-9429-3225eb53960a/"
+picture: "/assets/images/members/zurcher.jpg"
 ---

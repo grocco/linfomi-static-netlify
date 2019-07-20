@@ -41,5 +41,5 @@ bio-it: >-
   ricerca (IOR).
 email: florian.marxer@marxerpartner.com
 order: 1000
-picture: "https://ucarecdn.com/0d9f2060-d1bd-4560-8f76-4254d9398b00/"
+picture: "/assets/images/members/marxer.jpg"
 ---

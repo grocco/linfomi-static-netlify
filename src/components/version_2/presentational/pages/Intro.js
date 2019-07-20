@@ -48,10 +48,7 @@ class Intro extends Component {
       <div
         className="page intro-image"
         style={{
-          backgroundImage: `url('https://ucarecdn.com/8e8c1b52-b75a-4ad9-b489-faff11e11c66/-/resize/${Math.min(
-            1000,
-            window.innerWidth - 2
-          )}x/center'`
+          backgroundImage: `url('/assets/images/intro-image.jpg'`
         }}
       >
         {/* http://www.linuxcmd.org/lcshow/big/0/451_red-wallpaper.png */}

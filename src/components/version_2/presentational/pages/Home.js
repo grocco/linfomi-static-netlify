@@ -139,7 +139,7 @@ export default class Home extends Component {
                     className="smoothed-corners-pic"
                     id="president-pic"
                     style={{
-                      backgroundImage: `url('https://ucarecdn.com/4dece25b-6ccd-45c2-8edd-0689eb017984/-/crop/2763x2736/0,431/-/preview//-/scale_crop/220x220/')`
+                      backgroundImage: `url('/assets/images/president.jpg')`
                     }}
                   />
                 </div>
@@ -330,17 +330,8 @@ export default class Home extends Component {
               className="padded bubble-text"
               dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities[realityId].description) }}
             />
-            {realityId === "icml" && (
-              <img src={"https://ucarecdn.com/883b1339-5d6c-4727-8a1c-d950eea180d4/-/resize/434x/"} />
-            )}
-            {realityId === "ior" && (
-              <img
-                src={`https://ucarecdn.com/6231b3af-07d7-4b83-bae5-05dbbe08790a/-/resize/${Math.min(
-                  1000,
-                  window.innerWidth - 2
-                )}x/`}
-              />
-            )}
+            {realityId === "icml" && <img src={"/assets/images/reality-icml.jpg"} />}
+            {realityId === "ior" && <img src={`/assets/images/reality-ior.jpg`} />}
           </div>
         </div>
 
@@ -401,10 +392,7 @@ export default class Home extends Component {
           className="padded bubble-text"
           dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ielsg.description.second) }}
         />
-        <img
-          style={{ marginTop: 20, borderRadius: 4 }}
-          src={"https://ucarecdn.com/cf565a57-7dac-4fd3-a365-29738034afec/-/resize/1000x/"}
-        />
+        <img style={{ marginTop: 20, borderRadius: 4 }} src={"/assets/images/reality-ielsg.jpg"} />
       </div>
     );
     const icml = (
@@ -443,10 +431,7 @@ export default class Home extends Component {
           </div>
         </div>
 
-        <img
-          style={{ borderRadius: 4 }}
-          src={"https://ucarecdn.com/883b1339-5d6c-4727-8a1c-d950eea180d4/-/resize/1000x/"}
-        />
+        <img style={{ borderRadius: 4 }} src={"/assets/images/reality-icml-1000.jpg"} />
       </div>
     );
 
@@ -455,7 +440,7 @@ export default class Home extends Component {
         className="placeholder-image"
         style={{
           height: "calc(100vh - 81px)",
-          backgroundImage: "url('http://media.ticinotopten.ch/Castelgrande-30037-full-HD.jpg')"
+          backgroundImage: "url('/assets/images/Castelgrande-30037-full-HD.jpg')"
         }}
       >
         <div

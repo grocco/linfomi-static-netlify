@@ -37,7 +37,7 @@ const Member = ({ member, language, history }) => (
           className="image round"
           style={{
             backgroundImage: member.data.picture
-              ? `url('${member.data.picture}/-/scale_crop/220x220/')`
+              ? `url('${member.data.picture}'` // `url('${member.data.picture}/-/scale_crop/220x220/')`
               : "url('/assets/member-placeholder.jpg')"
           }}
         />
@@ -52,7 +52,7 @@ const Member = ({ member, language, history }) => (
           <div className="institute">{member.data.institute}</div>
           <div className="city">{member.data.city}</div>
           <a className="email" href={`mailto:${member.data.email}`}>
-            <img style={{ width: 25 }} src="https://www.new-soil.com/wp-content/uploads/2018/02/mail-icon.png" />
+            <img style={{ width: 25 }} src="/assets/images/mail-icon.png" />
           </a>
         </div>
       </div>
@@ -136,7 +136,7 @@ class MemberListItem extends React.Component {
               style={{
                 backgroundSize: "cover",
                 backgroundImage: member.data.picture
-                  ? `url('${member.data.picture}/-/scale_crop/440x440/')`
+                  ? `url('${member.data.picture}'` // `url('${member.data.picture}/-/scale_crop/440x440/')`
                   : "url('/assets/member-placeholder.jpg')"
               }}
             />
@@ -153,7 +153,7 @@ class MemberListItem extends React.Component {
                 {member.data.city && `, ${member.data.city}`}
               </div>
               <a className="email" href={`mailto:${member.data.email}`}>
-                <img src="https://www.new-soil.com/wp-content/uploads/2018/02/mail-icon.png" />
+                <img src="/assets/images/mail-icon.png" />
               </a>
             </div>
           </div>

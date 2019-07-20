@@ -97,5 +97,5 @@ email: giorgio.noseda@bluewin.ch
 board-of-directors: true
 not-anymore: false
 order: 1
-picture: "https://ucarecdn.com/b2f589d8-0c8f-4d8f-9aef-f7d2c449b4f6/"
+picture: "/assets/images/members/noseda.jpg"
 ---

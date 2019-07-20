@@ -60,6 +60,5 @@ bio-it: >-
   ricerca (IOR).
 email: alba.masullo@legacancro-ti.ch
 order: 1000
-picture: >-
-  https://ucarecdn.com/adf34dc4-ef1f-4ba0-836f-908865980b4e
+picture: "/assets/images/members/masullo.jpg"
 ---
