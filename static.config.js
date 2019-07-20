@@ -113,7 +113,7 @@ export default {
               <img
                 width={220}
                 height={220}
-                src="/assets/foundation_ior.png"
+                src="/assets/fondazione_ior.png"
                 style={{
                   width: 220,
                   height: 220,
