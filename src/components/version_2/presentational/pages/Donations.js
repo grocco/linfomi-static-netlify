@@ -10,16 +10,15 @@ import config from "config";
 // import ReactDOM from 'react-dom';
 // import paypal from 'paypal-checkout';
 
-// import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 
-// const MyMapComponent = withScriptjs(withGoogleMap((props) =>
-//   <GoogleMap
-//     defaultZoom={14}
-//     defaultCenter={{ lat: 46.194635, lng: 9.022549 }}
-//   >
-//     {props.isMarkerShown && <Marker position={{ lat: 46.194635, lng: 9.022549 }} />}
-//   </GoogleMap>
-// ));
+const MyMapComponent = withScriptjs(
+  withGoogleMap(props => (
+    <GoogleMap defaultZoom={14} defaultCenter={{ lat: 46.194635, lng: 9.022549 }}>
+      {props.isMarkerShown && <Marker position={{ lat: 46.194635, lng: 9.022549 }} />}
+    </GoogleMap>
+  ))
+);
 
 // class PayPalButton extends React.Component {
 //   constructor(props) {
@@ -548,13 +547,15 @@ export default class Donations extends React.PureComponent {
               </form>
             </div>
             <div className="map-container">
-              {/* <MyMapComponent 
-                                isMarkerShown
-                                googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${config.googleMapsKey}&v=3.exp&libraries=geometry,drawing,places`}
-                                loadingElement={<div className='map-element' />}
-                                containerElement={<div className='map-element' />}
-                                mapElement={<div className='map-element' />}
-                            /> */}
+              <MyMapComponent
+                isMarkerShown
+                googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${
+                  config.googleMapsKey
+                }&v=3.exp&libraries=geometry,drawing,places`}
+                loadingElement={<div className="map-element" />}
+                containerElement={<div className="map-element" />}
+                mapElement={<div className="map-element" />}
+              />
             </div>
           </div>
         </div>
