@@ -83,6 +83,7 @@ bio-it: >-
   ricerca (IOR).
 email: fabrizio.barazzoni@eoc.ch
 board-of-directors: false
+not-anymore: true
 order: 1000
 picture: /assets/images/members/barazzoni.jpg
 ---
