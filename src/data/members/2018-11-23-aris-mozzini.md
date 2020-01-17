@@ -3,7 +3,7 @@ layout: council
 title: Aris Mozzini
 name: Aris
 surname: Mozzini
-role: ""
+role: ''
 bio: >-
   Born in 1971 in Bellinzona, where he currently resides, he graduated as an
   economist from the University of Freiburg and after several years of activity
@@ -21,7 +21,7 @@ bio: >-
   Since 2014 he has been a member of the Board of Directors of the Foundation
   for Research and Treatment of Lymphomas in Ticino, now the Foundation for the
   Institute of Oncology Research (IOR).
-role-it: ""
+role-it: ''
 bio-it: >-
   Nato nel 1971 a Bellinzona dove attualmente risiede, ha conseguito la licenza
   in economista all’Università di Friburgo  e dopo alcuni anni di attività nel
@@ -41,7 +41,9 @@ bio-it: >-
   Cura dei Linfomi nel Ticino, ora Fondazione per l'istituto oncologico di
   ricerca (IOR).
 email: aris.mozzini@ti.ch
-board-of-directors: true
+board-of-directors: false
+not-anymore: true
 order: 1000
-picture: "/assets/images/members/mozzini.jpg"
+picture: /assets/images/members/mozzini.jpg
 ---
+
