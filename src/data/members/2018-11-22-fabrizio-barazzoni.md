@@ -82,7 +82,8 @@ bio-it: >-
   Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di
   ricerca (IOR).
 email: fabrizio.barazzoni@eoc.ch
-board-of-directors: true
+board-of-directors: false
+not-anymore: true
 order: 1000
 picture: 'https://ucarecdn.com/14e90c6a-e89c-4bdb-9c1c-50753a6f0126/'
 ---
