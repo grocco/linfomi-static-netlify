@@ -3,7 +3,7 @@ layout: council
 title: Michele Ghielmini
 name: Michele
 surname: Ghielmini
-role: ""
+role: ''
 bio: >-
   Compulsory and secondary school in Ticino.
 
@@ -41,7 +41,7 @@ bio: >-
   Since 1999 he has been a member of the Foundation Board of the Foundation for
   the Research and Treatment of Lymphomas in Ticino, now the Foundation for the
   Institute of Oncology Research (IOR).
-role-it: ""
+role-it: ''
 bio-it: >-
   Scuola dell'obbligo e medie superiori in Ticino.
 
@@ -81,6 +81,8 @@ bio-it: >-
   e la Cura dei Linfomi nel Ticino, ora Fondazione per l'istituto oncologico di
   ricerca (IOR).
 email: michele.ghielmini@eoc.ch
+board-of-directors: true
 order: 1000
-picture: "/assets/images/members/ghielmini.jpg"
+picture: /assets/images/members/ghielmini.jpg
 ---
+
