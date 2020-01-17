@@ -61,6 +61,7 @@ bio-it: >
   e la Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto oncologico di
   ricerca (IOR).
 email: emilio.camponovo@aurofin.ch
+not-anymore: true
 order: 1000
 picture: 'https://ucarecdn.com/6c4c7efe-ff92-4195-88c0-093450d61e07/'
 ---
