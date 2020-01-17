@@ -89,5 +89,6 @@ bio-it: >-
   oncologico di ricerca (IOR).
 board-of-directors: true
 order: 1000
+picture: "/assets/images/members/silke-gillessen.jpg"
 ---
 
