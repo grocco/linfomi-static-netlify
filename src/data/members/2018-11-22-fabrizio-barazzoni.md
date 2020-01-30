@@ -3,7 +3,7 @@ layout: council
 title: Fabrizio Barazzoni
 name: Fabrizio
 surname: Barazzoni
-role: ''
+role: 1999 - 2019
 bio: >-
   Born in 1954 in Thun, he graduated in 1974 from the Liceo Papio in Ascona,
   then graduated in medicine at the University of Zurich in 1982 and obtained
@@ -43,7 +43,7 @@ bio: >-
   Since 1999 he has been a member of the Board of Directors of the Foundation
   for Research and Treatment of Lymphomas in Ticino, now the Foundation for the
   Institute of Oncology Research (IOR).
-role-it: ''
+role-it: 1999 - 2019
 bio-it: >-
   Nato nel 1954 a Thun, ha conseguito nel 1974 la maturità federale al Liceo
   Papio di Ascona, quindi la laurea in medicina all’Università di Zurigo nel
