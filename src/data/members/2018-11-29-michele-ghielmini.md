@@ -41,6 +41,9 @@ bio: >-
   Since 1999 he has been a member of the Foundation Board of the Foundation for
   the Research and Treatment of Lymphomas in Ticino, now the Foundation for the
   Institute of Oncology Research (IOR).
+
+
+  Since 2019 he has been a member of the Board of Directors of the Foundation.
 role-it: ''
 bio-it: >-
   Scuola dell'obbligo e medie superiori in Ticino.
@@ -80,6 +83,9 @@ bio-it: >-
   Dal 1999 è membro del Consiglio di Fondazione della Fondazione per la Ricerca
   e la Cura dei Linfomi nel Ticino, ora Fondazione per l'istituto oncologico di
   ricerca (IOR).
+
+
+  Dal 2019 è membro del Consiglio Direttivo della Fondazione.
 email: michele.ghielmini@eoc.ch
 board-of-directors: true
 order: 1000
