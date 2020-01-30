@@ -2,7 +2,7 @@
 layout: council
 title: Silke Gillessen Sommer
 name: Silke
-surname: Gillessen Sommer Silke
+surname: Gillessen Sommer
 bio: >-
   Born in Niederdorf in 1965, she graduated in medicine at the University of
   Basel in 1990, where she received her doctorate in 1992. After working as an
@@ -78,7 +78,7 @@ bio-it: >-
   Per quanto riguarda la ricerca, ha pubblicato circa 150 articoli su riviste
   peer-reviewed e per i suoi progetti di ricerca ha ricevuto considerevoli
   riconoscimenti. È considerata “key opinion leader” a livello internazionale
-  nel campo del tumore della prostata e nella patologie maligne genito-urinarie.
+  nel campo del tumore della prostata e nelle patologie maligne genito-urinarie.
   Fa parte dei principali comitati scientifici e delle maggiori società della
   sua specialità a livello nazionale e internazionale. È spesso chiamata a
   intervenire come oratrice ai principali simposi internazionali.
@@ -87,7 +87,9 @@ bio-it: >-
 
   Dal 2019 è membro del Consiglio di Fondazione della Fondazione per l'Istituto
   oncologico di ricerca (IOR).
-board-of-directors: true
+email: Silke.GillessenSommer@eoc.ch
+board-of-directors: false
 order: 1000
-picture: "/assets/images/members/silke-gillessen.jpg"
+picture: /assets/images/members/silke-gillessen.jpg
 ---
+
