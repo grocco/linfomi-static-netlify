@@ -426,7 +426,7 @@ export default class Home extends Component {
             />
           </div>
           <div className="aside-right">
-            <div className="image " style={{ height: 478, width: 409, backgroundImage: `url('${assets.icml[0]}')` }} />
+            <div className="image " style={{ height: 575, width: 575, backgroundImage: `url('${assets.icml[0]}')` }} />
             {/* <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.address) }} /> */}
           </div>
         </div>
