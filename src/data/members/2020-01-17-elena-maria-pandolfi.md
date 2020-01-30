@@ -36,6 +36,7 @@ bio-it: >-
 
   Dal 2019 è membro del Consiglio di Fondazione della Fondazione per l'Istituto
   oncologico di ricerca (IOR).
+email: Elena-Maria.Pandolfi@ti.ch
 board-of-directors: false
 order: 1000
 picture: /assets/images/members/elena_maria_pandolfi.jpg
