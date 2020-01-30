@@ -40,11 +40,13 @@ bio-it: >-
   oltre che della Fondazione IOR, anche del consiglio di alcune fondazioni a
   scopo benefico.
 
+
   Dal 1999 è cassiere e membro del Consiglio Direttivo della Fondazione per la
   Ricerca e la Cura dei Linfomi nel Ticino, ora Fondazione per l'Istituto
   oncologico di ricerca (IOR).
 email: giovanni.zuercher@pentagramsa.com
 board-of-directors: true
 order: 1000
-picture: "/assets/images/members/zurcher.jpg"
+picture: /assets/images/members/zurcher.jpg
 ---
+
