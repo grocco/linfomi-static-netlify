@@ -5,9 +5,9 @@ name: Nancy E.
 surname: Hynes
 institute: Friedrich Miescher Institute
 location: Basel
-role: ' '
+role: ''
 bio: ' '
-role-it: ' '
+role-it: ''
 bio-it: ' '
 order: 1000
 ---
