@@ -1,13 +1,10 @@
 ---
-layout: council
+layout: scientific-council
 title: Hynes Nancy E.
 name: Nancy E.
 surname: Hynes
 institute: Friedrich Miescher Institute
-location: Basel
-role: ''
+city: Basel
 bio: ' '
-role-it: ''
 bio-it: ' '
-order: ''
 ---
