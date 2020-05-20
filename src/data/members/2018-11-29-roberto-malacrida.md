@@ -31,7 +31,7 @@ bio: >-
 
 
   Since 2017 he has been a member of the Foundation Board of the Foundation for
-  the Research and Treatment of Lymphomas in Ticino,cnow the Foundation for the
+  the Research and Treatment of Lymphomas in Ticino, now the Foundation for the
   Institute of Oncology Research (IOR).
 role-it: ""
 bio-it: >-
