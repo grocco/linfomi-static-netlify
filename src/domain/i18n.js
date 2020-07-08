@@ -183,12 +183,12 @@ const header = {
               en: "International Conference on Malignant Lymphoma"
             },
             humanAddress: {
-              it: "www.lymphcon.ch",
-              en: "www.lymphcon.ch"
+              it: "www.icml.ch",
+              en: "www.icml.ch"
             },
             address: {
-              it: "http://www.lymphcon.ch/",
-              en: "http://www.lymphcon.ch/"
+              it: "http://www.icml.ch/",
+              en: "http://www.icml.ch/"
             }
           },
           home: {
