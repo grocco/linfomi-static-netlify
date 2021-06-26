@@ -54,6 +54,7 @@ bio-it: >-
 
   ricerca (IOR).
 email: branda@m-avvocati.com
+board-of-directors: true
 order: 1000
 picture: null
 ---
