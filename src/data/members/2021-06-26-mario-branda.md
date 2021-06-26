@@ -30,25 +30,31 @@ bio-it: >-
 
   nel 1986;
 
+
   Delegato del Comitato internazionale della Croce Rossa tra il 1986 ed il 1988, ha
 
   partecipato a missioni in Pakistan e in Libano dove si è occupato dell&#39;applicazione delle
 
   Convenzioni di Ginevra alle popolazioni civili e ai prigionieri di guerra.
 
+
   Tornato in Ticino, ha lavorato per lo Stato presso il Servizio dei ricorsi del Consiglio di Stato
 
   poi come capo dell&#39;Ufficio di vigilanza sulle tutele.
+
 
   Nominato Procuratore pubblico nel 2001 e, dal 2009, Procuratore generale aggiunto presso
 
   il Ministero pubblico del Canton Ticino.
 
+
   Lasciata la magistratura alla fine del 2010, eletto in Gran Consiglio nell’aprile 2011 (fino al
 
   2013) e dallo stesso anno titolare di uno studio legale a Bellinzona.
 
+
   Dal 2012 sindaco di Bellinzona.
+
 
   Dal 2021 è membro del Consiglio di Fondazione della Fondazione per l’Istituto oncologico di
 
