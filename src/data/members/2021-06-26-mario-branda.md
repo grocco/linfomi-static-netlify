@@ -56,5 +56,5 @@ bio-it: >-
 email: branda@m-avvocati.com
 board-of-directors: true
 order: 1000
-picture: null
+picture: /assets/images/members/barazzoni.jpg
 ---
