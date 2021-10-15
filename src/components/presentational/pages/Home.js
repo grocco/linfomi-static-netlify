@@ -91,7 +91,7 @@ export default class Home extends Component {
                 <div className='aside-right'>
                     <img  className='article-top-image' src="https://ucarecdn.com/6a9e8b79-fda0-4983-b77d-34643156fccc/ior_lab.jpg" /> 
                     <div className='padded' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.description) }} />
-                    <a className={'external-link'} href='http://www.ior.iosi.ch/' target='__blank'>
+                    <a className={'external-link'} href='http://www.ior.usi.ch/' target='__blank'>
                         <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
                         <div className='title'>{l(i18n.pages.home.content.realities.ior.title)}</div>
                         <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
