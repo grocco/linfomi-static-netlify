@@ -341,7 +341,7 @@ export default class Home extends Component {
             .map((image, idx) => (
               <div key={image + idx} className="image " style={{ backgroundImage: `url('${image}')` }} />
             ))}
-          {/* <a className={'external-link'} href='http://www.ior.iosi.ch/' target='__blank'>
+          {/* <a className={'external-link'} href='http://www.ior.usi.ch/' target='__blank'>
                         <div className='name'>{l(i18n.pages.home.officialWebsite)}</div>
                         <div className='title'>{l(i18n.pages.home.content.realities.ior.title)}</div>
                         <img className='arrow-right' src='/assets/arrow-right.png' alt='select' />
