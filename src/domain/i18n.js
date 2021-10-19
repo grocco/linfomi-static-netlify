@@ -155,12 +155,12 @@ const header = {
               en: "Institute of Oncology Research"
             },
             humanAddress: {
-              it: "www.ior.iosi.ch",
-              en: "www.ior.iosi.ch"
+              it: "www.ior.usi.ch",
+              en: "www.ior.usi.ch"
             },
             address: {
-              it: "http://www.ior.iosi.ch/",
-              en: "http://www.ior.iosi.ch/"
+              it: "http://www.ior.usi.ch/",
+              en: "http://www.ior.usi.ch/"
             }
           },
           link_ielsg: {
