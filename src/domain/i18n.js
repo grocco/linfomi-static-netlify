@@ -368,7 +368,7 @@ const home = {
         },
         address: {
           en: "<b>Institute of Oncology Research</b>",
-          it: "<b>Istituto oncologico di ricerca</b>" // <br/><br/>Via Vincenzo Vela 6<br/>CH-6500 Bellinzona<br/><br/>+41 91 820 0322',
+          it: "<b>Istituto oncologico di ricerca</b>" // <br/><br/>Via F. Chiesa 5<br/>CH-6500 Bellinzona<br/><br/>+41 91 820 0322',
         }
       },
       ielsg: {
@@ -415,7 +415,7 @@ const home = {
             'The <b>ICML</b> was organised for the first time in 1981: first every three years, since 2011 every two years. This conference has now become the main conference for all those involved in research or treatment of patients with malignant lymphoma.<br/><br/>Currently, for logistical reasons, we are obliged to limit the number of participants to 3\'500, although many more would like to attend.<br/><br/>It is mainly thanks to ICML that the name of Lugano is now known worldwide in the field of medicine, to such an extent that the " Lugano Classification" is universally used for the evaluation of patients with this type of cancer.'
         },
         address: {
-          en: "<b>International Conference on Malignant Lymphoma (ICML)</b>" // <br/><br/>ICML Secretariat<br/>Via Vincenzo Vela 6<br/>CH-6500 Bellinzona<br/><br/>+41 (0)91 922 05 75'
+          en: "<b>International Conference on Malignant Lymphoma (ICML)</b>" // <br/><br/>ICML Secretariat<br/>Via F. Chiesa 5<br/>CH-6500 Bellinzona<br/><br/>+41 (0)91 922 05 75'
         }
       }
     },
@@ -632,9 +632,15 @@ const contact = {
   },
   address: {
     en:
-      "<b>Fondazione per l'Istituto oncologico di ricerca (IOR)</b><br/><br/>Via Vincenzo Vela 6<br/>6500 Bellinzona<br/>Switzerland",
+      "<b>Fondazione per l'Istituto oncologico di ricerca (IOR)</b><br/><br/>Via F. Chiesa 5<br/>6500 Bellinzona<br/>Switzerland",
     it:
-      "<b>Fondazione per l'Istituto oncologico di ricerca (IOR)</b><br/><br/>Via Vincenzo Vela 6<br/>6500 Bellinzona<br/>Svizzera"
+      "<b>Fondazione per l'Istituto oncologico di ricerca (IOR)</b><br/><br/>Via F. Chiesa 5<br/>6500 Bellinzona<br/>Svizzera"
+  },
+  communication: {
+    en:
+      "<hr/><br/><b>Olga Jackson Cariglia</b><br/>Secretary<br/><a href='mailto:olga.jackson@lymphcon.ch'>olga.jackson@lymphcon.ch</a><br/><br/><hr/><br/><b>Federica Cariglia</b><br/>Communication specialist<br/>+41 (0)79 938 03 56<br/><a href='mailto:federica.cariglia@ior.usi.ch'>federica.cariglia@ior.usi.ch</a>",
+    it:
+      "Comunicazione"
   },
   details: {
     en:
