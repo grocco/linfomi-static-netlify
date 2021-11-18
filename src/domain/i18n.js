@@ -638,9 +638,9 @@ const contact = {
   },
   communication: {
     en:
-      "<hr/><br/><b>Olga Jackson Cariglia</b><br/>Secretary<br/><a href='mailto:olga.jackson@lymphcon.ch'>olga.jackson@lymphcon.ch</a><br/><br/><hr/><br/><b>Federica Cariglia</b><br/>Communication specialist<br/>+41 (0)79 938 03 56<br/><a href='mailto:federica.cariglia@ior.usi.ch'>federica.cariglia@ior.usi.ch</a>",
+      "<hr/><br/><b>Olga Jackson</b><br/>Secretary<br/><a href='mailto:olga.jackson@lymphcon.ch'>olga.jackson@lymphcon.ch</a><br/><br/><hr/><br/><b>Federica Cariglia</b><br/>Communication specialist<br/>+41 (0)79 938 03 56<br/><a href='mailto:federica.cariglia@ior.usi.ch'>federica.cariglia@ior.usi.ch</a>",
     it:
-      "Comunicazione"
+      "<hr/><br/><b>Olga Jackson</b><br/>Segretaria<br/><a href='mailto:olga.jackson@lymphcon.ch'>olga.jackson@lymphcon.ch</a><br/><br/><hr/><br/><b>Federica Cariglia</b><br/>Specialista in comunicazione<br/>+41 (0)79 938 03 56<br/><a href='mailto:federica.cariglia@ior.usi.ch'>federica.cariglia@ior.usi.ch</a>",
   },
   details: {
     en:
