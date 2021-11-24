@@ -137,7 +137,7 @@ export default class Home extends Component {
                 >
                   <div
                     className="smoothed-corners-pic"
-                    id="president-pic"
+                    id="intro-left-pic"
                     style={{
                       backgroundImage: `url('/assets/images/president.jpg')`
                     }}
@@ -158,18 +158,44 @@ export default class Home extends Component {
                     })
                   }
                 >
-                  <img id="president-signature" src="/assets/signature-cavalli.png" alt="signature" />
+                  {/* <img id="president-signature" src="/assets/signature-cavalli.png" alt="signature" /> */}
                   <div>
                     {l(i18n.pages.home.content.signature.name)}
-                    <br />
                     <br />
                     {l(i18n.pages.home.content.signature.description)}
                   </div>
                 </div>
+                <br/>
+
+                <div
+                  className="smoothed-corners-pic"
+                  id="intro-left-pic"
+                  style={{
+                    backgroundImage: `url('/assets/images/sarah.jpeg')`
+                  }}
+                />
+                <br/>
+                  {l(i18n.pages.home.content.signature.sarah.name)}
+                  <br />
+                  {l(i18n.pages.home.content.signature.sarah.description)}
+<br/><br/>
+                <div
+                  className="smoothed-corners-pic"
+                  id="intro-left-pic"
+                  style={{
+                    backgroundImage: `url('/assets/images/federica.jpeg')`
+                  }}
+                />
+                <br/>
+                  {l(i18n.pages.home.content.signature.federica.name)}
+                  <br />
+                  {l(i18n.pages.home.content.signature.federica.description)}
+                  
               </div>
+
             </div>
           </div>
-          <div className="aside-center padded bubble-text snap-right">
+          <div className="aside-center padded bubble-text snap-right big-right-margin">
             {/* <div className='home-intro'>
                             
                             <div className='title'>{l(i18n.pages.home.content.realities.fior.title)}</div>

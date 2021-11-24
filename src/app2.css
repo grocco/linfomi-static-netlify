@@ -155,7 +155,7 @@ header .menu {
   bottom: 0;
 }
 
-.page-home #president-pic {
+.page-home #intro-left-pic {
   width: 220px;
   height: 220px;
   display: inline-block;
@@ -165,6 +165,10 @@ header .menu {
 
   /* TEST */
   /* border-radius: 50%; */
+}
+
+.big-right-margin {
+  padding-right: 50px;
 }
 
 .content {
