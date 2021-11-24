@@ -479,8 +479,8 @@ export default class Donations extends React.PureComponent {
                 style={{ marginTop: 0, backgroundImage: `url('/assets/${l(i18n.assets.logos.foundation)}')` }}
               />
               <div className="description" dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.address) }} />
-              <br/>
-              <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.communication) }} />
+              {/* <br/>
+              <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.contact.communication) }} /> */}
 
             </div>
           </div>

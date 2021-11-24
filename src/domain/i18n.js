@@ -362,9 +362,9 @@ const home = {
         },
         description: {
           it:
-            "Lo <b>IOR</b> ha iniziato la sua attività nel 2003 all'interno dell'edificio dell'Istituto di ricerca in biomedicina (IRB) di Bellinzona. In pochi anni i ricercatori dello IOR si sono affermati a livello internazionale, pubblicando ricerche di grande originalità e di notevole impatto nelle principali riviste scientifiche mondiali.<br/><br/>Inoltre questi ricercatori sono stati capaci di ottenere importanti contributi alla ricerca non solo dalle istanze nazionali svizzere, ma anche nell'ambito dei programmi molto selettivi dell'Unione Europea.<br/><br/>Questa qualità eccellente è stata riconosciuta dapprima dalla Segreteria di Stato per la formazione, la ricerca e l’innovazione (SEFRI), che ha accordato allo IOR i molto ambiti sussidi federali, ed in seguito dall'Università della Svizzera italiana (USI), che ha affiliato lo IOR nel 2016 nell'ambito della Facoltà di Biomedicina appena creata.<br/><br/>A tutt'oggi (2018) quasi 70 persone lavorano nei laboratori dello IOR, con un budget annuale che si sta ormai avvicinando allo soglia del 10 milioni di franchi.",
+            "Lo <b>IOR</b> ha iniziato la sua attività nel 2003 all'interno dell'edificio dell'Istituto di ricerca in biomedicina (IRB) di Bellinzona. In pochi anni i ricercatori dello IOR si sono affermati a livello internazionale, pubblicando ricerche di grande originalità e di notevole impatto nelle principali riviste scientifiche mondiali.<br/><br/>Inoltre questi ricercatori sono stati capaci di ottenere importanti contributi alla ricerca non solo dalle istanze nazionali svizzere, ma anche nell'ambito dei programmi molto selettivi dell'Unione Europea.<br/><br/>Questa qualità eccellente è stata riconosciuta dapprima dalla Segreteria di Stato per la formazione, la ricerca e l’innovazione (SEFRI), che ha accordato allo IOR i molto ambiti sussidi federali, ed in seguito dall'Università della Svizzera italiana (USI), che ha affiliato lo IOR nel 2016 nell'ambito della Facoltà di Biomedicina appena creata.<br/><br/>A tutt'oggi quasi 70 persone lavorano nei laboratori dello IOR, con un budget annuale che si sta ormai avvicinando allo soglia del 10 milioni di franchi.",
           en:
-            "The <b>IOR</b> (Institute of Oncology Research) started its activity in 2003 inside the building of the Institute for Research in Biomedicine  (IRB) in Bellinzona. In a few years, IOR researchers attained worldwide recognition through the publication of ground breaking research with a high impact in international leading scientific journals.<br/><br/>Furthermore the researchers were able to obtain important  financial contributions both in Switzerland and from the extremely selective European Union programmes.<br/><br/>This excellent quality level has been recognized first by the State Secretariat for Education, Research and Innovation (SEFRI), which has granted to IOR the much sought-after federal subsides and later by the Università della Svizzera italiana (USI), which affiliated the IOR in 2016 within the newly created Faculty of Biomedicine.<br/><br/>To date  (2018) almost 70 people work in the laboratories of the IOR with an annual budget that is approaching the threshold of 10 million francs."
+            "The <b>IOR</b> (Institute of Oncology Research) started its activity in 2003 inside the building of the Institute for Research in Biomedicine  (IRB) in Bellinzona. In a few years, IOR researchers attained worldwide recognition through the publication of ground breaking research with a high impact in international leading scientific journals.<br/><br/>Furthermore the researchers were able to obtain important  financial contributions both in Switzerland and from the extremely selective European Union programmes.<br/><br/>This excellent quality level has been recognized first by the State Secretariat for Education, Research and Innovation (SEFRI), which has granted to IOR the much sought-after federal subsides and later by the Università della Svizzera italiana (USI), which affiliated the IOR in 2016 within the newly created Faculty of Biomedicine.<br/><br/>To date almost 70 people work in the laboratories of the IOR with an annual budget that is approaching the threshold of 10 million francs."
         },
         address: {
           en: "<b>Institute of Oncology Research</b>",
@@ -421,9 +421,9 @@ const home = {
     },
     finalThoughts: {
       it:
-        "Come vedete, la carne al fuoco è tanta. E sono sicuro che se proseguirete nella lettura di questo sito, anche voi sarete impressionati da quanto stiamo facendo.<br/>Personalmente ne sono molto orgoglioso.",
+        "Come vedete, la carne al fuoco è tanta. E sono sicuro che se proseguirete nella lettura di questo sito, anche voi sarete impressionati da quanto stiamo facendo.<br/>Personalmente ne sono molto orgoglioso.<br/><br/>Prof. Franco Cavalli<br/>Presidente della Fondazione",
       en:
-        "As you can see there is a lot to take in and I am sure that as you continue reading this site, you will be impressed by all that we have accomplished.<br/></br/>Personally, I am very proud of our achievements."
+        "As you can see there is a lot to take in and I am sure that as you continue reading this site, you will be impressed by all that we have accomplished.<br/></br/>Personally, I am very proud of our achievements.<br/><br/>Prof. Franco Cavalli<br/>President of the Foundation"
     },
     signature: {
       name: {
@@ -433,6 +433,26 @@ const home = {
       description: {
         it: "Presidente della Fondazione",
         en: "President of the Foundation"
+      },
+      sarah: {
+        name: {
+          it: "Sarah Ortelli-Giannakis",
+          en: "Sarah Ortelli-Giannakis"
+        },
+        description: {
+          it: "Executive Assistant to Prof. Franco Cavalli",
+          en: "Executive Assistant to Prof. Franco Cavalli"
+        }
+      },
+      federica: {
+        name: {
+          it: "Federica Cariglia",
+          en: "Federica Cariglia"
+        },
+        description: {
+          it: "Communication Specialist",
+          en: "Communication Specialist"
+        }
       }
     }
   },
@@ -636,12 +656,12 @@ const contact = {
     it:
       "<b>Fondazione per l'Istituto oncologico di ricerca (IOR)</b><br/><br/>Via F. Chiesa 5<br/>6500 Bellinzona<br/>Svizzera"
   },
-  communication: {
-    en:
-      "<hr/><br/><b>Olga Jackson</b><br/>Secretary<br/><a href='mailto:olga.jackson@lymphcon.ch'>olga.jackson@lymphcon.ch</a><br/><br/><hr/><br/><b>Federica Cariglia</b><br/>Communication specialist<br/>+41 (0)79 938 03 56<br/><a href='mailto:federica.cariglia@ior.usi.ch'>federica.cariglia@ior.usi.ch</a>",
-    it:
-      "<hr/><br/><b>Olga Jackson</b><br/>Segretaria<br/><a href='mailto:olga.jackson@lymphcon.ch'>olga.jackson@lymphcon.ch</a><br/><br/><hr/><br/><b>Federica Cariglia</b><br/>Specialista in comunicazione<br/>+41 (0)79 938 03 56<br/><a href='mailto:federica.cariglia@ior.usi.ch'>federica.cariglia@ior.usi.ch</a>",
-  },
+  // communication: {
+  //   en:
+  //     "<hr/><br/><b>Olga Jackson</b><br/>Secretary<br/><a href='mailto:olga.jackson@lymphcon.ch'>olga.jackson@lymphcon.ch</a><br/><br/><hr/><br/><b>Federica Cariglia</b><br/>Communication specialist<br/>+41 (0)79 938 03 56<br/><a href='mailto:federica.cariglia@ior.usi.ch'>federica.cariglia@ior.usi.ch</a>",
+  //   it:
+  //     "<hr/><br/><b>Olga Jackson</b><br/>Segretaria<br/><a href='mailto:olga.jackson@lymphcon.ch'>olga.jackson@lymphcon.ch</a><br/><br/><hr/><br/><b>Federica Cariglia</b><br/>Specialista in comunicazione<br/>+41 (0)79 938 03 56<br/><a href='mailto:federica.cariglia@ior.usi.ch'>federica.cariglia@ior.usi.ch</a>",
+  // },
   details: {
     en:
       "<b>Ufficio del Presidente</b><br/>Ospedale San Giovanni<br/>CH-6500 Bellinzona<br/>Tel. +41 (0)91 811 86 66<br/>sarahjane.ortelligiannakis@eoc.ch<br/><br/><b>Segretaria della Fondazione</b><br/>Tel. +41 (0)91 921 45 61<br/>olga.jackson@lymphcon.ch"
