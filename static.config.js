@@ -285,6 +285,25 @@ export default {
     } else if (stage === "dev") {
       config.entry = ["babel-polyfill", ...config.entry];
     }
+    config.module.rules = config.module.rules.concat([
+      {
+      test: /\.js$/,
+      loader: 'babel-loader',
+      include: [
+        path.resolve(__dirname, "node_modules/swiper"),
+        path.resolve(__dirname, "node_modules/ssr-window")
+    ],
+      query: {
+        plugins: ['transform-object-rest-spread']
+      },
+      // exclude: [path.resolve(__dirname, 'node_modules')]
+    },
+    // {
+    //   test: /\.js$/, // Check for all js files
+    //   exclude: /node_modules\/(?!(dom7|ssr\-window|swiper)\/).*/,
+    //   loader: 'babel-loader'
+    // }
+    ]);
     return config;
   }
 };

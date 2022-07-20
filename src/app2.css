@@ -5,6 +5,8 @@ html {
 
 }
 
+
+
 #current {
   opacity: 0;
   /* height: 80px; */
@@ -377,7 +379,7 @@ header .menu {
   /* max-height: 700px; */
   background-position: bottom;
   background-size: cover;
-  height: calc(100vh - 81px);
+  height: 248px;
 
   margin: 80px -20px 20px -20px;
 }
@@ -389,6 +391,14 @@ header .menu {
 
 .padded {
   padding: 20px;
+}
+
+.aside-right {
+  display: flex;
+  flex-direction: row;
+  /* padding-top: 10px; */
+  padding-right: 0px;
+  padding-top: 20px;
 }
 
 .aside-left .image {
@@ -404,22 +414,22 @@ header .menu {
 }
 
 .aside-right .image {
-  width: 300px;
-  height: 220px;
-  margin: 20px 0px;
+  width: 270px;
+  height: 270px;
+  margin-left: 20px;
+  margin-bottom:20px;
 
-  margin: 20px 0px;
   border-radius: 4px;
   border: solid 1px #ccc;
 
   background-size: cover;
 }
 
-.aside-center.with-title {
-  margin: 20px;
+.page .with-title {
+  padding-top: 20px;
 }
 
-.aside-center.with-title .title {
+.page .with-title .title {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -434,17 +444,58 @@ header .menu {
   font-size: 20px;
 }
 
-.aside-center .title .image {
+.aside-center .title .image, .with-title .title .image {
   width: 100px;
   height: 100px;
   margin-right: 20px;
   background-size: cover;
   flex: 0 0 auto;
 }
+.with-title .title .image {
+font-size: 20px;
+}
+
+.slider-container {
+  /* margin: 20px 20px; */
+  margin-bottom: 30px;
+  border-radius: 4px;
+overflow:  hidden;
+}
+.ior-slide {
+  width: fit-content;
+}
+
+.next-slider-element, .prev-slider-element {
+  color: white
+}
+
+.page .swiper-slide {
+  width: fit-content;
+}
+@media only screen and (min-width: 840px) {
+.ior-slide {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: fit-content;
+}
+}
+
+.slick-list {
+
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.page .slick-prev:before, .page .slick-next:before {
+  color: #c2c2c2;
+}
+
 
 .page {
   position: relative;
   min-height: calc(100vh - 81px);
+  margin-bottom: 20px;
 }
 
 .page-columns {
@@ -453,10 +504,14 @@ header .menu {
 }
 
 .aside-center {
-  margin: 0 20px;
+  margin: 0px 20px;
   flex: 1;
 
   margin-right: 0;
+}
+
+.aside-center.for-ior {
+  margin: 0px;
 }
 
 .aside-center.padded {
@@ -497,7 +552,7 @@ header .menu {
 }
 
 .reality-description {
-  width: calc(1000px - 220px - 300px - 40px - 4px);
+  /* width: calc(1000px - 220px - 300px - 40px - 4px); */
   /* padding-bottom: 20px; */
 }
 
@@ -862,8 +917,19 @@ footer {
 
 
 .ielsg .reality-description {
-  width: calc(100% + 20px);
+  width: 100%;
 }
+
+.ielsg .aside-center {
+  width: 100%;
+  /* margin-left: 0px; */
+}
+
+.icml .aside-center {
+  /* width: 100%; */
+  margin-left: 0px;
+}
+
 
 
 
@@ -974,6 +1040,14 @@ footer {
 
 @media only screen and (max-width: 1063px) {
 
+
+.aside-left .image,
+.aside-right .image {
+  display: none;
+  /* margin: 20px 0; */
+}
+
+
   html {
     padding: 0px;
     user-select: none;
@@ -987,6 +1061,7 @@ footer {
   .ielsg .reality-description {
     width: 100%;
   }
+
 
 
   .row-size-text {
@@ -1029,16 +1104,11 @@ footer {
   }
 
 
-  .aside-left .image,
-  .aside-right .image {
-    display: none;
-  }
-
   .reality-description {
     width: 100%;
   }
 
-  .aside-center.with-title {
+  .page .with-title {
     margin: 20px -20px;
   }
 
@@ -1274,7 +1344,7 @@ footer {
 }
 
 .page.intro-image::after {
-  content: "Il mercato di Bellinzona © Svizzera Turismo Markus Buehler Rasom";
+  content: "IOR building - Stabile IOR";
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1312,4 +1382,10 @@ footer {
 
 a {
   text-decoration: none;
+}
+
+
+
+:root {
+  --swiper-theme-color: #333 !important;
 }
