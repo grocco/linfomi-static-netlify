@@ -48,7 +48,7 @@ class Intro extends Component {
       <div
         className="page intro-image"
         style={{
-          backgroundImage: `url('/assets/images/intro-image.jpg'`,
+          backgroundImage: `url('/assets/images/intro-image.jpg')`,
           minHeight: 'auto'
         }}
       >
