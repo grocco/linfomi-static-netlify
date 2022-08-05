@@ -554,7 +554,6 @@ export default class Home extends Component {
                       </a>
           </div> */}
         </div>
-
 <div style={{margin: "0 auto", marginTop:20 }}>
         <Swiper
             // spaceBetween={0}
