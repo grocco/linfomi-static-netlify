@@ -438,9 +438,9 @@ export default class Home extends Component {
             }}
             loop={true}
             autoplay={{
-              delay: 6000
+              delay: 4000
             }}
-            speed={2000}
+            speed={1500}
             
 
             // navigation={{
@@ -564,9 +564,9 @@ export default class Home extends Component {
             slidesPerView={"auto"}
             loop={true}
             autoplay={{
-              delay: 6000
+              delay: 4000
             }}
-            speed={2000}
+            speed={1500}
             
             // loop={true}
             // autoHeight={true}
