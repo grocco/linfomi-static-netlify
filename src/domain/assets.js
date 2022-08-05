@@ -42,7 +42,7 @@ export default {
     "/assets/images/ior_3.jpg", // "https://ucarecdn.com/ec1d0556-a9a3-46b5-b702-c4b7349175a7/-/scale_crop/220x220/center/",
     // 'https://ucarecdn.com/e6c1a4a6-6dc5-4c5b-9b6f-4a156fd06e34/-/scale_crop/220x220/',
     "/assets/images/ior_4.jpg", // "https://ucarecdn.com/c469b1e1-72a2-4385-bab4-6a993057e407/-/scale_crop/300x220/center/",
-    "/assets/images/ior_5.jpg", // "https://ucarecdn.com/892da45b-31d5-4eb0-a699-92c6324065b4/-/scale_crop/300x220/",
+    // "/assets/images/ior_5.jpg", // "https://ucarecdn.com/892da45b-31d5-4eb0-a699-92c6324065b4/-/scale_crop/300x220/",
     // "/assets/images/ior_6.jpg" // "https://ucarecdn.com/11de4084-8e52-48a1-bc83-2bad55796962/-/scale_crop/300x220/"
     // 'https://ucarecdn.com/928322f4-14ac-40a8-9ee3-17080a5c940e/-/scale_crop/300x220/center/',
   ],

@@ -15,7 +15,7 @@ import 'swiper/components/scrollbar/scrollbar.min.css'
 
 import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-SwiperCore.use([Navigation, Scrollbar]);
+SwiperCore.use([Navigation, Scrollbar,Autoplay]);
 
 // import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -431,12 +431,17 @@ export default class Home extends Component {
           <Swiper
             // spaceBetween={200}
             slidesPerView={1}
-            // loop={true}
             autoHeight={true}
-            // modules={[Scrollbar,Navigation]}
+            // modules={[Scrollbar,Navigation,Autoplay]}
             scrollbar={{
               hide:false
             }}
+            loop={true}
+            autoplay={{
+              delay: 6000
+            }}
+            speed={2000}
+            
 
             // navigation={{
             //   nextEl: "#next-slider-element",
@@ -490,7 +495,7 @@ export default class Home extends Component {
               ))} */}
           </Swiper>
         </div>
-        <div className="">
+        <div className="ior-description-box">
           {/* <div className="aside-left">
             {assets.ior.slice(0, Math.ceil(assets.ior.length / 2)).map((image, idx) => (
               <div key={image + idx} className="image " style={{ backgroundImage: `url('${image}')` }} />
@@ -498,7 +503,11 @@ export default class Home extends Component {
           {/* <div className='description' dangerouslySetInnerHTML={{ __html: l(i18n.pages.home.content.realities.ior.address) }} /> */}
           {/* </div> */}
 
-          <div className="aside-center for-ior">
+          <div style={{maxWidth:380, marginBottom:20}}>
+            <img src="/assets/images/ior_5.jpg" style={ {width:"100%"}} /> 
+            </div>
+
+          <div className="aside-center">
             <div
               ref={(el) => (this.realityDescription = el)}
               className="reality-description"
@@ -512,33 +521,8 @@ export default class Home extends Component {
               {/* <img src="/assets/images/reality-ior.jpg" /> */}
             </div>
           </div>
-<div style={{margin: "0 auto", marginTop:20 }}>
-        <Swiper
-            // spaceBetween={0}
-              // slidesPerView={6}
-              // centeredSlides={true}
-        spaceBetween={30}
-              slidesPerView={"auto"}
-            
-            // loop={true}
-            // autoHeight={true}
 
-            // navigation={{
-            //   nextEl: "#next-slider-element",
-            //   porevEl: "#prev-slider-element"
-            // }}
-              navigation={ true}
-            // modules={[Scrollbar, Navigation]}
-            >
-            {assets.ior.map((image, idx) => (
-              <SwiperSlide key={image + idx}>
-                <div className="ior-slide">
-                  <img src={image} height={200} />
-                </div>
-              </SwiperSlide>
-            ))}
-            </Swiper>
-          </div>
+
 
           {/* <div className="aside-right">
             <div style={{ flex: 1 }}>
@@ -570,6 +554,39 @@ export default class Home extends Component {
                       </a>
           </div> */}
         </div>
+
+<div style={{margin: "0 auto", marginTop:20 }}>
+        <Swiper
+            // spaceBetween={0}
+              // slidesPerView={6}
+              // centeredSlides={true}
+        spaceBetween={30}
+            slidesPerView={"auto"}
+            loop={true}
+            autoplay={{
+              delay: 6000
+            }}
+            speed={2000}
+            
+            // loop={true}
+            // autoHeight={true}
+
+            // navigation={{
+            //   nextEl: "#next-slider-element",
+            //   porevEl: "#prev-slider-element"
+            // }}
+              navigation={ true}
+            // modules={[Scrollbar, Navigation]}
+            >
+            {assets.ior.map((image, idx) => (
+              <SwiperSlide key={image + idx}>
+                <div className="ior-slide">
+                  <img src={image} height={200} />
+                </div>
+              </SwiperSlide>
+            ))}
+            </Swiper>
+          </div>
       </div>
     );
     const ielsg = (
