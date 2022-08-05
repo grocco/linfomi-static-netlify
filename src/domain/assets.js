@@ -1,12 +1,49 @@
 export default {
+  ior_slideshow: [
+    {
+      image: "/assets/images/ior_slideshow/1.jpeg",
+      description: "Molecular Oncology (Alimonti)",
+      website: "https://www.ior.usi.ch/en/group/molecular-oncology"
+    },
+    {
+      image: "/assets/images/ior_slideshow/2.jpeg",
+      description: "Lymphoma Genomics (Bertoni)",
+      website: "https://www.ior.usi.ch/en/group/lymphoma-genomics"
+    },
+    {
+      image: "/assets/images/ior_slideshow/3.jpeg",
+      description: "Experimental Therapeutics (Catapano)",
+      website: "https://www.ior.usi.ch/en/group/experimental-therapeutics"
+    },
+    {
+      image: "/assets/images/ior_slideshow/4.jpeg",
+      description: "Experimental Hematology (Rossi)",
+      website: "https://www.ior.usi.ch/en/group/experimental-hematology"
+    },
+    {
+      image: "/assets/images/ior_slideshow/5.jpeg",
+      description: "Cancer Immunotherapy (Calcinotto)",
+      website: "https://www.ior.usi.ch/en/group/cancer-immunotherapy"
+    },
+    {
+      image: "/assets/images/ior_slideshow/6.jpeg",
+      description: "Functional Cancer Genomics (Theurillat)",
+      website: "https://www.ior.usi.ch/en/group/functional-cancer-genomics"
+    },
+    {
+      image: "/assets/images/ior_slideshow/7.jpeg",
+      description: "Prostate Cancer Biology (Carbone)",
+      website: "https://www.ior.usi.ch/en/group/prostate-cancer-biology"
+    },
+  ],
   ior: [
     "/assets/images/ior_1.jpg", // "https://ucarecdn.com/05cc79b1-cb64-4b5c-9389-7e2851a536f1/-/scale_crop/220x220/",
     "/assets/images/ior_2.jpg", // "https://ucarecdn.com/67f7dcaf-6f11-4321-8ba8-a8b4f095f6e5/-/scale_crop/220x220/",
     "/assets/images/ior_3.jpg", // "https://ucarecdn.com/ec1d0556-a9a3-46b5-b702-c4b7349175a7/-/scale_crop/220x220/center/",
     // 'https://ucarecdn.com/e6c1a4a6-6dc5-4c5b-9b6f-4a156fd06e34/-/scale_crop/220x220/',
     "/assets/images/ior_4.jpg", // "https://ucarecdn.com/c469b1e1-72a2-4385-bab4-6a993057e407/-/scale_crop/300x220/center/",
-    "/assets/images/ior_5.jpg", // "https://ucarecdn.com/892da45b-31d5-4eb0-a699-92c6324065b4/-/scale_crop/300x220/",
-    "/assets/images/ior_6.jpg" // "https://ucarecdn.com/11de4084-8e52-48a1-bc83-2bad55796962/-/scale_crop/300x220/"
+    // "/assets/images/ior_5.jpg", // "https://ucarecdn.com/892da45b-31d5-4eb0-a699-92c6324065b4/-/scale_crop/300x220/",
+    // "/assets/images/ior_6.jpg" // "https://ucarecdn.com/11de4084-8e52-48a1-bc83-2bad55796962/-/scale_crop/300x220/"
     // 'https://ucarecdn.com/928322f4-14ac-40a8-9ee3-17080a5c940e/-/scale_crop/300x220/center/',
   ],
   ielsg: [
