@@ -106,6 +106,8 @@ export default {
             <title>Foundation IOR</title>
           </Head>
           <Body>
+            <div style={{ height: 200, marginTop: 100, margin: "100px auto 0px auto", textAlign: "center"} }>Sito in aggiornamento<br/>Website under maintainance</div>
+{/* 
             <div
               id="initial-loading"
               style={{ position: "fixed", top: 0, bottom: 0, left: 0, right: 0, background: "#000", zIndex: 9999999 }}
@@ -113,7 +115,7 @@ export default {
               <img
                 width={220}
                 height={220}
-                src="/assets/foundation_ior.png"
+                src="/assets/fondazione_ior.png"
                 style={{
                   width: 220,
                   height: 220,
@@ -124,7 +126,7 @@ export default {
                 }}
               />
             </div>
-            {children}
+            {children} */}
           </Body>
         </Html>
       );
