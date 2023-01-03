@@ -7,6 +7,7 @@ import History from 'components/version_2/connected/pages/History';
 import President from 'components/version_2/connected/pages/President';
 
 class Page extends Component {
+
     render() {
         return (<Switch>
             <Route path={`/home`} component={Home} />

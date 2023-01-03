@@ -106,7 +106,7 @@ export default {
             <title>Foundation IOR</title>
           </Head>
           <Body>
-            <div style={{ height: 200, marginTop: 100, margin: "100px auto 0px auto", textAlign: "center"} }>Sito in aggiornamento<br/>Website under maintainance</div>
+          <div style={{ height: 200, marginTop: 100, margin: "100px auto 0px auto", textAlign: "center"} }>Sito in aggiornamento<br/>Website under maintainance</div>
 {/* 
             <div
               id="initial-loading"
