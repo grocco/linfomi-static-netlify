@@ -35,6 +35,11 @@ export default {
       description: "Prostate Cancer Biology (Carbone)",
       website: "https://www.ior.usi.ch/en/group/prostate-cancer-biology"
     },
+    {
+      image: "/assets/images/ior_slideshow/8.jpeg",
+      description: "Stem Cells and Cancer (Baggiolini)",
+      website: "https://www.ior.usi.ch/en/group/stem-cells-and-cancer"
+    },
   ],
   ior: [
     "/assets/images/ior_1.jpg", // "https://ucarecdn.com/05cc79b1-cb64-4b5c-9389-7e2851a536f1/-/scale_crop/220x220/",
