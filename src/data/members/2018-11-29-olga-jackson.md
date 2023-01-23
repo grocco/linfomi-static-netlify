@@ -3,7 +3,7 @@ layout: council
 title: Olga Jackson
 name: Olga
 surname: Jackson
-role: Secretary
+role: ""
 bio: >-
   Born in Prague in 1957, she emigrated with her parents to Switzerland in 1968.
 
@@ -35,7 +35,7 @@ bio: >-
   Since 1999 she has been the secretary of the Foundation for Research and
   Treatment of Lymphomas in Ticino, now the Foundation for the Institute of
   Oncology Research (IOR).
-role-it: Segretaria
+role-it: ""
 bio-it: >-
   Nata a Praga nel 1957, è emigrata con i genitori nel 1968 in Svizzera.
 

@@ -3,7 +3,7 @@ layout: council
 title: Michele Ghielmini
 name: Michele
 surname: Ghielmini
-role: ''
+role: Secretary
 bio: >-
   Compulsory and secondary school in Ticino.
 
@@ -44,7 +44,7 @@ bio: >-
 
 
   Since 2019 he has been a member of the Board of Directors of the Foundation.
-role-it: ''
+role-it: Segretario
 bio-it: >-
   Scuola dell'obbligo e medie superiori in Ticino.
 
