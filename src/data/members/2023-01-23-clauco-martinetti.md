@@ -1,7 +1,7 @@
 ---
 layout: council
-title: Clauco Martinetti
-name: Clauco
+title: Glauco Martinetti
+name: Glauco
 surname: Martinetti
 role: ""
 bio: >-
@@ -26,7 +26,7 @@ bio: >-
   In all these years, he has gained particular experience in managing small and large teams and been able to deepen his knowledge of resource management, marketing studies and targeted communication. The topics of process optimisation, supply chain excellence and management by objectives also played a very special role.  
 
 
-  Since 2022 he is a member of the Board of Trustees of the Foundation of Institute of Oncology Research (IOR).
+  Since 2022 he has been a member of the Foundation Board of the Foundation for the Institute of Oncology Research (IOR).
 role-it: ""
 bio-it: >-
   Nato il 29 aprile 1966 a Iragna, si è laureato al Politecnico di Zurigo nel 1990 (Ing.agr. ETH).
