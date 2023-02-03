@@ -24,7 +24,7 @@ bio: >-
   Ticinese by adoption (his father was taken in as a refugee in 1943), he is double Italian and Swiss Citizen. He is committed to environmental and social issues that he considers inextricably linked to health.
   
 
-  Since 2022 he is a member of the Board of Trustees of the Foundation of Institute of Oncology Research (IOR).
+  Since 2022 he has been a member of the Foundation Board of the Foundation for the Institute of Oncology Research (IOR).
 role-it: ""
 bio-it: >-
   Il Prof. Pietro Majno-Hurst è nato il 22 aprile 1960 a Milano, dove si è laureato in medicina nel 1986.
